@@ -1,0 +1,118 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<link rel="stylesheet" href="https://rp-bizeeknowledge.github.io/Training-material/theme.css"><title>D8 — Email Handling & Workflow</title>
+</head><body><div class="page">
+  <a class="back-link" href="2026-2_D8_overview-nav.html">← Back to D8 Overview</a>
+  <div class="hero">
+    <div class="hero-label">D8 — Section 2</div>
+    <h1>Email Handling<br><span>&amp; Workflow</span></h1>
+    <div class="hero-sub">Email Rules · Account Lookup · Notes · Merging · Statuses · Round-Robin</div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">4.2.2 — Email Handling Guidelines</div>
+    <div class="rules-list">
+      <div class="rule-item allow"><span>✓</span><p>Always be polite, helpful, and use proper grammar.</p></div>
+      <div class="rule-item allow"><span>✓</span><p>Start your first reply with a polite greeting, like "Hello" or "Hi", followed by the customer's name (e.g., "Hello John," or "Hi Sarah,").</p></div>
+      <div class="rule-item allow"><span>✓</span><p>Close your email signing with your first name only + Bizee Support (unless there are duplicate names).</p></div>
+      <div class="rule-item note"><span>📌</span><p>If you or the customer reply again the same day, you don't need to repeat the greeting or the closing.</p></div>
+    </div>
+    <div class="subsection-title">Handling Emails in Other Languages</div>
+    <p>If you receive an email written in a language other than English, use available tools such as Zendesk's translation feature (preferred), ChatGPT, or Google Translate to understand the request and respond appropriately. <strong>Always reply in English.</strong> This does not apply to emails written in Spanish.</p>
+    <div class="subsection-title">Callback Requested through Email</div>
+    <p>When a customer requests a call via email, the agent must initiate the call. <strong>Do not instruct the customer to call us.</strong></p>
+    <div class="rules-list">
+      <div class="rule-item allow"><span>✓</span><p>If the user profile doesn't include a phone number, send an email asking for their preferred phone number and inform them that you will reach out once you have it.</p></div>
+      <div class="rule-item allow"><span>✓</span><p>If the call goes to voicemail: leave a polite message or send an email asking the customer to call us back. After leaving a message or sending the follow-up email, mark the ticket as solved.</p></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">4.2.3 — Workflow: Account Lookup to Solved Ticket</div>
+    <div class="phase-list">
+
+      <div class="phase-card">
+        <div class="phase-header"><span class="phase-num">Phase 1</span><h4>Locating the Order on DB</h4></div>
+        <div class="phase-body">
+          <p>Follow these steps until you locate the customer's account. Be aware that authentication may be required:</p>
+          <p><strong>Authentication NOT required:</strong></p><ul><li>Copy and paste their email</li><li>Use their phone number</li></ul>
+          <p><strong>Authentication required:</strong></p><ul><li>Use their name</li><li>Use the "Link to DB" (if available)</li><li>Ask for the order number or company name</li></ul>
+          <p>Once an order pulls up, verify the company name and continue with assistance. If you cannot locate the order after any of these steps, ask the customer to check the initial emails from us to obtain the order number. They can call us back once they find it.</p>
+        </div>
+      </div>
+
+      <div class="phase-card">
+        <div class="phase-header"><span class="phase-num">Phase 2</span><h4>Customer Service Job Aid</h4></div>
+        <div class="phase-body">
+          <ul>
+            <li><strong>Cancellations and Refunds:</strong> Use the C&R flowchart in the Knowledge Base.</li>
+            <li><strong>Changes and Corrections to an Order:</strong> Use the "Making changes on orders" article in KB.</li>
+            <li><strong>Escalations:</strong> Redirect the matter at hand to the corresponding department when the issue cannot be resolved by yourself. Follow the Escalation Guidelines article in KB.</li>
+            <li><strong>General Queries:</strong> Answer general queries for existing and new customers and provide guidance.</li>
+            <li><strong>Order Issues:</strong> Explain the specific order issue. Use the Order Issues article in KB.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="phase-card">
+        <div class="phase-header"><span class="phase-num">Phase 3</span><h4>Internal Notes and DB Comments</h4></div>
+        <div class="phase-body">
+          <p>All agents are required to leave <strong>internal notes</strong> when closing or escalating a request on Zendesk. Escalations require different information annotated in internal comments; follow the escalation guidelines according to the corresponding department.</p>
+          <p>DB comments must be written as well, as they will contain requirements to facilitate the resolution of future requests from the same customer.</p>
+        </div>
+      </div>
+
+      <div class="phase-card">
+        <div class="phase-header"><span class="phase-num">Phase 4</span><h4>Merging</h4></div>
+        <div class="phase-body">
+          <ul>
+            <li>You should never merge your tickets into solved tickets unless it's a callback that was made prior to the issue being addressed at a later time.</li>
+            <li>If there are multiple tickets regarding the same matter, merge all tickets into the one you will be replying to, making sure that all queries are addressed.</li>
+            <li>You must merge tickets into yours when the query of their ticket is the same as your existing open or pending ticket. This prevents double escalations.</li>
+          </ul>
+          <div class="callout callout-amber" style="margin-top:10px;"><span>⚠️</span><p><strong>Once a ticket is merged, no one can unmerge it.</strong></p></div>
+          <p style="margin-top:10px;">For merging steps, see the Merging section in D7 — Zendesk Support (Section 2.3).</p>
+        </div>
+      </div>
+
+      <div class="phase-card">
+        <div class="phase-header"><span class="phase-num">Phase 4 (cont.)</span><h4>Keeping Records Updated</h4></div>
+        <div class="phase-body">
+          <p>Zendesk is not automatically updated once a customer changes their contact information. Make sure to offer to update the user profile in Zendesk every time you notice a discrepancy against what's shown on DB/Bizee Tech, or if the customer has already informed you that their previous email or phone number is no longer being used — <strong>only if the caller/email sender has already been authenticated</strong>.</p>
+          <ul>
+            <li><strong>If the customer agrees:</strong> Send an email requesting written confirmation of the change before applying it to the account on DB/Bizee Tech.</li>
+            <li><strong>If the customer declines:</strong> Change the ticket requester by entering the email address shown for the caller/email sender in DB/Bizee Tech.</li>
+          </ul>
+          <p><strong>Good Housekeeping Practices — also update when you notice:</strong></p>
+          <ul>
+            <li><strong>Duplicate contact info:</strong> Watch for repeated email or phone entries. If duplicate details appear across profiles, confirm the correct account and keep Zendesk aligned with DB/Bizee Tech.</li>
+            <li><strong>Missing names:</strong> Fill in incomplete contact names when the customer confirms their identity, so future agents can locate the record faster.</li>
+            <li><strong>Outdated contact info:</strong> Offer to update stale phone or email details. If they reached out from a new contact method, ask whether they want it saved and update DB and Zendesk when confirmed.</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Phase 5 — Ticket Statuses</div>
+    <p>There are only 4 ways to submit a ticket:</p>
+    <div class="status-grid">
+      <div class="status-card open"><h4>Open</h4><p>Submit as Open if a follow-up is required, but it is not an escalation.</p></div>
+      <div class="status-card pending"><h4>Pending</h4><p>Submit as Pending every time it's escalated.</p></div>
+      <div class="status-card onhold"><h4>On-hold</h4><p>This is only to be used by supervisors or escalation departments. <strong>Agents should not use this label.</strong></p></div>
+      <div class="status-card solved"><h4>Solved</h4><p>Submit as Solved when responding to the client and no further action from the agent is required.</p></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Phase 6 — Round-Robin Reassignment</div>
+    <div class="rules-list">
+      <div class="rule-item note"><span>↻</span><p><strong>Reassignment Policy:</strong> The round-robin system will automatically reassign open, pending, and on-hold status tickets when an agent is on vacation, sick leave, or has temporarily disabled their round-robin assignments for any reason.</p></div>
+      <div class="rule-item note"><span>↻</span><p><strong>Active Round-Robin:</strong> When the round-robin system is active, agents may receive open, pending, or on-hold tickets assigned to them.</p></div>
+      <div class="rule-item allow"><span>✓</span><p><strong>Responsibility:</strong> Agents are required to manage any assigned tickets as if they were their own. Ensure to read the ticket details and respond promptly to customer inquiries.</p></div>
+    </div>
+  </div>
+
+  <div class="footer"><span class="footer-logo">Bizee</span><span class="footer-meta">Internal use only · Customer Service · D8 — Section 2</span></div>
+</div></body></html>
