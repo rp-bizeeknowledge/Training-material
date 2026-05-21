@@ -212,6 +212,7 @@ a:hover {
 .section {
   margin-bottom: 32px;
 }
+.section-note { font-size: 12px; color: var(--muted); margin-top: 10px; padding-top: 10px; border-top: 1px solid var(--border); line-height: 1.6; text-align: left; }
 
 .section-title {
   font-size: 18px;
@@ -2968,33 +2969,28 @@ li:last-child {
 }
 
 /* ── 46. D1-SPECIFIC ─────────────────────────────────────── */
-.designator-table {
-  width: 100%;
-  border-collapse: collapse;
-  border-radius: var(--radius);
-  overflow: hidden;
-  margin: 14px 0;
-  box-shadow: var(--shadow-sm);
-}
-.designator-table th {
-  background: var(--dark);
-  color: rgba(255, 255, 255, 0.88);
-  padding: 10px 14px;
-  text-align: left;
-  font-size: 11px;
-  font-weight: 600;
-  letter-spacing: 0.07em;
-  text-transform: uppercase;
-}
-.designator-table td {
-  padding: 11px 14px;
-  font-size: 14px;
-  border-bottom: 1px solid var(--border);
+.designator-list {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 16px auto;
   background: var(--white);
-  color: var(--mid);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 14px 18px;
+  width: fit-content;
 }
-.designator-table tr:last-child td {
-  border-bottom: none;
+.designator-row { display: flex; align-items: center; gap: 16px; }
+.d-label { font-weight: 600; color: var(--orange); font-size: 13px; min-width: 110px; flex-shrink: 0; }
+.d-values { display: flex; flex-wrap: wrap; gap: 6px; }
+.d-tag {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--mid);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 3px 10px;
 }
 
 .mgmt-split {
@@ -3444,13 +3440,15 @@ li:last-child {
   border-radius: 0;
   object-fit: initial;
 }
-.attorney-alert-text p {
+.attorney-alert-text p,
+p.attorney-alert-text {
   font-size: 14px;
   color: #78350f;
   margin-bottom: 8px;
   line-height: 1.65;
 }
-.attorney-alert-text p:last-child {
+.attorney-alert-text p:last-child,
+p.attorney-alert-text:last-child {
   margin-bottom: 0;
 }
 
@@ -3485,6 +3483,78 @@ li:last-child {
 }
 .red-alert-text p:last-child {
   margin-bottom: 0;
+}
+
+.blue-alert {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: var(--blue-light);
+  border: 1px solid var(--blue-border);
+  border-radius: var(--radius);
+  border-left: 6px solid var(--blue-border);
+  padding: 16px 18px;
+  margin: 16px 0;
+}
+.blue-alert-icon {
+  font-size: 22px;
+  line-height: 1;
+  flex-shrink: 0;
+  margin: 1%
+}
+.blue-alert-img {
+  vertical-align: middle;
+  height: 60px;
+  width: auto;
+  border-radius: 0;
+}
+.blue-alert-text p {
+  font-size: 14px;
+  color: #1e3a8a;
+  margin-bottom: 8px;
+  line-height: 1.65;
+}
+.blue-alert-text p:last-child {
+  margin-bottom: 0;
+}
+
+.scenario-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  margin: 16px 0;
+}
+.scenario-card-question {
+  padding: 16px 18px;
+  border-bottom: 1px solid var(--border);
+}
+.scenario-card-response {
+  padding: 16px 18px;
+  background: var(--surface);
+}
+.scenario-card-label {
+  display: block;
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 6px;
+}
+.scenario-card-question p {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--dark);
+  margin: 0;
+  line-height: 1.5;
+}
+.scenario-card-response p {
+  font-size: 14px;
+  color: var(--mid);
+  margin: 0;
+  line-height: 1.65;
 }
 
 .analogy-wrap {
