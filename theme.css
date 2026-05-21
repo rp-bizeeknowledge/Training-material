@@ -161,6 +161,25 @@ a:hover {
   letter-spacing: 0.02em;
 }
 
+/* Soft hero for subordinate pages (_1_, _2_, etc.) */
+.hero.hero-soft {
+  background: linear-gradient(135deg, #1C2333 0%, #141925 100%);
+  border: none;
+  padding: 24px 44px 20px;
+  margin-bottom: 28px;
+}
+.hero.hero-soft::before { opacity: .06; }
+.hero.hero-soft::after  { opacity: .03; }
+.hero.hero-soft .hero-label {
+  background: rgba(232,87,42,.15);
+  color: #F4A07A;
+  border-color: rgba(232,87,42,.22);
+  margin-bottom: 12px;
+}
+.hero.hero-soft h1       { font-size: 26px; color: #fff; margin-bottom: 8px; }
+.hero.hero-soft h1 span  { color: var(--orange); }
+.hero.hero-soft .hero-sub { color: rgba(255,255,255,.45); }
+
 /* ── 5. BACK LINK ─────────────────────────────────────────── */
 .back-link {
   display: inline-flex;
@@ -4303,10 +4322,14 @@ li:last-child {
   text-align: left;
 }
 
-.text-on-dark {
-  color: #fff;
-}
-.link-green {
-  color: var(--green);
-  font-weight: 500;
+.text-on-dark { color: #fff; }
+.link-green   { color: var(--green); font-weight: 500; }
+
+/* ── 47. IMAGE & FIGURE SETTING  ─────────────────────────────────────── */
+.entity-graphic {
+  display: block;
+  width: 70%;
+  height: auto;
+  object-fit: contain;
+  margin: 14px auto;
 }
