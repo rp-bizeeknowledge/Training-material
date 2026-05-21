@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>D7.4 — Interaction Flow</title>
+<link rel="stylesheet" href="https://rp-bizeeknowledge.github.io/Training-material/theme.css">
+<link rel="stylesheet" href="../../theme.css">
+</head>
+<body>
+<div class="page">
+
+  <a class="back-link" href="2026-2_D7_0_tool-usage-procedures.html">← Back to Tool Usage Procedures</a>
+
+  <div class="hero">
+    <div class="hero-label">D7 · Section 04</div>
+    <h1>Interaction <span>Flow</span></h1>
+    <div class="hero-sub">Greeting · Query · Authentication · Support · Closing</div>
+  </div>
+
+  <div class="mindset-banner">
+    <p><span>Stay real, stay ready.</span> No scripts.</p>
+  </div>
+
+  <div class="section">
+    <div class="section-title">1. Greeting</div>
+    <p>Start the call by introducing yourself and the company. Then, warmly ask how you can assist the customer.</p>
+  </div>
+
+  <div class="section">
+    <div class="section-title">2. Query</div>
+    <p>Figure out what the customer needs by listening actively and asking probing questions. And authenticate only if needed.</p>
+
+    <div class="subsection-title">2.1 Authentication</div>
+    <p>We protect customer data by verifying account holders before sharing or changing account information. Authenticate when you cannot pull up the account using Zendesk user details, and the customer wants to:</p>
+    <div class="action-list">
+      <div class="action-item">Access account-specific information</div>
+      <div class="action-item">Make changes</div>
+      <div class="action-item">Cancel a subscription</div>
+    </div>
+    <p>Based on <strong>information sensitivity</strong>, some questions require authentication and some do not:</p>
+    <div class="when-to-auth">
+      <div class="auth-card no">
+        <h4>No Authentication Required</h4>
+        <ul>
+          <li>"How long does it take to file an LLC?"</li>
+          <li>"How often are Annual Reports required in Oklahoma?"</li>
+          <li>"I need to start a new Corporation"</li>
+        </ul>
+      </div>
+      <div class="auth-card yes">
+        <h4>Authentication Required</h4>
+        <ul>
+          <li>"Can I get my EIN?"</li>
+          <li>"Please cancel my service."</li>
+          <li>"I need to update my company's membership"</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="subsection-title">2.1.1 How to Authenticate</div>
+    <p><strong>Step 1: Check the Database</strong> — Review the customer's billing information to determine what to ask. If no payment method is on file, adjust your questions.</p>
+    <p><strong>Step 2: Request for authentication information</strong></p>
+    <p><strong>If a Credit or Debit Card is on File</strong></p>
+    <div class="auth-fallback">
+      <div class="auth-step">
+        <div class="auth-badge badge-a">A</div>
+        <div class="auth-step-body">
+          <h4>Name + Last 4 digits of card, or full billing address</h4>
+          <p>Ask for the customer's name (must match the account) plus the last 4 digits of the card, <strong>or</strong> full billing address.</p>
+        </div>
+      </div>
+      <div class="auth-step">
+        <div class="auth-badge badge-b">B</div>
+        <div class="auth-step-body">
+          <h4>Last 4 digits of the SSN</h4>
+          <p>If they cannot provide either from A: ask for the last 4 digits of the SSN (if EIN is included in the order).</p>
+        </div>
+      </div>
+      <div class="auth-step">
+        <div class="auth-badge badge-c">C</div>
+        <div class="auth-step-body">
+          <h4>Call or email from contact info on file</h4>
+          <p>If still unavailable: ask them to call or email us from the contact information on file.</p>
+        </div>
+      </div>
+      <div class="auth-step">
+        <div class="auth-badge badge-d">D</div>
+        <div class="auth-step-body">
+          <h4>Photo ID via email</h4>
+          <p>As a last resort: send an email to the preferred address, asking for a photo of their ID.</p>
+        </div>
+      </div>
+    </div>
+    <div class="callout callout-amber">
+      <span>⚠️</span>
+      <p><strong>Important:</strong> Apple Pay uses a temporary card number. The last 4 digits in the database will not match the customer's real card, so do not use them for authentication.</p>
+    </div>
+
+    <p><strong>Step 3: If the Caller Is Not a Verified Contact</strong></p>
+    <div class="rules-list">
+      <div class="rule-item note"><span>📋</span><p>Ask to speak directly with the verified contact or offer to transfer the call to them.</p></div>
+      <div class="rule-item deny"><span>🚫</span><p>If they cannot authenticate, <strong>do not</strong> provide account-specific help.</p></div>
+    </div>
+
+    <div class="subsection-title">2.1.2 Roles and Permissions</div>
+    <div class="role-list">
+      <div class="role-item">
+        <div class="role-name">Contact</div>
+        <div class="role-desc">Can receive information and request changes.</div>
+      </div>
+      <div class="role-item">
+        <div class="role-name">Client</div>
+        <div class="role-desc">Can receive information but can only make changes through their dashboard.</div>
+      </div>
+      <div class="role-item">
+        <div class="role-name">Owner <em>(green check in DB)</em></div>
+        <div class="role-desc">Can receive information but can only make changes through their dashboard.</div>
+      </div>
+    </div>
+
+    <div class="subsection-title">2.1.3 Special Scenarios</div>
+    <div class="note-list">
+      <div class="note-item">If a verified contact is present with the caller, authenticate the contact directly.</div>
+      <div class="note-item">If the sole member of a company managed by a commercial client wants ownership: send an email requesting their ID, collect information to add them as a user in the database, and escalate using Zendesk (by selecting your Supervisor in the dropdown) and mark the ticket as pending.</div>
+    </div>
+    <div class="callout callout-red">
+      <span>🚫</span>
+      <p><strong>Key rule:</strong> Do not tell customers to "reach out from the email or phone on file." Always follow the full authentication process.</p>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">3. Support</div>
+    <p>After the customer expresses their concern, and has been authenticated, address the issue clearly and helpfully. Before ending the call, offer any additional support or information they may need.</p>
+    <div class="script-box">
+      <p>I'm glad I was able to assist. Is there anything else I can help with?</p>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">4. Closing</div>
+    <p>End with a friendly goodbye and then document the call, document any actions taken and call details in an internal note in Zendesk and comment in DB when appropriate.</p>
+    <div class="script-box">
+      <p>Thank you for calling Bizee. Have a great day!</p>
+    </div>
+  </div>
+
+  <div class="footer">
+    <span class="footer-logo">Bizee</span>
+    <span class="footer-meta">Internal use only · Customer Service · D7 — Section 04 of 05</span>
+  </div>
+</div>
+</body>
+</html>
