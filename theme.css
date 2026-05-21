@@ -119,7 +119,7 @@ a:hover { color: var(--orange-deep); }
   border: 1px solid rgba(232,87,42,.25);
 }
 .hero h1 {
-  font-size: 32px;
+  font-size: 35px;
   font-weight: 700;
   color: #fff;
   line-height: 1.15;
@@ -152,11 +152,12 @@ a:hover { color: var(--orange-deep); }
 .section { margin-bottom: 32px; }
 
 .section-title {
-  font-size: 11px;
-  font-weight: 700;
+  font-size: 18px;
+  font-weight: 900;
   letter-spacing: .13em;
   text-transform: uppercase;
   color: var(--orange);
+  margin-top: 20px;
   margin-bottom: 16px;
   display: flex;
   align-items: center;
@@ -232,7 +233,7 @@ li:last-child { margin-bottom: 0; }
   border-color: var(--orange);
 }
 .nc-label {
-  font-size: 10px;
+  font-size: 16px;
   font-weight: 600;
   letter-spacing: .08em;
   text-transform: uppercase;
