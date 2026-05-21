@@ -163,22 +163,34 @@ a:hover {
 
 /* Soft hero for subordinate pages (_1_, _2_, etc.) */
 .hero.hero-soft {
-  background: linear-gradient(135deg, #1C2333 0%, #141925 100%);
+  background: linear-gradient(135deg, #1c2333 0%, #141925 100%);
   border: none;
   padding: 24px 44px 20px;
   margin-bottom: 28px;
 }
-.hero.hero-soft::before { opacity: .06; }
-.hero.hero-soft::after  { opacity: .03; }
+.hero.hero-soft::before {
+  opacity: 0.06;
+}
+.hero.hero-soft::after {
+  opacity: 0.03;
+}
 .hero.hero-soft .hero-label {
-  background: rgba(232,87,42,.15);
-  color: #F4A07A;
-  border-color: rgba(232,87,42,.22);
+  background: rgba(232, 87, 42, 0.15);
+  color: #f4a07a;
+  border-color: rgba(232, 87, 42, 0.22);
   margin-bottom: 12px;
 }
-.hero.hero-soft h1       { font-size: 26px; color: #fff; margin-bottom: 8px; }
-.hero.hero-soft h1 span  { color: var(--orange); }
-.hero.hero-soft .hero-sub { color: rgba(255,255,255,.45); }
+.hero.hero-soft h1 {
+  font-size: 26px;
+  color: #fff;
+  margin-bottom: 8px;
+}
+.hero.hero-soft h1 span {
+  color: var(--orange);
+}
+.hero.hero-soft .hero-sub {
+  color: rgba(255, 255, 255, 0.45);
+}
 
 /* ── 5. BACK LINK ─────────────────────────────────────────── */
 .back-link {
@@ -429,6 +441,7 @@ li:last-child {
 .callout-blue {
   background: var(--blue-light);
   border-color: var(--blue-border);
+  border-left: 6px solid var(--blue-border);
   color: var(--blue);
 }
 .callout-green {
@@ -488,7 +501,7 @@ li:last-child {
 /* ── 11. SCRIPT BOX ──────────────────────────────────────── */
 .script-box {
   background: var(--blue-light);
-  border-left: 3px solid #3b82f6;
+  border-left: 6px solid var(--blue-border);
   border-radius: var(--radius);
   margin: 20px 32px;
   min-height: 88px;
@@ -3126,6 +3139,7 @@ li:last-child {
   gap: 8px;
   flex-wrap: wrap;
   margin: 12px 0;
+  text-align: center;
 }
 .flow-node {
   background: var(--white);
@@ -3136,10 +3150,75 @@ li:last-child {
   font-weight: 500;
   color: var(--dark);
   box-shadow: var(--shadow-xs);
+  box-sizing: border-box;
 }
 .flow-arrow {
   font-size: 16px;
   color: var(--orange);
+}
+
+.tax-flow.tax-flow-triangle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  margin: 18px 0 22px;
+}
+.tax-flow.tax-flow-triangle .flow-node-top {
+  width: min(520px, 100%);
+}
+.tax-flow.tax-flow-triangle .flow-arrow-down {
+  font-size: 40px;
+  margin-right: 360px;
+  color: var(--orange);
+}
+.tax-flow.tax-flow-triangle .flow-arrow-right {
+  font-size: 40px;
+  color: var(--orange);
+}
+.tax-flow-bottom {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  gap: 12px;
+  width: 100%;
+  max-width: 100%;
+  align-items: center;
+}
+.tax-flow-bottom .flow-node-side {
+  min-height: 118px;
+}
+@media (max-width: 680px) {
+  .tax-flow-bottom {
+    grid-template-columns: 1fr;
+  }
+  .tax-flow.tax-flow-triangle .flow-arrow-right {
+    display: none;
+  }
+}
+.tax-flow.tax-flow-triangle .fn-label {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-align: center;
+  color: var(--mid);
+  margin-bottom: 6px;
+}
+.tax-flow.tax-flow-triangle .fn-val {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--dark);
+  margin: 0;
+  text-align: center;
+  box-sizing: border-box;
+}
+@media (max-width: 680px) {
+  .tax-flow.tax-flow-triangle {
+    grid-template-columns: 1fr;
+  }
+  .tax-flow.tax-flow-triangle .flow-arrow-down {
+    transform: none;
+  }
 }
 
 .d-codes {
@@ -3382,6 +3461,7 @@ li:last-child {
   background: var(--red-light);
   border: 1px solid var(--red-border);
   border-radius: var(--radius);
+  border-left: 6px solid var(--red-border);
   padding: 16px 18px;
   margin: 16px 0;
 }
@@ -4322,8 +4402,13 @@ li:last-child {
   text-align: left;
 }
 
-.text-on-dark { color: #fff; }
-.link-green   { color: var(--green); font-weight: 500; }
+.text-on-dark {
+  color: #fff;
+}
+.link-green {
+  color: var(--green);
+  font-weight: 500;
+}
 
 /* ── 47. IMAGE & FIGURE SETTING  ─────────────────────────────────────── */
 .entity-graphic {
