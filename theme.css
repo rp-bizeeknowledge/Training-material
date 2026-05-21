@@ -1283,11 +1283,17 @@ li:last-child { margin-bottom: 0; }
 .board-decisions { display: flex; flex-direction: column; gap: 6px; margin: 10px 0; }
 .board-item { background: var(--white); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 12px 14px; box-shadow: var(--shadow-xs); }
 
-.attorney-alert { display: flex; gap: 16px; background: var(--amber-light); border: 1px solid var(--amber-border); border-radius: var(--radius); padding: 16px 18px; margin: 16px 0; }
-.attorney-alert-icon { font-size: 22px; flex-shrink: 0; }
-.attorney-alert-img  { width: 56px; height: 56px; border-radius: 50%; object-fit: cover; flex-shrink: 0; }
+.attorney-alert { display: flex; align-items: center; gap: 16px; background: var(--amber-light); border: 1px solid var(--amber-border); border-radius: var(--radius); padding: 16px 18px; margin: 16px 0; }
+.attorney-alert-icon { font-size: 22px; line-height: 1; flex-shrink: 0; }
+.attorney-alert-img  { vertical-align: middle; width: 60px; height: 60px; border-radius: 0; object-fit: initial; }
 .attorney-alert-text p { font-size: 14px; color: #78350F; margin-bottom: 8px; line-height: 1.65; }
 .attorney-alert-text p:last-child { margin-bottom: 0; }
+
+.red-alert { display: flex; align-items: center; gap: 16px; background: var(--red-light); border: 1px solid var(--red-border); border-radius: var(--radius); padding: 16px 18px; margin: 16px 0; }
+.red-alert-icon { font-size: 22px; line-height: 1; flex-shrink: 0; }
+.red-alert-img  { vertical-align: middle; width: 60px; height: 60px; border-radius: 0; object-fit: initial; }
+.red-alert-text p { font-size: 14px; color: #7F1D1D; margin-bottom: 8px; line-height: 1.65; }
+.red-alert-text p:last-child { margin-bottom: 0; }
 
 .analogy-wrap { background: var(--white); border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; margin: 14px 0; box-shadow: var(--shadow-sm); }
 .analogy-header { padding: 10px 16px; background: var(--bg); border-bottom: 1px solid var(--border); }
