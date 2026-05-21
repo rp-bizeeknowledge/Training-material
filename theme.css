@@ -134,6 +134,25 @@ a:hover { color: var(--orange-deep); }
   letter-spacing: .02em;
 }
 
+/* Soft hero for subordinate pages (_1_, _2_, etc.) */
+.hero.hero-soft {
+  background: linear-gradient(135deg, #1C2333 0%, #141925 100%);
+  border: none;
+  padding: 24px 44px 20px;
+  margin-bottom: 28px;
+}
+.hero.hero-soft::before { opacity: .06; }
+.hero.hero-soft::after  { opacity: .03; }
+.hero.hero-soft .hero-label {
+  background: rgba(232,87,42,.15);
+  color: #F4A07A;
+  border-color: rgba(232,87,42,.22);
+  margin-bottom: 12px;
+}
+.hero.hero-soft h1       { font-size: 26px; color: #fff; margin-bottom: 8px; }
+.hero.hero-soft h1 span  { color: var(--orange); }
+.hero.hero-soft .hero-sub { color: rgba(255,255,255,.45); }
+
 /* ── 5. BACK LINK ─────────────────────────────────────────── */
 .back-link {
   display: inline-flex;
