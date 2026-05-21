@@ -293,8 +293,6 @@ li:last-child { margin-bottom: 0; }
 .callout a      { color: inherit; font-weight: 600; }
 .callout p      { font-size: 14px; line-height: 1.65; margin: 0; text-align: left; }
 
-.callout-amber  { background: var(--amber-light);  border-color: var(--amber-border);  color: var(--amber); }
-.callout-red    { background: var(--red-light);    border-color: var(--red-border);    color: var(--red); }
 .callout-blue   { background: var(--blue-light);   border-color: var(--blue-border);   color: var(--blue); }
 .callout-green  { background: var(--green-light);  border-color: var(--green-border);  color: var(--green); }
 
@@ -1304,6 +1302,11 @@ li:last-child { margin-bottom: 0; }
 
 .best-for-list { display: flex; flex-direction: column; gap: 6px; margin: 10px 0; }
 .best-for-item { display: flex; gap: 8px; padding: 10px 13px; background: var(--green-light); border: 1px solid var(--green-border); border-radius: var(--radius-sm); font-size: 14px; color: #155539; }
+
+.best-for-images { display: flex; gap: 12px; margin: 14px 0; }
+.best-for-img-card { flex: 1; display: flex; flex-direction: column; align-items: center; gap: 12px; text-align: center; }
+.best-for-img-card img { width: 100%; max-width: 110px; height: auto; }
+.best-for-img-card span { font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: .07em; color: var(--amber); font-family: 'DM Mono', monospace; line-height: 1.5; }
 
 .note-pill { display: inline-block; font-size: 11px; font-weight: 500; padding: 3px 10px; border-radius: 20px; background: var(--blue-light); border: 1px solid var(--blue-border); color: var(--blue); margin: 4px 2px; font-family: 'DM Mono', monospace; }
 .tool-link { display: inline-flex; align-items: center; gap: 5px; font-size: 14px; font-weight: 500; color: var(--orange); text-decoration: none; }
