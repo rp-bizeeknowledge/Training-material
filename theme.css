@@ -498,6 +498,23 @@ li:last-child {
   background-repeat: no-repeat;
   background-position: center;
 }
+.callout-red-stop {
+  background: var(--red-light);
+  border-color: var(--red-border);
+  border-left: 6px solid var(--red-border);
+  color: var(--red);
+}
+.callout-red-stop::before {
+  content: "";
+  display: block;
+  width: var(--callout-icon-size);
+  height: var(--callout-icon-size);
+  flex-shrink: 0;
+  background-image: url("https://raw.githubusercontent.com/rp-bizeeknowledge/Assets/refs/heads/main/Stop-Red.png");
+  background-size: var(--callout-icon-scale);
+  background-repeat: no-repeat;
+  background-position: center;
+}
 
 /* pro-tip variant */
 .callout-pro-tip {
@@ -2641,7 +2658,7 @@ li:last-child {
   color: var(--mid);
   margin-bottom: 8px;
   line-height: 1.65;
-  text-align: left;
+  text-align: justify;
 }
 .pricing-formula p:last-child {
   margin-bottom: 0;
