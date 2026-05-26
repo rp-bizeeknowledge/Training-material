@@ -954,6 +954,9 @@ li:last-child {
   color: var(--mid);
   box-shadow: var(--shadow-xs);
 }
+.action-item p {
+  font-size: 14px;
+}
 .action-item::before {
   content: "→";
   color: var(--orange);
