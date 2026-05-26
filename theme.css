@@ -262,6 +262,7 @@ li {
   color: var(--mid);
   line-height: 1.65;
   margin-bottom: 5px;
+  text-align: justify;
 }
 li strong {
   color: var(--dark);
