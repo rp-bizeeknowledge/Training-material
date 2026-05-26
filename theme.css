@@ -416,6 +416,8 @@ li:last-child {
 
 /* ── 9. CALLOUTS ──────────────────────────────────────────── */
 .callout {
+  --callout-icon-size: 55px;
+  --callout-icon-scale: 88%;
   display: flex;
   align-items: center;
   gap: 12px;
@@ -452,15 +454,17 @@ li:last-child {
 .callout-blue-warning::before {
   content: "";
   display: block;
-  width: 44px;
-  height: 44px;
+  width: var(--callout-icon-size);
+  height: var(--callout-icon-size);
   flex-shrink: 0;
   background-image: url("https://github.com/rp-bizeeknowledge/Assets/blob/main/Warning-Blue.png?raw=true");
-  background-size: 88%;
+  background-size: var(--callout-icon-scale);
   background-repeat: no-repeat;
   background-position: center;
 }
 .callout-yellow-warning {
+  --callout-icon-size: 62px;
+  --callout-icon-scale: 96%;
   background: var(--amber-light);
   border-color: var(--amber-border);
   border-left: 6px solid var(--amber-border);
@@ -469,11 +473,11 @@ li:last-child {
 .callout-yellow-warning::before {
   content: "";
   display: block;
-  width: 44px;
-  height: 44px;
+  width: var(--callout-icon-size);
+  height: var(--callout-icon-size);
   flex-shrink: 0;
   background-image: url("https://github.com/rp-bizeeknowledge/Assets/blob/main/Warning-Yellow-Fake.png?raw=true");
-  background-size: 96%;
+  background-size: var(--callout-icon-scale);
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -486,11 +490,11 @@ li:last-child {
 .callout-red-warning::before {
   content: "";
   display: block;
-  width: 44px;
-  height: 44px;
+  width: var(--callout-icon-size);
+  height: var(--callout-icon-size);
   flex-shrink: 0;
   background-image: url("https://github.com/rp-bizeeknowledge/Assets/blob/main/Red%20Warning.png?raw=true");
-  background-size: 88%;
+  background-size: var(--callout-icon-scale);
   background-repeat: no-repeat;
   background-position: center;
 }
