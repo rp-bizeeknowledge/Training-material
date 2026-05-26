@@ -1574,6 +1574,10 @@ li:last-child {
   color: var(--dark);
 }
 
+.note-item p {
+  font-size: 14px;
+}
+
 .scenario-list {
   display: flex;
   flex-direction: column;
