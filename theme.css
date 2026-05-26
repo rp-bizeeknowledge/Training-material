@@ -1274,6 +1274,46 @@ li:last-child {
   text-align: left;
   text-wrap: pretty;
 }
+.term-card-body {
+  padding: 8px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+.term-card-body p {
+  padding: 0;
+}
+.term-card-body ul {
+  margin: 0;
+  padding-left: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+.term-card-body li {
+  font-size: 12px;
+  color: var(--muted);
+  line-height: 1.5;
+}
+.mgmt-card-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  margin: 14px 0;
+}
+.mgmt-card-grid .term-card {
+  display: flex;
+  flex-direction: column;
+  grid-row: unset;
+  grid-template-rows: unset;
+}
+.term-card-img {
+  width: 100%;
+  display: block;
+  object-fit: contain;
+  aspect-ratio: 16 / 5;
+  margin-bottom: 8px;
+}
 
 /* ── 23. EXAMPLE WRAP ────────────────────────────────────── */
 .example-wrap {
