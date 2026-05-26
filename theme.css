@@ -450,11 +450,11 @@ li:last-child {
 .callout-blue-alert::before {
   content: "";
   display: block;
-  width: 38px;
-  height: 38px;
+  width: 44px;
+  height: 44px;
   flex-shrink: 0;
   background-image: url("https://github.com/rp-bizeeknowledge/Assets/blob/main/Warning-Blue.png?raw=true");
-  background-size: contain;
+  background-size: 88%;
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -502,11 +502,11 @@ li:last-child {
 .callout-yellow-warning::before {
   content: "";
   display: block;
-  width: 56px;
-  height: 56px;
+  width: 62px;
+  height: 62px;
   flex-shrink: 0;
-  background-image: url("https://github.com/rp-bizeeknowledge/Assets/blob/main/Alert-Yellow.png?raw=true");
-  background-size: contain;
+  background-image: url("https://github.com/rp-bizeeknowledge/Assets/blob/main/Warning-Yellow-Fake.png?raw=true");
+  background-size: 96%;
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -3227,12 +3227,14 @@ li:last-child {
   flex-direction: column;
   align-items: center;
   gap: 12px;
-  margin: 18px 0 22px;
+  margin: 18px auto 22px;
+  max-width: 560px;
 }
 .tax-flow.tax-flow-triangle .flow-node-top {
   width: min(520px, 100%);
 }
 .tax-flow.tax-flow-triangle .flow-arrow {
+
   width: 34px;
   height: 34px;
   border-radius: 50%;
@@ -3746,37 +3748,26 @@ li:last-child {
 }
 
 
-.red-alert {
-  display: flex;
-  align-items: center;
-  gap: 16px;
+.callout-red-warning {
   background: var(--red-light);
-  border: 1px solid var(--red-border);
-  border-radius: var(--radius);
+  border-color: var(--red-border);
   border-left: 6px solid var(--red-border);
-  padding: 16px 18px;
-  margin: 16px 0;
+  color: var(--red);
+  align-items: center;
 }
-.red-alert-icon {
-  font-size: 22px;
-  line-height: 1;
+.callout-red-warning::before {
+  content: "";
+  display: block;
+  width: 44px;
+  height: 44px;
   flex-shrink: 0;
+  background-image: url("https://github.com/rp-bizeeknowledge/Assets/blob/main/Red%20Warning.png?raw=true");
+  background-size: 88%;
+  background-repeat: no-repeat;
+  background-position: center;
 }
-.red-alert-img {
-  vertical-align: middle;
-  width: 60px;
-  height: 60px;
-  border-radius: 0;
-  object-fit: initial;
-}
-.red-alert-text p {
-  font-size: 14px;
-  color: #7f1d1d;
-  margin-bottom: 8px;
-  line-height: 1.65;
-}
-.red-alert-text p:last-child {
-  margin-bottom: 0;
+.callout-red-warning p {
+  color: var(--red);
 }
 
 .blue-alert {
