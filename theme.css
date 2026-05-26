@@ -1142,7 +1142,7 @@ li:last-child {
   font-size: 17px;
   font-weight: 600;
   color: var(--dark);
-  margin-bottom: 6px;
+  margin-bottom: 12px;
   text-align: center;
 }
 .scenario.no h4 {
