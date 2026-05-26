@@ -2648,7 +2648,7 @@ li:last-child {
   color: var(--mid);
   margin-bottom: 8px;
   line-height: 1.65;
-  text-align: left;
+  text-align: justify;
 }
 .pricing-formula p:last-child {
   margin-bottom: 0;
