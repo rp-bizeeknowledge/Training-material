@@ -514,6 +514,27 @@ li:last-child {
   color: var(--amber);
   text-align: justify;
 }
+.callout-red-warning {
+  background: var(--red-light);
+  border-color: var(--red-border);
+  border-left: 6px solid var(--red-border);
+  color: var(--red);
+  align-items: center;
+}
+.callout-red-warning::before {
+  content: "";
+  display: block;
+  width: 44px;
+  height: 44px;
+  flex-shrink: 0;
+  background-image: url("https://github.com/rp-bizeeknowledge/Assets/blob/main/Red%20Warning.png?raw=true");
+  background-size: 88%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.callout-red-warning p {
+  color: var(--red);
+}
 
 /* ── 10. RULE ITEMS ───────────────────────────────────────── */
 .rules-list {
@@ -3750,28 +3771,6 @@ li:last-child {
   box-shadow: var(--shadow-xs);
 }
 
-
-.callout-red-warning {
-  background: var(--red-light);
-  border-color: var(--red-border);
-  border-left: 6px solid var(--red-border);
-  color: var(--red);
-  align-items: center;
-}
-.callout-red-warning::before {
-  content: "";
-  display: block;
-  width: 44px;
-  height: 44px;
-  flex-shrink: 0;
-  background-image: url("https://github.com/rp-bizeeknowledge/Assets/blob/main/Red%20Warning.png?raw=true");
-  background-size: 88%;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-.callout-red-warning p {
-  color: var(--red);
-}
 
 .blue-alert {
   display: flex;
