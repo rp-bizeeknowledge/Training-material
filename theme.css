@@ -417,6 +417,7 @@ li:last-child {
 /* ── 9. CALLOUTS ──────────────────────────────────────────── */
 .callout {
   display: flex;
+  align-items: center;
   gap: 12px;
   padding: 14px 16px;
   border-radius: var(--radius-sm);
@@ -437,17 +438,18 @@ li:last-child {
   font-size: 14px;
   line-height: 1.65;
   margin: 0;
-  text-align: left;
+  color: inherit;
+  text-align: justify;
 }
 
-.callout-blue-alert {
+/* warning variants */
+.callout-blue-warning {
   background: var(--blue-light);
   border-color: var(--blue-border);
   border-left: 6px solid var(--blue-border);
   color: var(--blue);
-  align-items: center;
 }
-.callout-blue-alert::before {
+.callout-blue-warning::before {
   content: "";
   display: block;
   width: 44px;
@@ -458,12 +460,47 @@ li:last-child {
   background-repeat: no-repeat;
   background-position: center;
 }
+.callout-yellow-warning {
+  background: var(--amber-light);
+  border-color: var(--amber-border);
+  border-left: 6px solid var(--amber-border);
+  color: var(--amber);
+}
+.callout-yellow-warning::before {
+  content: "";
+  display: block;
+  width: 44px;
+  height: 44px;
+  flex-shrink: 0;
+  background-image: url("https://github.com/rp-bizeeknowledge/Assets/blob/main/Warning-Yellow-Fake.png?raw=true");
+  background-size: 96%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.callout-red-warning {
+  background: var(--red-light);
+  border-color: var(--red-border);
+  border-left: 6px solid var(--red-border);
+  color: var(--red);
+}
+.callout-red-warning::before {
+  content: "";
+  display: block;
+  width: 44px;
+  height: 44px;
+  flex-shrink: 0;
+  background-image: url("https://github.com/rp-bizeeknowledge/Assets/blob/main/Red%20Warning.png?raw=true");
+  background-size: 88%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* pro-tip variant */
 .callout-pro-tip {
   background: var(--orange-light);
   border-color: var(--orange-mid);
   border-left: 6px solid var(--orange);
   color: var(--orange-deep);
-  align-items: center;
 }
 .callout-pro-tip::before {
   content: "";
@@ -491,49 +528,6 @@ li:last-child {
 }
 .callout-pro-tip-body p {
   margin: 0;
-}
-.callout-yellow-warning {
-  background: var(--amber-light);
-  border-color: var(--amber-border);
-  border-left: 6px solid var(--amber-border);
-  color: var(--amber);
-  align-items: center;
-}
-.callout-yellow-warning::before {
-  content: "";
-  display: block;
-  width: 62px;
-  height: 62px;
-  flex-shrink: 0;
-  background-image: url("https://github.com/rp-bizeeknowledge/Assets/blob/main/Warning-Yellow-Fake.png?raw=true");
-  background-size: 96%;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-.callout-yellow-warning p {
-  color: var(--amber);
-  text-align: justify;
-}
-.callout-red-warning {
-  background: var(--red-light);
-  border-color: var(--red-border);
-  border-left: 6px solid var(--red-border);
-  color: var(--red);
-  align-items: center;
-}
-.callout-red-warning::before {
-  content: "";
-  display: block;
-  width: 44px;
-  height: 44px;
-  flex-shrink: 0;
-  background-image: url("https://github.com/rp-bizeeknowledge/Assets/blob/main/Red%20Warning.png?raw=true");
-  background-size: 88%;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-.callout-red-warning p {
-  color: var(--red);
 }
 
 /* ── 10. RULE ITEMS ───────────────────────────────────────── */
