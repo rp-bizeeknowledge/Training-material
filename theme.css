@@ -439,16 +439,79 @@ li:last-child {
   text-align: left;
 }
 
-.callout-blue {
+.callout-blue-alert {
   background: var(--blue-light);
   border-color: var(--blue-border);
   border-left: 6px solid var(--blue-border);
   color: var(--blue);
+  align-items: center;
 }
-.callout-green {
-  background: var(--green-light);
-  border-color: var(--green-border);
-  color: var(--green);
+.callout-blue-alert::before {
+  content: "";
+  display: block;
+  width: 38px;
+  height: 38px;
+  flex-shrink: 0;
+  background-image: url("https://github.com/rp-bizeeknowledge/Assets/blob/main/Warning-Blue.png?raw=true");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.callout-pro-tip {
+  background: var(--orange-light);
+  border-color: var(--orange-mid);
+  border-left: 6px solid var(--orange);
+  color: var(--orange-deep);
+  align-items: center;
+}
+.callout-pro-tip::before {
+  content: "";
+  display: block;
+  width: 56px;
+  height: 56px;
+  flex-shrink: 0;
+  background-image: url("https://github.com/rp-bizeeknowledge/Assets/blob/main/bizee-icon-pro-tip-1024x1024.png?raw=true");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.callout-pro-tip-body {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.callout-pro-tip-body::before {
+  content: "PRO TIP";
+  font-family: "DM Mono", monospace;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: var(--orange);
+}
+.callout-pro-tip-body p {
+  margin: 0;
+}
+.callout-yellow-warning {
+  background: var(--amber-light);
+  border-color: var(--amber-border);
+  border-left: 6px solid var(--amber-border);
+  color: var(--amber);
+  align-items: center;
+}
+.callout-yellow-warning::before {
+  content: "";
+  display: block;
+  width: 56px;
+  height: 56px;
+  flex-shrink: 0;
+  background-image: url("https://github.com/rp-bizeeknowledge/Assets/blob/main/Alert-Yellow.png?raw=true");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.callout-yellow-warning p {
+  color: var(--amber);
+  text-align: justify;
 }
 
 /* ── 10. RULE ITEMS ───────────────────────────────────────── */
@@ -1148,7 +1211,8 @@ li:last-child {
 }
 .term-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto 1fr;
   gap: 10px;
   margin: 14px 0;
 }
@@ -1159,8 +1223,9 @@ li:last-child {
   overflow: hidden;
   margin: 0;
   padding: 0;
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-row: span 2;
+  grid-template-rows: subgrid;
 }
 .term-label {
   align-self: stretch;
@@ -1169,9 +1234,8 @@ li:last-child {
   background: var(--orange);
   color: var(--white);
   padding: 14px 16px;
-  min-height: 62px;
   font-size: 14px;
-  font-weight: 550;
+  font-weight: 590;
   flex-shrink: 0;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -1182,12 +1246,13 @@ li:last-child {
   justify-content: center;
 }
 .term-card p {
-  font-size: 13px;
+  font-size: 12px;
   color: var(--muted);
   margin-top: 0;
   line-height: 1.6;
-  padding: 10px 16px;
+  padding: 10px 12px;
   text-align: left;
+  text-wrap: pretty;
 }
 
 /* ── 23. EXAMPLE WRAP ────────────────────────────────────── */
@@ -3160,20 +3225,31 @@ li:last-child {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 8px;
+  gap: 12px;
   margin: 18px 0 22px;
 }
 .tax-flow.tax-flow-triangle .flow-node-top {
   width: min(520px, 100%);
 }
-.tax-flow.tax-flow-triangle .flow-arrow-down {
-  font-size: 40px;
-  margin-right: 360px;
+.tax-flow.tax-flow-triangle .flow-arrow {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: var(--orange-light);
+  border: 1.5px solid var(--orange-mid);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
   color: var(--orange);
+  flex-shrink: 0;
+}
+.tax-flow.tax-flow-triangle .flow-arrow-down {
+  margin-right: 360px;
+  transform: rotate(90deg);
 }
 .tax-flow.tax-flow-triangle .flow-arrow-right {
-  font-size: 40px;
-  color: var(--orange);
+  margin: auto;
 }
 .tax-flow-bottom {
   display: grid;
@@ -3203,9 +3279,14 @@ li:last-child {
   color: var(--mid);
   margin-bottom: 6px;
 }
+.tax-flow.tax-flow-triangle .flow-node {
+  padding: 16px 20px;
+  box-shadow: var(--shadow-sm);
+}
 .tax-flow.tax-flow-triangle .fn-val {
-  font-size: 15px;
-  font-weight: 600;
+  font-size: 26px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
   color: var(--dark);
   margin: 0;
   text-align: center;
@@ -3216,8 +3297,251 @@ li:last-child {
     grid-template-columns: 1fr;
   }
   .tax-flow.tax-flow-triangle .flow-arrow-down {
-    transform: none;
+    transform: rotate(90deg);
+    margin-right: 0;
   }
+}
+
+/* ── tax-flow enhancements ───────────────────────────────── */
+.flow-node-profit {
+  background: var(--white);
+  border: 2px solid var(--orange);
+  box-shadow: var(--shadow-md);
+}
+.tax-flow.tax-flow-triangle .flow-node-profit .fn-tax {
+  color: var(--orange-deep);
+}
+.flow-node-salary {
+  background: var(--orange-light);
+  border-color: var(--orange-mid);
+}
+.flow-node-dist {
+  background: var(--white);
+}
+.fn-sub {
+  font-size: 11px;
+  color: var(--muted);
+  margin: 8px 0 0;
+  line-height: 1.45;
+  text-align: center;
+}
+.fn-tax {
+  font-size: 12px;
+  font-weight: 600;
+  margin: 8px 0 0;
+  text-align: center;
+}
+.fn-tax-orange { color: var(--orange-deep); }
+.fn-tax-green  { color: var(--green); }
+.fn-savings-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  background: var(--green-light);
+  border: 1px solid var(--green-border);
+  border-radius: var(--radius-sm);
+  padding: 12px 20px;
+  box-sizing: border-box;
+  box-shadow: var(--shadow-xs);
+}
+.fn-savings-label {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: var(--green);
+  font-family: "DM Mono", monospace;
+}
+.fn-savings-amt {
+  font-size: 24px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: var(--green);
+}
+.tax-savings-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  background: var(--green-light);
+  border: 1px solid var(--green-border);
+  border-radius: var(--radius-sm);
+  padding: 10px 18px;
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: 4px;
+}
+.tax-compare {
+  width: 100%;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  background: var(--white);
+  margin-top: 4px;
+}
+.tc-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.tc-col {
+  padding: 20px 24px;
+  text-align: center;
+}
+.tc-col:first-child {
+  border-right: 1px solid var(--border);
+}
+.tc-title {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--dark);
+  margin: 0 0 8px;
+}
+.tc-amount {
+  font-size: 40px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: var(--dark);
+  margin: 0 0 6px;
+}
+.tc-amount-cost {
+  color: var(--red);
+}
+.tc-desc {
+  font-size: 12px;
+  color: var(--muted);
+  line-height: 1.5;
+  margin: 0;
+}
+.tc-divider {
+  height: 1px;
+  background: var(--border);
+}
+.tc-savings {
+  padding: 16px 24px;
+  text-align: center;
+  background: var(--green-light);
+}
+.tc-savings-label {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--dark);
+  margin: 0 0 4px;
+}
+.tc-savings-amount {
+  font-size: 40px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: var(--green);
+  margin: 0;
+}
+@media (max-width: 520px) {
+  .tc-grid {
+    grid-template-columns: 1fr;
+  }
+  .tc-col:first-child {
+    border-right: none;
+    border-bottom: 1px solid var(--border);
+  }
+}
+
+/* ── S Corp tax comparison card ──────────────────────────── */
+.sc-tax-card {
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  margin: 18px 0 22px;
+}
+.sc-basis {
+  background: var(--orange);
+  color: var(--white);
+  text-align: center;
+  padding: 10px 24px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-family: "DM Mono", monospace;
+}
+.sc-cols {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background: var(--white);
+}
+.sc-col {
+  padding: 22px 24px;
+  text-align: center;
+}
+.sc-col + .sc-col {
+  border-left: 1px solid var(--border);
+}
+.sc-entity {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+  margin: 0 0 10px;
+  font-family: "DM Mono", monospace;
+}
+.sc-tax {
+  font-size: 44px;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  color: var(--dark);
+  margin: 0 0 10px;
+}
+.sc-detail {
+  font-size: 12px;
+  color: var(--muted);
+  line-height: 1.5;
+  margin: 0;
+}
+.sc-savings {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  background: var(--green-light);
+  border-top: 1px solid var(--green-border);
+  padding: 14px 24px;
+}
+.sc-save-label {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--green);
+  font-family: "DM Mono", monospace;
+}
+.sc-save-amt {
+  font-size: 30px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: var(--green);
+}
+@media (max-width: 520px) {
+  .sc-cols {
+    grid-template-columns: 1fr;
+  }
+  .sc-col + .sc-col {
+    border-left: none;
+    border-top: 1px solid var(--border);
+  }
+}
+
+.pin-list {
+  list-style: none;
+  padding: 0;
+  margin: 14px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.pin-list li {
+  font-size: 15px;
+  color: var(--mid);
+  line-height: 1.75;
 }
 
 .d-codes {
@@ -3420,40 +3744,6 @@ li:last-child {
   box-shadow: var(--shadow-xs);
 }
 
-.attorney-alert {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  background: var(--amber-light);
-  border: 1px solid var(--amber-border);
-  border-radius: var(--radius);
-  border-left: 6px solid var(--amber-border);
-  padding: 16px 18px;
-  margin: 16px 0;
-}
-.attorney-alert-icon {
-  font-size: 22px;
-  line-height: 1;
-  flex-shrink: 0;
-}
-.attorney-alert-img {
-  vertical-align: middle;
-  width: 60px;
-  height: 60px;
-  border-radius: 0;
-  object-fit: initial;
-}
-.attorney-alert-text p,
-p.attorney-alert-text {
-  font-size: 14px;
-  color: #78350f;
-  margin-bottom: 8px;
-  line-height: 1.65;
-}
-.attorney-alert-text p:last-child,
-p.attorney-alert-text:last-child {
-  margin-bottom: 0;
-}
 
 .red-alert {
   display: flex;
