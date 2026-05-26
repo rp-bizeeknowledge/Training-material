@@ -41,53 +41,179 @@
           personal tax returns.
         </p>
         <p>
-          The main advantage of S Corp taxation is that it can help reduce
-          overall taxes for business owners by allowing them to separate salary
-          from profit distributions. This can lead to significant tax savings on
-          self-employment taxes, especially for profitable businesses with active
-          owner involvement.
-        </p>
-        <div class="tax-flow tax-flow-triangle">
-          <div class="flow-node flow-node-top flow-node-profit">
-            <p class="fn-label">Business Profit</p>
-            <p class="fn-val">$50,000</p>
-            <p class="fn-tax">As Sole Proprietor: 15.3% Tax = $7,650</p>
-          </div>
-          <div class="flow-arrow flow-arrow-down">→</div>
-          <div class="tax-flow-bottom">
-            <div class="flow-node flow-node-side flow-node-salary">
-              <p class="fn-label">Reasonable Salary</p>
-              <p class="fn-val">$30,000</p>
-              <p class="fn-tax fn-tax-orange">15.3% = ~$4,590 in payroll taxes</p>
-            </div>
-            <div class="flow-arrow flow-arrow-right">→</div>
-            <div class="flow-node flow-node-side flow-node-dist">
-              <p class="fn-label">Distributions</p>
-              <p class="fn-val">$20,000</p>
-              <p class="fn-tax fn-tax-green">$0 payroll tax</p>
-            </div>
-          </div>
-          <div class="fn-savings-row">
-            <span class="fn-savings-label">Annual Savings vs. Sole Proprietor</span>
-            <span class="fn-savings-amt">~$3,060</span>
-          </div>
-        </div>
-        <p>
           This structure is why many small business owners choose S Corp
           taxation. It allows profits to pass through to the owners while
           separating salary from distributions, which can help reduce overall
           taxes when handled correctly and in accordance with IRS rules.
         </p>
-        <div class="callout callout-pro-tip">
+              <div class="section">
+        <div class="section-title">TAX BENEFITS FOR LLCs choosing s corp status</div>
+        <p>
+          Payroll taxes apply only to <strong>earned income</strong> (the salary an owner
+          pays themselves) not to profit distributions. By structuring
+          compensation this way, active business owners avoid paying the full
+          15.3% employment tax on every dollar the business earns. The example
+          below illustrates how that split plays out in practice.
+        </p>
+        <div class="scorp-diagram">
+
+          <div class="sd-header">
+            <p class="sd-header-lbl">gross Business Profit</p>
+            <p class="sd-header-val">$50,000</p>
+          </div>
+
+          <div class="sd-cols">
+
+            <!-- Left: without S Corp -->
+            <div class="sd-col">
+              <div class="sd-col-label sd-col-label-orange">Without S Corp</div>
+              <p class="sd-col-sub">Standard LLC</p>
+              <div class="sd-block sd-block-orange">
+                <p class="sd-blk-lbl">Taxable Amount</p>
+                <p class="sd-blk-amt">$50,000</p>
+                <p class="sd-blk-desc">Entire amount subject to self-employment tax (15.3%)</p>
+              </div>
+              <div class="sd-down-arrow">↓</div>
+              <div class="sd-result sd-result-orange">
+                <p class="sd-res-lbl">SE Tax Due</p>
+                <p class="sd-res-val">$7,650</p>
+                <p class="sd-res-calc">15.3% × $50,000</p>
+              </div>
+            </div>
+
+            <!-- Center divider -->
+            <div class="sd-divider">
+              <div class="sd-divider-line"></div>
+              <span class="sd-divider-vs">vs</span>
+              <div class="sd-divider-line"></div>
+            </div>
+
+            <!-- Right: with S Corp -->
+            <div class="sd-col">
+              <div class="sd-col-label sd-col-label-blue">With S Corp</div>
+              <p class="sd-col-sub">LLC being taxed as an S Corp</p>
+              <div class="sd-block sd-block-blue">
+                <span class="sd-blk-badge sd-blk-badge-blue">1</span>
+                <p class="sd-blk-lbl">Reasonable Salary</p>
+                <p class="sd-blk-amt">$30,000</p>
+                <p class="sd-blk-desc">Subject to payroll taxes (15.3%)</p>
+                <p class="sd-blk-tax">→ $4,590 payroll tax</p>
+                <div class="sd-tooltip-wrap">
+                  <span class="sd-tooltip-icon">i</span>
+                  <div class="sd-tooltip-box">
+                    The IRS uses a facts-and-circumstances test — no fixed formula. Key factors: market rate for the owner's role, time and effort devoted, experience, and comparable pay for similar work. The most defensible approach is a documented salary analysis. Customers should consult a CPA.
+                  </div>
+                </div>
+              </div>
+              <div class="sd-block-sep">+</div>
+              <div class="sd-block sd-block-neutral">
+                <span class="sd-blk-badge sd-blk-badge-muted">2</span>
+                <p class="sd-blk-lbl">Owner Distribution</p>
+                <p class="sd-blk-amt">$20,000</p>
+                <p class="sd-blk-desc"><strong>Not</strong> subject to payroll taxes</p>
+                <p class="sd-blk-tax sd-blk-tax-muted">→ $0 payroll tax</p>
+              </div>
+              <div class="sd-down-arrow">↓</div>
+              <div class="sd-savings">
+                <div class="sd-sav-top">
+                  <div class="sd-sav-icon">↗</div>
+                  <div>
+                    <p class="sd-sav-val">~$3,060</p>
+                  </div>
+                </div>
+                <p class="sd-sav-desc">In savings from paying payroll taxes only on the salary portion of profit.</p>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+        <br>
+                <div class="callout callout-pro-tip">
           <div class="callout-pro-tip-body">
             <p>Our website has an <a href="https://bizee.com/taxes/s-corporation-tax-calculator" target="_blank">S Corp Tax Calculator</a>
                you can share with customers if they'd like to get an aproximate calculation of their potential tax savings, based on the expected income.</p>
           </div>
         </div>
-      </div>
+      </div><BR>
+<div class="section-title">TAX BENEFITS FOR C CORPS choosing s corp status</div>
+        <p>
+          A C Corporation is taxed twice: once at the corporate level, and again
+          when profits are distributed to shareholders as dividends. Electing
+          S Corp status eliminates that second layer by passing income directly
+          to the owner's personal return. The example below illustrates the
+          difference in tax exposure between the two structures.
+        </p>
+        <div class="scorp-diagram">
 
+          <div class="sd-header">
+            <p class="sd-header-lbl">Business Profit After Corporate Tax</p>
+            <p class="sd-header-val">$50,000</p>
+          </div>
+
+          <div class="sd-cols">
+
+            <!-- Left: C Corp without S Corp status -->
+            <div class="sd-col">
+              <div class="sd-col-label sd-col-label-orange">Without S Corp</div>
+              <p class="sd-col-sub">Standard C Corporation</p>
+              <div class="sd-block sd-block-orange">
+                <p class="sd-blk-lbl">Qualified Dividend Tax</p>
+                <p class="sd-blk-amt">$7,500</p>
+                <p class="sd-blk-desc">15% dividend tax on distributed profits</p>
+              </div>
+              <div class="sd-down-arrow">↓</div>
+              <div class="sd-result sd-result-orange">
+                <p class="sd-res-lbl">Cash Distributed to Owner</p>
+                <p class="sd-res-val">$42,500</p>
+                <p class="sd-res-calc">After dividend tax</p>
+              </div>
+            </div>
+
+            <!-- Center divider -->
+            <div class="sd-divider">
+              <div class="sd-divider-line"></div>
+              <span class="sd-divider-vs">vs</span>
+              <div class="sd-divider-line"></div>
+            </div>
+
+            <!-- Right: S Corp pass-through -->
+            <div class="sd-col">
+              <div class="sd-col-label sd-col-label-blue">With S Corp</div>
+              <p class="sd-col-sub">C Corp taxed as an S Corp</p>
+              <div class="sd-block sd-block-neutral">
+                <p class="sd-blk-lbl">No Dividend Tax Layer</p>
+                <p class="sd-blk-amt">$0</p>
+                <p class="sd-blk-desc">Profits pass directly to owner</p>
+              </div>
+              <div class="sd-down-arrow">↓</div>
+              <div class="sd-result sd-result-blue">
+                <p class="sd-res-lbl">Dividend Tax Avoided</p>
+                <p class="sd-res-val">$7,500</p>
+                <p class="sd-res-calc">No second layer of dividend taxation</p>
+              </div>
+              <div class="sd-down-arrow">↓</div>
+              <div class="sd-savings">
+                <div class="sd-sav-top">
+                  <div class="sd-sav-icon">↗</div>
+                  <div>
+                    <p class="sd-sav-lbl">Pass-Through Income</p>
+                    <p class="sd-sav-val">$50,000</p>
+                  </div>
+                </div>
+                <p class="sd-sav-desc">Reported on owner's personal tax return · personal income tax still applies at ordinary rates.</p>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+
+<BR
+>
       <div class="section">
-        <div class="section-title">How It Works During Formation</div>
+        <div class="section-title">How does it work during order placement?</div>
         <div class="process-steps">
           <div class="process-step">
             <div class="process-left">
