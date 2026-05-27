@@ -866,20 +866,20 @@ li:last-child {
   font-family: "DM Mono", monospace;
 }
 .sb-review {
-  background: var(--blue-light);
-  color: var(--blue);
-}
-.sb-hold {
   background: var(--amber-light);
   color: var(--amber);
 }
+.sb-hold {
+  background: var(--red-light);
+  color: var(--red);
+}
 .sb-processing {
-  background: var(--purple-light);
-  color: var(--purple);
+  background: var(--blue-light);
+  color: var(--blue);
 }
 .sb-forwarded {
-  background: var(--orange-light);
-  color: var(--orange);
+  background: var(--purple-light);
+  color: var(--blue);
 }
 .sb-shipped {
   background: var(--green-light);
