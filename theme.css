@@ -4490,6 +4490,7 @@ li:last-child {
   color: var(--amber);
   font-family: "DM Mono", monospace;
   line-height: 1.5;
+  margin: 6px 0;
 }
 .best-for-img-card p {
   font-size: 13px;
