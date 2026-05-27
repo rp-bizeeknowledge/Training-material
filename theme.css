@@ -5338,9 +5338,13 @@ li:last-child {
 
 .analogy-float {
   display: flex;
+  flex-wrap: wrap;
   gap: 40px;
   margin: 28px 0;
   align-items: flex-start;
+  background: var(--white);
+  border-radius: var(--radius);
+  padding: 28px 32px;
 }
 .analogy-float-item {
   flex: 1;
@@ -5360,6 +5364,13 @@ li:last-child {
   font-weight: 700;
   color: var(--orange);
   letter-spacing: -0.01em;
+}
+.analogy-float-intro {
+  flex-basis: 100%;
+  font-size: 13px;
+  color: var(--mid);
+  font-style: italic;
+  margin: 0 0 4px;
 }
 .analogy-float-desc {
   font-size: 13.5px;
