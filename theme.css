@@ -4066,6 +4066,16 @@ li:last-child {
   padding: 16px 18px;
   box-shadow: var(--shadow-xs);
 }
+.doc-card h4 {
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: var(--amber);
+  font-family: "DM Mono", monospace;
+  line-height: 1.5;
+  margin: 6px 0;
+}
 
 .summary-box {
   background: var(--white);
@@ -4476,6 +4486,11 @@ li:last-child {
   align-items: center;
   gap: 12px;
   text-align: center;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 24px 20px;
+  box-shadow: var(--shadow-xs);
 }
 .best-for-img-card img {
   width: 100%;
@@ -5307,7 +5322,8 @@ li:last-child {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 10px;
-  margin: 14px 0;
+  margin: 14px auto;
+  max-width: 500px;
 }
 @media (max-width: 520px) {
   .price-row {
