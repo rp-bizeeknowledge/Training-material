@@ -4671,6 +4671,31 @@ li:last-child {
   flex-direction: column;
   gap: 12px;
   box-shadow: 0 4px 20px rgba(17, 17, 17, 0.07);
+  overflow: hidden;
+}
+.state-card-script {
+  margin-top: auto;
+  margin-left: -24px;
+  margin-right: -24px;
+  margin-bottom: -24px;
+  padding: 14px 24px 18px;
+  background: var(--bg);
+  border-top: 1px solid var(--border);
+}
+.state-card-script-label {
+  font-size: 9px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--orange);
+  margin-bottom: 7px;
+}
+.state-card-script-text {
+  font-size: 13px;
+  line-height: 1.65;
+  color: var(--mid);
+  margin: 0;
+  font-style: italic;
 }
 .state-card-header {
   display: flex;
