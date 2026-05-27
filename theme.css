@@ -2537,7 +2537,7 @@ li:last-child {
   border-radius: var(--radius-sm);
   padding: 12px 14px;
   display: grid;
-  grid-template-columns: 200px 1fr;
+  grid-template-columns: 1fr;
   gap: 12px;
   align-items: start;
   box-shadow: var(--shadow-xs);
@@ -2559,8 +2559,8 @@ li:last-child {
 }
 .product-tag {
   display: inline-block;
-  font-size: 11px;
-  font-weight: 600;
+  font-size: 14px;
+  font-weight: 500;
   padding: 2px 9px;
   background: var(--orange-light);
   border: 1px solid var(--orange-mid);
