@@ -129,16 +129,20 @@
           <p>An <strong>Amendment</strong> does <strong>not</strong> replace the Filed Articles. It simply becomes an additional record in the state's system, confirming that a change has occurred. The original filing always remains on record with the state for historical and legal reference.</p>
 
     <div class="analogy-float">
-      <p class="analogy-float-intro">Think of it like buying a used car:</p>
+      <p class="analogy-float-intro"><strong>Think of it like buying a used car:</strong></p>
 
       <div class="analogy-float-item">
-        <img src="https://github.com/rp-bizeeknowledge/Assets/blob/main/bizee-icon-vehicle-title-receive-1600x1000.png?raw=true" alt="Filed Articles">
+        <div class="pdf-trigger" onclick="openModal('modal-analogy-articles')">
+          <img src="https://github.com/rp-bizeeknowledge/Assets/blob/main/bizee-icon-vehicle-title-receive-1600x1000.png?raw=true" alt="Filed Articles">
+        </div>
         <div class="analogy-float-title">The Filed Articles</div>
         <p class="analogy-float-desc">Are like the original <strong>vehicle title</strong>, proof that the car exists and who first owned it. It never goes away; it stays on record permanently.</p>
       </div>
 
       <div class="analogy-float-item">
-        <img src="https://github.com/rp-bizeeknowledge/Assets/blob/main/bizee-icon-vehicle-title-sell-1600x1000.png?raw=true" alt="Amendment">
+        <div class="pdf-trigger" onclick="openModal('modal-analogy-amendment')">
+          <img src="https://github.com/rp-bizeeknowledge/Assets/blob/main/bizee-icon-vehicle-title-sell-1600x1000.png?raw=true" alt="Amendment">
+        </div>
         <div class="analogy-float-title">An Amendment</div>
         <p class="analogy-float-desc">Is similar to the <strong>title transfer</strong>. It updates the record to reflect what changed, without erasing the original. Both documents exist side by side.</p>
       </div>
@@ -150,10 +154,19 @@
 
   <div class="section">
     <div class="section-title">The Role of the Organizer</div>
-    <p>The role of the <strong>Organizer/Incorporator</strong> is limited to filing the necessary forms with the state and overseeing the formation process. Organizers are not owners or ongoing decision-makers. Once the company is formed, control automatically shifts to the actual members (LLCs) or directors (Corporations).</p>
-    <p>When a company is formed through our services, we include a <strong>Statement of the Organizer</strong> (for LLCs) or <strong>Statement of the Incorporator</strong> (for Corporations and Nonprofits). These confirm who filed the paperwork and show they stepped down after formation.</p>
+    <p>The individual who signs and submits the Articles on behalf of the company is called 
+      the <strong>Organizer</strong> (for LLCs) or <strong>Incorporator</strong> (for Corporations and Nonprofits). 
+      Their role is limited to preparing and filing the formation paperwork with the Secretary of State. 
+      Once the company is formed, their involvement ends. Organizers are <strong>not owners</strong> or ongoing 
+      decision-makers; control passes automatically to the members (for LLCs) or directors (for Corporations).</p>
+
+    <p>When forming through Bizee, we include a <strong>Statement of the Organizer</strong> or <strong>Statement 
+      of the Incorporator</strong> confirming who filed the paperwork and that their role ended at formation.</p>
+        
     <div class="callout callout-blue-warning">
-      <p>If ownership needs to be proven, the Statement, along with the Operating Agreement or corporate bylaws, can be used. This is especially helpful in states that do <strong>not list members or directors</strong> in the Articles of Organization or Incorporation.</p>
+      <p>If ownership needs to be proven, the Statement, along with the Operating Agreement or corporate bylaws, 
+        can be used. This is especially helpful in states that do <strong>not list members or directors</strong> in 
+        the Articles of Organization or Incorporation.</p>
     </div>
   </div>
 
@@ -184,6 +197,30 @@
     </div>
     <div class="pdf-modal-body">
       <iframe src="https://docs.google.com/viewer?url=https://github.com/rp-bizeeknowledge/Assets/raw/main/Art.%20of%20Incorporation.pdf&embedded=true"></iframe>
+    </div>
+  </div>
+</div>
+
+<div class="pdf-modal-overlay" id="modal-analogy-articles">
+  <div class="pdf-modal">
+    <div class="pdf-modal-header">
+      <span class="pdf-modal-title">Filed Articles · Analogy</span>
+      <button class="pdf-modal-close" onclick="closeModal('modal-analogy-articles')">✕</button>
+    </div>
+    <div class="pdf-modal-body">
+      <iframe src="https://docs.google.com/viewer?url=https://github.com/rp-bizeeknowledge/Assets/raw/main/Analogy%20Articles.pdf&embedded=true"></iframe>
+    </div>
+  </div>
+</div>
+
+<div class="pdf-modal-overlay" id="modal-analogy-amendment">
+  <div class="pdf-modal">
+    <div class="pdf-modal-header">
+      <span class="pdf-modal-title">Amendment · Analogy</span>
+      <button class="pdf-modal-close" onclick="closeModal('modal-analogy-amendment')">✕</button>
+    </div>
+    <div class="pdf-modal-body">
+      <iframe src="https://docs.google.com/viewer?url=https://github.com/rp-bizeeknowledge/Assets/raw/main/Analogy%20Amendment.pdf&embedded=true"></iframe>
     </div>
   </div>
 </div>

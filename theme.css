@@ -5339,7 +5339,8 @@ li:last-child {
 .analogy-float {
   display: flex;
   flex-wrap: wrap;
-  gap: 40px;
+  row-gap: 12px;
+  column-gap: 40px;
   margin: 28px 0;
   align-items: flex-start;
   background: var(--white);
@@ -5356,7 +5357,7 @@ li:last-child {
 }
 .analogy-float-item img {
   width: 100%;
-  max-width: 180px;
+  max-width: 210px;
   height: auto;
 }
 .analogy-float-title {
