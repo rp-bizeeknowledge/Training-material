@@ -531,7 +531,7 @@ li:last-child {
   width: var(--callout-icon-size);
   height: var(--callout-icon-size);
   flex-shrink: 0;
-  background-image: url("https://github.com/rp-bizeeknowledge/Assets/blob/main/bizee-icon-pro-tip-1024x1024.png?raw=true");
+  background-image: url("https://github.com/rp-bizeeknowledge/Assets/blob/main/bizee-icon-pro-tip-callout-1024x1024.png?raw=true");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
