@@ -259,7 +259,7 @@ ol {
 }
 li {
   font-size: 14px;
-  color: var(--mid);
+  color: inherit;
   line-height: 1.65;
   margin-bottom: 5px;
   text-align: justify;
