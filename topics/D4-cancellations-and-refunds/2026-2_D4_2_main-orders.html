@@ -13,35 +13,51 @@
   <a class="back-link" href="2026-2_D4_0_cancellations-and-refunds.html">← Back to Cancellations and Refunds</a>
 
   <div class="hero hero-soft">
-    <div class="hero-label">D4 · Section 02</div>
+    <div class="hero-label">Cancellations &amp; Refunds · Topic 02</div>
     <h1>Main <span>Orders</span></h1>
-    <div class="hero-sub">Rules · Status-based steps · Cancellation flow</div>
+    <div class="hero-sub">Rules and Steps to cancel and refund Main Orders</div>
   </div>
 
   <div class="section">
-    <div class="section-title">2.1 Rules</div>
-    <div class="rules-list">
-      <div class="rule-item note">
-        <span>🔺</span>
-        <p>To resolve an <strong>Identity Confirmation</strong> Issue, escalate to your supervisor using the <strong>"Identity Confirmation Issue - Order cancellation request"</strong> macro. Do not mark the issue as resolved on your own.</p>
-      </div>
-      <div class="rule-item info">
-        <span>ℹ️</span>
-        <p>If the order has an ongoing <strong>Order Issue (name not available or an additional information request)</strong>, click on <strong>"Resolve Issue"</strong> before you cancel and refund the order, or the system will not allow you to proceed.</p>
-      </div>
-      <div class="rule-item info">
-        <span>⏱️</span>
-        <p>A 3 to 5-business-day refund timeframe begins after the refund is applied through the <strong>Transaction History Tab</strong>. Communicate this to the customer so they know when to expect the funds.</p>
-      </div>
-      <div class="rule-item deny">
-        <span>🚫</span>
-        <p>Do not provide Cancellation or Refund confirmation until either process is complete.</p>
-      </div>
-    </div>
-  </div>
+    <div class="doc-frame" style="max-width: 25%;">
+      <img src="https://github.com/rp-bizeeknowledge/Assets/blob/main/C&R%20Main%20Order.png?raw=true" alt="Flowchart for cancelling and refunding Main Orders">
+      <div class="doc-frame-caption">Cancel &amp; Refund Flowchart for Main Orders</div>
+    </div>    
+    <div class="section-title">Rules</div>
+        <div class="req-grid">
+          <div class="req-card-wrap">
+            <div class="req-card">
+              <div class="req-card-big-num">1</div>
+              <div class="req-card-title">Identity Confirmation</div>
+              <div class="req-card-text">To resolve an <strong>Identity Confirmation</strong> Issue, escalate to your supervisor using the <strong>"Identity Confirmation Issue - Order cancellation request"</strong> macro. Do not mark the issue as resolved on your own.</div>
+            </div>
+          </div>
+          <div class="req-card-wrap">
+            <div class="req-card">
+              <div class="req-card-big-num">2</div>
+              <div class="req-card-title">Order Issues</div>
+              <div class="req-card-text">If the order has an ongoing <strong>Order Issue (name not available or an additional information request)</strong>, click on <strong>"Resolve Issue"</strong> before you cancel and refund the order, or the system will not allow you to proceed.</div>
+            </div>
 
+          </div>
+          <div class="req-card-wrap">
+            <div class="req-card">
+              <div class="req-card-big-num">3</div>
+              <div class="req-card-title">Communicate Refund Timeframe</div>
+              <div class="req-card-text">A 3 to 5-business-day refund timeframe begins after the refund is applied through the <strong>Transaction History Tab</strong>. Communicate this to the customer so they know when to expect the funds.</div>
+            </div>
+          </div>
+          <div class="req-card-wrap"> 
+            <div class="req-card">
+              <div class="req-card-big-num">4</div>
+              <div class="req-card-title">Confirm Cancellation &amp; Refund</div>
+              <div class="req-card-text">Do not provide Cancellation or Refund confirmation until either process is complete.</div>
+            </div>
+          </div>
+        </div>
+      </div>
   <div class="section">
-    <div class="section-title">2.2 Steps</div>
+    <div class="section-title">Steps</div>
     <div class="process-steps">
       <div class="process-step">
         <div class="process-left"><div class="process-num">1</div><div class="process-line"></div></div>
@@ -55,7 +71,7 @@
           <h4>Check the Order Status and Order History Tab. If the status is:</h4>
           <div class="status-flow">
             <div class="status-row">
-              <span class="status-badge sb-review">Pending Completion</span>
+              <span class="status-badge sb-review">Pending</span>
               <p>The Order can be cancelled and refunded.</p>
             </div>
             <div class="status-row">
@@ -64,14 +80,18 @@
             </div>
             <div class="status-row">
               <span class="status-badge sb-processing">Processing</span>
-              <p>▷ If there's a "Start Automation" comment: <strong>Do not cancel or refund.</strong><br>
-              ▷ If forwarded to the state: <strong>Do not cancel or refund.</strong><br>
-              ▷ If not forwarded to the state: <strong>Cancel and refund.</strong></p>
+              <ul>
+                <li><p>If there's a "Start Automation" comment: <strong>Do not cancel or refund.</strong></p></li>
+                <li><p>If forwarded to the state: <strong>Do not cancel or refund.</strong></p></li>
+                <li><p>If not forwarded to the state: <strong>Cancel and refund.</strong></p></li>
+              </ul>
             </div>
             <div class="status-row">
               <span class="status-badge sb-hold">Hold</span>
-              <p>▷ If forwarded to the state: <strong>Do not cancel or refund.</strong><br>
-              ▷ If not forwarded to the state: <strong>Cancel and refund only if</strong> there are no comments stating the order should not be cancelled or refunded.</p>
+              <ul>
+                <li><p>If forwarded to the state: <strong>Do not cancel or refund.</strong></p></li>
+                <li><p>If not forwarded to the state: <strong>Cancel and refund only if</strong> there are no comments stating the order should not be cancelled or refunded.</p></li>
+              </ul>
             </div>
             <div class="status-row">
               <span class="status-badge sb-forwarded">Forwarded</span>
@@ -101,8 +121,9 @@
 
   <div class="footer">
     <span class="footer-logo">Bizee</span>
-    <span class="footer-meta">Internal use only · Customer Service · D4 — Section 02 of 04</span>
+    <span class="footer-meta">Internal use only · Training & Development · Cancellations &amp; Refunds · Topic 02 of 04</span>
   </div>
 </div>
+<script src="../../theme.js"></script>
 </body>
 </html>

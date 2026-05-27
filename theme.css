@@ -866,20 +866,20 @@ li:last-child {
   font-family: "DM Mono", monospace;
 }
 .sb-review {
-  background: var(--blue-light);
-  color: var(--blue);
-}
-.sb-hold {
   background: var(--amber-light);
   color: var(--amber);
 }
+.sb-hold {
+  background: var(--red-light);
+  color: var(--red);
+}
 .sb-processing {
-  background: var(--purple-light);
-  color: var(--purple);
+  background: var(--blue-light);
+  color: var(--blue);
 }
 .sb-forwarded {
-  background: var(--orange-light);
-  color: var(--orange);
+  background: var(--purple-light);
+  color: var(--blue);
 }
 .sb-shipped {
   background: var(--green-light);
@@ -2537,7 +2537,7 @@ li:last-child {
   border-radius: var(--radius-sm);
   padding: 12px 14px;
   display: grid;
-  grid-template-columns: 200px 1fr;
+  grid-template-columns: 1fr;
   gap: 12px;
   align-items: start;
   box-shadow: var(--shadow-xs);
@@ -2559,8 +2559,8 @@ li:last-child {
 }
 .product-tag {
   display: inline-block;
-  font-size: 11px;
-  font-weight: 600;
+  font-size: 14px;
+  font-weight: 500;
   padding: 2px 9px;
   background: var(--orange-light);
   border: 1px solid var(--orange-mid);
@@ -4852,6 +4852,7 @@ li:last-child {
   font-size: 13.5px;
   line-height: 1.6;
   color: var(--mid);
+  text-align: justify;
 }
 @media (max-width: 520px) {
   .req-grid { grid-template-columns: 1fr; gap: 16px; margin-left: 48px; }
@@ -4874,7 +4875,7 @@ li:last-child {
   box-shadow: 0 4px 20px rgba(17, 17, 17, 0.07);
   overflow: hidden;
 }
-.state-card-script { ;
+.state-card-script {
   margin-top: auto;
   margin-left: -24px;
   margin-right: -24px;
