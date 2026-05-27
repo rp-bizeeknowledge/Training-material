@@ -4633,8 +4633,11 @@ li:last-child {
   background: var(--white);
   border: 1.5px solid var(--border);
   border-radius: var(--radius-sm);
-  padding: 16px 18px 16px 68px;
+  padding: 16px 18px;
   position: relative;
+}
+.req-card:has(.req-card-big-num) {
+  padding-left: 68px;
 }
 .req-card-title {
   font-size: 13px;
