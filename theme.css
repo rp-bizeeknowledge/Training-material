@@ -7,7 +7,7 @@
    ============================================================ */
 
 /* ── 0. FONTS ─────────────────────────────────────────────── */
-@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..900;1,9..40,100..900&family=DM+Mono:wght@400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..900;1,9..40,100..900&family=DM+Mono:wght@400;500&family=DM+Serif+Display&display=swap");
 
 /* ── 1. TOKENS ────────────────────────────────────────────── */
 :root {
@@ -3656,7 +3656,7 @@ li:last-child {
   text-align: center;
 }
 .sd-header-val {
-  font-size: 48px;
+  font-size: 42px;
   font-weight: 800;
   letter-spacing: -0.04em;
   color: var(--dark);
@@ -4605,6 +4605,52 @@ li:last-child {
   color: var(--green);
   font-weight: 600;
   flex-shrink: 0;
+}
+.req-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px 20px;
+  margin: 20px 0;
+}
+.req-card-wrap {
+  position: relative;
+}
+.req-card-big-num {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-family: "DM Serif Display", Georgia, serif;
+  font-size: 64px;
+  font-weight: 900;
+  font-variation-settings: "wght" 900;
+  line-height: 1;
+  color: #dde1e7;
+  user-select: none;
+  pointer-events: none;
+}
+.req-card {
+  background: var(--white);
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 16px 18px 16px 68px;
+  position: relative;
+}
+.req-card-title {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--orange);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-bottom: 5px;
+}
+.req-card-text {
+  font-size: 13.5px;
+  line-height: 1.6;
+  color: var(--mid);
+}
+@media (max-width: 520px) {
+  .req-grid { grid-template-columns: 1fr; gap: 16px; margin-left: 48px; }
 }
 .required-list {
   display: flex;
