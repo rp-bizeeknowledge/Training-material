@@ -691,6 +691,9 @@ li:last-child {
   flex-shrink: 0;
   margin-top: 2px;
 }
+.rule-item p {
+  font-size: 14px;
+}
 
 
 .script-line {
