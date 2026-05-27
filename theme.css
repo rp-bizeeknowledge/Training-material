@@ -4700,6 +4700,7 @@ li:last-child {
   font-size: 13.5px;
   line-height: 1.6;
   color: var(--mid);
+  text-align: justify;
 }
 @media (max-width: 520px) {
   .req-grid { grid-template-columns: 1fr; gap: 16px; margin-left: 48px; }
