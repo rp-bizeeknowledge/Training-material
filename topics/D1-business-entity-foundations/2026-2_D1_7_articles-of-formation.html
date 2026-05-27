@@ -6,6 +6,62 @@
 <title>D1.7 — Articles of Formation &amp; The Organizer</title>
 <link rel="stylesheet" href="https://rp-bizeeknowledge.github.io/Training-material/theme.css">
 <link rel="stylesheet" href="../../theme.css">
+<style>
+  .pdf-trigger { cursor: pointer; transition: transform 0.25s ease, filter 0.25s ease; }
+  .pdf-trigger:hover { transform: scale(1.1) translateY(-6px); filter: drop-shadow(0 10px 20px rgba(255, 90, 0, 0.3)); }
+
+  .pdf-modal-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(17, 17, 17, 0.6);
+    z-index: 1000;
+    align-items: center;
+    justify-content: center;
+  }
+  .pdf-modal-overlay.open { display: flex; }
+
+  .pdf-modal {
+    background: var(--white);
+    border-radius: var(--radius);
+    width: 90%;
+    max-width: 800px;
+    height: 85vh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    box-shadow: 0 24px 64px rgba(17, 17, 17, 0.28);
+  }
+  .pdf-modal-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 20px;
+    border-bottom: 1px solid var(--border);
+    flex-shrink: 0;
+  }
+  .pdf-modal-title {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--dark);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+  .pdf-modal-close {
+    background: none;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    color: var(--mid);
+    line-height: 1;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-family: inherit;
+  }
+  .pdf-modal-close:hover { background: var(--bg); color: var(--dark); }
+  .pdf-modal-body { flex: 1; overflow: hidden; }
+  .pdf-modal-body iframe { width: 100%; height: 100%; border: none; display: block; }
+</style>
 </head>
 <body>
 <div class="page">
@@ -20,78 +76,82 @@
 
   <div class="section">
     <div class="section-title">Filed Articles</div>
-    <p>When a customer purchases a <strong>formation package</strong> from Bizee, it creates what we call a <strong>Main Order</strong>. 
-      This Main Order triggers the filing process with the state and results in the creation of the <strong>Filed Articles</strong>, 
-      the official certificate that serves as proof of the company's formation and succesful registration with the Secretary of State. 
-      Think of it as the birth certificate of a company.</p> 
-    <div class="state-grid">
+    <p>When a customer purchases a <strong>formation package</strong> from Bizee, it creates what we call a <strong>Main Order</strong>.
+      This Main Order triggers the filing process with the state and results in the creation of the <strong>Filed Articles</strong>,
+      the official certificate that serves as proof of the company's formation and succesful registration with the Secretary of State.
+      Think of it as the birth certificate of a company.</p>
+    <div class="state-grid" style="max-width: 560px; margin-left: auto; margin-right: auto;">
 
       <div class="state-card">
         <div class="state-card-title">LLCs</div>
-        <div class="state-card-icon" style="align-self: center; margin-top: auto; width: 200px; height: 100px;"><img src="https://github.com/rp-bizeeknowledge/Assets/blob/main/bizee-icon-LLC-1600x800.png?raw=true" alt="LLC"></div>
-        <p class="state-card-desc" style="text-align: center; font-size: 15px;">Receive <strong style="color: var(--orange); font-weight: 800;">Articles of Organization</strong></p>
+        <div class="state-card-icon pdf-trigger" style="align-self: center; margin-top: auto; width: 200px; height: 100px;" onclick="openModal('modal-org')">
+          <img src="https://github.com/rp-bizeeknowledge/Assets/blob/main/Articles%20of%20Organization.png?raw=true" alt="LLC">
+        </div>
+        <p class="state-card-desc" style="text-align: center; font-size: 15px;"><strong style="color: var(--orange); font-weight: 800;">Articles of Organization</strong></p>
       </div>
 
       <div class="state-card">
-        <div class="state-card-title">Corporations / Nonprofits</div>
-        <div class="state-card-icon" style="align-self: center; margin-top: auto; width: 200px; height: 100px;"><img src="https://github.com/rp-bizeeknowledge/Assets/blob/main/bizee-icon-C-Corp-1600x800%20(1).png?raw=true" alt="Corporation"></div>
-        <p class="state-card-desc" style="text-align: center; font-size: 15px;">Receive <strong style="color: var(--orange); font-weight: 800;">Articles of Incorporation</strong></p>
+        <div class="state-card-title">Corporations & Nonprofits</div>
+        <div class="state-card-icon pdf-trigger" style="align-self: center; margin-top: auto; width: 200px; height: 100px;" onclick="openModal('modal-inc')">
+          <img src="https://github.com/rp-bizeeknowledge/Assets/blob/main/Articles%20of%20Incorporation.png?raw=true" alt="Corporation">
+        </div>
+        <p class="state-card-desc" style="text-align: center; font-size: 15px;"><strong style="color: var(--orange); font-weight: 800;">Articles of Incorporation</strong></p>
       </div>
 
     </div>
     <div class="callout callout-yellow-warning">
-      <p>Filed Articles can only be generated through a Main Order. They are <strong>not available</strong> for <strong>standalone purchase</strong>.</p>
+      <p>Filed Articles can only be generated through a Main Order. They are <strong>not available for standalone purchase</strong>.</p>
     </div>
 
   </div>
 
   <div class="section">
-    <div class="section-title">Delivery of Filed Articles</div>
-    <p>By default, customers receive <strong>digital PDF copies</strong> of the Filed Articles, accessible from their online dashboard. These copies are <strong>printable</strong> and carry the <strong>same legal weight</strong> as physical documents. Customers sometimes have the option of paying an <strong>additional $25 at checkout</strong> to receive a physical copy of the Filed Articles mailed to the contact address provided. When purchased, they are sent within <strong>3 to 5 business days</strong> after the company is officially formed.</p>
-    <div class="two-col">
-      <div class="info-card">
-        <h4>✓ Default — Digital PDF</h4>
-        <p>Accessible from the online dashboard. Printable, with the same legal weight as physical documents.</p>
-      </div>
-      <div class="info-card">
-        <h4>+ Optional — Physical Copy</h4>
-        <p>Additional <strong>$25 at checkout</strong>. Mailed within <strong>3 to 5 business days</strong> after the company is officially formed.</p>
-      </div>
+    <div class="section-title">document Delivery </div>
+    <p>By default, customers receive <strong>the original PDF files</strong> of the their Articles, through their online dashboard.
+      These copies are <strong>printable</strong> and carry the <strong>same legal weight</strong> as physical documents.</p>
+    <div class="doc-frame" style="max-width: 560px;">
+      <img src="https://github.com/rp-bizeeknowledge/Assets/blob/main/Completed%20Docs.gif?raw=true" alt="Completed Documents Preview">
+      <div class="doc-frame-caption">Filed Articles · Dashboard View</div>
     </div>
-  </div>
 
+      <p>Customers sometimes have the option of paying an <strong>additional $25 at checkout</strong> to receive a physical copy of
+        the Filed Articles mailed to the contact address provided. When purchased, they are sent within <strong>3 to 5 business
+          days</strong> after the company is officially formed.</p>
+    <div class="doc-frame" style="max-width: 560px;">
+      <img src="https://github.com/rp-bizeeknowledge/Assets/blob/main/FedEx%20Option.png?raw=true" alt="FedEx Physical Copy Option">
+      <div class="doc-frame-caption">Physical Copy · Checkout Option</div>
+    </div>
   <div class="section">
-    <div class="section-title">Updating Filed Articles</div>
-    <p>If a customer later needs to change the information listed on the filed articles, such as the business name, company address, or management structure, these changes cannot be made by editing or reissuing the original Filed Articles. Instead, the customer must file a separate document called an <strong>Amendment</strong>.</p>
+    <div class="section-title">Updating information in the Filed Articles</div>
+    <p>If a customer later needs to change the information listed on the filed articles, such as the <strong>business name</strong>,
+      <strong>company address</strong>, or <strong>management structure</strong>, these changes cannot be made by editing or reissuing the original
+      Filed Articles. Instead, the customer must file a separate document called an <strong>Amendment</strong>.</p>
     <p>Think of it like buying a used car:</p>
-    <div class="analogy-wrap">
-      <div class="analogy-header"><h4>🚗 The Used Car Analogy</h4></div>
-      <div class="analogy-row">
-        <span class="analogy-badge primary">Filed Articles</span>
-        <div class="analogy-body">= The original title of ownership: it's proof of the initial setup.</div>
+    <div class="analogy-float">
+
+      <div class="analogy-float-item">
+        <img src="https://github.com/rp-bizeeknowledge/Assets/blob/main/bizee-icon-vehicle-title-receive-1600x1000.png?raw=true" alt="Filed Articles">
+        <div class="analogy-float-title">Filed Articles</div>
+        <p class="analogy-float-desc">The original vehicle title — proof that the car exists and who first owned it. It never goes away; it stays on record permanently.</p>
       </div>
-      <div class="analogy-row">
-        <span class="analogy-badge secondary">Amendment</span>
-        <div class="analogy-body">= The title transfer: it doesn't erase the original sale but updates the record to show who owns it now or what's changed.</div>
+
+      <div class="analogy-float-item">
+        <img src="https://github.com/rp-bizeeknowledge/Assets/blob/main/bizee-icon-vehicle-title-sell-1600x1000.png?raw=true" alt="Amendment">
+        <div class="analogy-float-title">Amendment</div>
+        <p class="analogy-float-desc">A title transfer — it updates the record to reflect what changed, but doesn't erase the original. Both documents exist side by side.</p>
       </div>
+
     </div>
     <p>An <strong>Amendment</strong> does <strong>not</strong> replace the Filed Articles. It simply becomes an additional record in the state's system, confirming that a change has occurred. The original filing always remains on record with the state for historical and legal reference.</p>
   </div>
 
-  <div class="section">
-    <div class="section-title">Examples</div>
-    <div class="subsection-title">Limited Liability Company (LLC)</div>
-    <p>If the customer ordered an LLC, what they receive in return are <strong>Articles of Organization</strong>.</p>
-    <div class="subsection-title">C Corp, S Corp &amp; NFP</div>
-    <p>If one of the above entity types is chosen instead, customers receive Articles of Incorporation, which may also be called a Certificate of Formation or Incorporation, depending on the state.</p>
-  </div>
+
 
   <div class="section">
     <div class="section-title">The Role of the Organizer</div>
     <p>The role of the <strong>Organizer/Incorporator</strong> is limited to filing the necessary forms with the state and overseeing the formation process. Organizers are not owners or ongoing decision-makers. Once the company is formed, control automatically shifts to the actual members (LLCs) or directors (Corporations).</p>
     <p>When a company is formed through our services, we include a <strong>Statement of the Organizer</strong> (for LLCs) or <strong>Statement of the Incorporator</strong> (for Corporations and Nonprofits). These confirm who filed the paperwork and show they stepped down after formation.</p>
     <div class="callout callout-blue-warning">
-
       <p>If ownership needs to be proven, the Statement, along with the Operating Agreement or corporate bylaws, can be used. This is especially helpful in states that do <strong>not list members or directors</strong> in the Articles of Organization or Incorporation.</p>
     </div>
   </div>
@@ -101,5 +161,54 @@
     <span class="footer-meta">Internal use only · Training & Development · Business Entity Foundations · Topic 07 of 11</span>
   </div>
 </div>
+
+<!-- PDF Modals -->
+<div class="pdf-modal-overlay" id="modal-org">
+  <div class="pdf-modal">
+    <div class="pdf-modal-header">
+      <span class="pdf-modal-title">Articles of Organization — Sample</span>
+      <button class="pdf-modal-close" onclick="closeModal('modal-org')">✕</button>
+    </div>
+    <div class="pdf-modal-body">
+      <iframe src="https://docs.google.com/viewer?url=https://github.com/rp-bizeeknowledge/Assets/raw/main/Art.%20of%20Organization.pdf&embedded=true"></iframe>
+    </div>
+  </div>
+</div>
+
+<div class="pdf-modal-overlay" id="modal-inc">
+  <div class="pdf-modal">
+    <div class="pdf-modal-header">
+      <span class="pdf-modal-title">Articles of Incorporation — Sample</span>
+      <button class="pdf-modal-close" onclick="closeModal('modal-inc')">✕</button>
+    </div>
+    <div class="pdf-modal-body">
+      <iframe src="https://docs.google.com/viewer?url=https://github.com/rp-bizeeknowledge/Assets/raw/main/Art.%20of%20Incorporation.pdf&embedded=true"></iframe>
+    </div>
+  </div>
+</div>
+
+<script>
+  function openModal(id) {
+    document.getElementById(id).classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeModal(id) {
+    document.getElementById(id).classList.remove('open');
+    document.body.style.overflow = '';
+  }
+  document.querySelectorAll('.pdf-modal-overlay').forEach(function(el) {
+    el.addEventListener('click', function(e) {
+      if (e.target === el) closeModal(el.id);
+    });
+  });
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') {
+      document.querySelectorAll('.pdf-modal-overlay.open').forEach(function(el) {
+        closeModal(el.id);
+      });
+    }
+  });
+</script>
+<script src="../../theme.js"></script>
 </body>
 </html>
