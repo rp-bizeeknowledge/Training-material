@@ -691,6 +691,9 @@ li:last-child {
   flex-shrink: 0;
   margin-top: 2px;
 }
+.rule-item p {
+  font-size: 14px;
+}
 
 
 .script-line {
@@ -1176,7 +1179,7 @@ li:last-child {
   font-size: 14px;
   margin: 0;
   line-height: 1.6;
-  text-align: left;
+  text-align: justify;
   color: var(--dark);
 }
 .scenario.no p {
