@@ -29,3 +29,25 @@
     if (e.key === 'Escape') close();
   });
 })();
+
+// PDF modal
+window.openModal = function (id) {
+  document.getElementById(id).classList.add('open');
+  document.body.style.overflow = 'hidden';
+};
+window.closeModal = function (id) {
+  document.getElementById(id).classList.remove('open');
+  document.body.style.overflow = '';
+};
+document.querySelectorAll('.pdf-modal-overlay').forEach(function (el) {
+  el.addEventListener('click', function (e) {
+    if (e.target === el) window.closeModal(el.id);
+  });
+});
+document.addEventListener('keydown', function (e) {
+  if (e.key === 'Escape') {
+    document.querySelectorAll('.pdf-modal-overlay.open').forEach(function (el) {
+      window.closeModal(el.id);
+    });
+  }
+});

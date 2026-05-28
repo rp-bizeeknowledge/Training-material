@@ -6,62 +6,6 @@
 <title>D1.9 — Internal Governance &amp; Banking Docs</title>
 <link rel="stylesheet" href="https://rp-bizeeknowledge.github.io/Training-material/theme.css">
 <link rel="stylesheet" href="../../theme.css">
-<style>
-  .pdf-trigger { cursor: pointer; transition: transform 0.25s ease, filter 0.25s ease; }
-  .pdf-trigger:hover { transform: scale(1.1) translateY(-6px); filter: drop-shadow(0 10px 20px rgba(255, 90, 0, 0.3)); }
-
-  .pdf-modal-overlay {
-    display: none;
-    position: fixed;
-    inset: 0;
-    background: rgba(17, 17, 17, 0.6);
-    z-index: 1000;
-    align-items: center;
-    justify-content: center;
-  }
-  .pdf-modal-overlay.open { display: flex; }
-
-  .pdf-modal {
-    background: var(--white);
-    border-radius: var(--radius);
-    width: 90%;
-    max-width: 800px;
-    height: 85vh;
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-    box-shadow: 0 24px 64px rgba(17, 17, 17, 0.28);
-  }
-  .pdf-modal-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 14px 20px;
-    border-bottom: 1px solid var(--border);
-    flex-shrink: 0;
-  }
-  .pdf-modal-title {
-    font-size: 13px;
-    font-weight: 700;
-    color: var(--dark);
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-  }
-  .pdf-modal-close {
-    background: none;
-    border: none;
-    font-size: 18px;
-    cursor: pointer;
-    color: var(--mid);
-    line-height: 1;
-    padding: 4px 8px;
-    border-radius: 4px;
-    font-family: inherit;
-  }
-  .pdf-modal-close:hover { background: var(--bg); color: var(--dark); }
-  .pdf-modal-body { flex: 1; overflow: hidden; }
-  .pdf-modal-body iframe { width: 100%; height: 100%; border: none; display: block; }
-</style>
 </head>
 <body>
 <div class="page">
@@ -78,8 +22,8 @@
     <div class="section-title">LLC Operating Agreement</div>
     <div style="background: var(--white); border-top: 3px solid var(--orange); border-radius: var(--radius-sm); padding: 22px 24px 24px; box-shadow: 0 4px 20px rgba(17,17,17,0.07); margin: 14px 0; overflow: hidden;">
       <img src="https://github.com/rp-bizeeknowledge/Assets/blob/main/bizee-icon-operating-agreement.png?raw=true" alt="Operating Agreement" class="pdf-trigger" style="float: left; width: 120px; height: auto; margin: 4px 24px 16px 0;" onclick="openModal('modal-oa')">
-      <p>An <strong>Operating Agreement</strong> is a private contract between the <strong>members</strong> of an LLC. It defines how the business will be managed, including ownership percentages, decision-making processes, profit and loss distribution, and what happens when a member joins or leaves. It helps set clear expectations and reduces the risk of misunderstandings among members.</p>
-      <p>We provide an <strong>Operating Agreement</strong> template with standard and premium orders. However, to be valid, it must be <strong>completed, dated,</strong> and <strong>signed</strong> by the members. <em>Some</em> banks or agencies may also require it to be <strong>notarized</strong>.</p>
+      <p style="font-size: 14px;">An <strong>Operating Agreement</strong> is a private contract between the <strong>members</strong> of an LLC. It defines how the business will be managed, including ownership percentages, decision-making processes, profit and loss distribution, and what happens when a member joins or leaves. It helps set clear expectations and reduces the risk of misunderstandings among members.</p>
+      <p style="font-size: 14px;">We provide an <strong>Operating Agreement</strong> template with standard and premium orders. However, to be valid, it must be <strong>completed, dated,</strong> and <strong>signed</strong> by the members. <em>Some</em> banks or agencies may also require it to be <strong>notarized</strong>.</p>
     </div>
     <div class="subsection-title">Importance</div>
     <p>Even if not legally required, having an Operating Agreement is strongly recommended because it:</p>
@@ -90,10 +34,9 @@
     </div>
     <div class="subsection-title">State Requirements</div>
     <p>Some states (such as <strong>California</strong> and <strong>New York</strong>) require LLCs to have an Operating Agreement. Without one, default laws will apply, which may not align with your intended structure (i.e., splitting profits equally regardless of investment).</p>
-    <div class="state-chips">
-      <span class="state-chip">California</span>
-      <span class="state-chip">New York</span>
-    </div>
+    <div class="subsection-title">Updates</div>
+    <p>The operating agreement can be modified if the LLC's structure or internal operations need to change. If the change affects information filed with the state (i.e., changing the LLC's management structure or registered member information), an amendment filing may be required before the update. For less formal changes, such as updating membership percentages, an internal update may be sufficient.</p>
+
   </div>
 
   <div class="section">
@@ -105,46 +48,40 @@
           <img src="https://github.com/rp-bizeeknowledge/Assets/blob/main/bizee-icon-corporate-bylaws-1024x1024.png?raw=true" alt="Corporate Bylaws">
         </div>
         <p class="state-card-desc" style="text-align: center; font-size: 16px;"><strong style="color: var(--orange); font-weight: 800;">Corporate Bylaws</strong></p>
-        <p class="state-card-desc">Corporate bylaws serve as a corporation's internal rulebook, defining the roles and responsibilities of shareholders, directors, and officers. They also outline how critical decisions are made. Essentially, bylaws provide the framework for running the business, ensuring that everyone within the company is aligned with its goals and operations.</p>
+        <p class="state-card-desc" style="font-size: 14px;">Corporate bylaws serve as a corporation's internal rulebook, defining the roles and responsibilities of shareholders, directors, and officers. They also outline how critical decisions are made. Essentially, bylaws provide the framework for running the business, ensuring that everyone within the company is aligned with its goals and operations.</p>
       </div>
       <div class="state-card">
         <div class="state-card-icon pdf-trigger" style="align-self: center; width: 130px; height: 130px;" onclick="openModal('modal-minutes')">
           <img src="https://github.com/rp-bizeeknowledge/Assets/blob/main/bizee-icon-meeting-minutes-1024x1024.png?raw=true" alt="Meeting Minutes">
         </div>
         <p class="state-card-desc" style="text-align: center; font-size: 16px;"><strong style="color: var(--orange); font-weight: 800;">Meeting Minutes</strong></p>
-        <p class="state-card-desc">Meeting minutes are the <strong>official record of board meetings</strong>. While the bylaws set the rules, the minutes document how those rules are applied, recording who attended, what decisions were made, and what actions were taken. These minutes provide a historical account of the company's decision-making process and <strong>serve as proof of the actions taken</strong> during meetings.</p>
+        <p class="state-card-desc" style="font-size: 14px;">Meeting minutes are the <strong>official record of board meetings</strong>. While the bylaws set the rules, the minutes document how those rules are applied, recording who attended, what decisions were made, and what actions were taken. These minutes provide a historical account of the company's decision-making process and <strong>serve as proof of the actions taken</strong> during meetings.</p>
       </div>
     </div>
     <div class="subsection-title">Importance</div>
-    <p>The corporate bylaws and meeting minutes help establish a clear record of the company's internal structure, ensuring compliance from the start. These documents are <strong>particularly useful in states where directors are not listed in the Articles of Incorporation</strong>.</p>
-    <div class="subsection-title">Templates</div>
-    <div class="callout callout-yellow-warning">
-      <p>It is important to note that any templates provided by Bizee must be <strong>reviewed</strong>, <strong>completed</strong>, and <strong>signed</strong> by the corporation's board of directors. Depending on third-party requirements (e.g., banks or licensing authorities), <strong>notarization may also be necessary</strong>.</p>
+    <p>Corporate bylaws and meeting minutes are important governance documents because they:</p>
+    <div class="benefits-list">
+      <div class="benefit-item"><strong>Establish internal structure</strong> by creating a clear record of how the corporation is organized and governed</div>
+      <div class="benefit-item"><strong>Ensure compliance from the start</strong> by formalizing roles, rules, and decision-making processes</div>
+      <div class="benefit-item"><strong>Prove governance and ownership</strong> in states where directors are not listed in the Articles of Incorporation</div>
     </div>
+    <div class="subsection-title">State Requirements</div>
+    <p>Most states require corporations to adopt bylaws, hold regular meetings, maintain meeting minutes, and follow corporate formalities. Requirements vary by state; for example, <strong>Delaware</strong> requires corporations to maintain certain corporate records and document key business decisions. Failing to follow these formalities can put the corporation's good standing and liability protections at risk.</p>
+    
     <div class="subsection-title">Updates</div>
     <p>The bylaws can be modified if the company's structure needs to change (i.e., altering management roles or updating shareholder information). If the change involves something that needs to be listed with the state (i.e., a director change), an amendment may be required before the update. For less formal changes, such as updating shareholder information, an email may be sufficient to update the record.</p>
   </div>
 
   <div class="section">
     <div class="section-title">Banking Resolution</div>
-    <p>The Banking Resolution is a document that authorizes an individual to open and manage a bank account on behalf of a business entity. This individual is also designated as an "<strong>authorized signer</strong>", giving them the ability to handle the bank account.</p>
-    <p>For customers who file a main order with us, the Banking Resolution is included in our <strong>Standard</strong> and <strong>Premium</strong> packages. If they did not select one of these packages, the Banking Resolution can still be added through our <strong>Business Contract Templates</strong> library for a <strong>$150 fee</strong>. It is not available as a standalone service outside these options.</p>
-    <div class="price-row">
-      <div class="price-card free">
-        <h4>Included</h4>
-        <span class="amount">$0</span>
-        <p>Standard Package · Premium Package</p>
-      </div>
-      <div class="price-card paid">
-        <h4>Add-On</h4>
-        <span class="amount">$150</span>
-        <p>Via Business Contract Templates, if Standard/Premium was not selected</p>
-      </div>
-    </div>
-    <div class="internal-box">
-      <div class="internal-label">Internal Only — Do Not Share with Customer</div>
-      <p>The Banking Resolution is <strong>not available as a standalone service</strong> outside of these options. There is no other way to obtain it.</p>
-    </div>
+    <div style="background: var(--white); border-top: 3px solid var(--orange); border-radius: var(--radius-sm); padding: 22px 24px 24px; box-shadow: 0 4px 20px rgba(17,17,17,0.07); margin: 14px 0; overflow: hidden;">
+      <img src="https://github.com/rp-bizeeknowledge/Assets/blob/main/bizee-icon-banking-resolution-1024x1024.png?raw=true" alt="Banking Resolution" class="pdf-trigger" style="float: left; width: 140px; height: auto; margin: 4px 16px 16px 0;" onclick="openModal('modal-banking')">
+      <p style="font-size: 14px;">The Banking Resolution is a document that authorizes an individual to open and manage a bank account on behalf of a business entity. This individual is also designated as an "<strong>authorized signer</strong>", giving them the ability to handle the bank account.</p>
+      <p style="font-size: 14px;">For customers who file a main order with us, the Banking Resolution is included in our <strong>Standard</strong> and <strong>Premium</strong> packages. If they did not select one of these packages, the Banking Resolution can still be added through our <strong>Business Contract Templates</strong> library for a <strong>$150 fee</strong>. It is not available as a standalone service outside these options.</p>
+    </div><br>
+<div class="callout callout-red-warning">
+  <p>Any templates provided by Bizee should be <strong>reviewed</strong>, <strong>completed</strong>, and <strong>signed</strong> by the appropriate parties for the business entity (e.g., members or managers for LLCs, directors or officers for corporations). Depending on third-party requirements (such as banks or licensing authorities), <strong>notarization may also be required</strong>.</p>
+</div>
   </div>
 
   <div class="footer">
@@ -190,28 +127,19 @@
   </div>
 </div>
 
-<script>
-  function openModal(id) {
-    document.getElementById(id).classList.add('open');
-    document.body.style.overflow = 'hidden';
-  }
-  function closeModal(id) {
-    document.getElementById(id).classList.remove('open');
-    document.body.style.overflow = '';
-  }
-  document.querySelectorAll('.pdf-modal-overlay').forEach(function(el) {
-    el.addEventListener('click', function(e) {
-      if (e.target === el) closeModal(el.id);
-    });
-  });
-  document.addEventListener('keydown', function(e) {
-    if (e.key === 'Escape') {
-      document.querySelectorAll('.pdf-modal-overlay.open').forEach(function(el) {
-        closeModal(el.id);
-      });
-    }
-  });
-</script>
+<div class="pdf-modal-overlay" id="modal-banking">
+  <div class="pdf-modal">
+    <div class="pdf-modal-header">
+      <span class="pdf-modal-title">Banking Resolution · Sample</span>
+      <button class="pdf-modal-close" onclick="closeModal('modal-banking')">✕</button>
+    </div>
+    <div class="pdf-modal-body">
+      <iframe src="https://docs.google.com/viewer?url=https://github.com/rp-bizeeknowledge/Assets/raw/main/Banking%20Res.pdf&embedded=true"></iframe>
+    </div>
+  </div>
+</div>
+
+
 <script src="../../theme.js"></script>
 </body>
 </html>
