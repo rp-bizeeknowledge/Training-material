@@ -1787,7 +1787,7 @@ li:last-child {
 }
 .proc-body p {
   font-size: 14px;
-  color: var(--mid);
+  color: inherit;
   margin-bottom: 10px;
   line-height: 1.7;
 }
@@ -1795,7 +1795,7 @@ li:last-child {
   margin-bottom: 0;
 }
 .proc-body strong {
-  color: var(--dark);
+  color: inherit;
 }
 .proc-body ul,
 .proc-body ol {
