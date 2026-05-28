@@ -13,45 +13,64 @@
   <a class="back-link" href="2026-2_D4_0_cancellations-and-refunds.html">← Back to Cancellations and Refunds</a>
 
   <div class="hero hero-soft">
-    <div class="hero-label">D4 · Section 03</div>
+    <div class="hero-label">Cancellations &amp; Refunds · Topic 03</div>
     <h1>Miscellaneous <span>Orders</span></h1>
-    <div class="hero-sub">Product orders · Rules · Steps · SFB bundle scenario</div>
+    <div class="hero-sub">Rules and steps to cancel and refund Miscellaneous Orders</div>
   </div>
 
   <div class="section">
-    <div class="section-title">3.1 Product Orders</div>
+      
+    <div class="doc-frame" style="max-width: 25%;">
+      <img src="https://github.com/rp-bizeeknowledge/Assets/blob/main/cr-misc-order.png?raw=true" alt="Flowchart for cancelling and refunding Miscellaneous Orders">
+      <div class="doc-frame-caption">Cancel &amp; Refund Flowchart for Miscellaneous Orders</div>
+    </div>  
+    <div class="section">
+    <div class="section-title">Product Orders</div>
     <p>This applies to all orders for:</p>
     <div class="product-rows">
       <div class="product-row">
-        <div class="product-name">Covered Products</div>
-        <div class="product-rule">
+        <div class="product-name">
+          <div class="product-tags">
           <span class="product-tag">Annual Reports</span>
           <span class="product-tag">Amendment</span>
           <span class="product-tag">Change of Agent</span>
+          <span class="product-tag">Dissolution</span>
+          <span class="product-tag">Reinstatement</span>
           <span class="product-tag">Foreign Qualification</span>
           <span class="product-tag">Assumed Business Name</span>
           <span class="product-tag">Certificate of Good Standing</span>
-          <span class="product-tag">Dissolution</span>
-          <span class="product-tag">Reinstatement</span>
+          </div>
         </div>
       </div>
     </div>
 
     <div class="subsection-title">Rules</div>
-    <div class="rules-list">
-      <div class="rule-item info">
-        <span>ℹ️</span>
-        <p>If the order has an active <strong>Order Issue</strong>, click on <strong>"resolve issue"</strong> before you cancel the order, or the system will not allow you to proceed.</p>
+    <div class="section-title">Rules</div>
+        <div class="req-grid">
+          <div class="req-card-wrap">
+            <div class="req-card">
+              <div class="req-card-big-num">1</div>
+              <div class="req-card-title">Order Issues</div>
+              <div class="req-card-text">If the order has an active <strong>Order Issue</strong>, click on <strong>"resolve issue"</strong> before you cancel the order, or the system will not allow you to proceed.</div>
+            </div>
+          </div>
+          <div class="req-card-wrap">
+            <div class="req-card">
+              <div class="req-card-big-num">2</div>
+              <div class="req-card-title">Communicate Refund Timeframe</div>
+              <div class="req-card-text">The estimated timeframe for refunds is <strong>between 3 to 5 business days</strong>.</div>
+            </div>
+
+          </div>
+          <div class="req-card-wrap">
+            <div class="req-card">
+              <div class="req-card-big-num">3</div>
+              <div class="req-card-title">Confirm Cancellation &amp; Refund</div>
+              <div class="req-card-text">Do not provide Cancellation or Refund confirmation until the process is complete.</div>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="rule-item info">
-        <span>⏱️</span>
-        <p>The estimated timeframe for refunds is <strong>between 3 to 5 business days</strong>.</p>
-      </div>
-      <div class="rule-item deny">
-        <span>🚫</span>
-        <p>Do not provide Cancellation or Refund confirmation until the process is complete.</p>
-      </div>
-    </div>
 
     <div class="subsection-title">Steps</div>
     <div class="process-steps">
@@ -72,8 +91,17 @@
             </div>
             <div class="status-row">
               <span class="status-badge sb-hold">Hold</span>
-              <p>▷ If currently on hold, but at any point it has been forwarded to the state: Cancel and refund <strong>only if</strong> there are <strong>no comments</strong> stating the order should not be cancelled or refunded. If there is no comment (usually pinned) advising to NOT cancel the order, then proceed with refunding.<br><br>
-              ▷ If never forwarded to the state: Cancel and refund.</p>
+              <ul>
+                <li>If currently on hold, but at any point it has been forwarded to the state: Cancel and refund <strong>only if</strong> there are <strong>no comments</strong> stating the order should not be cancelled or refunded.
+                <div class="doc-frame" style="max-width: 100%;">
+      <img src="https://github.com/rp-bizeeknowledge/Assets/blob/main/misc-hold.png?raw=true" alt="Miscellaneous Orders in Hold Status">
+      <div class="doc-frame-caption">Miscellaneous Orders in Hold Status · Example</div></li>
+                <li>If there is no comment (usually pinned) advising to <strong>not</strong> cancel the order, then proceed with refunding.
+                <div class="doc-frame" style="max-width: 100%;">
+      <img src="https://github.com/rp-bizeeknowledge/Assets/blob/main/misc-noc&r.png?raw=true" alt="Miscellaneous Orders with 'DO NOT CANCEL AND REFUND' Comment">
+      <div class="doc-frame-caption">Miscellaneous Orders with 'DO NOT CANCEL AND REFUND' Comment · Example</div></li>
+                <li>If never forwarded to the state: Cancel and refund.</li>
+              </ul>
             </div>
             <div class="status-row">
               <span class="status-badge sb-processing">Processing</span>
@@ -85,6 +113,10 @@
             </div>
             <div class="status-row">
               <span class="status-badge sb-shipped">Shipped</span>
+              <p><strong>Do not</strong> cancel or refund.</p>
+            </div>
+            <div class="status-row">
+              <span class="status-badge sb-shipped">Transferred</span>
               <p><strong>Do not</strong> cancel or refund.</p>
             </div>
           </div>
@@ -99,8 +131,12 @@
       <div class="process-step">
         <div class="process-left"><div class="process-num">4</div><div class="process-line"></div></div>
         <div class="process-body">
-          <p>Expand the Status dropdown in the panel on the left, then click the <strong>Cancel/Refund</strong> option.</p>
+          <p>Expand the status dropdown in the panel on the left, then click the <strong>Cancel/Refund</strong> option.</p>
+          <div class="doc-frame" style="max-width: 100%;">
+      <img src="https://github.com/rp-bizeeknowledge/Assets/blob/main/c&r-miscorder.gif?raw=true" alt="Cancelling and Refunding Miscellaneous Orders">
+      <div class="doc-frame-caption">Cancelling and Refunding Miscellaneous Order · Example</div>
         </div>
+      </div>
       </div>
       <div class="process-step">
         <div class="process-left"><div class="process-num">5</div></div>
@@ -112,32 +148,37 @@
   </div>
 
   <div class="section">
-    <div class="section-title">3.2 Special Scenarios</div>
+    <div class="section-title">Special Scenarios</div>
     <div class="subsection-title">Annual Report + State Filings Bundle Orders</div>
     <p>When you cancel an Annual Report order that includes a State Filings Bundle subscription, a confirmation pop-up will appear.</p>
     <p>You will have to confirm with the customer whether they would like to keep the subscription or not, and select the corresponding option:</p>
+    <div class="doc-frame" style="max-width: 60%;">
+      <img src="https://github.com/rp-bizeeknowledge/Assets/blob/main/SFB&AR-cancel.png?raw=true" alt="Cancelling and Refunding AR + SFB Order">
+      <div class="doc-frame-caption">Cancelling and Refunding AR + SFB Order · Example</div>
+    </div>
     <div class="sfb-decision">
       <div class="sfb-header">
-        <h4>Confirm with the customer — which option applies?</h4>
+        <h4>Confirm with the customer and select the corresponding option</h4>
       </div>
       <div class="sfb-option">
-        <span class="sfb-label sfb-full">Cancel / Refund</span>
-        <p>If they want to cancel the order in full — this will cancel the SFB subscription and refund the whole amount paid.</p>
+        <span class="sfb-label sfb-full">Cancel/Refund</span>
+        <p>If they want to cancel the order in full. This will <strong>cancel the SFB subscription</strong> and <strong>refund the whole amount</strong> paid.</p>
       </div>
       <div class="sfb-option">
-        <span class="sfb-label sfb-keep">C/R &amp; Keep Subscription</span>
-        <p>If they want to cancel the Annual Report and keep the subscription active — this will only refund the state fee, excluding the $99 subscription portion.</p>
+        <span class="sfb-label sfb-keep">C/R &amp; Keep <br>Subscription</span>
+        <p>If they want to cancel the Annual Report and <strong>keep the subscription active</strong>. This will only <strong>refund the state fee</strong>, excluding the $99 subscription portion.</p>
       </div>
     </div>
-            <div class="callout callout-yellow-warning">
+        <div class="callout callout-blue-warning">
           <p>Review the flowchart in the Knowledge Base to determine which paths apply and offer only the available options before promising any outcomes.</p>
         </div>
   </div>
 
   <div class="footer">
     <span class="footer-logo">Bizee</span>
-    <span class="footer-meta">Internal use only · Customer Service · D4 — Section 03 of 04</span>
+    <span class="footer-meta">Internal use only · Training & Development · Cancellations &amp; Refunds · Topic 03 of 04</span>
   </div>
 </div>
+<script src="../../theme.js"></script>
 </body>
 </html>

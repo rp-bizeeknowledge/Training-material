@@ -858,36 +858,43 @@ li:last-child {
 /* ── 15. STATUS BADGES ───────────────────────────────────── */
 .status-badge {
   display: inline-block;
-  font-size: 11px;
-  font-weight: 600;
+  font-size: 14px;
+  font-weight: 500;
   padding: 3px 10px;
   border-radius: 20px;
   white-space: nowrap;
   font-family: "DM Mono", monospace;
+  min-width: 110px;
 }
 .sb-review {
   background: var(--amber-light);
   color: var(--amber);
+  text-align: center;
 }
 .sb-hold {
   background: var(--red-light);
   color: var(--red);
+  text-align: center;
 }
 .sb-processing {
   background: var(--blue-light);
   color: var(--blue);
+  text-align: center;
 }
 .sb-forwarded {
   background: var(--purple-light);
   color: var(--blue);
+  text-align: center;
 }
 .sb-shipped {
   background: var(--green-light);
   color: var(--green);
+  text-align: center;
 }
 .sb-denied {
   background: var(--red-light);
   color: var(--red);
+  text-align: center;
 }
 
 /* ── 16. STATUS FLOW ─────────────────────────────────────── */
@@ -1906,28 +1913,31 @@ li:last-child {
   border-bottom: none;
 }
 .sfb-label {
-  font-size: 10px;
-  font-weight: 600;
-  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 500;
   padding: 3px 9px;
   border-radius: 20px;
-  white-space: nowrap;
   flex-shrink: 0;
   font-family: "DM Mono", monospace;
+  text-transform: none;
+  min-width: 140px;
+
 }
 .sfb-full {
   background: var(--red-light);
   color: var(--red);
+  text-align: center;
 }
 .sfb-keep {
   background: var(--amber-light);
   color: var(--amber);
+  text-align: center;
 }
 .sfb-option p {
   font-size: 14px;
   color: var(--mid);
   margin: 0;
-  text-align: left;
+  text-align: justify;
 }
 
 /* ── 32. GLOSSARY ────────────────────────────────────────── */
@@ -2557,15 +2567,23 @@ li:last-child {
   color: var(--mid);
   line-height: 1.6;
 }
+.product-tags {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* centers pills */
+  gap: 6px;
+}
 .product-tag {
-  display: inline-block;
+   display: inline-flex;
+  align-items: center;
+  justify-content: center;
   font-size: 14px;
   font-weight: 500;
   padding: 2px 9px;
   background: var(--orange-light);
-  border: 1px solid var(--orange-mid);
+  border: 1px solid var(--orange);
   border-radius: 20px;
-  color: var(--orange);
+  color: var(--mid);
   margin-right: 4px;
   margin-bottom: 4px;
   font-family: "DM Mono", monospace;
