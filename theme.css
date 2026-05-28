@@ -864,6 +864,7 @@ li:last-child {
   border-radius: 20px;
   white-space: nowrap;
   font-family: "DM Mono", monospace;
+  min-width: 110px;
 }
 .sb-review {
   background: var(--amber-light);
@@ -1912,28 +1913,31 @@ li:last-child {
   border-bottom: none;
 }
 .sfb-label {
-  font-size: 10px;
-  font-weight: 600;
-  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 500;
   padding: 3px 9px;
   border-radius: 20px;
-  white-space: nowrap;
   flex-shrink: 0;
   font-family: "DM Mono", monospace;
+  text-transform: none;
+  min-width: 140px;
+
 }
 .sfb-full {
   background: var(--red-light);
   color: var(--red);
+  text-align: center;
 }
 .sfb-keep {
   background: var(--amber-light);
   color: var(--amber);
+  text-align: center;
 }
 .sfb-option p {
   font-size: 14px;
   color: var(--mid);
   margin: 0;
-  text-align: left;
+  text-align: justify;
 }
 
 /* ── 32. GLOSSARY ────────────────────────────────────────── */
