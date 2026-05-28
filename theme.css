@@ -2567,15 +2567,23 @@ li:last-child {
   color: var(--mid);
   line-height: 1.6;
 }
+.product-tags {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* centers pills */
+  gap: 6px;
+}
 .product-tag {
-  display: inline-block;
+   display: inline-flex;
+  align-items: center;
+  justify-content: center;
   font-size: 14px;
   font-weight: 500;
   padding: 2px 9px;
   background: var(--orange-light);
-  border: 1px solid var(--orange-mid);
+  border: 1px solid var(--orange);
   border-radius: 20px;
-  color: var(--orange);
+  color: var(--mid);
   margin-right: 4px;
   margin-bottom: 4px;
   font-family: "DM Mono", monospace;
