@@ -857,38 +857,43 @@ li:last-child {
 
 /* ── 15. STATUS BADGES ───────────────────────────────────── */
 .status-badge {
-  display: inline-flex;
+  display: inline-block;
   font-size: 14px;
   font-weight: 500;
   padding: 3px 10px;
   border-radius: 20px;
-  min-width: 120px;
   white-space: nowrap;
   font-family: "DM Mono", monospace;
 }
 .sb-review {
   background: var(--amber-light);
   color: var(--amber);
+  text-align: center;
 }
 .sb-hold {
   background: var(--red-light);
   color: var(--red);
+  text-align: center;
 }
 .sb-processing {
   background: var(--blue-light);
   color: var(--blue);
+  text-align: center;
 }
 .sb-forwarded {
   background: var(--purple-light);
   color: var(--blue);
+  text-align: center;
 }
 .sb-shipped {
   background: var(--green-light);
   color: var(--green);
+  text-align: center;
 }
 .sb-denied {
   background: var(--red-light);
   color: var(--red);
+  text-align: center;
 }
 
 /* ── 16. STATUS FLOW ─────────────────────────────────────── */
@@ -901,7 +906,7 @@ li:last-child {
 
 .status-row {
   display: flex;
-  align-items: column;
+  align-items: flex-start;
   gap: 12px;
   background: var(--white);
   border: 1px solid var(--border);
