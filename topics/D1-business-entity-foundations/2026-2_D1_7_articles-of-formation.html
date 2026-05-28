@@ -169,28 +169,6 @@
   </div>
 </div>
 
-<script>
-  function openModal(id) {
-    document.getElementById(id).classList.add('open');
-    document.body.style.overflow = 'hidden';
-  }
-  function closeModal(id) {
-    document.getElementById(id).classList.remove('open');
-    document.body.style.overflow = '';
-  }
-  document.querySelectorAll('.pdf-modal-overlay').forEach(function(el) {
-    el.addEventListener('click', function(e) {
-      if (e.target === el) closeModal(el.id);
-    });
-  });
-  document.addEventListener('keydown', function(e) {
-    if (e.key === 'Escape') {
-      document.querySelectorAll('.pdf-modal-overlay.open').forEach(function(el) {
-        closeModal(el.id);
-      });
-    }
-  });
-</script>
 <script src="../../theme.js"></script>
 </body>
 </html>
