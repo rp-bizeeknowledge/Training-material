@@ -5643,3 +5643,58 @@ li:last-child {
   border-top: 1px solid var(--border);
   text-align: center;
 }
+
+/* ── PDF TRIGGER & MODAL ──────────────────────────────────── */
+.pdf-trigger { cursor: pointer; transition: transform 0.25s ease, filter 0.25s ease; }
+.pdf-trigger:hover { transform: scale(1.1) translateY(-6px); filter: drop-shadow(0 10px 20px rgba(255, 90, 0, 0.3)); }
+
+.pdf-modal-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(17, 17, 17, 0.6);
+  z-index: 1000;
+  align-items: center;
+  justify-content: center;
+}
+.pdf-modal-overlay.open { display: flex; }
+.pdf-modal {
+  background: var(--white);
+  border-radius: var(--radius);
+  width: 90%;
+  max-width: 800px;
+  height: 85vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  box-shadow: 0 24px 64px rgba(17, 17, 17, 0.28);
+}
+.pdf-modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 20px;
+  border-bottom: 1px solid var(--border);
+  flex-shrink: 0;
+}
+.pdf-modal-title {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--dark);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+.pdf-modal-close {
+  background: none;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+  color: var(--mid);
+  line-height: 1;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-family: inherit;
+}
+.pdf-modal-close:hover { background: var(--bg); color: var(--dark); }
+.pdf-modal-body { flex: 1; overflow: hidden; }
+.pdf-modal-body iframe { width: 100%; height: 100%; border: none; display: block; }

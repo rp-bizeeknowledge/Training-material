@@ -6,62 +6,6 @@
 <title>D1.9 — Internal Governance &amp; Banking Docs</title>
 <link rel="stylesheet" href="https://rp-bizeeknowledge.github.io/Training-material/theme.css">
 <link rel="stylesheet" href="../../theme.css">
-<style>
-  .pdf-trigger { cursor: pointer; transition: transform 0.25s ease, filter 0.25s ease; }
-  .pdf-trigger:hover { transform: scale(1.1) translateY(-6px); filter: drop-shadow(0 10px 20px rgba(255, 90, 0, 0.3)); }
-
-  .pdf-modal-overlay {
-    display: none;
-    position: fixed;
-    inset: 0;
-    background: rgba(17, 17, 17, 0.6);
-    z-index: 1000;
-    align-items: center;
-    justify-content: center;
-  }
-  .pdf-modal-overlay.open { display: flex; }
-
-  .pdf-modal {
-    background: var(--white);
-    border-radius: var(--radius);
-    width: 90%;
-    max-width: 800px;
-    height: 85vh;
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-    box-shadow: 0 24px 64px rgba(17, 17, 17, 0.28);
-  }
-  .pdf-modal-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 14px 20px;
-    border-bottom: 1px solid var(--border);
-    flex-shrink: 0;
-  }
-  .pdf-modal-title {
-    font-size: 13px;
-    font-weight: 700;
-    color: var(--dark);
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-  }
-  .pdf-modal-close {
-    background: none;
-    border: none;
-    font-size: 18px;
-    cursor: pointer;
-    color: var(--mid);
-    line-height: 1;
-    padding: 4px 8px;
-    border-radius: 4px;
-    font-family: inherit;
-  }
-  .pdf-modal-close:hover { background: var(--bg); color: var(--dark); }
-  .pdf-modal-body { flex: 1; overflow: hidden; }
-  .pdf-modal-body iframe { width: 100%; height: 100%; border: none; display: block; }
-</style>
 </head>
 <body>
 <div class="page">
@@ -78,8 +22,8 @@
     <div class="section-title">LLC Operating Agreement</div>
     <div style="background: var(--white); border-top: 3px solid var(--orange); border-radius: var(--radius-sm); padding: 22px 24px 24px; box-shadow: 0 4px 20px rgba(17,17,17,0.07); margin: 14px 0; overflow: hidden;">
       <img src="https://github.com/rp-bizeeknowledge/Assets/blob/main/bizee-icon-operating-agreement.png?raw=true" alt="Operating Agreement" class="pdf-trigger" style="float: left; width: 120px; height: auto; margin: 4px 24px 16px 0;" onclick="openModal('modal-oa')">
-      <p>An <strong>Operating Agreement</strong> is a private contract between the <strong>members</strong> of an LLC. It defines how the business will be managed, including ownership percentages, decision-making processes, profit and loss distribution, and what happens when a member joins or leaves. It helps set clear expectations and reduces the risk of misunderstandings among members.</p>
-      <p>We provide an <strong>Operating Agreement</strong> template with standard and premium orders. However, to be valid, it must be <strong>completed, dated,</strong> and <strong>signed</strong> by the members. <em>Some</em> banks or agencies may also require it to be <strong>notarized</strong>.</p>
+      <p style="font-size: 14px;">An <strong>Operating Agreement</strong> is a private contract between the <strong>members</strong> of an LLC. It defines how the business will be managed, including ownership percentages, decision-making processes, profit and loss distribution, and what happens when a member joins or leaves. It helps set clear expectations and reduces the risk of misunderstandings among members.</p>
+      <p style="font-size: 14px;">We provide an <strong>Operating Agreement</strong> template with standard and premium orders. However, to be valid, it must be <strong>completed, dated,</strong> and <strong>signed</strong> by the members. <em>Some</em> banks or agencies may also require it to be <strong>notarized</strong>.</p>
     </div>
     <div class="subsection-title">Importance</div>
     <p>Even if not legally required, having an Operating Agreement is strongly recommended because it:</p>
@@ -90,10 +34,7 @@
     </div>
     <div class="subsection-title">State Requirements</div>
     <p>Some states (such as <strong>California</strong> and <strong>New York</strong>) require LLCs to have an Operating Agreement. Without one, default laws will apply, which may not align with your intended structure (i.e., splitting profits equally regardless of investment).</p>
-    <div class="state-chips">
-      <span class="state-chip">California</span>
-      <span class="state-chip">New York</span>
-    </div>
+
   </div>
 
   <div class="section">
@@ -105,14 +46,14 @@
           <img src="https://github.com/rp-bizeeknowledge/Assets/blob/main/bizee-icon-corporate-bylaws-1024x1024.png?raw=true" alt="Corporate Bylaws">
         </div>
         <p class="state-card-desc" style="text-align: center; font-size: 16px;"><strong style="color: var(--orange); font-weight: 800;">Corporate Bylaws</strong></p>
-        <p class="state-card-desc">Corporate bylaws serve as a corporation's internal rulebook, defining the roles and responsibilities of shareholders, directors, and officers. They also outline how critical decisions are made. Essentially, bylaws provide the framework for running the business, ensuring that everyone within the company is aligned with its goals and operations.</p>
+        <p class="state-card-desc" style="font-size: 14px;">Corporate bylaws serve as a corporation's internal rulebook, defining the roles and responsibilities of shareholders, directors, and officers. They also outline how critical decisions are made. Essentially, bylaws provide the framework for running the business, ensuring that everyone within the company is aligned with its goals and operations.</p>
       </div>
       <div class="state-card">
         <div class="state-card-icon pdf-trigger" style="align-self: center; width: 130px; height: 130px;" onclick="openModal('modal-minutes')">
           <img src="https://github.com/rp-bizeeknowledge/Assets/blob/main/bizee-icon-meeting-minutes-1024x1024.png?raw=true" alt="Meeting Minutes">
         </div>
         <p class="state-card-desc" style="text-align: center; font-size: 16px;"><strong style="color: var(--orange); font-weight: 800;">Meeting Minutes</strong></p>
-        <p class="state-card-desc">Meeting minutes are the <strong>official record of board meetings</strong>. While the bylaws set the rules, the minutes document how those rules are applied, recording who attended, what decisions were made, and what actions were taken. These minutes provide a historical account of the company's decision-making process and <strong>serve as proof of the actions taken</strong> during meetings.</p>
+        <p class="state-card-desc" style="font-size: 14px;">Meeting minutes are the <strong>official record of board meetings</strong>. While the bylaws set the rules, the minutes document how those rules are applied, recording who attended, what decisions were made, and what actions were taken. These minutes provide a historical account of the company's decision-making process and <strong>serve as proof of the actions taken</strong> during meetings.</p>
       </div>
     </div>
     <div class="subsection-title">Importance</div>
