@@ -68,19 +68,10 @@
 
   <div class="section">
     <div class="section-title">Banking Resolution</div>
-    <p>The Banking Resolution is a document that authorizes an individual to open and manage a bank account on behalf of a business entity. This individual is also designated as an "<strong>authorized signer</strong>", giving them the ability to handle the bank account.</p>
-    <p>For customers who file a main order with us, the Banking Resolution is included in our <strong>Standard</strong> and <strong>Premium</strong> packages. If they did not select one of these packages, the Banking Resolution can still be added through our <strong>Business Contract Templates</strong> library for a <strong>$150 fee</strong>. It is not available as a standalone service outside these options.</p>
-    <div class="price-row">
-      <div class="price-card free">
-        <h4>Included</h4>
-        <span class="amount">$0</span>
-        <p>Standard Package · Premium Package</p>
-      </div>
-      <div class="price-card paid">
-        <h4>Add-On</h4>
-        <span class="amount">$150</span>
-        <p>Via Business Contract Templates, if Standard/Premium was not selected</p>
-      </div>
+    <div style="background: var(--white); border-top: 3px solid var(--orange); border-radius: var(--radius-sm); padding: 22px 24px 24px; box-shadow: 0 4px 20px rgba(17,17,17,0.07); margin: 14px 0; overflow: hidden;">
+      <img src="https://github.com/rp-bizeeknowledge/Assets/blob/main/bizee-icon-banking-resolution-1024x1024.png?raw=true" alt="Banking Resolution" class="pdf-trigger" style="float: left; width: 140px; height: auto; margin: 4px 16px 16px 0;" onclick="openModal('modal-banking')">
+      <p style="font-size: 14px;">The Banking Resolution is a document that authorizes an individual to open and manage a bank account on behalf of a business entity. This individual is also designated as an "<strong>authorized signer</strong>", giving them the ability to handle the bank account.</p>
+      <p style="font-size: 14px;">For customers who file a main order with us, the Banking Resolution is included in our <strong>Standard</strong> and <strong>Premium</strong> packages. If they did not select one of these packages, the Banking Resolution can still be added through our <strong>Business Contract Templates</strong> library for a <strong>$150 fee</strong>. It is not available as a standalone service outside these options.</p>
     </div>
     <div class="internal-box">
       <div class="internal-label">Internal Only — Do Not Share with Customer</div>
@@ -127,6 +118,18 @@
     </div>
     <div class="pdf-modal-body">
       <iframe src="https://docs.google.com/viewer?url=https://github.com/rp-bizeeknowledge/Assets/raw/main/Meeting%20Minutes.pdf&embedded=true"></iframe>
+    </div>
+  </div>
+</div>
+
+<div class="pdf-modal-overlay" id="modal-banking">
+  <div class="pdf-modal">
+    <div class="pdf-modal-header">
+      <span class="pdf-modal-title">Banking Resolution · Sample</span>
+      <button class="pdf-modal-close" onclick="closeModal('modal-banking')">✕</button>
+    </div>
+    <div class="pdf-modal-body">
+      <iframe src="https://docs.google.com/viewer?url=https://github.com/rp-bizeeknowledge/Assets/raw/main/Banking%20Res.pdf&embedded=true"></iframe>
     </div>
   </div>
 </div>

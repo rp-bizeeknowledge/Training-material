@@ -5339,9 +5339,9 @@ li:last-child {
 .price-row {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 10px;
-  margin: 14px auto;
-  max-width: 500px;
+  gap: 56px;
+  margin: 20px auto;
+  max-width: 580px;
 }
 @media (max-width: 520px) {
   .price-row {
@@ -5351,23 +5351,26 @@ li:last-child {
 .price-card.free {
   background: var(--green-light);
   border: 1px solid var(--green-border);
+  border-top: 3px solid var(--green);
   border-radius: var(--radius);
-  padding: 18px 20px;
+  padding: 28px 24px 24px;
   text-align: center;
 }
 .price-card.paid {
   background: var(--orange-light);
   border: 1px solid var(--orange-mid);
+  border-top: 3px solid var(--orange);
   border-radius: var(--radius);
-  padding: 18px 20px;
+  padding: 28px 24px 24px;
   text-align: center;
 }
 .price-card h4 {
-  font-size: 12px;
-  font-weight: 600;
-  margin-bottom: 8px;
+  font-size: 11px;
+  font-weight: 700;
+  margin-bottom: 4px;
   text-transform: uppercase;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.09em;
+  font-family: "DM Mono", monospace;
 }
 .price-card.free h4 {
   color: var(--green);
@@ -5376,9 +5379,9 @@ li:last-child {
   color: var(--orange);
 }
 .price-card .amount {
-  font-size: 28px;
+  font-size: 36px;
   font-weight: 700;
-  margin: 8px 0 5px;
+  margin: 10px 0 12px;
   font-family: "DM Mono", monospace;
   display: block;
 }
@@ -5391,6 +5394,7 @@ li:last-child {
 .price-card p {
   font-size: 13px;
   color: var(--muted);
+  line-height: 1.6;
 }
 
 .phase {
