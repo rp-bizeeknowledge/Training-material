@@ -1731,9 +1731,10 @@ div.scenario-item {
   display: flex;
   align-items: center;
   gap: 10px;
+  font-size:10px;
 }
 .scenario-header h4 {
-  font-size: 13px;
+  font-size: 9px;
   font-weight: 600;
   color: var(--dark);
 }
@@ -5815,7 +5816,7 @@ div.scenario-item {
   margin: 6px 0 0;
 }
 details.scenario-item {
-  background: var(--white);
+  background: var(--bg);
   border: 1px solid var(--border);
   border-left: 2px solid var(--orange);
   border-radius: var(--radius-sm);
@@ -5828,10 +5829,10 @@ details.scenario-item {
   align-items: center;
   justify-content: space-between;
   padding: 0;
-  background: var(--white);
+  background: var(--bg);
   cursor: pointer;
-  font-size: 14px;
-  font-weight: 500;
+  font-size: 13px;
+  font-weight: 600;
   color: var(--dark);
   list-style: none;
   user-select: none;
@@ -5854,8 +5855,8 @@ details.scenario-item {
   color: var(--orange);
 }
 .scenario-body {
-  padding: 4px 10px 8px;
-  background: var(--white);
+  padding: 8px 10px 8px;
+  background: var(--bg);
   font-size: 13px;
   color: var(--mid);
   line-height: 1.6;

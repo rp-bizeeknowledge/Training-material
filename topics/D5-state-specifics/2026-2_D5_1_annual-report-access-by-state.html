@@ -208,49 +208,70 @@
             Pennsylvania Corporation</strong
           >, and follow the steps below:
         </p>
-        <div class="decision-tree">
-          <div class="dt-header">
-            <h4>First Annual Report Status — Corps &amp; NFPs</h4>
+        <div class="ar-wrap">
+          <h4 class="ar-question">Has the first Annual Report been filed?</h4>
+
+          <div class="ar-toggle">
+            <button class="ar-btn" id="ar-btn-no" onclick="arShow('no')">
+              Not yet filed
+            </button>
+            <button class="ar-btn" id="ar-btn-yes" onclick="arShow('yes')">
+              Already filed
+            </button>
           </div>
-          <div class="dt-branch yes">
-            <div class="dt-if">
-              ✓ If the first Annual Report has NOT been filed
+
+          <div id="ar-panel-default" class="ar-default">
+            <em>Select a status above to see what actions are available.</em>
+          </div>
+
+          <div id="ar-panel-no" class="ar-panel" style="display: none">
+            <div class="ar-panel-header green">
+              <div class="ar-panel-icon green">✓</div>
+              <span class="ar-panel-title green"
+                >First Annual Report not yet filed — more flexibility</span
+              >
             </div>
-            <ul>
-              <li>
-                Offer to do an internal update of the officers'/directors'
-                information (changing names or addresses, adding/removing
-                directors or officers).
-              </li>
-              <li>
-                If they're adding or removing a director/officer, let them know
-                the change will only reflect on a state-issued document once the
-                Annual Report is filed.
-              </li>
-              <li>
-                <strong>*Note:</strong> Authorized shares cannot be updated
-                internally. Changes can only be made after the first Annual
-                Report is filed.
-              </li>
-            </ul>
+            <div class="ar-panel-body">
+              <ul>
+                <li>
+                  Offer to do an internal update of the officers'/directors'
+                  information (changing names or addresses, adding/removing
+                  directors or officers).
+                </li>
+                <li>
+                  If they're adding or removing a director/officer, let them
+                  know the change will only reflect on a state-issued document
+                  once the Annual Report is filed.
+                </li>
+              </ul>
+            </div>
           </div>
-          <div class="dt-branch no">
-            <div class="dt-if">✗ If the first Annual Report has been filed</div>
+
+          <div id="ar-panel-yes" class="ar-panel" style="display: none">
+            <div class="ar-panel-header red">
+              <div class="ar-panel-icon red">✕</div>
+              <span class="ar-panel-title red"
+                >First Annual Report already filed — changes require an
+                amendment</span
+              >
+            </div>
+            <div class="ar-panel-body">
+              <p>
+                Adding or removing Directors or Officers, or changing the amount
+                of authorized shares, can only be done through
+                an<strong>Amendment</strong>.
+              </p>
+            </div>
+          </div>
+          <div class="callout callout-blue-warning">
             <p>
-              Adding or removing Directors or Officers, or changing the amount
-              of authorized shares, can only be done through an
-              <strong>Amendment</strong>.
+              States do not record shareholder information. C Corps and S Corps
+              keep these details in their
+              <strong>internal governance documents</strong>. S Corporations
+              must also report and update their shareholders with the IRS for
+              tax purposes.
             </p>
           </div>
-        </div>
-        <div class="callout callout-blue-warning">
-          <p>
-            <strong>*Note:</strong> States do not record shareholder
-            information. C-Corps and S-Corps keep these details in their
-            <strong>internal governance documents</strong>. S Corporations must
-            also report and update their shareholders with the IRS for tax
-            purposes.
-          </p>
         </div>
       </div>
 
@@ -307,7 +328,14 @@
           Letter" that is mailed out by the Comptroller a couple of weeks after
           the company has been formed.
         </p>
-
+        <!--Add Image from TexasComptroller-->
+        <div class="doc-frame" style="max-width: 560px">
+          <img
+            src="https://github.com/rp-bizeeknowledge/Assets/blob/main/Texas_Comptroller_webfile_number.png?raw=true"
+            alt="Texas_Comptroller_webfile_number"
+          />
+          <div class="doc-frame-caption">Physical Copy · Checkout Option</div>
+        </div>
         <div class="subsection-title">Updating the Comptroller's Records</div>
         <p>
           If a customer wants to update the
@@ -534,6 +562,13 @@
             through our platform.
           </p>
         </div>
+        <div class="doc-frame" style="max-width: 250px">
+          <img
+            src="https://github.com/rp-bizeeknowledge/Assets/blob/main/Texas_Comptroller_Revenue_Threshold.png?raw=true"
+            alt="Texas_Comptroller_Revenue_Threshold"
+          />
+          <div class="doc-frame-caption">Physical Copy · Checkout Option</div>
+        </div>
       </div>
 
       <div class="section">
@@ -594,6 +629,104 @@
           window for all entities lasts 6 months and ends on the last day of the
           company's formation anniversary month.
         </p>
+        <div class="kbx">
+          <div class="kbx-card">
+            <div class="kbx-timeline">
+              <div class="kbx-spine">
+                <div class="kbx-spine-fill"></div>
+              </div>
+              <!-- Step 1: title inline with node, date below bold -->
+              <div class="kbx-step kbx-step--top">
+                <div class="kbx-node kbx-node--formed">✓</div>
+                <div class="kbx-step-body">
+                  <div class="kbx-step-title kbx-step-title--green">
+                    Company Formed
+                  </div>
+                  <div class="kbx-date-label">March 13, 2026</div>
+                  <div class="kbx-step-desc">
+                    The entity is officially registered.<br />
+                    The 90-day clock for the initial filing begins now.
+                  </div>
+                </div>
+              </div>
+              <!-- Step 2: title inline with node, date below bold -->
+              <div class="kbx-step kbx-step--top">
+                <div class="kbx-node kbx-node--initial">!</div>
+                <div class="kbx-step-body">
+                  <div class="kbx-step-title kbx-step-title--red">
+                    Initial Statement of Information Due
+                  </div>
+                  <div class="kbx-date-label">Due by June 11, 2026</div>
+                  <div class="kbx-due-badge">90-day deadline</div>
+                  <div class="kbx-step-desc">
+                    Applies to all entity types: LLC, Nonprofit, and
+                    Corporation.
+                  </div>
+                </div>
+              </div>
+              <!-- Step 3: Ongoing Compliance — burnt orange, distinct from corp amber -->
+              <div class="kbx-step" style="margin-bottom: 16px">
+                <div class="kbx-node kbx-node--cycle">↻</div>
+                <div class="kbx-step-body">
+                  <div class="kbx-step-title kbx-step-title--orange">
+                    Ongoing Compliance
+                  </div>
+                  <div class="kbx-step-desc">
+                    Recurring filing windows apply based on entity type.
+                  </div>
+                </div>
+              </div>
+              <!-- Fork cards -->
+              <div class="kbx-fork-row">
+                <div class="kbx-fork-card kbx-fork-card--corp">
+                  <div class="kbx-fork-tag">Corporation</div>
+                  <div class="kbx-fork-card-title">Next Filing Window</div>
+                  <div class="kbx-window-bar">
+                    <span class="kbx-window-start">Oct 1, 2026</span>
+                    <div class="kbx-window-line"></div>
+                    <span class="kbx-window-end">Mar 31, 2027</span>
+                  </div>
+                  <div class="kbx-fork-sub">
+                    Corporations file annually within<br />
+                    the same 6-month window each year.
+                  </div>
+                </div>
+                <div class="kbx-fork-card kbx-fork-card--llc">
+                  <div class="kbx-fork-tag">LLC &amp; Nonprofit</div>
+                  <div class="kbx-fork-card-title">Next Filing Window</div>
+                  <div class="kbx-window-bar">
+                    <span class="kbx-window-start">Oct 1, 2027</span>
+                    <div class="kbx-window-line"></div>
+                    <span class="kbx-window-end">Mar 31, 2028</span>
+                  </div>
+                  <div class="kbx-fork-sub">
+                    LLCs &amp; Nonprofits file biennially:<br />
+                    every two years.
+                  </div>
+                </div>
+              </div>
+            </div>
+            <hr class="kbx-divider" />
+            <div class="kbx-legend">
+              <div class="kbx-legend-item">
+                <div class="kbx-legend-dot" style="background: #16a34a"></div>
+                <span>Formation date</span>
+              </div>
+              <div class="kbx-legend-item">
+                <div class="kbx-legend-dot" style="background: #dc2626"></div>
+                <span>Initial filing deadline</span>
+              </div>
+              <div class="kbx-legend-item">
+                <div class="kbx-legend-dot" style="background: #f5a623"></div>
+                <span>Corporation window</span>
+              </div>
+              <div class="kbx-legend-item">
+                <div class="kbx-legend-dot" style="background: #0284c7"></div>
+                <span>LLC &amp; Nonprofit window</span>
+              </div>
+            </div>
+          </div>
+        </div>
         <p>
           The name of the company's Members, Directors or Officers will not
           become public until the initial SOI is filed.
@@ -638,5 +771,6 @@
         >
       </div>
     </div>
+    <script src="../../theme.js"></script>
   </body>
 </html>
