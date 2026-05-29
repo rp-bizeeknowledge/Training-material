@@ -162,32 +162,58 @@
             Pennsylvania LLC</strong
           >, and follow the steps below:
         </p>
-        <div class="decision-tree">
-          <div class="dt-header">
-            <h4>First Annual Report Status: LLCs</h4>
+        <div class="ar-wrap">
+          <h4 class="ar-question">First Annual Report Status — LLCs</h4>
+
+          <div class="ar-toggle">
+            <button class="ar-btn ar-btn-no" onclick="arShow(this, 'no')">
+              Not yet filed
+            </button>
+            <button class="ar-btn ar-btn-yes" onclick="arShow(this, 'yes')">
+              Already filed
+            </button>
           </div>
-          <div class="dt-branch yes">
-            <div class="dt-if">
-              ✓ If the first Annual Report has NOT been filed
+
+          <div class="ar-panel-default ar-default">
+            <em>Select a status above to see what actions are available.</em>
+          </div>
+
+          <div class="ar-panel-no ar-panel" style="display: none">
+            <div class="ar-panel-header green">
+              <div class="ar-panel-icon green">✓</div>
+              <span class="ar-panel-title green"
+                >First Annual Report not yet filed: more flexibility</span
+              >
             </div>
-            <ul>
-              <li>
-                Offer to do an internal update of the members' information
-                (changing names/addresses, adding/removing members).
-              </li>
-              <li>
-                If they're adding or removing a member, let them know the change
-                will only reflect on a state-issued document once the Annual
-                Report is filed.
-              </li>
-            </ul>
+            <div class="ar-panel-body">
+              <ul>
+                <li>
+                  Offer to do an internal update of the members' information
+                  (changing names/addresses, adding/removing members).
+                </li>
+                <li>
+                  If they're adding or removing a member, let them know the
+                  change will only reflect on a state-issued document once the
+                  Annual Report is filed.
+                </li>
+              </ul>
+            </div>
           </div>
-          <div class="dt-branch no">
-            <div class="dt-if">✗ If the first Annual Report has been filed</div>
-            <p>
-              Adding/removing members can only be done through an
-              <strong>Amendment</strong>.
-            </p>
+
+          <div class="ar-panel-yes ar-panel" style="display: none">
+            <div class="ar-panel-header red">
+              <div class="ar-panel-icon red">✕</div>
+              <span class="ar-panel-title red"
+                >First Annual Report already filed: changes require an
+                amendment</span
+              >
+            </div>
+            <div class="ar-panel-body">
+              <p>
+                Adding/removing members can only be done through an
+                <strong>Amendment</strong>.
+              </p>
+            </div>
           </div>
         </div>
 
@@ -209,22 +235,24 @@
           >, and follow the steps below:
         </p>
         <div class="ar-wrap">
-          <h4 class="ar-question">Has the first Annual Report been filed?</h4>
+          <h4 class="ar-question">
+            First Annual Report Status — C Corps, S Corps & NFPs
+          </h4>
 
           <div class="ar-toggle">
-            <button class="ar-btn" id="ar-btn-no" onclick="arShow('no')">
+            <button class="ar-btn ar-btn-no" onclick="arShow(this, 'no')">
               Not yet filed
             </button>
-            <button class="ar-btn" id="ar-btn-yes" onclick="arShow('yes')">
+            <button class="ar-btn ar-btn-yes" onclick="arShow(this, 'yes')">
               Already filed
             </button>
           </div>
 
-          <div id="ar-panel-default" class="ar-default">
+          <div class="ar-panel-default ar-default">
             <em>Select a status above to see what actions are available.</em>
           </div>
 
-          <div id="ar-panel-no" class="ar-panel" style="display: none">
+          <div class="ar-panel-no ar-panel" style="display: none">
             <div class="ar-panel-header green">
               <div class="ar-panel-icon green">✓</div>
               <span class="ar-panel-title green"
@@ -247,7 +275,7 @@
             </div>
           </div>
 
-          <div id="ar-panel-yes" class="ar-panel" style="display: none">
+          <div class="ar-panel-yes ar-panel" style="display: none">
             <div class="ar-panel-header red">
               <div class="ar-panel-icon red">✕</div>
               <span class="ar-panel-title red"
@@ -504,7 +532,7 @@
                   >Businesses below economic nexus with no Texas
                   presence</strong
                 >
-               : an out-of-state online business with very low or no Texas
+                : an out-of-state online business with very low or no Texas
                 sales. If you do not meet the Texas economic nexus threshold and
                 have no physical presence, registration does not apply.
               </p>
@@ -515,7 +543,7 @@
           <p>
             <strong>Things people often think apply but do not:</strong> Having
             an LLC or corporation alone does not automatically trigger sales tax
-           : what you sell matters. Having a website alone does not require
+            : what you sell matters. Having a website alone does not require
             registration. Charging invoices instead of checkout sales does not
             change tax rules.
           </p>
@@ -764,14 +792,20 @@
         </p>
       </div>
 
-  <div class="completion-card">
-    <img class="completion-icon-img" src="https://github.com/rp-bizeeknowledge/Assets/blob/main/bizee-icon-topic-complete-cutout-1024x1024.png?raw=true" alt="Topic Complete">
-    <div class="completion-title">You've completed this topic!</div>
-    <div class="completion-sub">Next Up:</div>
-    <a class="next-topic-btn" href="2026-2_D5_2_sos-access-requests-by-state.html">SoS Access Requests by State →</a>
-  </div>
-
-
+      <div class="completion-card">
+        <img
+          class="completion-icon-img"
+          src="https://github.com/rp-bizeeknowledge/Assets/blob/main/bizee-icon-topic-complete-cutout-1024x1024.png?raw=true"
+          alt="Topic Complete"
+        />
+        <div class="completion-title">You've completed this topic!</div>
+        <div class="completion-sub">Next Up:</div>
+        <a
+          class="next-topic-btn"
+          href="2026-2_D5_2_sos-access-requests-by-state.html"
+          >SoS Access Requests by State →</a
+        >
+      </div>
 
       <div class="footer">
         <span class="footer-logo">Bizee</span>

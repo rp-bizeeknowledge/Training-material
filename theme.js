@@ -62,9 +62,12 @@ window.openModal = function (id, e) {
   var vp = window.visualViewport;
   // When body is fixed (scroll already locked by a parent modal),
   // visualViewport.pageTop returns 0 — use the saved offset instead
-  var vpTop = document.body.style.position === "fixed"
-    ? _modalScrollY
-    : (vp ? vp.pageTop : (window.scrollY || 0));
+  var vpTop =
+    document.body.style.position === "fixed"
+      ? _modalScrollY
+      : vp
+        ? vp.pageTop
+        : window.scrollY || 0;
   var vpH = vp ? Math.min(vp.height, 900) : Math.min(window.innerHeight, 900);
   var top = Math.max(0, Math.round(vpTop + (vpH - modalH) / 2));
   el.style.top = top + "px";
@@ -92,16 +95,21 @@ document.addEventListener("keydown", function (e) {
   }
 });
 
-
 // Equal-height nav cards
 (function () {
   function equalize() {
     document.querySelectorAll(".nav-grid").forEach(function (grid) {
       var cards = grid.querySelectorAll(".nav-card");
-      cards.forEach(function (c) { c.style.height = ""; });
+      cards.forEach(function (c) {
+        c.style.height = "";
+      });
       var max = 0;
-      cards.forEach(function (c) { max = Math.max(max, c.offsetHeight); });
-      cards.forEach(function (c) { c.style.height = max + "px"; });
+      cards.forEach(function (c) {
+        max = Math.max(max, c.offsetHeight);
+      });
+      cards.forEach(function (c) {
+        c.style.height = max + "px";
+      });
     });
   }
   // Run after layout is fully computed
@@ -110,14 +118,23 @@ document.addEventListener("keydown", function (e) {
   window.addEventListener("resize", equalize);
 })();
 
-function arShow(state) {
-  document.getElementById("ar-panel-default").style.display = "none";
-  document.getElementById("ar-panel-no").style.display =
+// Annual report status toggle
+
+function arShow(button, state) {
+  var wrap = button.closest(".ar-wrap");
+  if (!wrap) return;
+
+  wrap.querySelector(".ar-panel-default").style.display = "none";
+  wrap.querySelector(".ar-panel-no").style.display =
     state === "no" ? "block" : "none";
-  document.getElementById("ar-panel-yes").style.display =
+  wrap.querySelector(".ar-panel-yes").style.display =
     state === "yes" ? "block" : "none";
-  document.getElementById("ar-btn-no").className =
-    "ar-btn" + (state === "no" ? " active-no" : "");
-  document.getElementById("ar-btn-yes").className =
-    "ar-btn" + (state === "yes" ? " active-yes" : "");
+
+  var btnNo = wrap.querySelector(".ar-btn-no");
+  var btnYes = wrap.querySelector(".ar-btn-yes");
+  if (btnNo)
+    btnNo.className = "ar-btn ar-btn-no" + (state === "no" ? " active-no" : "");
+  if (btnYes)
+    btnYes.className =
+      "ar-btn ar-btn-yes" + (state === "yes" ? " active-yes" : "");
 }
