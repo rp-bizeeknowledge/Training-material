@@ -4827,17 +4827,35 @@ div.scenario-item {
 .hold-card h4 {
   font-size: 13px;
   font-weight: 600;
-  color: var(--amber);
-  margin-bottom: 6px;
+  color: var(--orange);
+  margin-bottom: 12px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.hold-card h4 img {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+  flex-shrink: 0;
 }
 .hold-card.billing h4 {
-  color: var(--red);
+  color: var(--orange);
 }
 .hold-card p {
   font-size: 14px;
   color: var(--mid);
   margin-bottom: 8px;
   line-height: 1.65;
+}
+.hold-card .callout-yellow-warning p {
+  color: var(--amber);
+}
+.hold-card .callout-red-warning p,
+.hold-card .callout-red-warning strong {
+  color: var(--red);
 }
 .hold-card p:last-child {
   margin-bottom: 0;
@@ -4856,15 +4874,17 @@ div.scenario-item {
   color: var(--dark);
 }
 .duration-pill {
-  display: inline-block;
-  margin-top: 6px;
-  font-size: 11px;
-  font-weight: 600;
-  padding: 3px 10px;
-  border-radius: 20px;
+  display: block;
+  margin-top: 12px;
+  font-size: 14px;
+  font-weight: 400;
+  padding: 14px 16px;
+  border-radius: var(--radius-sm);
   background: var(--amber-light);
   color: var(--amber);
   border: 1px solid var(--amber-border);
+  border-left: 6px solid var(--amber-border);
+  line-height: 1.65;
   font-family: "DM Mono", monospace;
 }
 
@@ -4875,9 +4895,9 @@ div.scenario-item {
   margin: 10px 0;
 }
 .refund-item {
-  display: flex;
-  gap: 10px;
-  padding: 10px 13px;
+  display: block;
+  position: relative;
+  padding: 10px 13px 10px 30px;
   background: var(--white);
   border: 1px solid var(--border);
   border-radius: var(--radius-sm);
@@ -4890,7 +4910,9 @@ div.scenario-item {
   content: "→";
   color: var(--orange);
   font-weight: 600;
-  flex-shrink: 0;
+  position: absolute;
+  left: 13px;
+  top: 10px;
 }
 
 .confirm-list {
@@ -6213,6 +6235,11 @@ details.scenario-item {
   padding: 14px 18px;
   width: 230px;
   flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 .lc-col-holds {
   flex: 1;
@@ -6265,7 +6292,7 @@ details.scenario-item {
   text-transform: uppercase;
   letter-spacing: 0.08em;
   color: var(--mid);
-  margin-bottom: 8px;
+  margin-bottom: 14px;
 }
 .lc-highlight-list {
   display: flex;

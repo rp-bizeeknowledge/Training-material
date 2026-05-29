@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(ls ~/Desktop/ | grep -i \"BOA\\\\|boa\\\\|bank\")",
+      "Read(//Users/diegoernestosilvarocha/Desktop/**)",
+      "Bash(grep -n \"img {$\\\\|img{$\\\\| img \" \"/Users/diegoernestosilvarocha/Desktop/Training Repository/Untitled/theme.css\")"
+    ]
+  }
+}
