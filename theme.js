@@ -36,8 +36,10 @@
 window.openModal = function (id, e) {
   var el = document.getElementById(id);
   var modalH = 720;
-  var clickY = (e && e.clientY != null) ? e.clientY : 400;
-  var top = Math.max(0, Math.round(clickY - modalH / 2));
+  var vp = window.visualViewport;
+  var vpTop = vp ? vp.pageTop : (window.scrollY || 0);
+  var vpH = vp ? Math.min(vp.height, 900) : Math.min(window.innerHeight, 900);
+  var top = Math.max(0, Math.round(vpTop + (vpH - modalH) / 2));
   el.style.top = top + "px";
   el.style.height = modalH + "px";
   el.classList.add("open");
