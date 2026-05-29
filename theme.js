@@ -43,12 +43,29 @@ window.openModal = function (id, e) {
   el.style.top = top + "px";
   el.style.height = modalH + "px";
   el.classList.add("open");
+
+  el._scrollLock = function (ev) {
+    var body = el.querySelector(".pdf-modal-body");
+    if (body && body.contains(ev.target)) {
+      var atTop = body.scrollTop <= 0 && ev.deltaY < 0;
+      var atBottom = body.scrollTop + body.clientHeight >= body.scrollHeight - 1 && ev.deltaY > 0;
+      if (!atTop && !atBottom) return;
+    }
+    ev.preventDefault();
+  };
+  document.addEventListener("wheel", el._scrollLock, { passive: false });
+  document.addEventListener("touchmove", el._scrollLock, { passive: false });
 };
 window.closeModal = function (id) {
   var el = document.getElementById(id);
   el.classList.remove("open");
   el.style.top = "";
   el.style.height = "";
+  if (el._scrollLock) {
+    document.removeEventListener("wheel", el._scrollLock);
+    document.removeEventListener("touchmove", el._scrollLock);
+    delete el._scrollLock;
+  }
 };
 document.querySelectorAll(".pdf-modal-overlay").forEach(function (el) {
   el.addEventListener("click", function (e) {
