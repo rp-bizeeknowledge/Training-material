@@ -5793,7 +5793,7 @@ div.scenario-item {
   border-radius: var(--radius);
   width: 90%;
   max-width: 800px;
-  height: 85vh;
+  height: min(75vh, 720px);
   display: flex;
   flex-direction: column;
   overflow: hidden;
@@ -5829,17 +5829,18 @@ div.scenario-item {
   color: var(--dark);
 }
 .pdf-modal-footer {
-  padding: 14px 20px;
+  padding: 16px 20px;
   border-top: 1px solid var(--border);
   flex-shrink: 0;
   display: flex;
+  justify-content: center;
   gap: 10px;
   flex-wrap: wrap;
 }
 .modal-btn {
   display: inline-flex;
   align-items: center;
-  padding: 8px 16px;
+  padding: 11px 20px;
   border-radius: var(--radius-sm);
   font-size: 13px;
   font-weight: 600;
@@ -6162,6 +6163,10 @@ details.scenario-item {
 .pdf-modal--wide {
   max-width: 95vw;
   width: 95vw;
+}
+.pdf-modal--auto {
+  height: auto;
+  max-height: min(75vh, 720px);
 }
 .pdf-modal-body--img {
   overflow-x: auto;
