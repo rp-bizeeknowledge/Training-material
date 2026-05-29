@@ -5089,20 +5089,20 @@ div.scenario-item {
 .refund-list {
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  gap: 10px;
   margin: 10px 0;
 }
 .refund-item {
   display: block;
   position: relative;
-  padding: 10px 13px 10px 30px;
-  background: var(--white);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-sm);
+  padding: 0 0 0 22px;
+  background: none;
+  border: none;
+  border-radius: 0;
   font-size: 14px;
   color: var(--mid);
   line-height: 1.6;
-  box-shadow: var(--shadow-xs);
+  box-shadow: none;
 }
 .refund-item::before {
   content: "→";
@@ -6393,23 +6393,23 @@ details.scenario-item {
   gap: 10px;
 }
 .lc-header-placed {
-  background: rgba(7, 13, 89, 0.78);
+  background: #070d59;
   color: #fff;
 }
 .lc-header-review {
-  background: rgba(255, 192, 9, 0.78);
+  background: #ffc009;
   color: #fff;
 }
 .lc-header-processing {
-  background: rgba(223, 79, 17, 0.78);
+  background: #df4f11;
   color: #fff;
 }
 .lc-header-forwarded {
-  background: rgba(31, 60, 136, 0.78);
+  background: #1f3c88;
   color: #fff;
 }
 .lc-header-shipped {
-  background: rgba(21, 131, 28, 0.78);
+  background: #15831c;
   color: #fff;
 }
 .lc-header-title {
@@ -6435,7 +6435,6 @@ details.scenario-item {
   flex-shrink: 0;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   text-align: center;
 }
@@ -6485,12 +6484,14 @@ details.scenario-item {
   flex-shrink: 0;
 }
 .lc-label {
-  font-size: 10px;
+  font-size: 11px;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color: var(--mid);
+  letter-spacing: 0.1em;
+  color: var(--muted);
   margin-bottom: 14px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 .lc-highlight-list {
   display: flex;
@@ -6510,11 +6511,13 @@ details.scenario-item {
   cursor: pointer;
   border: none;
   background: none;
-  transition: background 0.15s;
+  transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
   text-align: center;
 }
 .lc-highlight-btn:hover {
-  background: var(--orange-light);
+  background: none;
+  transform: translateY(-8px) scale(1.12);
+  box-shadow: 0 0 28px rgba(232, 87, 42, 0.35), 0 14px 28px rgba(232, 87, 42, 0.2);
 }
 .lc-highlight-btn img {
   width: 62px;
