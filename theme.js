@@ -33,10 +33,13 @@
 })();
 
 // PDF modal
-window.openModal = function (id) {
+window.openModal = function (id, e) {
   var el = document.getElementById(id);
-  el.style.top = window.scrollY + "px";
-  el.style.height = window.innerHeight + "px";
+  var modalH = 720;
+  var clickY = (e && e.clientY != null) ? e.clientY : 400;
+  var top = Math.max(0, Math.round(clickY - modalH / 2));
+  el.style.top = top + "px";
+  el.style.height = modalH + "px";
   el.classList.add("open");
 };
 window.closeModal = function (id) {

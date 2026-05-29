@@ -5799,9 +5799,7 @@ div.scenario-item {
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  box-shadow:
-    0 0 0 100vmax rgba(17, 17, 17, 0.55),
-    0 24px 64px rgba(17, 17, 17, 0.28);
+  box-shadow: 0 24px 64px rgba(17, 17, 17, 0.28);
 }
 .pdf-modal-header {
   display: flex;
@@ -6182,7 +6180,7 @@ details.scenario-item {
 }
 .pdf-modal-body--img:active { cursor: grabbing; }
 .pdf-modal-body--img img {
-  height: 75vh;
+  height: 100%;
   width: auto;
   max-width: none;
   display: block;

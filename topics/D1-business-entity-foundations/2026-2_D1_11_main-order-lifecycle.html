@@ -31,7 +31,7 @@
 
    
     <div class="section-title">Main Order Lifecycle</div>
- <div class="doc-frame" style="cursor: pointer; margin: 16px 0 0;" onclick="openModal('modal-lifecycle-img')">
+ <div class="doc-frame" style="cursor: pointer; margin: 16px 0 0;" onclick="openModal('modal-lifecycle-img', event)">
       <img src="https://github.com/rp-bizeeknowledge/Assets/blob/main/Order%20lifecycle%20.png?raw=true" alt="Order Lifecycle Diagram" style="pointer-events: none;">
       <div class="doc-frame-caption">Click here to explore the status flow</div>
     </div>
@@ -61,11 +61,11 @@
           <div class="lc-col-highlights">
             <div class="lc-label">Highlights</div>
             <div class="lc-highlight-list">
-              <button class="lc-highlight-btn" onclick="openModal('modal-lc-review-1')">
+              <button class="lc-highlight-btn" onclick="openModal('modal-lc-review-1', event)">
                 <img src="https://github.com/rp-bizeeknowledge/Assets/blob/main/Order%20Confirmation%20Email.png?raw=true" alt="Order Confirmation Email">
                 <span>Order Confirmation Email is Sent</span>
               </button>
-              <button class="lc-highlight-btn" onclick="openModal('modal-lc-review-2')">
+              <button class="lc-highlight-btn" onclick="openModal('modal-lc-review-2', event)">
                 <img src="https://github.com/rp-bizeeknowledge/Assets/blob/main/Customer%20Dashboard.png?raw=true" alt="Customer Dashboard">
                 <span>Customer Dashboard is Created</span>
               </button>
@@ -87,11 +87,11 @@
           <div class="lc-col-highlights">
             <div class="lc-label">Highlights</div>
             <div class="lc-highlight-list">
-              <button class="lc-highlight-btn" onclick="openModal('modal-lc-proc-1')">
+              <button class="lc-highlight-btn" onclick="openModal('modal-lc-proc-1', event)">
                 <img src="https://github.com/rp-bizeeknowledge/Assets/blob/main/Customer%20can't%20edit.png?raw=true" alt="Customer Can't Edit">
                 <span>Customer Can't Edit Anymore</span>
               </button>
-              <button class="lc-highlight-btn" onclick="openModal('modal-lc-proc-2')">
+              <button class="lc-highlight-btn" onclick="openModal('modal-lc-proc-2', event)">
                 <img src="https://github.com/rp-bizeeknowledge/Assets/blob/main/Order%20with%20filing.png?raw=true" alt="Order with Filing Dept">
                 <span>Order In Hands of Filing Dept.</span>
               </button>
@@ -113,11 +113,11 @@
           <div class="lc-col-highlights">
             <div class="lc-label">Highlights</div>
             <div class="lc-highlight-list">
-              <button class="lc-highlight-btn" onclick="openModal('modal-lc-fwd-1')">
+              <button class="lc-highlight-btn" onclick="openModal('modal-lc-fwd-1', event)">
                 <img src="https://github.com/rp-bizeeknowledge/Assets/blob/main/Sent%20to%20the%20state%20.png?raw=true" alt="Sent to the State">
                 <span>Sent To The State</span>
               </button>
-              <button class="lc-highlight-btn" onclick="openModal('modal-lc-fwd-2')">
+              <button class="lc-highlight-btn" onclick="openModal('modal-lc-fwd-2', event)">
                 <img src="https://github.com/rp-bizeeknowledge/Assets/blob/main/No%20Changes%20Allowed.png?raw=true" alt="No Changes Allowed">
                 <span>No Changes Allowed</span>
               </button>
@@ -139,15 +139,15 @@
           <div class="lc-col-highlights">
             <div class="lc-label">Highlights</div>
             <div class="lc-highlight-list">
-              <button class="lc-highlight-btn" onclick="openModal('modal-lc-ship-1')">
+              <button class="lc-highlight-btn" onclick="openModal('modal-lc-ship-1', event)">
                 <img src="https://github.com/rp-bizeeknowledge/Assets/blob/main/State%20Approval%20.png?raw=true" alt="State Approval">
                 <span>State Approval Is Received</span>
               </button>
-              <button class="lc-highlight-btn" onclick="openModal('modal-lc-ship-2')">
+              <button class="lc-highlight-btn" onclick="openModal('modal-lc-ship-2', event)">
                 <img src="https://github.com/rp-bizeeknowledge/Assets/blob/main/Uploaded%20Documents%20.png?raw=true" alt="Documents Uploaded">
                 <span>Documents Uploaded To Dashboard</span>
               </button>
-              <button class="lc-highlight-btn" onclick="openModal('modal-lc-ship-3')">
+              <button class="lc-highlight-btn" onclick="openModal('modal-lc-ship-3', event)">
                 <img src="https://github.com/rp-bizeeknowledge/Assets/blob/main/Order%20Confirmation%20Email.png?raw=true" alt="Order Completion Email">
                 <span>Order Completion Email Is Sent</span>
               </button>
@@ -325,8 +325,8 @@
       </div>
     </div>
     <div class="pdf-modal-footer">
-      <button class="modal-btn modal-btn-primary" onclick="openModal('modal-email-example')">Order Confirmation Email Example</button>
-      <button class="modal-btn modal-btn-primary" onclick="openModal('modal-pdf-example')">Order Confirmation PDF Example</button>
+      <button class="modal-btn modal-btn-primary" onclick="openModal('modal-email-example', event)">Order Confirmation Email Example</button>
+      <button class="modal-btn modal-btn-primary" onclick="openModal('modal-pdf-example', event)">Order Confirmation PDF Example</button>
     </div>
   </div>
 </div>
