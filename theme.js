@@ -81,6 +81,23 @@ document.addEventListener("keydown", function (e) {
 });
 
 
+// Equal-height nav cards
+(function () {
+  function equalize() {
+    document.querySelectorAll(".nav-grid").forEach(function (grid) {
+      var cards = grid.querySelectorAll(".nav-card");
+      cards.forEach(function (c) { c.style.height = ""; });
+      var max = 0;
+      cards.forEach(function (c) { max = Math.max(max, c.offsetHeight); });
+      cards.forEach(function (c) { c.style.height = max + "px"; });
+    });
+  }
+  // Run after layout is fully computed
+  setTimeout(equalize, 0);
+  window.addEventListener("load", equalize);
+  window.addEventListener("resize", equalize);
+})();
+
 function arShow(state) {
   document.getElementById("ar-panel-default").style.display = "none";
   document.getElementById("ar-panel-no").style.display =
