@@ -347,13 +347,28 @@
   </div>
 </div>
 <div class="pdf-modal-overlay" id="modal-lc-proc-1">
-  <div class="pdf-modal">
+  <div class="pdf-modal pdf-modal--auto">
     <div class="pdf-modal-header">
       <span class="pdf-modal-title">Customer Can't Edit Anymore</span>
       <button class="pdf-modal-close" onclick="closeModal('modal-lc-proc-1')">✕</button>
     </div>
-    <div class="pdf-modal-body" style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:20px;padding:32px;overflow:auto;">
-      <img src="https://github.com/rp-bizeeknowledge/Assets/blob/main/Customer%20can't%20edit.png?raw=true" style="max-height:120px;object-fit:contain;">
+    <div class="pdf-modal-body" style="padding:32px 32px 24px;overflow:auto;">
+      <img src="https://github.com/rp-bizeeknowledge/Assets/blob/main/Customer%20can't%20edit.png?raw=true" alt="Can't Edit" style="max-height:80px;object-fit:contain;display:block;margin:0 auto 24px;">
+      <p style="font-size:14px;color:var(--mid);margin:0 0 20px;">Once an order moves to <strong>Processing</strong>, the customer's dashboard no longer allows any edits. The order review button disappears and the interface reflects the new status. The comparison below shows what the customer sees before and after the transition.</p>
+      <div style="display:flex;gap:16px;justify-content:center;">
+        <div style="display:flex;flex-direction:column;align-items:center;">
+          <div class="doc-frame" style="margin:0 0 8px;width:fit-content;">
+            <img src="https://github.com/rp-bizeeknowledge/Assets/blob/main/Order%20in%20Review.png?raw=true" alt="Order in Review" style="width:240px;height:auto;display:block;">
+            <div class="doc-frame-caption">Order in Review</div>
+          </div>
+        </div>
+        <div style="display:flex;flex-direction:column;align-items:center;">
+          <div class="doc-frame" style="margin:0 0 8px;width:fit-content;">
+            <img src="https://github.com/rp-bizeeknowledge/Assets/blob/main/Order%20in%20Processing.png?raw=true" alt="Order in Processing" style="width:240px;height:auto;display:block;">
+            <div class="doc-frame-caption">Order in Processing</div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>
