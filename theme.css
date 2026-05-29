@@ -7,7 +7,7 @@
    ============================================================ */
 
 /* ── 0. FONTS ─────────────────────────────────────────────── */
-@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..900;1,9..40,100..900&family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@300..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..900;1,9..40,100..900&family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@300..700&family=Josefin+Sans:wght@600;700&family=Syncopate:wght@400;700&family=Poppins:wght@600;700&display=swap");
 
 /* ── 1. TOKENS ────────────────────────────────────────────── */
 :root {
@@ -398,13 +398,13 @@ li:last-child {
   border-color: var(--orange);
 }
 .nc-label {
-  font-size: 16px;
-  font-weight: 600;
-  letter-spacing: 0.08em;
+  font-size: 17px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--orange);
-  margin-bottom: 5px;
-  font-family: "DM Mono", monospace;
+  margin-bottom: 6px;
+  font-family: "Syncopate", sans-serif;
 }
 .nc-title {
   font-size: 13px;
@@ -548,6 +548,27 @@ li:last-child {
   background-repeat: no-repeat;
   background-position: center;
 }
+.policy-note {
+  border-left: 3px solid var(--amber);
+  padding: 10px 16px;
+  margin: 20px 0;
+}
+.policy-note-label {
+  display: inline-block;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--amber);
+  margin-bottom: 6px;
+}
+.policy-note p {
+  font-size: 14px;
+  color: var(--muted);
+  margin: 0;
+  line-height: 1.7;
+}
+
 .callout-red-warning {
   background: var(--red-light);
   border-color: var(--red-border);
@@ -1341,17 +1362,22 @@ li:last-child {
 }
 
 /* ── 22. TERM GRID ───────────────────────────────────────── */
-@media (max-width: 520px) {
-  .term-grid {
-    grid-template-columns: 1fr;
-  }
-}
 .term-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: auto 1fr;
   gap: 10px;
   margin: 14px 0;
+}
+@media (max-width: 760px) {
+  .term-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 480px) {
+  .term-grid {
+    grid-template-columns: 1fr;
+  }
 }
 .term-card {
   background: var(--white);
@@ -1371,16 +1397,19 @@ li:last-child {
   background: var(--orange);
   color: var(--white);
   padding: 14px 16px;
-  font-size: 14px;
-  font-weight: 590;
+  font-size: 12px;
+  font-weight: 700;
   flex-shrink: 0;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  font-family: "DM Mono", monospace;
+  font-family: "Poppins", sans-serif;
   text-align: center;
   display: flex;
   align-items: center;
   justify-content: center;
+  word-break: break-word;
+  overflow-wrap: break-word;
+  hyphens: auto;
 }
 .term-card p {
   font-size: 12px;
@@ -4635,11 +4664,11 @@ div.scenario-item {
   align-items: center;
   gap: 12px;
   text-align: center;
-  background: var(--white);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  padding: 24px 20px;
-  box-shadow: var(--shadow-xs);
+  padding: 12px 8px;
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
 }
 .best-for-img-card img {
   width: 100%;
