@@ -34,12 +34,16 @@
 
 // PDF modal
 window.openModal = function (id) {
-  document.getElementById(id).classList.add("open");
-  document.body.style.overflow = "hidden";
+  var el = document.getElementById(id);
+  el.style.top = window.scrollY + "px";
+  el.style.height = window.innerHeight + "px";
+  el.classList.add("open");
 };
 window.closeModal = function (id) {
-  document.getElementById(id).classList.remove("open");
-  document.body.style.overflow = "";
+  var el = document.getElementById(id);
+  el.classList.remove("open");
+  el.style.top = "";
+  el.style.height = "";
 };
 document.querySelectorAll(".pdf-modal-overlay").forEach(function (el) {
   el.addEventListener("click", function (e) {

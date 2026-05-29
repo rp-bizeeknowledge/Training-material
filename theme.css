@@ -5778,8 +5778,10 @@ div.scenario-item {
 
 .pdf-modal-overlay {
   display: none;
-  position: fixed;
-  inset: 0;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
   background: rgba(17, 17, 17, 0.6);
   z-index: 1000;
   align-items: center;
