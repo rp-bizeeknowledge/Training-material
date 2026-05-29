@@ -2857,7 +2857,7 @@ div.scenario-item {
 }
 .state-proc-header {
   padding: 14px 18px;
-  background: var(--dark);
+  background: var(--orange);
   display: flex;
   align-items: center;
   gap: 10px;
@@ -2898,31 +2898,6 @@ div.scenario-item {
 }
 .state-proc-body li strong {
   color: var(--dark);
-}
-
-.info-request {
-  background: var(--bg);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-sm);
-  padding: 12px 14px;
-  margin: 10px 0;
-}
-.info-request h5 {
-  font-size: 10px;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color: var(--muted);
-  margin-bottom: 7px;
-  font-family: "DM Mono", monospace;
-}
-.info-request ul {
-  padding-left: 16px;
-}
-.info-request li {
-  font-size: 14px;
-  color: var(--mid);
-  margin-bottom: 3px;
 }
 
 .escalation-box {
