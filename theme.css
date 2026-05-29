@@ -3207,9 +3207,8 @@ div.scenario-item {
   align-items: flex-start;
 }
 .contact-chip strong {
-  color: var(--orange);
+  color: var(--orange-deep);
 }
-
 /* ── 45. SALES CALLS ─────────────────────────────────────── */
 .mindset-banner {
   background: var(--dark);
