@@ -138,3 +138,16 @@ function arShow(button, state) {
     btnYes.className =
       "ar-btn ar-btn-yes" + (state === "yes" ? " active-yes" : "");
 }
+
+// LLC vs License toggle
+function cmpPick(group, side) {
+  ["a", "b"].forEach(function (s) {
+    document
+      .getElementById("c" + group + s)
+      .classList.remove("active-a", "active-b");
+    var r = document.getElementById("r" + group + s);
+    r.classList.remove("show");
+  });
+  document.getElementById("c" + group + side).classList.add("active-" + side);
+  document.getElementById("r" + group + side).classList.add("show");
+}

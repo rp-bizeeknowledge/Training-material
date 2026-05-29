@@ -1705,6 +1705,200 @@ li:last-child {
   text-align: left;
 }
 
+/*LLC VS LICENSE TOGGLE STYLING*/
+
+ /* ── Section wrapper ── */
+  .cmp-section {
+    margin-bottom: 2rem;
+  }
+  /* ── Card grid ── */
+  .cmp-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+ 
+  @media (max-width: 520px) {
+    .cmp-row {
+      grid-template-columns: 1fr;
+    }
+  }
+ 
+  /* ── Individual card ── */
+  .cmp-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 18px;
+    cursor: pointer;
+    transition: border-color 0.15s ease, transform 0.12s ease, box-shadow 0.15s ease;
+    position: relative;
+    user-select: none;
+  }
+ 
+  .cmp-card:hover {
+    border-color: var(--mid);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-xs);
+  }
+ 
+  .cmp-card.active-a {
+    border: 2px solid #0F6E56;
+    transform: translateY(-2px);
+  }
+ 
+  .cmp-card.active-b {
+    border: 2px solid #185FA5;
+    transform: translateY(-2px);
+  }
+ 
+  /* ── Card icon badge ── */
+  .cmp-card-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: var(--radius-sm);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 12px;
+    font-size: 18px;
+  }
+ 
+  .cmp-card-icon.icon-teal {
+    background: #E1F5EE;
+    color: #0F6E56;
+  }
+ 
+  .cmp-card-icon.icon-blue {
+    background: #E6F1FB;
+    color: #185FA5;
+  }
+ 
+  /* ── Card text ── */
+  .cmp-card h4 {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--dark);
+    margin: 0 0 6px;
+  }
+ 
+  .cmp-card p {
+    font-size: 13px;
+    color: var(--mid);
+    margin: 0;
+    line-height: 1.6;
+    text-align: left;
+  }
+ 
+  /* ── Tap hint ── */
+  .cmp-hint {
+    font-size: 11px;
+    color: var(--muted, #aaa);
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-style: italic;
+  }
+ 
+  /* ── Result box ── */
+  .cmp-result {
+    display: none;
+    border-radius: var(--radius-sm);
+    overflow: hidden;
+    border: 1px solid var(--border);
+    margin-top: 10px;
+  }
+ 
+  .cmp-result.show {
+    display: block;
+    animation: fadeUp 0.18s ease;
+  }
+ 
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(6px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+ 
+  /* ── Colored top bar on result ── */
+  .cmp-result-bar {
+    height: 4px;
+  }
+ 
+  .cmp-result-bar.bar-teal { background: #0F6E56; }
+  .cmp-result-bar.bar-blue { background: #185FA5; }
+ 
+  /* ── Result inner layout ── */
+  .cmp-result-inner {
+    padding: 14px 16px;
+    background: var(--bg-subtle, #f9f6f2);
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+  }
+ 
+  /* ── Colored dot ── */
+  .cmp-result-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    margin-top: 5px;
+    flex-shrink: 0;
+  }
+ 
+  .cmp-result-dot.dot-teal { background: #0F6E56; }
+  .cmp-result-dot.dot-blue { background: #185FA5; }
+ 
+  /* ── Result eyebrow label ── */
+  .cmp-result-eyebrow {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin: 0 0 4px;
+  }
+ 
+  .cmp-result-eyebrow.eye-teal { color: #085041; }
+  .cmp-result-eyebrow.eye-blue { color: #0C447C; }
+ 
+  /* ── Result body text ── */
+  .cmp-result-text {
+    font-size: 14px;
+    color: var(--mid);
+    line-height: 1.65;
+    margin: 0;
+  }
+ 
+  .cmp-result-text strong {
+    color: var(--dark);
+    font-weight: 600;
+  }
+ 
+  /* ── VS divider ── */
+  .cmp-vs {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+  }
+ 
+  .cmp-vs-line {
+    flex: 1;
+    height: 1px;
+    background: var(--border);
+  }
+ 
+  .cmp-vs-badge {
+    font-size: 11px;
+    font-weight: 500;
+    color: var(--mid);
+    padding: 3px 12px;
+    border: 1px solid var(--border);
+    border-radius: 99px;
+    white-space: nowrap;
+    background: var(--white);
+  }
+/*TAX TABLE STYLING*/
 .tax-table {
   width: 100%;
   border-collapse: separate;
@@ -2884,6 +3078,10 @@ div.scenario-item {
 }
 .state-proc-body strong {
   color: var(--dark);
+}
+.state-proc-body .callout p,
+.state-proc-body .callout strong {
+  color: inherit;
 }
 .state-proc-body ol,
 .state-proc-body ul {
