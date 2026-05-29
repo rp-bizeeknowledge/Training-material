@@ -5109,8 +5109,8 @@ div.scenario-item {
   color: var(--orange);
   font-weight: 600;
   position: absolute;
-  left: 13px;
-  top: 10px;
+  left: 0;
+  top: 0;
 }
 
 .confirm-list {
