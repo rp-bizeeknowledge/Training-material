@@ -1431,19 +1431,22 @@ li:last-child {
 .states-wrap {
   display: flex;
   flex-direction: column;
-  gap: 6px;
   margin: 14px 0;
 }
-.state-row {
+.states-wrap .state-row {
   display: flex;
   align-items: flex-start;
   gap: 10px;
-  padding: 11px 14px;
-  background: var(--white);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-sm);
+  padding: 8px 0;
+  background: none;
+  border: none;
+  border-bottom: 1px solid var(--border);
+  border-radius: 0;
+  box-shadow: none;
   font-size: 14px;
-  box-shadow: var(--shadow-xs);
+}
+.states-wrap .state-row:last-child {
+  border-bottom: none;
 }
 .state-name {
   font-weight: 600;
