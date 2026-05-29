@@ -235,7 +235,7 @@ a:hover {
 }
 
 .section-title {
-  font-size: 18px;
+  font-size: 19px;
   font-weight: 900;
   letter-spacing: 0.13em;
   text-transform: uppercase;
@@ -1159,12 +1159,16 @@ li:last-child {
   color: var(--dark);
   margin-bottom: 6px;
 }
+.def-box::before {
+  content: none;
+  display: none;
+}
 .def-box p {
   font-size: 14px;
   color: var(--muted);
   line-height: 1.65;
   margin: 0;
-  text-align: left;
+  text-align: justify;
 }
 
 /* ── 21. SCENARIO SPLIT ──────────────────────────────────── */
