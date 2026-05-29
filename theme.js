@@ -80,6 +80,7 @@ document.addEventListener("keydown", function (e) {
   }
 });
 
+
 function arShow(state) {
   document.getElementById("ar-panel-default").style.display = "none";
   document.getElementById("ar-panel-no").style.display =
