@@ -2885,6 +2885,10 @@ div.scenario-item {
 .state-proc-body strong {
   color: var(--dark);
 }
+.state-proc-body .callout p,
+.state-proc-body .callout strong {
+  color: inherit;
+}
 .state-proc-body ol,
 .state-proc-body ul {
   padding-left: 18px;
