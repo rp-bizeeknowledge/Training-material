@@ -5951,7 +5951,7 @@ div.scenario-item {
   overflow: hidden;
 }
 .pdf-modal-body iframe {
-  width: 100%;
+  width: calc(100% - 52px);
   height: 100%;
   border: none;
   display: block;

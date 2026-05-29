@@ -32,7 +32,30 @@
   });
 })();
 
-// PDF modal
+// PDF modal — scroll lock helpers
+var _modalScrollY = 0;
+var _modalCount = 0;
+
+function _lockScroll() {
+  if (_modalCount++ > 0) return;
+  _modalScrollY = window.scrollY || window.pageYOffset || 0;
+  document.body.style.position = "fixed";
+  document.body.style.top = -_modalScrollY + "px";
+  document.body.style.left = "0";
+  document.body.style.right = "0";
+  document.body.style.overflow = "hidden";
+}
+
+function _unlockScroll() {
+  if (--_modalCount > 0) return;
+  document.body.style.position = "";
+  document.body.style.top = "";
+  document.body.style.left = "";
+  document.body.style.right = "";
+  document.body.style.overflow = "";
+  window.scrollTo(0, _modalScrollY);
+}
+
 window.openModal = function (id, e) {
   var el = document.getElementById(id);
   var modalH = 720;
@@ -43,29 +66,14 @@ window.openModal = function (id, e) {
   el.style.top = top + "px";
   el.style.height = modalH + "px";
   el.classList.add("open");
-
-  el._scrollLock = function (ev) {
-    var body = el.querySelector(".pdf-modal-body");
-    if (body && body.contains(ev.target)) {
-      var atTop = body.scrollTop <= 0 && ev.deltaY < 0;
-      var atBottom = body.scrollTop + body.clientHeight >= body.scrollHeight - 1 && ev.deltaY > 0;
-      if (!atTop && !atBottom) return;
-    }
-    ev.preventDefault();
-  };
-  document.addEventListener("wheel", el._scrollLock, { passive: false });
-  document.addEventListener("touchmove", el._scrollLock, { passive: false });
+  _lockScroll();
 };
 window.closeModal = function (id) {
   var el = document.getElementById(id);
   el.classList.remove("open");
   el.style.top = "";
   el.style.height = "";
-  if (el._scrollLock) {
-    document.removeEventListener("wheel", el._scrollLock);
-    document.removeEventListener("touchmove", el._scrollLock);
-    delete el._scrollLock;
-  }
+  _unlockScroll();
 };
 document.querySelectorAll(".pdf-modal-overlay").forEach(function (el) {
   el.addEventListener("click", function (e) {
