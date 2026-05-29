@@ -304,8 +304,8 @@ li:last-child {
   gap: 10px;
 }
 .completion-icon-img {
-  width: 140px;
-  height: 140px;
+  width: 160px;
+  height: 160px;
   object-fit: contain;
   display: block;
   margin: 0 auto 2px;
