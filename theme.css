@@ -388,14 +388,16 @@ li:last-child {
   display: block;
   box-shadow: var(--shadow-xs);
   transition:
-    box-shadow 0.2s,
-    transform 0.2s,
-    border-color 0.2s;
+    box-shadow 0.22s ease,
+    transform 0.22s ease,
+    border-color 0.22s ease,
+    border-top-width 0.22s ease;
 }
 .nav-card:hover {
-  box-shadow: var(--shadow-md);
-  transform: translateY(-2px);
+  box-shadow: 0 12px 40px rgba(232, 87, 42, 0.18), 0 4px 12px rgba(17, 17, 17, 0.1);
+  transform: translateY(-6px) scale(1.02);
   border-color: var(--orange);
+  border-top-width: 3px;
 }
 .nc-label {
   font-size: 17px;

@@ -1,3 +1,15 @@
+// Scroll to top on every page load
+(function () {
+  function scrollTop() {
+    window.scrollTo(0, 0);
+    document.documentElement.scrollTop = 0;
+    document.body.scrollTop = 0;
+    try { window.parent.scrollTo(0, 0); } catch (e) {}
+  }
+  scrollTop();
+  window.addEventListener("load", scrollTop);
+})();
+
 (function () {
   var overlay = document.createElement("div");
   overlay.className = "img-lightbox-overlay";
