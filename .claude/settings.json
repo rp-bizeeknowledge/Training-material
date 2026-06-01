@@ -1,0 +1,7 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(curl -s \"https://rp-bizeeknowledge.github.io/Training-material/topics/D1-business-entity-foundations/2026-2_D1_0_business-entity-foundations.html\")"
+    ]
+  }
+}
