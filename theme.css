@@ -953,55 +953,68 @@ li:last-child {
   margin: 8px 0;
   letter-spacing: 0.01em;
 }
+
 .pricing-formula {
   display: flex;
   align-items: stretch;
+  justify-content: center;
   gap: 10px;
   margin: 16px 0;
   flex-wrap: wrap;
+  background: none !important;
+  border: none !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+  border-radius: 0 !important;
 }
 .pf-item {
-  background: var(--orange-light);
-  border: 1.5px solid var(--orange-mid);
-  border-radius: var(--radius-sm);
-  padding: 14px 22px;
-  text-align: center;
-  min-width: 110px;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 18px 32px;
+  border-radius: var(--radius-sm);
+  min-width: 140px;
+  background: var(--orange);
+  border: none;
 }
 .pf-item--muted {
-  background: var(--bg);
-  border-color: var(--border);
+  background: #1a3a7c;
+  border: none;
 }
 .pf-amount {
-  font-size: 22px;
+  font-size: 26px;
   font-weight: 800;
-  color: var(--orange);
+  color: #fff;
   font-family: "Space Grotesk", sans-serif;
   line-height: 1.1;
 }
 .pf-item--muted .pf-amount {
-  font-size: 15px;
-  color: var(--muted);
+  font-size: 26px;
+  font-weight: 800;
+  color: #fff;
 }
 .pf-label {
   font-size: 10px;
-  font-weight: 700;
+  font-weight: 500;
   text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color: var(--muted);
-  margin-top: 5px;
+  letter-spacing: 0.06em;
+  color: rgba(255, 255, 255, 0.72);
+  margin-top: 6px;
+  font-family: "DM Mono", monospace;
   -webkit-font-smoothing: antialiased;
 }
+.pf-item--muted .pf-label {
+  color: rgba(255, 255, 255, 0.65);
+}
 .pf-operator {
-  font-size: 22px;
+  font-size: 20px;
   font-weight: 300;
   color: var(--muted);
   display: flex;
   align-items: center;
-  padding: 0 2px;
+  padding: 0 4px;
 }
 
 /* ── 15. STATUS BADGES ───────────────────────────────────── */
