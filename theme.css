@@ -953,6 +953,56 @@ li:last-child {
   margin: 8px 0;
   letter-spacing: 0.01em;
 }
+.pricing-formula {
+  display: flex;
+  align-items: stretch;
+  gap: 10px;
+  margin: 16px 0;
+  flex-wrap: wrap;
+}
+.pf-item {
+  background: var(--orange-light);
+  border: 1.5px solid var(--orange-mid);
+  border-radius: var(--radius-sm);
+  padding: 14px 22px;
+  text-align: center;
+  min-width: 110px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.pf-item--muted {
+  background: var(--bg);
+  border-color: var(--border);
+}
+.pf-amount {
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--orange);
+  font-family: "Space Grotesk", sans-serif;
+  line-height: 1.1;
+}
+.pf-item--muted .pf-amount {
+  font-size: 15px;
+  color: var(--muted);
+}
+.pf-label {
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+  margin-top: 5px;
+  -webkit-font-smoothing: antialiased;
+}
+.pf-operator {
+  font-size: 22px;
+  font-weight: 300;
+  color: var(--muted);
+  display: flex;
+  align-items: center;
+  padding: 0 2px;
+}
 
 /* ── 15. STATUS BADGES ───────────────────────────────────── */
 .status-badge {
