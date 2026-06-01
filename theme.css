@@ -3167,7 +3167,7 @@ div.scenario-item {
   color: var(--muted);
   margin: 0;
   line-height: 1.6;
-  text-align: left;
+  text-align: justify;
 }
 .nf-body ul {
   padding-left: 16px;
