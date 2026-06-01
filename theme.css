@@ -3234,7 +3234,7 @@ div.scenario-item {
 }
 .nf-body ul {
   padding-left: 16px;
-  margin: 4px 0;
+  margin: 4px 0 0 20px;
 }
 .nf-body li {
   font-size: 14px;
