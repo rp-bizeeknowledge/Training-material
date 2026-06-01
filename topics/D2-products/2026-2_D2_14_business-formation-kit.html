@@ -30,6 +30,11 @@
     <img src="https://raw.githubusercontent.com/rp-bizeeknowledge/Assets/main/Business%20Formation%20KIT%20items.png" alt="Business Formation Kit items">
     <div class="doc-frame-caption">Business Formation Kit Items</div>
   </div>
+    <p><span class="price-tag">$99</span></p>
+        <img 
+  
+        />
+  
         <p>
           A document set designed to organize and store essential business
           records, including official state filings, provided in a bound kit
@@ -77,6 +82,31 @@
             </p>
           </div>
         </div>
+        
+       <div class="completion-card">
+  <img class="completion-icon-img" src="https://github.com/rp-bizeeknowledge/Assets/blob/main/bizee-icon-topic-complete-cutout-1024x1024.png?raw=true" alt="Topic Complete">
+  <div class="completion-title">You've completed this Module!</div>
+  <div class="completion-sub">Done:</div>
+  <a class="next-topic-btn" onclick="showConfetti()" href="#">Celebrate</a>
+</div>
+
+<!-- GIF Overlay -->
+<div id="confettiOverlay" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; z-index:9999; pointer-events:none;">
+<img src="https://raw.githubusercontent.com/rp-bizeeknowledge/Assets/main/Happy%20Birthday%20Rainbow%20Sticker.gif" style="width:100%; height:100%; object-fit:cover;">
+</div>
+
+<script>
+  function showConfetti() {
+    const overlay = document.getElementById('confettiOverlay');
+    overlay.style.display = 'block';
+
+    // Hide it after 3 seconds
+    setTimeout(() => {
+      overlay.style.display = 'none';
+    }, 3000);
+  }
+</script>
+  </div>
       </div>
       <div class="footer">
         <span class="footer-logo">Bizee</span>
