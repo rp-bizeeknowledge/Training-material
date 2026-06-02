@@ -65,7 +65,7 @@ function _unlockScroll() {
   document.body.style.left = "";
   document.body.style.right = "";
   document.body.style.overflow = "";
-  window.scrollTo(0, _modalScrollY);
+  window.scrollTo({ top: _modalScrollY, behavior: "smooth" });
 }
 
 window.openModal = function (id, e) {
