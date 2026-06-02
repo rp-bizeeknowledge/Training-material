@@ -77,6 +77,11 @@ summary::-webkit-details-marker {
   display: none;
 }
 
+.top-anchor {
+  position: absolute;
+  top: 0;
+}
+
 body {
   font-family: "DM Sans", sans-serif;
   background: var(--bg);
