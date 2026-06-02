@@ -70,8 +70,9 @@ function _unlockScroll() {
 
 window.openModal = function (id, e) {
   var el = document.getElementById(id);
-  var modalH = 720;
   var vp = window.visualViewport;
+  var vpH = vp ? vp.height : window.innerHeight;
+  var modalH = Math.min(Math.round(vpH * 0.85), 920);
   // When body is fixed (scroll already locked by a parent modal),
   // visualViewport.pageTop returns 0 — use the saved offset instead
   var vpTop =
@@ -80,7 +81,6 @@ window.openModal = function (id, e) {
       : vp
         ? vp.pageTop
         : window.scrollY || 0;
-  var vpH = vp ? Math.min(vp.height, 900) : Math.min(window.innerHeight, 900);
   var top = Math.max(0, Math.round(vpTop + (vpH - modalH) / 2));
   el.style.top = top + "px";
   el.style.height = modalH + "px";

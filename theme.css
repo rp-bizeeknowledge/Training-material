@@ -6316,7 +6316,7 @@ div.scenario-item {
   border-radius: var(--radius);
   width: 90%;
   max-width: 800px;
-  height: min(75vh, 720px);
+  height: min(85vh, 920px);
   display: flex;
   flex-direction: column;
   overflow: hidden;
