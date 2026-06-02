@@ -145,40 +145,39 @@
 
 <!-- Icons Section -->
 <div class="section">
-   <div class="section-title">When to Obtain a New EIN</div>
-    <p><strong>Click</strong> on an icon to see a description of each document. </p>
-  </div>
-  <div style="display:flex; flex-wrap:wrap; gap:24px;"> </div>
+  <div class="section-title">EIN Forms &amp; Documents</div>
+  <p style="margin:8px 0 16px; font-size:12px; color:#aaa;">Click an icon to view</p>
 
-  <div style="display:flex; flex-wrap:wrap; gap:24px; justify-content:center;">
-    <div style="display:flex; flex-wrap:wrap; gap:24px; justify-content:center; margin-bottom:24px;">
+  <div style="display:flex; flex-wrap:wrap; gap:24px; justify-content:center; margin-bottom:32px;">
+
     <div onclick="openModal('form-ss4')" style="cursor:pointer; text-align:center; width:120px;">
       <div style="position:relative; width:100px; height:100px; margin:0 auto;">
         <img src="https://raw.githubusercontent.com/rp-bizeeknowledge/Assets/main/bizee-icon-form-ss4-1024x1024.png" alt="Form SS-4" style="width:100px; height:100px; object-fit:contain; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.15); transition:transform 0.2s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
-        <div style="position:absolute; bottom:-10; left:0; right:0;; border-radius:0 0 12px 12px; padding:5px 4px; font-size:11px; font-weight:600; color:#000000; line-height:1.2;">Form SS-4</div>
       </div>
+      <p style="margin:8px 0 0; font-size:12px; font-weight:600; color:#333; width:100px; text-align:center;">Form SS-4</p>
     </div>
 
     <div onclick="openModal('form-8821')" style="cursor:pointer; text-align:center; width:120px;">
       <div style="position:relative; width:100px; height:100px; margin:0 auto;">
         <img src="https://raw.githubusercontent.com/rp-bizeeknowledge/Assets/main/bizee-icon-form-8821-1024x1024.png" alt="Form 8821" style="width:100px; height:100px; object-fit:contain; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.15); transition:transform 0.2s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
-        <div style="position:absolute; bottom:-10; left:0; right:0;(0,0,0,0.45); border-radius:0 0 12px 12px; padding:5px 4px; font-size:11px; font-weight:600; color:#000000; line-height:1.2;">Form 8821</div>
       </div>
+      <p style="margin:8px 0 0; font-size:12px; font-weight:600; color:#333; width:100px; text-align:center;">Form 8821</p>
     </div>
 
     <div onclick="openModal('cp575')" style="cursor:pointer; text-align:center; width:120px;">
       <div style="position:relative; width:100px; height:100px; margin:0 auto;">
         <img src="https://raw.githubusercontent.com/rp-bizeeknowledge/Assets/main/bizee-icon-notice-cp575-1024x1024.png" alt="CP 575" style="width:100px; height:100px; object-fit:contain; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.15); transition:transform 0.2s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
-        <div style="position:absolute; bottom:-10; left:0; right:0;0,0,0,0.45); border-radius:0 0 12px 12px; padding:5px 4px; font-size:11px; font-weight:600; color:#000000; line-height:1.2;">CP 575</div>
       </div>
+      <p style="margin:8px 0 0; font-size:12px; font-weight:600; color:#333; width:100px; text-align:center;">CP 575</p>
     </div>
 
     <div onclick="openModal('letter-147c')" style="cursor:pointer; text-align:center; width:120px;">
       <div style="position:relative; width:100px; height:100px; margin:0 auto;">
         <img src="https://raw.githubusercontent.com/rp-bizeeknowledge/Assets/main/bizee-icon-letter-147c-1024x1024.png" alt="Letter 147C" style="width:100px; height:100px; object-fit:contain; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.15); transition:transform 0.2s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
-        <div style="position:absolute; bottom:-10; left:0; right:0;border-radius:0 0 12px 12px; padding:5px 4px; font-size:11px; font-weight:600; color:#000000; line-height:1.2;">Letter 147C</div>
       </div>
+      <p style="margin:8px 0 0; font-size:12px; font-weight:600; color:#333; width:100px; text-align:center;">Letter 147C</p>
     </div>
+
   </div>
 </div>
 
@@ -198,9 +197,25 @@ const formData = {
   },
   'cp575': {
     title: 'CP 575: EIN Confirmation Letter',
-    desc: 'The CP 575 letter is sent by the IRS, either by fax or mail, to confirm that an EIN has been assigned. It is the <strong>original EIN confirmation notice</strong>, issued right after the SS-4 (faxed or electronic) is processed and approved. CP 575 Letters can have several different versions, some of which contain a dotted slip customers can mail to the IRS to request changes, while other taxpayers are required to send a signed letter.',
-    type: 'pdf',
-    src: 'https://docs.google.com/viewer?url=https://raw.githubusercontent.com/rp-bizeeknowledge/Assets/main/EMPLOYER%20IDENTIFICATION%20NUMBER%20ein.pdf&embedded=true'
+    desc: 'The CP575 designation encompasses several distinct versions of the form',
+    type: 'images',
+    images: [
+      {
+        src: 'https://raw.githubusercontent.com/rp-bizeeknowledge/Assets/main/CP575.png',
+        label: 'CP 575 - Standard',
+        desc: 'The CP 575 letter is mailed by the IRS, to serve as proof that an EIN has been assigned to a business entity. It is the EIN confirmation notice, issued after a faxed application was approved and its sent directly by the IRS to the address appointed by the customer.'
+      },
+      {
+        src: 'https://raw.githubusercontent.com/rp-bizeeknowledge/Assets/main/CP575A.png',
+        label: 'CP 575 - A',
+        desc: 'The CP 575 A letter is mailed by the IRS, to serve as proof that an EIN has been assigned to a business entity when an application has a foreign address present, the entity is a sole proprietor or a single member limited liability company.'
+      },
+      {
+        src: 'https://raw.githubusercontent.com/rp-bizeeknowledge/Assets/main/CP575G.png',
+        label: 'CP 575 - G',
+        desc: 'The IRS Notice CP575G serves as an EIN assignment notification. We obtain this document immediately after an online application is approved, and upload it to the Customers dashboard so they have visibility on the assigned number.'
+      }
+    ]
   },
   'letter-147c': {
     title: 'EIN Verification Letter (147C)',
@@ -215,11 +230,21 @@ function openModal(key) {
   document.getElementById('modal-title').textContent = data.title;
   document.getElementById('modal-desc').innerHTML = data.desc;
   const viewer = document.getElementById('modal-viewer');
+
   if (data.type === 'pdf') {
     viewer.innerHTML = `<iframe src="${data.src}" width="100%" height="500px" style="border:1px solid #ddd; border-radius:8px;"></iframe>`;
-  } else {
+  } else if (data.type === 'image') {
     viewer.innerHTML = `<img src="${data.src}" alt="${data.title}" style="width:100%; border-radius:8px; border:1px solid #ddd;">`;
+  } else if (data.type === 'images') {
+    viewer.innerHTML = data.images.map(img => `
+      <div style="margin-bottom:32px;">
+        <p style="font-weight:700; font-size:14px; margin:0 0 4px;">${img.label}</p>
+        <p style="font-size:13px; color:#555; margin:0 0 10px;">${img.desc}</p>
+        <img src="${img.src}" alt="${img.label}" style="width:100%; border-radius:8px; border:1px solid #ddd;">
+      </div>
+    `).join('');
   }
+
   document.getElementById('form-modal').style.display = 'flex';
   document.body.style.overflow = 'hidden';
 }
@@ -235,24 +260,19 @@ document.getElementById('form-modal').addEventListener('click', function(e) {
 });
 </script>
 
-  <div class="section" style="margin-top:48px;">
-    <div class="section-title">When to Obtain a New EIN</div>
-    <p>A <strong>new EIN is required</strong> if the business undergoes major structural changes, such as forming a new legal entity, merging with another company, or being acquired. However, a simple <strong>business name change</strong> does not require a new EIN as long as the entity structure remains the same.</p>
-  </div>
-
-  <div class="completion-card">
-    <img class="completion-icon-img" src="https://github.com/rp-bizeeknowledge/Assets/blob/main/bizee-icon-topic-complete-cutout-1024x1024.png?raw=true" alt="Topic Complete">
-    <div class="completion-title">You've completed this topic!</div>
-    <div class="completion-sub">Next Up:</div>
-    <a class="next-topic-btn" href="2026-2_D2_9_dba.html#top">Assumed Business Name / DBA →</a>
-  </div>
-
-
-
-  <div class="footer">
-    <span class="footer-logo">Bizee</span>
-    <span class="footer-meta">Internal use only · Customer Service · D2: Product 08 of 14</span>
-  </div>
+<div class="section" style="margin-top:48px;">
+  <div class="section-title">When to Obtain a New EIN</div>
+  <p>A <strong>new EIN is required</strong> if the business undergoes major structural changes, such as forming a new legal entity, merging with another company, or being acquired. However, a simple <strong>business name change</strong> does not require a new EIN as long as the entity structure remains the same.</p>
 </div>
-</body>
-</html>
+
+<div class="completion-card">
+  <img class="completion-icon-img" src="https://github.com/rp-bizeeknowledge/Assets/blob/main/bizee-icon-topic-complete-cutout-1024x1024.png?raw=true" alt="Topic Complete">
+  <div class="completion-title">You've completed this topic!</div>
+  <div class="completion-sub">Next Up:</div>
+  <a class="next-topic-btn" href="2026-2_D2_9_dba.html#top">Assumed Business Name / DBA →</a>
+</div>
+
+<div class="footer">
+  <span class="footer-logo">Bizee</span>
+  <span class="footer-meta">Internal use only · Customer Service · D2: Product 08 of 14</span>
+</div>
