@@ -3475,10 +3475,10 @@ div.scenario-item {
   display: block;
 }
 .grant-card p {
-  font-size: 14px;
+  font-size: 13px;
   color: var(--muted);
   margin: 0;
-  text-align: left;
+  text-align: justify;
 }
 
 .contact-row {
