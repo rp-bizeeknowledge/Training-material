@@ -18,8 +18,14 @@
         <div class="hero-sub">Who needs it · Obtainment · Forms &amp; documents · Updating records</div>
   </div>
 
-  <div class="section">
-    <div class="section-title">What It Is</div>
+ <div class="section">
+  <div class="section-title">What It Is</div>
+  <div class="doc-frame" style="max-width: 750px;">
+    <img src="https://raw.githubusercontent.com/rp-bizeeknowledge/Assets/main/EMPLOYER%20IDENTIFICATION%20NUMBER%20info.png" alt="Employer Identification
+">
+    <div class="doc-frame-caption">EIN - Employer Identification Number</div>
+  </div>
+
     <p>An Employer Identification Number (EIN), also called a Federal Tax Identification Number or Tax ID, is a unique nine-digit number issued by the IRS to identify a business entity for tax and reporting purposes.</p>
   </div>
 
@@ -150,27 +156,99 @@
   </div>
   </div>
 
-  <div class="section">
-    <div class="section-title">EIN Forms &amp; Documents</div>
-    <div class="forms-list">
-      <div class="form-item">
-        <h4>Form SS-4: Application for EIN</h4>
-        <p>Form SS-4 is the application used to request an Employer Identification Number from the IRS. We use this form whenever applying for an EIN on behalf of <strong>foreign customers</strong>, <strong>customers who refused to provide an SSN</strong>, or as an alternative for <strong>domestic (electronic) applications that were rejected by the IRS</strong>. This form does not create a business on its own. It is simply the document the IRS uses to assign the company's federal tax ID number.</p>
-      </div>
-      <div class="form-item">
-        <h4>Form 8821: Tax Authorization</h4>
-        <p>IRS Form 8821, "Tax Information Authorization", lets an individual or entity access taxpayer information. This enables us to contact the IRS on the client's behalf and access their EIN details for updates or retrieval. At Bizee, we submit this form along with the SS-4 application to access and review the clients' EIN information as a third party before it is issued. <strong>We only access EIN-related information</strong>, so clients do not need to worry about other data being shared. Clients must sign this form on their dashboard after signing the SS-4. They cannot sign Form 8821 before the SS-4. <strong>*Note:</strong> This authorization expires once the IRS issues the EIN. Any corrections or issues with the 8821 should be escalated to the EIN/SS-4 department.</p>
-      </div>
-      <div class="form-item">
-        <h4>CP 575: EIN Confirmation Letter</h4>
-        <p>The CP 575 letter is sent by the IRS, either by fax or mail, to confirm that an EIN has been assigned. It is the <strong>original EIN confirmation notice</strong>, issued right after the SS-4 (faxed or electronic) is processed and approved. CP 575 Letters can have several different versions, some of which contain a dotted slip customers can mail to the IRS to request changes, while other taxpayers are required to send a signed letter.</p>
-      </div>
-      <div class="form-item">
-        <h4>EIN Verification Letter (147C)</h4>
-        <p>An IRS Letter 147C is an official document issued by the IRS to <strong>verify an existing Employer Identification Number</strong>. It serves as a replacement for the original CP 575 EIN confirmation notice, which is issued only once and cannot be reissued if lost. Businesses typically request a 147C letter when they need official, documented proof of their EIN for banks, vendors, or other institutions. In some cases, customers can request a 147C letter from the IRS directly and use our fax number if we filed for their EIN, as it is already on the IRS's records.</p>
-      </div>
-    </div>
+  <!-- Modal Overlay -->
+<div id="form-modal" style="display:none; position:fixed; inset:0; background:rgba(0,0,0,0.6); z-index:1000; align-items:center; justify-content:center;">
+  <div style="background:#fff; border-radius:12px; width:90%; max-width:800px; max-height:90vh; overflow-y:auto; padding:32px; position:relative; box-shadow:0 20px 60px rgba(0,0,0,0.3);">
+    <button onclick="closeModal()" style="position:absolute; top:16px; right:16px; background:none; border:none; font-size:24px; cursor:pointer; color:#666;">✕</button>
+    <h3 id="modal-title" style="margin:0 0 12px;"></h3>
+    <p id="modal-desc" style="color:#444; line-height:1.6; margin-bottom:24px;"></p>
+    <div id="modal-viewer"></div>
   </div>
+</div>
+
+<!-- Icons Section -->
+<div class="section">
+  <div class="section-title">EIN Forms &amp; Documents</div>
+  <div style="display:flex; flex-wrap:wrap; gap:24px; margin-top:16px;">
+
+    <div onclick="openModal('form-ss4')" style="cursor:pointer; text-align:center; width:140px;">
+      <img src="https://raw.githubusercontent.com/rp-bizeeknowledge/Assets/main/bizee-icon-form-ss4-1024x1024.png" alt="Form SS-4" style="width:100px; height:100px; object-fit:contain; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.15); transition:transform 0.2s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+      <p style="margin:8px 0 0; font-size:13px; font-weight:600; color:#333;">Form SS-4</p>
+      <p style="margin:2px 0 0; font-size:11px; color:#2563eb;">Click to view</p>
+    </div>
+
+    <div onclick="openModal('form-8821')" style="cursor:pointer; text-align:center; width:140px;">
+      <img src="https://raw.githubusercontent.com/rp-bizeeknowledge/Assets/main/bizee-icon-form-8821-1024x1024.png" alt="Form 8821" style="width:100px; height:100px; object-fit:contain; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.15); transition:transform 0.2s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+      <p style="margin:8px 0 0; font-size:13px; font-weight:600; color:#333;">Form 8821</p>
+      <p style="margin:2px 0 0; font-size:11px; color:#2563eb;">Click to view</p>
+    </div>
+
+    <div onclick="openModal('cp575')" style="cursor:pointer; text-align:center; width:140px;">
+      <img src="https://raw.githubusercontent.com/rp-bizeeknowledge/Assets/main/bizee-icon-notice-cp575-1024x1024.png" alt="CP 575" style="width:100px; height:100px; object-fit:contain; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.15); transition:transform 0.2s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+      <p style="margin:8px 0 0; font-size:13px; font-weight:600; color:#333;">CP 575</p>
+      <p style="margin:2px 0 0; font-size:11px; color:#2563eb;">Click to view</p>
+    </div>
+
+    <div onclick="openModal('letter-147c')" style="cursor:pointer; text-align:center; width:140px;">
+      <img src="https://raw.githubusercontent.com/rp-bizeeknowledge/Assets/main/bizee-icon-letter-147c-1024x1024.png" alt="Letter 147C" style="width:100px; height:100px; object-fit:contain; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.15); transition:transform 0.2s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+      <p style="margin:8px 0 0; font-size:13px; font-weight:600; color:#333;">Letter 147C</p>
+      <p style="margin:2px 0 0; font-size:11px; color:#2563eb;">Click to view</p>
+    </div>
+
+  </div>
+</div>
+
+<script>
+const formData = {
+  'form-ss4': {
+    title: 'Form SS-4: Application for EIN',
+    desc: 'Form SS-4 is the application used to request an Employer Identification Number from the IRS. We use this form whenever applying for an EIN on behalf of <strong>foreign customers</strong>, <strong>customers who refused to provide an SSN</strong>, or as an alternative for <strong>domestic (electronic) applications that were rejected by the IRS</strong>. This form does not create a business on its own. It is simply the document the IRS uses to assign the company\'s federal tax ID number.',
+    type: 'pdf',
+    src: 'https://docs.google.com/viewer?url=https://raw.githubusercontent.com/rp-bizeeknowledge/Assets/main/EMPLOYER%20IDENTIFICATION%20NUMBER%20SS4.pdf&embedded=true'
+  },
+  'form-8821': {
+    title: 'Form 8821: Tax Authorization',
+    desc: 'IRS Form 8821, "Tax Information Authorization", lets an individual or entity access taxpayer information. This enables us to contact the IRS on the client\'s behalf and access their EIN details for updates or retrieval. At Bizee, we submit this form along with the SS-4 application to access and review the clients\' EIN information as a third party before it is issued. <strong>We only access EIN-related information</strong>, so clients do not need to worry about other data being shared. Clients must sign this form on their dashboard after signing the SS-4. They cannot sign Form 8821 before the SS-4. <strong>*Note:</strong> This authorization expires once the IRS issues the EIN. Any corrections or issues with the 8821 should be escalated to the EIN/SS-4 department.',
+    type: 'pdf',
+    src: 'https://docs.google.com/viewer?url=https://raw.githubusercontent.com/rp-bizeeknowledge/Assets/main/EMPLOYER%20IDENTIFICATION%20NUMBER%208821.pdf&embedded=true'
+  },
+  'cp575': {
+    title: 'CP 575: EIN Confirmation Letter',
+    desc: 'The CP 575 letter is sent by the IRS, either by fax or mail, to confirm that an EIN has been assigned. It is the <strong>original EIN confirmation notice</strong>, issued right after the SS-4 (faxed or electronic) is processed and approved. CP 575 Letters can have several different versions, some of which contain a dotted slip customers can mail to the IRS to request changes, while other taxpayers are required to send a signed letter.',
+    type: 'pdf',
+    src: 'https://docs.google.com/viewer?url=https://raw.githubusercontent.com/rp-bizeeknowledge/Assets/main/EMPLOYER%20IDENTIFICATION%20NUMBER%20ein.pdf&embedded=true'
+  },
+  'letter-147c': {
+    title: 'EIN Verification Letter (147C)',
+    desc: 'An IRS Letter 147C is an official document issued by the IRS to <strong>verify an existing Employer Identification Number</strong>. It serves as a replacement for the original CP 575 EIN confirmation notice, which is issued only once and cannot be reissued if lost. Businesses typically request a 147C letter when they need official, documented proof of their EIN for banks, vendors, or other institutions. In some cases, customers can request a 147C letter from the IRS directly and use our fax number if we filed for their EIN, as it is already on the IRS\'s records.',
+    type: 'image',
+    src: 'https://raw.githubusercontent.com/rp-bizeeknowledge/Assets/main/147%20C.png'
+  }
+};
+
+function openModal(key) {
+  const data = formData[key];
+  document.getElementById('modal-title').textContent = data.title;
+  document.getElementById('modal-desc').innerHTML = data.desc;
+  const viewer = document.getElementById('modal-viewer');
+  if (data.type === 'pdf') {
+    viewer.innerHTML = `<iframe src="${data.src}" width="100%" height="500px" style="border:1px solid #ddd; border-radius:8px;"></iframe>`;
+  } else {
+    viewer.innerHTML = `<img src="${data.src}" alt="${data.title}" style="width:100%; border-radius:8px; border:1px solid #ddd;">`;
+  }
+  const modal = document.getElementById('form-modal');
+  modal.style.display = 'flex';
+}
+
+function closeModal() {
+  document.getElementById('form-modal').style.display = 'none';
+  document.getElementById('modal-viewer').innerHTML = '';
+}
+
+document.getElementById('form-modal').addEventListener('click', function(e) {
+  if (e.target === this) closeModal();
+});
+</script>
 
   <div class="section">
     <div class="section-title">When to Obtain a New EIN</div>
