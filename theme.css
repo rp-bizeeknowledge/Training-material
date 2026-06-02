@@ -1020,36 +1020,21 @@ li:last-child {
   display: flex;
   align-items: stretch;
   justify-content: center;
-  gap: 0;
-  width: fit-content;
-  max-width: 100%;
-  margin: 16px auto;
-  padding: 6px;
-  border: 1px solid var(--orange-mid);
-  border-radius: var(--radius);
-  background: var(--white);
-  box-shadow: var(--shadow-xs);
+  gap: 12px;
+  margin: 16px 0;
 }
 .ein-pricing-row .pricing-formula {
   margin: 0;
-}
-.ein-pricing-row .pf-item {
-  min-width: 178px;
-  height: 86px;
-  border-radius: var(--radius-sm);
 }
 .ein-pricing-or {
   display: flex;
   align-items: center;
   justify-content: center;
-  min-width: 52px;
-  padding: 0 12px;
-  font-size: 12px;
-  font-weight: 700;
-  color: var(--orange);
+  padding: 0 2px;
+  font-size: 18px;
+  font-weight: 400;
+  color: var(--muted);
   font-family: "DM Mono", monospace;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
 }
 .ein-included-card {
   display: flex;
@@ -1058,12 +1043,11 @@ li:last-child {
   align-items: center;
   min-width: 286px;
   max-width: 320px;
-  height: 86px;
-  padding: 14px 24px;
-  border: none;
+  padding: 16px 24px;
+  border: 1px solid var(--orange-mid);
   border-radius: var(--radius-sm);
-  background: var(--orange-light);
-  box-shadow: none;
+  background: var(--white);
+  box-shadow: var(--shadow-xs);
   text-align: center;
 }
 .ein-included-title {
@@ -1084,15 +1068,10 @@ li:last-child {
 @media (max-width: 700px) {
   .ein-pricing-row {
     flex-wrap: wrap;
-    width: auto;
   }
   .ein-pricing-or {
     width: 100%;
     min-height: 20px;
-  }
-  .ein-included-card,
-  .ein-pricing-row .pf-item {
-    width: 100%;
   }
 }
 
