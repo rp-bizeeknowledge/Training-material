@@ -4,7 +4,9 @@
     window.scrollTo(0, 0);
     document.documentElement.scrollTop = 0;
     document.body.scrollTop = 0;
-    try { window.parent.scrollTo(0, 0); } catch (e) {}
+    try {
+      window.parent.scrollTo(0, 0);
+    } catch (e) {}
   }
   scrollTop();
   window.addEventListener("load", scrollTop);
@@ -162,4 +164,10 @@ function cmpPick(group, side) {
   });
   document.getElementById("c" + group + side).classList.add("active-" + side);
   document.getElementById("r" + group + side).classList.add("show");
+}
+
+// Interactive Button toggle//
+
+function ruleToggle(btn) {
+  btn.classList.toggle("is-selected");
 }
