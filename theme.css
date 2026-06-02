@@ -7107,8 +7107,8 @@ details.scenario-item {
 }
 
 .state-nav a {
-  width: 48px;
-  height: 48px;
+  width: 100px;
+  height: 100px;
   border-radius: 50%;
   background: var(--white);
   border: 1px solid var(--border);
