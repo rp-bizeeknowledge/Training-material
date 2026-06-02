@@ -80,20 +80,26 @@
     <div class="subsection-title" style="margin-top:16px;">Examples</div>
     <div class="state-examples">
       <div class="state-example-item">
-        <img src="https://github.com/rp-bizeeknowledge/Assets/blob/main/bizee-icon-state-new-york-1024x1024.png?raw=true" alt="New York">
+        <div class="pdf-trigger" onclick="openModal('modal-ar-ny', event)">
+          <img src="https://github.com/rp-bizeeknowledge/Assets/blob/main/bizee-icon-state-new-york-1024x1024.png?raw=true" alt="New York">
+        </div>
         <strong>New York</strong>
         <span class="state-example-filing">Biennial Statement</span>
         <span class="state-freq state-freq-biennial">Every 2 Years</span>
       </div>
       <div class="state-example-item">
-        <img src="https://github.com/rp-bizeeknowledge/Assets/blob/main/bizee-icon-state-california-1024x1024.png?raw=true" alt="California">
+        <div class="pdf-trigger" onclick="openModal('modal-ar-ca', event)">
+          <img src="https://github.com/rp-bizeeknowledge/Assets/blob/main/bizee-icon-state-california-1024x1024.png?raw=true" alt="California">
+        </div>
         <strong>California</strong>
         <span class="state-example-filing">Statement of Information</span>
-        <span class="state-freq state-freq-annual">Annual · Corps</span>
-        <span class="state-freq state-freq-biennial">Biennial · LLCs</span>
+        <span class="state-freq state-freq-annual">Annual (Corps)</span>
+        <span class="state-freq state-freq-biennial">Biennial (LLCs)</span>
       </div>
       <div class="state-example-item">
-        <img src="https://github.com/rp-bizeeknowledge/Assets/blob/main/bizee-icon-state-texas-1024x1024.png?raw=true" alt="Texas">
+        <div class="pdf-trigger" onclick="openModal('modal-ar-tx', event)">
+          <img src="https://github.com/rp-bizeeknowledge/Assets/blob/main/bizee-icon-state-texas-1024x1024.png?raw=true" alt="Texas">
+        </div>
         <strong>Texas</strong>
         <span class="state-example-filing">Public Information &amp; Franchise Tax Report</span>
         <span class="state-freq state-freq-annual">Annual</span>
@@ -143,7 +149,44 @@
 
   <div class="footer">
     <span class="footer-logo">Bizee</span>
-    <span class="footer-meta">Internal use only · Customer Service · D2: Product 01 of 14</span>
+    <span class="footer-meta">Internal use only · Training & Development · PRODUCTS · Topic 01 of 14</span>
+  </div>
+</div>
+
+<!-- PDF Modals -->
+<div class="pdf-modal-overlay" id="modal-ar-ny">
+  <div class="pdf-modal">
+    <div class="pdf-modal-header">
+      <span class="pdf-modal-title">New York · Biennial Statement</span>
+      <button class="pdf-modal-close" onclick="closeModal('modal-ar-ny')">✕</button>
+    </div>
+    <div class="pdf-modal-body">
+      <iframe src="https://docs.google.com/viewer?url=https://github.com/rp-bizeeknowledge/Assets/raw/main/NY%20Biennial%20report.pdf&embedded=true" style="width:100%;height:100%;border:none;display:block;"></iframe>
+    </div>
+  </div>
+</div>
+
+<div class="pdf-modal-overlay" id="modal-ar-ca">
+  <div class="pdf-modal">
+    <div class="pdf-modal-header">
+      <span class="pdf-modal-title">California · Statement of Information</span>
+      <button class="pdf-modal-close" onclick="closeModal('modal-ar-ca')">✕</button>
+    </div>
+    <div class="pdf-modal-body">
+      <iframe src="https://docs.google.com/viewer?url=https://github.com/rp-bizeeknowledge/Assets/raw/main/CA%20SoI.pdf&embedded=true" style="width:100%;height:100%;border:none;display:block;"></iframe>
+    </div>
+  </div>
+</div>
+
+<div class="pdf-modal-overlay" id="modal-ar-tx">
+  <div class="pdf-modal">
+    <div class="pdf-modal-header">
+      <span class="pdf-modal-title">Texas · Public Information &amp; Franchise Tax Report</span>
+      <button class="pdf-modal-close" onclick="closeModal('modal-ar-tx')">✕</button>
+    </div>
+    <div class="pdf-modal-body">
+      <iframe src="https://docs.google.com/viewer?url=https://github.com/rp-bizeeknowledge/Assets/raw/main/TX%20PIFTR.pdf&embedded=true" style="width:100%;height:100%;border:none;display:block;"></iframe>
+    </div>
   </div>
 </div>
 
