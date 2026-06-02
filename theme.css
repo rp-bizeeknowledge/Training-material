@@ -980,7 +980,7 @@ li:last-child {
   text-align: center;
   padding: 18px 32px;
   border-radius: var(--radius-sm);
-  min-width: 140px;
+  min-width: 200px;
   background: var(--orange);
   border: none;
 }
