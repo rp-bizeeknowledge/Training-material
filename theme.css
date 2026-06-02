@@ -7101,30 +7101,56 @@ details.scenario-item {
 .state-nav {
   display: flex;
   justify-content: center;
-  gap: 12px;
+  gap: 36px;
   margin: 20px 0 28px;
   flex-wrap: wrap;
+  max-width: 100%;
 }
 
 .state-nav a {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  background: var(--white);
-  border: 1px solid var(--border);
+  width: 120px;
+  height: auto;
+  border-radius: none;
+  background: inherit;;
+  border: 0px solid var(--border);
   display: flex;
   align-items: center;
   justify-content: center;
   text-decoration: none;
   font-size: 22px;
-  box-shadow: var(--shadow-xs);
+  box-shadow: none;
   transition: transform 0.15s ease;
 }
+.state-nav-item {
+  width: 110px;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.state-title {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  text-align: center;
+  text-wrap: wrap;
 
-.state-nav a:hover {
-  transform: translateY(-2px);
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--dark);
+  line-height: 1.1;
+  margin-bottom: 8px;
 }
 
-html {
-  scroll-behavior: smooth;
+.state-icon {
+  width: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: filter 0.2s ease, transform 0.2s ease;
+}
+
+.state-nav img:hover {
+  filter: drop-shadow(0 0 16px rgba(249, 115, 22, 0.8));
+  transform: translateY(-8px) scale(1.12);
 }
