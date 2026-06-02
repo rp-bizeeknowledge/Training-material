@@ -3533,7 +3533,7 @@ div.scenario-item {
   display: block;
 }
 .grant-card p {
-  font-size: 13px;
+  font-size: 12px;
   color: var(--muted);
   margin: 0;
   text-align: justify;
@@ -7089,4 +7089,37 @@ details.scenario-item {
   .kbx .kbx-legend-item {
     white-space: normal;
   }
+}
+
+/* State Navigation (5. State Specifics) */
+
+.state-nav {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin: 20px 0 28px;
+  flex-wrap: wrap;
+}
+
+.state-nav a {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: var(--white);
+  border: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-size: 22px;
+  box-shadow: var(--shadow-xs);
+  transition: transform 0.15s ease;
+}
+
+.state-nav a:hover {
+  transform: translateY(-2px);
+}
+
+html {
+  scroll-behavior: smooth;
 }
