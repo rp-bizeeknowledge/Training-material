@@ -7311,3 +7311,32 @@ details.scenario-item {
 .rule-box.is-selected .rule-box-text {
   display: block;
 }
+
+/* State Navigation (5. State Specifics) */
+
+.state-nav {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin: 20px 0 28px;
+  flex-wrap: wrap;
+}
+
+.state-nav a {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: none;
+  border: 0px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-size: 22px;
+  box-shadow: none;
+  transition: transform 0.15s ease;
+}
+
+.state-nav a:hover {
+  transform: translateY(-2px);
+}
