@@ -1163,37 +1163,37 @@ li:last-child {
   background: #dda53a;
   color: #1e1a17;
   text-align: center;
-  border: 1px solid #1e1a17;
+  border: 2px solid #1e1a17;
 }
 .sb-open {
   background: #c84b31;
   color: #f4efe6;
   text-align: center;
-  border: 1px solid #1e1a17;
+  border: 2px solid #1e1a17;
 }
 .sb-pending {
   background: #5e97c9;
   color: #f4efe6;
   text-align: center;
-  border: 1px solid #1e1a17;
+  border: 2px solid #1e1a17;
 }
 .sb-onhold {
   background: #1e1a17;
   color: #f4efe6;
   text-align: center;
-  border: 1px solid #1e1a17;
+  border: 2px solid #1e1a17;
 }
 .sb-solved {
   background: #8c8379;
   color: #f4efe6;
   text-align: center;
-  border: 1px solid #1e1a17;
+  border: 2px solid #1e1a17;
 }
 .sb-closed {
   background: #d4ccbe;
-  color: #fefefe;
+  color: var(--mid);
   text-align: center;
-  border: 1px solid #1e1a17;
+  border: 2px solid #1e1a17;
 }
 
 /* ── 16. STATUS FLOW ─────────────────────────────────────── */
