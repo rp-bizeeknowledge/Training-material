@@ -6559,8 +6559,8 @@ details.scenario-item {
   font-size: 14px;
   color: var(--mid);
   text-align: center;
-  padding: 2rem;
-  border: 1px dashed var(--border);
+  padding: 1rem;
+  border: 0px dashed var(--border);
   border-radius: var(--radius-sm);
 }
 
