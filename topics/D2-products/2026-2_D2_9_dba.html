@@ -89,6 +89,35 @@
   </div>
     <p>If the DBA is filed with the state, the document will generally reflect that the name is valid across all counties within that state.</p>
     <p>However, if the DBA is filed at the county level, it will only be valid in that specific county. If the customer wants the DBA to be recognized in multiple counties, we would need to file it separately in each county.</p>
+
+    <div class="subsection-title" style="margin-top:16px;">Examples</div>
+    <p style="font-size:13px; color:var(--muted); margin-bottom:12px;">Click a state to view a sample DBA filing document.</p>
+    <div class="state-examples">
+      <div class="state-example-item">
+        <div class="pdf-trigger" onclick="openModal('modal-dba-tx', event)">
+          <img src="https://github.com/rp-bizeeknowledge/Assets/blob/main/bizee-icon-state-texas-1024x1024.png?raw=true" alt="Texas">
+        </div>
+        <strong>Texas</strong>
+        <span class="state-example-filing">Assumed Name Certificate</span>
+        <span class="state-freq state-freq-biennial">County Level</span>
+      </div>
+      <div class="state-example-item">
+        <div class="pdf-trigger" onclick="openModal('modal-dba-ca', event)">
+          <img src="https://github.com/rp-bizeeknowledge/Assets/blob/main/bizee-icon-state-california-1024x1024.png?raw=true" alt="California">
+        </div>
+        <strong>California</strong>
+        <span class="state-example-filing">Fictitious Business Name Statement</span>
+        <span class="state-freq state-freq-biennial">County Level</span>
+      </div>
+      <div class="state-example-item">
+        <div class="pdf-trigger" onclick="openModal('modal-dba-or', event)">
+          <img src="https://github.com/rp-bizeeknowledge/Assets/blob/main/bizee-icon-state-oregon-1024x1024.png?raw=true" alt="Oregon">
+        </div>
+        <strong>Oregon</strong>
+        <span class="state-example-filing">Assumed Business Name</span>
+        <span class="state-freq state-freq-annual">State Level</span>
+      </div>
+    </div>
   </div>
 
   <div class="section">
@@ -114,5 +143,44 @@
     <span class="footer-meta">Internal use only · Training & Development · PRODUCTS · Topic 09 of 14</span>
   </div>
 </div>
+
+<!-- PDF Modals -->
+<div class="pdf-modal-overlay" id="modal-dba-tx">
+  <div class="pdf-modal">
+    <div class="pdf-modal-header">
+      <span class="pdf-modal-title">Texas · Assumed Name Certificate</span>
+      <button class="pdf-modal-close" onclick="closeModal('modal-dba-tx')">✕</button>
+    </div>
+    <div class="pdf-modal-body">
+      <iframe src="" style="width:100%;height:100%;border:none;display:block;"></iframe>
+    </div>
+  </div>
+</div>
+
+<div class="pdf-modal-overlay" id="modal-dba-ca">
+  <div class="pdf-modal">
+    <div class="pdf-modal-header">
+      <span class="pdf-modal-title">California · Fictitious Business Name Statement</span>
+      <button class="pdf-modal-close" onclick="closeModal('modal-dba-ca')">✕</button>
+    </div>
+    <div class="pdf-modal-body">
+      <iframe src="" style="width:100%;height:100%;border:none;display:block;"></iframe>
+    </div>
+  </div>
+</div>
+
+<div class="pdf-modal-overlay" id="modal-dba-or">
+  <div class="pdf-modal">
+    <div class="pdf-modal-header">
+      <span class="pdf-modal-title">Oregon · Assumed Business Name</span>
+      <button class="pdf-modal-close" onclick="closeModal('modal-dba-or')">✕</button>
+    </div>
+    <div class="pdf-modal-body">
+      <iframe src="" style="width:100%;height:100%;border:none;display:block;"></iframe>
+    </div>
+  </div>
+</div>
+
+<script src="../../theme.js"></script>
 </body>
 </html>

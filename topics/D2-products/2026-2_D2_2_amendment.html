@@ -53,7 +53,7 @@
     </div>
     
     <p><strong>Sending a signed letter that that contains the following details:</strong></p>
-    <div class="note-item">
+    <div class="note-item" style="border-radius:16px;">
       <ul style="margin:0; padding-left:18px; display:flex; flex-direction:column; gap:6px;">
         <li>Legal business name</li>
         <li>Employer Identification Number (EIN)</li>
@@ -65,7 +65,7 @@
     </div>
 
     <div class="callout callout-red-warning">
-      <p><strong>Bizee cannot update this information</strong> on a taxpayer's behalf through an amendment. Changes to an existing EIN need to be done by the <strong>responsible party</strong> exclusively and might also require the submission of <strong>Form 8821-B</strong>.</p>
+      <p><strong>Bizee cannot update this information</strong> on a taxpayer's behalf through an amendment. Changes to an existing EIN need to be done by the <strong>responsible party</strong> exclusively and might also require the submission of <strong><a href="#" onclick="openModal('modal-f8821b', event); return false;" style="color:inherit; text-decoration:underline; cursor:pointer;">Form 8821-B</a></strong>.</p>
     </div>
   </div>
 
@@ -87,8 +87,19 @@
     <div class="subsection-title">If the Amendment order hasn't been placed</div>
     <div class="process-steps">
       <div class="process-step">
-        <div class="process-left"><div class="process-num">1</div><div class="process-line"></div></div>
-        <div class="process-body"><p>Advise the customer to <strong>submit the order</strong> and enter the information that needs to be amended in the <strong>designated section during order checkout</strong>.</p></div>
+        <div class="process-left"><div class="process-num">1</div><div class="process-line" style="display:block;"></div></div>
+        <div class="process-body">
+          <p>Advise the customer to <strong>submit the order</strong> and enter the information that needs to be amended in the <strong>designated section during order checkout</strong>.</p>
+        </div>
+      </div>
+    </div>
+    <div class="process-continuation">
+      <div class="process-continuation-spine"></div>
+      <div class="process-continuation-body">
+        <div class="doc-frame" style="margin:0;">
+          <img src="https://github.com/rp-bizeeknowledge/Assets/blob/main/Amendment%20not%20placed.png?raw=true" alt="Amendment not placed">
+          <div class="doc-frame-caption">Amendment ordering from the Dashboard</div>
+        </div>
       </div>
     </div>
 
@@ -96,14 +107,25 @@
     <div class="process-steps">
       <div class="process-step">
         <div class="process-left"><div class="process-num">1</div><div class="process-line"></div></div>
-        <div class="process-body"><p>Check <strong>internal storage</strong> for the amendment receipt as well as the <strong>Order History tab</strong> and any associated comments, to determine if <strong>work has started</strong>.</p></div>
+        <div class="process-body">
+          <p>Check <strong>internal storage</strong> for the amendment receipt as well as the <strong>Order History tab</strong> and any associated comments, to determine if <strong>work has started</strong>.</p>
+        </div>
+      </div>
+      <div class="process-continuation">
+        <div class="process-continuation-spine"></div>
+        <div class="process-continuation-body">
+          <div class="doc-frame" style="margin:0;">
+            <img src="https://raw.githubusercontent.com/rp-bizeeknowledge/Assets/16c7b43233a23ac21a47e30ce2b206e16777cbf3/Check%20Internal%20Storage.gif" alt="Check Internal Storage">
+            <div class="doc-frame-caption">Checking internal storage in DB</div>
+          </div>
+        </div>
       </div>
       <div class="process-step">
-        <div class="process-left"><div class="process-num">2a</div><div class="process-line"></div></div>
+        <div class="process-left"><div class="process-num">2</div><div class="process-line"></div></div>
         <div class="process-body"><h4>If work has begun</h4><p>Advise the customer to submit a <strong>new amendment order</strong>.</p></div>
       </div>
       <div class="process-step">
-        <div class="process-left"><div class="process-num">2b</div></div>
+        <div class="process-left"><div class="process-num">3</div><div class="process-line" style="display:block;"></div></div>
         <div class="process-body">
           <h4>If work hasn't started</h4>
           <ul>
@@ -166,5 +188,20 @@
     <span class="footer-meta">Internal use only · Training & Development · PRODUCTS · Topic 02 of 14</span>
   </div>
 </div>
+
+<!-- PDF Modals -->
+<div class="pdf-modal-overlay" id="modal-f8821b">
+  <div class="pdf-modal">
+    <div class="pdf-modal-header">
+      <span class="pdf-modal-title">Form 8821-B</span>
+      <button class="pdf-modal-close" onclick="closeModal('modal-f8821b')">✕</button>
+    </div>
+    <div class="pdf-modal-body">
+      <iframe src="https://docs.google.com/viewer?url=https://github.com/rp-bizeeknowledge/Assets/raw/main/f8821.pdf&embedded=true" style="width:100%;height:100%;border:none;display:block;"></iframe>
+    </div>
+  </div>
+</div>
+
+<script src="../../theme.js"></script>
 </body>
 </html>
