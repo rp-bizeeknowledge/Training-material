@@ -146,18 +146,24 @@
 
   <div class="section">
     <div class="section-title">Special Scenarios</div>
-    <div class="scenario-list">
-      <div class="scenario-item">
-        <h4>Delaware</h4>
-        <p><strong>Delaware</strong> allows customers to decide whether or not to list company members. If a customer initially chose <strong>not to list members</strong> or the <strong>company address</strong>, they can file an amendment later to add this information.</p>
+    <div class="state-examples" style="grid-template-columns: repeat(3, 1fr);">
+      <div class="state-example-item">
+        <div class="pdf-trigger" onclick="openModal('modal-amend-de', event)">
+          <img src="https://github.com/rp-bizeeknowledge/Assets/blob/main/bizee-icon-state-delaware-1024x1024.png?raw=true" alt="Delaware">
+        </div>
+        <strong>Delaware</strong>
       </div>
-      <div class="scenario-item">
-        <h4>Pennsylvania</h4>
-        <p><strong>Pennsylvania</strong> doesn't show members on the Articles until the <strong>first Annual Report</strong> has been filed. If customers want to change this information, they will have to <strong>wait until the report's deadline is near</strong> so the change can be made through an Amendment.</p>
+      <div class="state-example-item">
+        <div class="pdf-trigger" onclick="openModal('modal-amend-pa', event)">
+          <img src="https://github.com/rp-bizeeknowledge/Assets/blob/main/bizee-icon-state-pennsylvania-1024x1024.png?raw=true" alt="Pennsylvania">
+        </div>
+        <strong>Pennsylvania</strong>
       </div>
-      <div class="scenario-item">
-        <h4>Updating DBA Address After Company Address Amendment</h4>
-        <p>When a customer files an amendment to change the company address with the Secretary of State, the DBA (Doing Business As) address does not automatically update. The <strong>customer</strong> will need to update the DBA address <strong>directly with the county</strong> where the DBA was initially filed.</p>
+      <div class="state-example-item">
+        <div class="pdf-trigger" onclick="openModal('modal-amend-dba', event)">
+          <img src="https://github.com/rp-bizeeknowledge/Assets/blob/main/bizee-icon-address-update-1024x1024.png?raw=true" alt="Updating DBA Address">
+        </div>
+        <strong>Updating DBA Address</strong>
       </div>
     </div>
   </div>
@@ -190,6 +196,42 @@
 </div>
 
 <!-- PDF Modals -->
+<div class="pdf-modal-overlay" id="modal-amend-de">
+  <div class="pdf-modal" style="height:auto;">
+    <div class="pdf-modal-header">
+      <span class="pdf-modal-title">Delaware</span>
+      <button class="pdf-modal-close" onclick="closeModal('modal-amend-de')">✕</button>
+    </div>
+    <div class="pdf-modal-body" style="padding:24px 28px;">
+      <p><strong>Delaware</strong> allows customers to decide whether or not to list company members. If a customer initially chose <strong>not to list members</strong> or the <strong>company address</strong>, they can file an amendment later to add this information.</p>
+    </div>
+  </div>
+</div>
+
+<div class="pdf-modal-overlay" id="modal-amend-pa">
+  <div class="pdf-modal" style="height:auto;">
+    <div class="pdf-modal-header">
+      <span class="pdf-modal-title">Pennsylvania</span>
+      <button class="pdf-modal-close" onclick="closeModal('modal-amend-pa')">✕</button>
+    </div>
+    <div class="pdf-modal-body" style="padding:24px 28px;">
+      <p><strong>Pennsylvania</strong> doesn't show members on the Articles until the <strong>first Annual Report</strong> has been filed. If customers want to change this information, they will have to <strong>wait until the report's deadline is near</strong> so the change can be made through an Amendment.</p>
+    </div>
+  </div>
+</div>
+
+<div class="pdf-modal-overlay" id="modal-amend-dba">
+  <div class="pdf-modal" style="height:auto;">
+    <div class="pdf-modal-header">
+      <span class="pdf-modal-title">Updating DBA Address After Company Address Amendment</span>
+      <button class="pdf-modal-close" onclick="closeModal('modal-amend-dba')">✕</button>
+    </div>
+    <div class="pdf-modal-body" style="padding:24px 28px;">
+      <p>When a customer files an amendment to change the company address with the Secretary of State, the DBA (Doing Business As) address does not automatically update. The <strong>customer</strong> will need to update the DBA address <strong>directly with the county</strong> where the DBA was initially filed.</p>
+    </div>
+  </div>
+</div>
+
 <div class="pdf-modal-overlay" id="modal-f8821b">
   <div class="pdf-modal">
     <div class="pdf-modal-header">
