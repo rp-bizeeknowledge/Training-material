@@ -3605,7 +3605,7 @@ div.scenario-item {
   font-size: 13px;
   text-align: center;
   border: 1px solid rgba(255, 255, 255, 0.06);
-  align-items: flex-start;
+  align-items: center;
 }
 .contact-chip strong {
   color: var(--orange-deep);
@@ -6098,11 +6098,30 @@ div.scenario-item {
   }
 }
 .agency-card {
-  background: var(--white);
-  border: 1px solid var(--border);
+  background: none;
+  border: 0px solid var(--border);
   border-radius: var(--radius);
-  padding: 14px 16px;
   box-shadow: var(--shadow-xs);
+}
+.agency-card.contact-card {
+  display: flex;
+  align-items: stretch;
+}
+.agency-card.contact-card .contact-chip {
+  display: flex;
+  align-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  flex-wrap: wrap;
+  justify-content: center;
+  min-height: 63px;
+  overflow-wrap: anywhere;
+  width: 100%;
+  height: 100%;
+}
+.agency-card.contact-card .contact-chip span {
+  display: block;
+  width: 100%;
 }
 .agency-card h4 {
   font-size: 13px;
@@ -6559,9 +6578,16 @@ details.scenario-item {
   font-family: inherit;
 }
 
-.ar-btn:hover {
-  background: var(--bg-subtle, #f9f6f2);
-  border-color: var(--mid);
+.ar-btn-no:hover {
+  background: var(--green-light);
+  border-color: var(--green-border);
+  color: var(--green);
+}
+
+.ar-btn-yes:hover {
+  background: var(--red-light);
+  border-color: var(--red-border);
+  color: var(--red);
 }
 
 .ar-btn.active-no {
