@@ -6,6 +6,83 @@
 <title>D2.10: Form 2553 (S-Corp Election)</title>
 <link rel="stylesheet" href="https://rp-bizeeknowledge.github.io/Training-material/theme.css">
 <link rel="stylesheet" href="../../theme.css">
+<style>
+  .floating-guy {
+    position: absolute;
+    z-index: 100;
+    cursor: grab;
+    user-select: none;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 6px;
+  }
+  .floating-guy:active { cursor: grabbing; }
+
+  .floating-bubble {
+    display: none;
+    position: relative;
+    background: #fff;
+    border: 1px solid var(--border, #ddd);
+    border-radius: 12px;
+    padding: 12px 16px;
+    font-size: 13px;
+    line-height: 1.6;
+    width: 220px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+    color: var(--text, #333);
+  }
+  .floating-bubble::after {
+    content: '';
+    position: absolute;
+    bottom: -9px;
+    right: 24px;
+    width: 0; height: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-top: 9px solid var(--border, #ddd);
+  }
+  .floating-bubble::before {
+    content: '';
+    position: absolute;
+    bottom: -7px;
+    right: 25px;
+    width: 0; height: 0;
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+    border-top: 7px solid #fff;
+    z-index: 1;
+  }
+  .floating-bubble.open { display: block; }
+  .floating-bubble-label {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--accent, #e07a5f);
+  }
+  .floating-bubble p {
+    margin: 0 0 4px;
+  }
+  .floating-bubble p:last-child { margin: 0; }
+
+  .floating-img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    filter: drop-shadow(0 4px 8px rgba(0,0,0,0.15));
+    transition: transform 0.15s;
+    display: block;
+  }
+  .floating-img:hover { transform: scale(1.08); }
+
+  /* Wrapper so the guy sits relative to the process section */
+  .process-section-wrap {
+    position: relative;
+  }
+</style>
 </head>
 <body><a id="top" style="position:absolute;top:0;"></a>
 <div class="page">
@@ -15,91 +92,114 @@
   <div class="hero hero-soft">
     <div class="hero-label">PRODUCTS · Topic 10</div>
     <h1>Form 2553 <span>(S-Corp Election)</span></h1>
-        <div class="hero-sub">Submission · IRS response · Eligibility · Corrections · Late elections</div>
+    <div class="hero-sub">Submission · IRS response · Eligibility · Corrections · Late elections</div>
   </div>
 
   <div class="section">
-  <div class="section-title">What It Is</div>
-  
+    <div class="section-title">What It Is</div>
     <p>IRS Form 2553 (<strong>Election by a Small Business Corporation</strong>), is used to elect S Corporation tax status for federal tax purposes. Eligible domestic corporations and limited liability companies that meet IRS requirements may file this form to be taxed as an S Corporation rather than under the default tax classification.</p>
     <p>By making this election, the business generally becomes a pass-through entity for federal income tax purposes, meaning income, losses, deductions, and credits are reported on the owners' individual tax returns rather than being taxed at the corporate level. The election affects how federal income and employment taxes are calculated and reported but does not change the entity's legal structure under state law.</p>
   </div>
+
   <div class="section">
-        <div class="section">
-  <div class="doc-frame" style="max-width: 750px;">
-    <iframe 
-      src="https://docs.google.com/viewer?url=https://raw.githubusercontent.com/rp-bizeeknowledge/Assets/main/2553%20PDF.pdf&embedded=true" 
-      style="width:100%; height:500px; border:none; display:block;">
-    </iframe>
-    <div class="doc-frame-caption">2553 Election by a Small Business Corporation · Example</div>
+    <div class="doc-frame" style="max-width: 750px;">
+      <iframe
+        src="https://docs.google.com/viewer?url=https://raw.githubusercontent.com/rp-bizeeknowledge/Assets/main/2553%20PDF.pdf&embedded=true"
+        style="width:100%; height:500px; border:none; display:block;">
+      </iframe>
+      <div class="doc-frame-caption">2553 Election by a Small Business Corporation · Example</div>
+    </div>
   </div>
-</div>
 
   <div class="section">
     <div class="section-title">Pricing</div>
     <div class="pricing-formula"><div class="pf-item"><div class="pf-amount">$50</div><div class="pf-label">Flat Fee · All Inclusive</div></div></div>
   </div>
 
-  <div class="section">
-    <div class="section-title">Submission</div>
-    <div class="rules-list">
-      <div class="callout callout-blue-warning"><p>Once Form 2553 is faxed to the IRS, the service is complete. The faxed document will be available for customers to view.</p></div>
+  <!-- S-CORP ELECTION PROCESS -->
+  <div class="section process-section-wrap">
+    <div class="section-title">S-Corp Election Process</div>
+
+    <!-- Floating draggable guy — spawns near Step 1 -->
+    <div class="floating-guy" id="floatingGuy" style="top: 48px; right: 0px;">
+<div class="floating-bubble open" id="floatingBubble">
+        <span class="floating-bubble-label">Remember</span>
+        <p>Foreigners <strong>cannot</strong> apply for S-Corp status.</p>
+        <p>The company <strong>cannot</strong> have other entities as members.</p>
+      </div>
+      <img
+        class="floating-img"
+        src="https://raw.githubusercontent.com/rp-bizeeknowledge/Assets/main/bizee-icon-individual-owner-1024x1024.png"
+        alt="Helper"
+        id="floatingImg">
     </div>
+
+    <div class="process-steps">
+
+      <div class="process-step">
+        <div class="process-left"><div class="process-num">1</div><div class="process-line" style="display:block;"></div></div>
+        <div class="process-body">
+          <h4>Eligibility Check</h4>
+          <p>The business must have an <strong>EIN</strong>. The company cannot have other entities as members. Foreigners cannot apply for S-Corp status.</p>
+        </div>
+      </div>
+
+      <div class="process-step">
+        <div class="process-left"><div class="process-num">2</div><div class="process-line" style="display:block;"></div></div>
+        <div class="process-body">
+          <h4>Form 2553</h4>
+          <p>Form 2553 must be submitted <strong>within 75 days</strong> of the intended effective date and signed by all owners.</p>
+        </div>
+      </div>
+
+      <div class="process-step">
+        <div class="process-left"><div class="process-num">3</div><div class="process-line" style="display:block;"></div></div>
+        <div class="process-body">
+          <h4>Submission</h4>
+          <p>Once Form 2553 is faxed to the IRS, the service is complete. The faxed document will be available for customers to view. Corrections can only be made <strong>before</strong> the fax is sent.</p>
+          <div class="callout callout-red-warning" style="font-size: 13px; padding: 10px 14px; margin-top: 8px;">
+            <p style="margin:0;">After faxing, corrections can only be made if the IRS rejects the form. The customer must contact the IRS directly.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="process-step">
+        <div class="process-left"><div class="process-num">4</div></div>
+        <div class="process-body">
+          <h4>IRS Response</h4>
+          <p>The IRS will send an acceptance or rejection letter, usually within <strong>60 days</strong>. The letter is sent to the address on the form. Bizee won't know the outcome unless the customer uses our Virtual Address.</p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Effective Date Banner -->
+    <div class="callout callout-yellow-warning" style="margin-top: 20px;">
+      <p>&#128197; <strong>Effective Date:</strong> The effective date can be postdated to a future time — it determines when S-Corp status takes effect.</p>
+    </div>
+
   </div>
 
-  <div class="section">
-    <div class="section-title">IRS Response</div>
-    <div class="rules-list">
-      <div class="callout callout-blue-warning"><p>The IRS will send an acceptance or rejection letter, usually within <strong>60 days</strong>. The letter is sent to the address on the form. Bizee won't know the outcome unless the customer uses our Virtual Address.</p></div>
-    </div>
-  </div>
-
-  <div class="section">
-    <div class="section-title">Eligibility</div>
-    <div class="rules-list">
-      <div class="callout callout-red-warning"><p>Foreigners <strong>cannot</strong> apply for S-Corp status.</p></div>
-      <div class="callout callout-blue-warning"><p>The business must have an EIN and signatures from all owners.</p></div>
-    </div>
-  </div>
-
-  <div class="section">
-    <div class="section-title">Common Customer Scenarios</div>
-    <div class="note-list">
-      <div class="note-item"><strong>Form Rejection:</strong> Ask for the rejection letter and escalate.</div>
-      <div class="note-item"><strong>Missing Information:</strong> The system auto-fills missing fields (like EIN).</div>
-      <div class="note-item"><strong>Form Not Available:</strong> If the form option is missing, the company may not be eligible for S-Corp status.</div>
-    </div>
-  </div>
-
-  <div class="section">
-    <div class="section-title">Corrections</div>
-    <div class="rules-list">
-      <div class="callout callout-blue-warning"><p>Corrections can be made <strong>before</strong> the fax is sent.</p></div>
-      <div class="callout callout-red-warning"><p>After faxing, corrections can only be made if the IRS rejects the form. The customer must contact the IRS directly.</p></div>
-    </div>
-  </div>
-
-  <div class="section">
-    <div class="section-title">Election Requirements</div>
-    <div class="rules-list">
-      <div class="callout callout-blue-warning"><p>Form 2553 must be submitted after obtaining an EIN.</p></div>
-      <div class="callout callout-blue-warning"><p>Must be signed by all owners.</p></div>
-      <div class="callout callout-red-warning"><p>The company <strong>cannot</strong> have other entities as members.</p></div>
-    </div>
-  </div>
-
-  <div class="section">
-    <div class="section-title">Effective Date</div>
-    <div class="rules-list">
-      <div class="callout callout-yellow-warning"><p>The form must be submitted <strong>before</strong> the effective date (within 75 days). The effective date can be postdated to a future time. It determines when S-Corp status takes effect.</p></div>
-    </div>
-  </div>
-
+  <!-- LATE ELECTION -->
   <div class="section">
     <div class="section-title">Late Election</div>
-    <div class="rules-list">
-      <div class="callout callout-yellow-warning"><p>A Late Election can be filed up to <strong>3 years and 75 days</strong> after the deadline, but requires approval from the Document Department.</p></div>
+    <div class="process-steps">
+      <div class="process-step">
+        <div class="process-left"><div class="process-num">!</div></div>
+        <div class="process-body">
+          <h4>Filing a Late Election</h4>
+          <p>A Late Election can be filed up to <strong>3 years and 75 days</strong> after the deadline, but requires approval from the Document Department.</p>
+        </div>
+      </div>
     </div>
+  </div>
+
+  <!-- COMMON CUSTOMER SCENARIOS -->
+  <div class="section">
+    <div class="section-title">Common Customer Scenarios</div>
+    <p><strong>Form Rejection:</strong> Ask for the rejection letter and escalate.</p>
+    <p><strong>Missing Information:</strong> The system auto-fills missing fields (like EIN).</p>
+    <p><strong>Form Not Available:</strong> If the form option is missing, the company may not be eligible for S-Corp status.</p>
   </div>
 
   <div class="completion-card">
@@ -109,12 +209,72 @@
     <a class="next-topic-btn" href="2026-2_D2_11_business-contract-templates.html#top">Business Contract Templates →</a>
   </div>
 
-
-
   <div class="footer">
     <span class="footer-logo">Bizee</span>
     <span class="footer-meta">Internal use only · Training & Development · PRODUCTS · Topic 10 of 14</span>
   </div>
+
 </div>
+
+<script>
+  var guy = document.getElementById('floatingGuy');
+  var bubble = document.getElementById('floatingBubble');
+  var img = document.getElementById('floatingImg');
+  var dragged = false;
+  var dragging = false;
+  var startX, startY, startLeft, startTop;
+
+  img.addEventListener('click', function() {
+    if (!dragged) bubble.classList.toggle('open');
+    dragged = false;
+  });
+
+  guy.addEventListener('mousedown', function(e) {
+    dragging = true;
+    dragged = false;
+    startX = e.clientX;
+    startY = e.clientY;
+    startLeft = guy.offsetLeft;
+    startTop = guy.offsetTop;
+    e.preventDefault();
+  });
+
+  document.addEventListener('mousemove', function(e) {
+    if (!dragging) return;
+    var dx = e.clientX - startX;
+    var dy = e.clientY - startY;
+    if (Math.abs(dx) > 3 || Math.abs(dy) > 3) dragged = true;
+    guy.style.left = (startLeft + dx) + 'px';
+    guy.style.top = (startTop + dy) + 'px';
+    guy.style.right = 'auto';
+  });
+
+  document.addEventListener('mouseup', function() { dragging = false; });
+
+  // Touch
+  guy.addEventListener('touchstart', function(e) {
+    var t = e.touches[0];
+    dragging = true;
+    dragged = false;
+    startX = t.clientX;
+    startY = t.clientY;
+    startLeft = guy.offsetLeft;
+    startTop = guy.offsetTop;
+  }, { passive: true });
+
+  document.addEventListener('touchmove', function(e) {
+    if (!dragging) return;
+    var t = e.touches[0];
+    var dx = t.clientX - startX;
+    var dy = t.clientY - startY;
+    if (Math.abs(dx) > 3 || Math.abs(dy) > 3) dragged = true;
+    guy.style.left = (startLeft + dx) + 'px';
+    guy.style.top = (startTop + dy) + 'px';
+    guy.style.right = 'auto';
+  }, { passive: true });
+
+  document.addEventListener('touchend', function() { dragging = false; });
+</script>
+
 </body>
 </html>
