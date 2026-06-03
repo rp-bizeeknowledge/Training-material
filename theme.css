@@ -6538,9 +6538,16 @@ details.scenario-item {
   font-family: inherit;
 }
 
-.ar-btn:hover {
-  background: var(--bg-subtle, #f9f6f2);
-  border-color: var(--mid);
+.ar-btn-no:hover {
+  background: var(--green-light);
+  border-color: var(--green-border);
+  color: var(--green);
+}
+
+.ar-btn-yes:hover {
+  background: var(--red-light);
+  border-color: var(--red-border);
+  color: var(--red);
 }
 
 .ar-btn.active-no {
