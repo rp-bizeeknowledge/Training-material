@@ -6105,7 +6105,7 @@ div.scenario-item {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 10px;
-  margin: 12px 0;
+  margin: 0 0 12px;
 }
 @media (max-width: 520px) {
   .agency-split {
@@ -6115,8 +6115,8 @@ div.scenario-item {
 .agency-card {
   background: none;
   border: 0px solid var(--border);
-  border-radius: var(--radius);
-  box-shadow: var(--shadow-xs);
+  border-radius: no;
+  box-shadow: none;
 }
 .agency-card.contact-card {
   display: flex;

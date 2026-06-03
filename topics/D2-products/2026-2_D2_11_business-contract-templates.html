@@ -15,29 +15,171 @@
   <div class="hero hero-soft">
     <div class="hero-label">PRODUCTS · Topic 11</div>
     <h1>Business Contract <span>Templates</span></h1>
-    <div class="hero-sub">25+ contract drafts · Included in Premium · Available as add-on</div>
+    <div class="hero-sub">25+  Lawyer-Approved Legal Documents</div>
   </div>
     <div class="section">
   <div class="section-title">What It Is</div>
      <p>This product includes over <strong>25 business contract drafts</strong> designed to support the business's activities, including internal governance, vendor relationships, and standard commercial arrangements. The feature is included at <strong>no additional cost with the Premium package</strong>, and it can also be purchased separately as a <strong>one-time add-on for $150</strong>.</p>
-    <div class="price-row">
-      <div class="price-card free">
-        <h4>Included In</h4>
-        <span class="amount">$0</span>
-        <p>Premium Package</p>
+     <div class="section">
+    <div class="section-title">Pricing</div>
+    <div class="pricing-formula">
+      <div class="pf-item">
+        <div class="pf-amount">$150</div>
+        <div class="pf-label">Standalone Add-On</div>
       </div>
-      <div class="price-card paid">
-        <h4>Standalone Add-On</h4>
-        <span class="amount">$150</span>
-        <p>One-time purchase</p>
+      <div class="pf-operator">or</div>
+      <div class="pf-item" style="background:#fff; border:2px solid #e8572a;">
+        <div class="pf-amount" style="color:#e8572a;">Included in Premium Package</div>
+        <div class="pf-label" style="color:rgba(232,87,42,0.7);">In the Standard &amp; Premium Packages </div>
       </div>
+    </div>
+      </div>
+  </div>
+
+  
+
+  <div class="section">
+  <div class="section-title"> Documents Included In The Contract Template Library</div>
+  <p style="font-style: italic; color: var(--muted); font-size: 13px;">(Click on a tile to learn more)</p>
+
+  <style>
+    .contract-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      margin-top: 16px;
+    }
+    .contract-tile {
+      border: 1px solid var(--border, #ddd);
+      border-radius: 8px;
+      padding: 14px 12px;
+      text-align: center;
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      cursor: pointer;
+      background: var(--card-bg, #fff);
+      color: var(--text, #333);
+      transition: background 0.15s, border-color 0.15s;
+      line-height: 1.4;
+    }
+    .contract-tile:hover {
+      border-color: var(--accent, #e07a5f);
+      color: var(--accent, #e07a5f);
+    }
+
+    /* Modal overlay */
+    .contract-modal-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.45);
+      z-index: 9999;
+      align-items: center;
+      justify-content: center;
+    }
+    .contract-modal-overlay.open {
+      display: flex;
+    }
+    .contract-modal {
+      background: #fff;
+      border-radius: 12px;
+      padding: 32px 28px 24px;
+      max-width: 480px;
+      width: 90%;
+      position: relative;
+      box-shadow: 0 8px 40px rgba(0,0,0,0.18);
+      animation: modalIn 0.2s ease;
+    }
+    @keyframes modalIn {
+      from { transform: scale(0.94); opacity: 0; }
+      to   { transform: scale(1);    opacity: 1; }
+    }
+    .contract-modal-close {
+      position: absolute;
+      top: 14px;
+      right: 18px;
+      font-size: 22px;
+      cursor: pointer;
+      color: var(--muted, #999);
+      line-height: 1;
+      background: none;
+      border: none;
+      padding: 0;
+    }
+    .contract-modal-close:hover {
+      color: var(--text, #333);
+    }
+    .contract-modal h4 {
+      margin: 0 0 12px;
+      font-size: 17px;
+      color: var(--accent, #e07a5f);
+      padding-right: 24px;
+    }
+    .contract-modal p {
+      margin: 0;
+      font-size: 14px;
+      line-height: 1.7;
+      color: var(--text, #333);
+    }
+  </style>
+
+  <div class="contract-grid">
+    <div class="contract-tile" onclick="showContract('operating-agreement', 'Operating Agreement', 'An Operating Agreement is an internal legal document that outlines the ownership and operating procedures of an LLC. While most states do not require one to form an LLC, it is still strongly recommended as it defines member roles, profit sharing, and decision-making procedures.')">Operating Agreement</div>
+    <div class="contract-tile" onclick="showContract('non-compete', 'Non-Compete Agreement', 'A Non-Compete Agreement prevents an employee or contractor from working with competitors or starting a competing business for a specified period after leaving your company. It helps protect trade secrets and client relationships.')">Non-Compete Agreement</div>
+    <div class="contract-tile" onclick="showContract('nda', 'Non-Disclosure Agreement (NDA)', 'An NDA is a legally binding contract that establishes a confidential relationship. It ensures that sensitive information shared between parties remains private and cannot be disclosed to third parties.')">Non-Disclosure Agreement (NDA)</div>
+    <div class="contract-tile" onclick="showContract('independent-contractor', 'Independent Contractor Agreement', 'This agreement defines the terms of a working relationship between a business and an independent contractor. It clarifies that the contractor is not an employee and outlines scope of work, payment, and ownership of work product.')">Independent Contractor Agreement</div>
+    <div class="contract-tile" onclick="showContract('employment-agreement', 'Employment Agreement', 'An Employment Agreement outlines the terms and conditions of employment between an employer and employee, including compensation, duties, benefits, termination conditions, and confidentiality obligations.')">Employment Agreement</div>
+    <div class="contract-tile" onclick="showContract('employment-offer-letter', 'Employment Offer Letter', 'A formal document sent to a candidate offering them a position. It outlines the job title, start date, compensation, and other key terms before a full employment contract is signed.')">Employment Offer Letter</div>
+    <div class="contract-tile" onclick="showContract('ip-assignment', 'Intellectual Property Assignment Agreement', 'This agreement transfers ownership of intellectual property (such as inventions, software, or creative works) from one party — often an employee or contractor — to another, typically the business.')">Intellectual Property Assignment Agreement</div>
+    <div class="contract-tile" onclick="showContract('release-of-liability', 'Release of Liability', 'A Release of Liability (waiver) is a legal document in which one party agrees not to hold another party responsible for potential damages, injuries, or losses that may occur during an activity or transaction.')">Release of Liability</div>
+    <div class="contract-tile" onclick="showContract('83b', '83(B) Election Form', 'An 83(b) election form is a letter sent to the IRS informing them that you\'d like to be taxed on your equity at the time it is granted rather than when it vests. This can result in significant tax savings for founders and early employees.')">83(B) Election Form</div>
+    <div class="contract-tile" onclick="showContract('terms-of-service', 'Terms of Service', 'A Terms of Service agreement sets the rules users must agree to in order to use your website or app. It covers user rights and responsibilities, limitations of liability, and dispute resolution.')">Terms of Service</div>
+    <div class="contract-tile" onclick="showContract('privacy-policy', 'Privacy Policy', 'A Privacy Policy explains how your business collects, uses, stores, and protects user data. It is legally required in many jurisdictions and builds trust with your customers.')">Privacy Policy</div>
+    <div class="contract-tile" onclick="showContract('sales-agreement', 'Sales Agreement', 'A Sales Agreement is a contract between a buyer and seller that outlines the terms of a sale, including price, payment terms, delivery, and warranties for goods or services.')">Sales Agreement</div>
+    <div class="contract-tile" onclick="showContract('general-corporate-resolution', 'General Corporate Resolution', 'A Corporate Resolution is a formal document that records decisions made by a company\'s board of directors or members. It is often required by banks and government agencies to authorize specific business actions.')">General Corporate Resolution</div>
+    <div class="contract-tile" onclick="showContract('demand-letter', 'Demand Letter', 'A Demand Letter is a formal written request asking another party to fulfill an obligation — such as paying a debt or correcting a breach of contract — before legal action is taken.')">Demand Letter</div>
+    <div class="contract-tile" onclick="showContract('letter-of-intent', 'Letter of Intent for a Business Venture', 'A Letter of Intent outlines the preliminary agreement between parties entering a business deal. It signals serious intent to proceed and sets the framework for a more detailed contract to follow.')">Letter of Intent for a Business Venture</div>
+    <div class="contract-tile" onclick="showContract('joint-venture', 'Joint Venture Agreement', 'A Joint Venture Agreement establishes a business arrangement between two or more parties who agree to pool resources for a specific project or business activity, while remaining independent entities.')">Joint Venture Agreement</div>
+    <div class="contract-tile" onclick="showContract('mou', 'Memorandum of Understanding (MOU)', 'An MOU is a non-binding agreement that outlines the intentions and expectations of two or more parties who plan to work together. It is a precursor to a formal contract.')">Memorandum of Understanding (MOU)</div>
+    <div class="contract-tile" onclick="showContract('consulting', 'Consulting Agreement', 'A Consulting Agreement defines the terms under which a consultant provides services to a client, including scope of work, fees, timelines, confidentiality, and ownership of deliverables.')">Consulting Agreement</div>
+    <div class="contract-tile" onclick="showContract('org-meeting-minutes', 'Organization Meeting Minutes', 'Meeting minutes are an official written record of the discussions and decisions made during a business meeting. They are important for legal compliance and internal record-keeping.')">Organization Meeting Minutes</div>
+    <div class="contract-tile" onclick="showContract('partnership', 'Partnership Agreement', 'A Partnership Agreement outlines the terms of a business partnership, including each partner\'s responsibilities, profit sharing, decision-making authority, and procedures for dissolving the partnership.')">Partnership Agreement</div>
+    <div class="contract-tile" onclick="showContract('founder', 'Founder Agreement', 'A Founder Agreement establishes the roles, equity splits, vesting schedules, and responsibilities of the founding members of a startup or new business.')">Founder Agreement</div>
+    <div class="contract-tile" onclick="showContract('service-agreement', 'Service Agreement', 'A Service Agreement is a contract between a service provider and a client that outlines the services to be performed, payment terms, timelines, and other conditions of the engagement.')">Service Agreement</div>
+    <div class="contract-tile" onclick="showContract('employee-termination', 'Employee Termination Letter', 'An Employee Termination Letter formally notifies an employee that their employment is being ended. It documents the reason for termination, effective date, and any final compensation or return-of-property instructions.')">Employee Termination Letter</div>
+    <div class="contract-tile" onclick="showContract('website-linking', 'Website Linking Agreement', 'A Website Linking Agreement sets the terms under which one website may link to another, including branding guidelines, liability limitations, and conditions for revoking linking permission.')">Website Linking Agreement</div>
+    <div class="contract-tile" onclick="showContract('bill-of-sale', 'Bill of Sale', 'A Bill of Sale is a legal document that records the transfer of ownership of an item from a seller to a buyer. It serves as proof of purchase and includes details about the item, price, and parties involved.')">Bill of Sale</div>
+    <div class="contract-tile" onclick="showContract('collaboration', 'Collaboration Agreement', 'A Collaboration Agreement outlines the terms under which two or more parties work together on a shared project, including contributions, ownership of output, revenue sharing, and each party\'s responsibilities.')">Collaboration Agreement</div>
+    <div class="contract-tile" onclick="showContract('cease-and-desist', 'Cease &amp; Desist Letter (Trademark Infringement)', 'A Cease and Desist letter is used to formally demand that another party stop an activity that infringes on your trademark. It is often a first legal step before pursuing litigation.')">Cease &amp; Desist Letter (Trademark...)</div>
+  </div>
+
+  <!-- Single reusable modal -->
+  <div class="contract-modal-overlay" id="contractModal" onclick="closeContractModal(event)">
+    <div class="contract-modal">
+      <button class="contract-modal-close" onclick="closeContractModal()">&#x2715;</button>
+      <h4 id="contractModalTitle"></h4>
+      <p id="contractModalBody"></p>
     </div>
   </div>
 
-  <div class="section">
-    <div class="section-title">Pricing</div>
-    <div class="pricing-formula"><div class="pf-item"><div class="pf-amount">$150</div><div class="pf-label">Flat Fee · All Inclusive</div></div></div>
-  </div>
+  <script>
+    function showContract(id, title, body) {
+      document.getElementById('contractModalTitle').textContent = title;
+      document.getElementById('contractModalBody').textContent = body;
+      document.getElementById('contractModal').classList.add('open');
+    }
+    function closeContractModal(e) {
+      if (!e || e.target === document.getElementById('contractModal')) {
+        document.getElementById('contractModal').classList.remove('open');
+      }
+    }
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') closeContractModal();
+    });
+  </script>
+</div>
 
   <div class="completion-card">
     <img class="completion-icon-img" src="https://github.com/rp-bizeeknowledge/Assets/blob/main/bizee-icon-topic-complete-cutout-1024x1024.png?raw=true" alt="Topic Complete">
