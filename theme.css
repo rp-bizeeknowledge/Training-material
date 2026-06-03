@@ -4526,6 +4526,27 @@ div.scenario-item {
   margin: 0;
 }
 
+.click-hint {
+  font-size: 12px;
+  color: var(--muted);
+  text-align: center;
+  letter-spacing: 0.03em;
+  margin: 0 0 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+.click-hint::before {
+  content: '';
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  background: url('https://github.com/rp-bizeeknowledge/Assets/blob/main/Click.png?raw=true') center / contain no-repeat;
+  flex-shrink: 0;
+  opacity: 0.5;
+}
+
 .sd-sav-desc {
   font-size: 13px;
   color: var(--green);
