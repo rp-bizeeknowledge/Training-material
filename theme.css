@@ -6242,6 +6242,10 @@ div.scenario-item {
   padding: 4px 0;
   font-size: 14px;
   color: var(--mid);
+  background: none;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
 }
 .use-case::before {
   content: "→";
