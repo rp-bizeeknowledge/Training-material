@@ -6560,7 +6560,7 @@ details.scenario-item {
   color: var(--mid);
   text-align: center;
   padding: 1rem;
-  border: 1px dashed var(--border);
+  border: 0px dashed var(--border);
   border-radius: var(--radius-sm);
 }
 
