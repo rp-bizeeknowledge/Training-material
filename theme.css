@@ -6559,7 +6559,7 @@ details.scenario-item {
   font-size: 14px;
   color: var(--mid);
   text-align: center;
-  padding: 2rem;
+  padding: 1rem;
   border: 1px dashed var(--border);
   border-radius: var(--radius-sm);
 }
