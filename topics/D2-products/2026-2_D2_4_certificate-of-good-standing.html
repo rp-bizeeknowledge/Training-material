@@ -46,19 +46,28 @@
 
   <div class="section">
     <div class="section-title">Requirements</div>
-    <p>To receive a COGS, the business must:</p>
-    <div class="req-steps">
-      <div class="req-step">
-        <div class="process-left"><div class="req-num">1</div><div class="req-line"></div></div>
-        <div class="req-body"><p>Be <strong>active and in good standing</strong> with the state</p></div>
+    <p>To receive a COGS, businesses must comply with the following requirements:</p>
+    <div class="req-grid">
+      <div class="req-card-wrap">
+        <div class="req-card">
+          <div class="req-card-big-num">1</div>
+          <div class="req-card-title">Active & In Good Standing</div>
+          <p class="req-card-text">Verified through the state's public records at the time the certificate is requested.</p>
+        </div>
       </div>
-      <div class="req-step">
-        <div class="process-left"><div class="req-num">2</div><div class="req-line"></div></div>
-        <div class="req-body"><p>Have <strong>no overdue reports or unpaid franchise tax or fees</strong></p></div>
+      <div class="req-card-wrap">
+        <div class="req-card">
+          <div class="req-card-big-num">2</div>
+          <div class="req-card-title">No Overdue Reports or Fees</div>
+          <p class="req-card-text">Any outstanding balance or missed filing will cause the state to deny the request until resolved.</p>
+        </div>
       </div>
-      <div class="req-step">
-        <div class="process-left"><div class="req-num">3</div></div>
-        <div class="req-body"><p>Maintain a <strong>registered agent on file</strong></p></div>
+      <div class="req-card-wrap">
+        <div class="req-card">
+          <div class="req-card-big-num">3</div>
+          <div class="req-card-title">Registered Agent on File</div>
+          <p class="req-card-text">If the agent has resigned or is no longer valid, the certificate cannot be issued until a replacement is appointed.</p>
+        </div>
       </div>
     </div>
             <div class="callout callout-yellow-warning">
@@ -80,5 +89,13 @@
     <span class="footer-meta">Internal use only · Training & Development · PRODUCTS · Topic 04 of 14</span>
   </div>
 </div>
+<script>
+window.addEventListener('load', function () {
+  var cards = document.querySelectorAll('.req-card');
+  var max = 0;
+  cards.forEach(function (c) { max = Math.max(max, c.offsetHeight); });
+  cards.forEach(function (c) { c.style.minHeight = max + 'px'; });
+});
+</script>
 </body>
 </html>

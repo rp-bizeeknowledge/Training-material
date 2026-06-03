@@ -679,7 +679,7 @@ li:last-child {
 }
 .callout-pro-tip-body p {
   margin: 0;
-  color: var(--muted);
+  color: var(--dark);
   font-size: 13px;
 }
 
@@ -4526,6 +4526,27 @@ div.scenario-item {
   margin: 0;
 }
 
+.click-hint {
+  font-size: 12px;
+  color: var(--muted);
+  text-align: center;
+  letter-spacing: 0.03em;
+  margin: 0 0 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+.click-hint::before {
+  content: '';
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  background: url('https://github.com/rp-bizeeknowledge/Assets/blob/main/Click.png?raw=true') center / contain no-repeat;
+  flex-shrink: 0;
+  opacity: 0.5;
+}
+
 .sd-sav-desc {
   font-size: 13px;
   color: var(--green);
@@ -5446,6 +5467,10 @@ div.scenario-item {
 }
 .req-card-wrap {
   position: relative;
+  display: flex;
+}
+.req-card-wrap .req-card {
+  flex: 1;
 }
 .req-card-big-num {
   position: absolute;
@@ -6214,13 +6239,9 @@ div.scenario-item {
 .use-case {
   display: flex;
   gap: 10px;
-  padding: 10px 14px;
-  background: var(--white);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-sm);
+  padding: 4px 0;
   font-size: 14px;
   color: var(--mid);
-  box-shadow: var(--shadow-xs);
 }
 .use-case::before {
   content: "→";
