@@ -63,9 +63,7 @@
     letter-spacing: 0.06em;
     color: var(--accent, #e07a5f);
   }
-  .floating-bubble p {
-    margin: 0 0 4px;
-  }
+  .floating-bubble p { margin: 0 0 4px; }
   .floating-bubble p:last-child { margin: 0; }
 
   .floating-img {
@@ -78,10 +76,10 @@
   }
   .floating-img:hover { transform: scale(1.08); }
 
-  /* Wrapper so the guy sits relative to the process section */
-  .process-section-wrap {
-    position: relative;
-  }
+  .process-section-wrap { position: relative; }
+
+  /* Step 1 wrapper — positions the guy relative to it */
+  .step1-wrap { position: relative; }
 </style>
 </head>
 <body><a id="top" style="position:absolute;top:0;"></a>
@@ -111,18 +109,13 @@
     </div>
   </div>
 
-  <div class="section">
+  <div class="section" style="position: relative;">
     <div class="section-title">Pricing</div>
     <div class="pricing-formula"><div class="pf-item"><div class="pf-amount">$50</div><div class="pf-label">Flat Fee · All Inclusive</div></div></div>
-  </div>
 
-  <!-- S-CORP ELECTION PROCESS -->
-  <div class="section process-section-wrap">
-    <div class="section-title">S-Corp Election Process</div>
-
-    <!-- Floating draggable guy — spawns near Step 1 -->
-    <div class="floating-guy" id="floatingGuy" style="top: 48px; right: 0px;">
-<div class="floating-bubble open" id="floatingBubble">
+    <!-- Floating guy spawns next to price box -->
+    <div class="floating-guy" id="floatingGuy" style="position: absolute; top: 50%; right: 0; transform: translateY(-50%);">
+      <div class="floating-bubble open" id="floatingBubble">
         <span class="floating-bubble-label">Remember</span>
         <p>Foreigners <strong>cannot</strong> apply for S-Corp status.</p>
         <p>The company <strong>cannot</strong> have other entities as members.</p>
@@ -133,9 +126,15 @@
         alt="Helper"
         id="floatingImg">
     </div>
+  </div>
+
+  <!-- S-CORP ELECTION PROCESS -->
+  <div class="section process-section-wrap">
+    <div class="section-title">S-Corp Election Process</div>
 
     <div class="process-steps">
 
+      <!-- Step 1 -->
       <div class="process-step">
         <div class="process-left"><div class="process-num">1</div><div class="process-line" style="display:block;"></div></div>
         <div class="process-body">
@@ -251,7 +250,6 @@
 
   document.addEventListener('mouseup', function() { dragging = false; });
 
-  // Touch
   guy.addEventListener('touchstart', function(e) {
     var t = e.touches[0];
     dragging = true;
