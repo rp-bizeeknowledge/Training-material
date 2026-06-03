@@ -6,6 +6,9 @@
 <title>D2.2: Amendment</title>
 <link rel="stylesheet" href="https://rp-bizeeknowledge.github.io/Training-material/theme.css">
 <link rel="stylesheet" href="../../theme.css">
+<style>
+  .subsection-title { margin: 32px 0 14px; }
+</style>
 </head>
 <body><a id="top" class="top-anchor"></a>
 <div class="page">
@@ -120,20 +123,29 @@
           </div>
         </div>
       </div>
-      <div class="process-step">
-        <div class="process-left"><div class="process-num">2</div><div class="process-line"></div></div>
-        <div class="process-body"><h4>If work has begun</h4><p>Advise the customer to submit a <strong>new amendment order</strong>.</p></div>
-      </div>
-      <div class="process-step">
-        <div class="process-left"><div class="process-num">3</div><div class="process-line" style="display:block;"></div></div>
-        <div class="process-body">
-          <h4>If work hasn't started</h4>
-          <ul>
-            <li>Place the order on hold.</li>
-            <li>Email the customer confirming we can apply the requested changes.</li>
-            <li>Copy-paste the changes into DB comments, ensuring the <strong>"show before automation"</strong> checkbox is checked.</li>
-            <li>After annotating, release the hold and move the order back to <strong>Review</strong> status.</li>
-          </ul>
+      <div class="process-step" style="align-items:start;">
+        <div class="process-left"><div class="process-num">2</div></div>
+        <div style="flex:1; display:grid; grid-template-columns:1fr 1fr; gap:12px; align-items:stretch; margin-top:26px;">
+          <div style="display:flex; gap:8px; align-items:stretch;">
+            <span style="font-weight:900; color:#111; font-size:13px; flex-shrink:0; line-height:1.65; align-self:flex-start; padding-top:6px;">A)</span>
+            <div class="process-body" style="margin-top:-8px; flex:1; margin-bottom:0;">
+              <h4>If work hasn't started (Before Forwarded)</h4>
+              <ul>
+                <li>Place the order on hold.</li>
+                <li>Email the customer instructing them to reply with confirmation of the required changes.</li>
+                <li>Escalate the request by checking the Order Issues box in Zendesk, including the obtained information.</li>
+              </ul>
+            </div>
+          </div>
+          <div style="display:flex; gap:8px; align-items:stretch;">
+            <span style="font-weight:900; color:#111; font-size:13px; flex-shrink:0; line-height:1.65; align-self:flex-start; padding-top:6px;">B)</span>
+            <div class="process-body" style="margin-top:-8px; flex:1; margin-bottom:0;">
+              <h4>If work has begun (Forwarded)</h4>
+              <ul>
+                <li>Advise the customer to submit a <strong>new amendment order</strong>.</li>
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -171,7 +183,7 @@
   <div class="section">
     <div class="section-title">Important Considerations</div>
     <ul>
-      <li>Occasionally, shares are presented with a <strong>par value</strong>, which may require an amendment for <strong>any change</strong>. This is commonly seen in states like <strong>Wyoming</strong>.</li>
+      <li>Occasionally, shares are presented with a <strong>par value</strong>, which may require an amendment for <strong>any change</strong>.</li>
       <li>If <strong>shareholder information</strong> is not listed with the state or has already been amended, updates can be made upon request via <strong>email from the customer</strong>.</li>
       <li>An amendment allows for <strong>multiple changes</strong> to be made at once. You can change the <strong>company name</strong>, <strong>add or remove a member</strong>, and <strong>update the address</strong> all in a single amendment. It is <strong>not limited to one change</strong> per amendment.</li>
     </ul>
