@@ -53,36 +53,24 @@ var _modalCount = 0;
 function _lockScroll() {
   if (_modalCount++ > 0) return;
   _modalScrollY = window.scrollY || window.pageYOffset || 0;
-  document.body.style.position = "fixed";
-  document.body.style.top = -_modalScrollY + "px";
-  document.body.style.left = "0";
-  document.body.style.right = "0";
   document.body.style.overflow = "hidden";
 }
 
 function _unlockScroll() {
   if (--_modalCount > 0) return;
-  document.body.style.position = "";
-  document.body.style.top = "";
-  document.body.style.left = "";
-  document.body.style.right = "";
   document.body.style.overflow = "";
-  window.scrollTo({ top: _modalScrollY, behavior: "smooth" });
 }
 
 window.openModal = function (id, e) {
+  if (_modalCount > 0) {
+    var fromInsideModal = e && e.target && e.target.closest && e.target.closest(".pdf-modal-overlay.open");
+    if (!fromInsideModal) return;
+  }
   var el = document.getElementById(id);
   var vp = window.visualViewport;
   var vpH = vp ? vp.height : window.innerHeight;
   var modalH = Math.min(Math.round(vpH * 0.85), 920);
-  // When body is fixed (scroll already locked by a parent modal),
-  // visualViewport.pageTop returns 0 — use the saved offset instead
-  var vpTop =
-    document.body.style.position === "fixed"
-      ? _modalScrollY
-      : vp
-        ? vp.pageTop
-        : window.scrollY || 0;
+  var vpTop = vp ? vp.pageTop : window.scrollY || 0;
   var top = Math.max(0, Math.round(vpTop + (vpH - modalH) / 2));
   el.style.top = top + "px";
   el.style.height = modalH + "px";
