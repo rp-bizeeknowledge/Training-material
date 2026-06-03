@@ -4,17 +4,67 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>D2.13: Business License Research Package (BLRP)</title>
-    <link
-      rel="stylesheet"
-      href="https://rp-bizeeknowledge.github.io/Training-material/theme.css"
-    />
+    <link rel="stylesheet" href="https://rp-bizeeknowledge.github.io/Training-material/theme.css" />
     <link rel="stylesheet" href="../../theme.css" />
+    <script>
+      function pickCard(id) {
+        var ids = ['r1a', 'r1b', 'r1c'];
+        var cards = ['c1a', 'c1b', 'c1c'];
+
+        // Check if already open
+        var result = document.getElementById(id);
+        var isOpen = result.style.display === 'block';
+
+        // Close all
+        ids.forEach(function(rid) {
+          document.getElementById(rid).style.display = 'none';
+        });
+        cards.forEach(function(cid) {
+          document.getElementById(cid).classList.remove('active');
+        });
+
+        // If it was closed, open it
+        if (!isOpen) {
+          result.style.display = 'block';
+          var cardId = id.replace('r', 'c');
+          document.getElementById(cardId).classList.add('active');
+        }
+      }
+
+      function togglePanel(header) {
+        var body = header.nextElementSibling;
+        var arrow = header.querySelector('.dropdown-arrow');
+        var isOpen = body.style.display !== 'none';
+
+        document.querySelectorAll('.proc-body').forEach(function(b) {
+          b.style.display = 'none';
+        });
+        document.querySelectorAll('.dropdown-arrow').forEach(function(a) {
+          a.textContent = '+';
+        });
+
+        if (!isOpen) {
+          body.style.display = 'block';
+          arrow.textContent = '−';
+        }
+      }
+    </script>
+    <style>
+      .info-panel {
+        margin-top: 8px;
+        padding: 14px 16px;
+        border-left: 3px solid var(--accent, #e07a5f);
+        background: var(--hover-bg, #f9f9f9);
+        border-radius: 0 6px 6px 0;
+        font-size: 14px;
+        line-height: 1.6;
+        color: var(--text, #333);
+      }
+    </style>
   </head>
   <body><a id="top" style="position:absolute;top:0;"></a>
     <div class="page">
-      <a class="back-link" href="2026-2_D2_0_products.html#top"
-        >← Back to Products</a
-      >
+      <a class="back-link" href="2026-2_D2_0_products.html#top">← Back to Products</a>
 
       <div class="hero hero-soft">
         <div class="hero-label">PRODUCTS · Topic 13</div>
@@ -44,114 +94,83 @@
 
       <div class="section">
         <div class="section-title">Pricing</div>
-        <div class="pricing-formula"><div class="pf-item"><div class="pf-amount">$99</div><div class="pf-label">Flat Fee · All Inclusive</div></div></div>
+        <div class="pricing-formula">
+          <div class="pf-item">
+            <div class="pf-amount">$99</div>
+            <div class="pf-label">Flat Fee · All Inclusive</div>
+          </div>
+        </div>
       </div>
 
       <div class="section">
         <div class="section-title">Included Features</div>
         <div class="benefits-list">
           <div class="benefit-item">
-            <strong>Expert research</strong>: Provided in partnership with
-            Wolters Kluwer.
+            <strong>Expert research</strong>: Provided in partnership with Wolters Kluwer.
           </div>
           <div class="benefit-item">
-            <strong>Digital Delivery</strong>: Forms and how-to guides via your
-            Bizee dashboard.
+            <strong>Digital Delivery</strong>: Forms and how-to guides via your Bizee dashboard.
           </div>
           <div class="benefit-item">
-            <strong>No Filing Service</strong>: You file the applications you
-            need using our instructions.
+            <strong>No Filing Service</strong>: You file the applications you need using our instructions.
           </div>
         </div>
       </div>
 
       <div class="section">
-        <div class="section-title">License vs. Permit</div>
+        <div class="section-title">Registration vs. License vs. Permit</div>
 
-        <div class="cmp-row">
-          <div class="cmp-card" id="c1a" onclick="cmpPick(1, 'a')">
-            <div class="cmp-card-icon icon-teal">&#127970;</div>
-            <h4>LLC Registration</h4>
-            <p>Creates your legal business. Protects your personal assets.</p>
-            <span class="cmp-hint">&#8595; Tap to learn more</span>
-          </div>
-          <div class="cmp-card" id="c1b" onclick="cmpPick(1, 'b')">
-            <div class="cmp-card-icon icon-blue">&#128196;</div>
-            <h4>Business License</h4>
-            <p>Allows you to start selling or offering services legally.</p>
-            <span class="cmp-hint">&#8595; Tap to learn more</span>
-          </div>
-        </div>
+        <div style="display: flex; flex-direction: column; gap: 12px;">
 
-        <div class="cmp-result" id="r1a">
-          <div class="cmp-result-bar bar-teal"></div>
-          <div class="cmp-result-inner">
-            <div class="cmp-result-dot dot-teal"></div>
-            <div>
-              <p class="cmp-result-eyebrow eye-teal">LLC Registration</p>
-              <p class="cmp-result-text">
-                You exist. Your business is legally formed and personal assets
-                are protected — but you're not yet authorized to sell or
-                operate.
-              </p>
+          <!-- LLC Registration — full width -->
+          <div>
+  <div class="cmp-card" id="c1a" style="width:50%; box-sizing:border-box; cursor:pointer; margin: 0 auto;" onclick="pickCard('r1a')">
+    <div class="cmp-card-icon icon-teal">&#127970;</div>
+    <h4>LLC Registration</h4>
+    <p>Creates your legal business. Protects your personal assets.</p>
+    <span class="cmp-hint">&#8595; Tap to learn more</span>
+  </div>
+  <div class="info-panel" id="r1a" style="display:none;">
+    <strong>You exist.</strong> Your business is legally formed and personal assets are protected — but you're not yet authorized to sell or operate.
+  </div>
+</div>
+
+          <!-- Business License + Business Permit — side by side -->
+          <div style="display: flex; gap: 12px; align-items: flex-start;">
+            <div style="flex: 1;">
+              <div class="cmp-card" id="c1b" style="cursor:pointer;" onclick="pickCard('r1b')">
+                <div class="cmp-card-icon icon-blue">&#128196;</div>
+                <h4>Business License</h4>
+                <p>Allows you to start selling or offering services legally.</p>
+                <span class="cmp-hint">&#8595; Tap to learn more</span>
+              </div>
+              <div class="info-panel" id="r1b" style="display:none;">
+                <strong>You can start operating.</strong> With a license, you're authorized to sell products or offer services in your jurisdiction.
+              </div>
+            </div>
+            <div style="flex: 1;">
+              <div class="cmp-card" id="c1c" style="cursor:pointer;" onclick="pickCard('r1c')">
+                <div class="cmp-card-icon icon-blue">&#128221;</div>
+                <h4>Business Permit</h4>
+                <p>Permission to do specific things safely and legally.</p>
+                <span class="cmp-hint">&#8595; Tap to learn more</span>
+              </div>
+              <div class="info-panel" id="r1c" style="display:none;">
+                <strong>Here's how you must operate.</strong> Permits cover specific activities — food service, construction, zoning, and more.
+              </div>
             </div>
           </div>
         </div>
 
-        <div class="cmp-result" id="r1b">
-          <div class="cmp-result-bar bar-blue"></div>
-          <div class="cmp-result-inner">
-            <div class="cmp-result-dot dot-blue"></div>
-            <div>
-              <p class="cmp-result-eyebrow eye-blue">Business License</p>
-              <p class="cmp-result-text">
-                <strong>You can start operating.</strong> With a license, you're
-                authorized to sell products or offer services in your
-                jurisdiction.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div class="cmp-vs">
+        <div class="cmp-vs" style="margin-top: 16px;">
           <div class="cmp-vs-line"></div>
-          <span class="cmp-vs-badge"
-            >LLC = you exist &nbsp;&middot;&nbsp; License = you can
-            operate</span
-          >
+          <span class="cmp-vs-badge">
+            Registration = you exist &nbsp;&middot;&nbsp;
+            License = you can operate &nbsp;&middot;&nbsp;
+            Permit = here's how
+          </span>
           <div class="cmp-vs-line"></div>
         </div>
-      </div>
-
-      <div class="section">
-        <div class="section-title">License vs. Permit</div>
-        <div class="compare-row">
-          <div class="compare-card">
-            <h4>Business License</h4>
-            <p>
-              Permission to run your business. Required by your city, state, or
-              federal government.
-            </p>
-          </div>
-          <div class="compare-card">
-            <h4>Business Permit</h4>
-            <p>
-              Permission to do specific things safely and legally. Needed for
-              things like food service, building, or zoning.
-            </p>
-          </div>
-        </div>
-        <p
-          style="
-            text-align: center;
-            font-size: 13px;
-            color: var(--muted);
-            margin-top: 4px;
-          "
-        >
-          <strong>License = You can start operating.</strong> &nbsp;–vs–&nbsp;
-          <strong>Permit = Here's how you must operate.</strong>
-        </p>
       </div>
 
       <div class="section">
@@ -221,12 +240,12 @@
 
       </div>
 
-      <div class="section">
+       <div class="section">
         <div class="section-title">Important Notes</div>
         <p>Turnaround: approximately <strong>3 business days</strong>.</p>
-                  <p>Virtual addresses <strong>cannot</strong> be used, including ours.</p>
-        <p>          Best for physical-location businesses like restaurants, retail, salons, construction, etc. Usually <strong>not suited</strong> for e-commerce businesses.
-        
+        <p>          Virtual addresses <strong>cannot</strong> be used, including ours.</p>
+        <p>          Best for physical-location businesses like restaurants, retail, salons, construction, etc. Usually <strong>not suited</strong> fore-commerce businesses.
+        </p>
       </div>
 
       <div class="completion-card">
@@ -241,19 +260,6 @@
         <span class="footer-meta">Internal use only · Training & Development · PRODUCTS · Topic 13 of 14</span>
       </div>
     </div>
-    <script>
-      function togglePanel(header) {
-        const body = header.nextElementSibling;
-        const arrow = header.querySelector('.dropdown-arrow');
-        if (body.style.display === 'none') {
-          body.style.display = 'block';
-          arrow.textContent = '−';
-        } else {
-          body.style.display = 'none';
-          arrow.textContent = '+';
-        }
-      }
-    </script>
     <script src="../../theme.js"></script>
   </body>
 </html>
