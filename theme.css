@@ -5769,7 +5769,7 @@ div.scenario-item {
   font-size: 14px;
   color: var(--muted);
   margin: 0;
-  text-align: left;
+  text-align: justify;
 }
 .access-method a {
   color: var(--orange);
