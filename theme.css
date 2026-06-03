@@ -2618,7 +2618,19 @@ div.scenario-item {
   margin-bottom: 6px;
   line-height: 1.55;
 }
+.do-card strong {
+  font-size: 14px;
+  color: #155539;
+  margin-bottom: 6px;
+  line-height: 1.55;
+}
 .dont-card li {
+  font-size: 14px;
+  color: #7f1d1d;
+  margin-bottom: 6px;
+  line-height: 1.55;
+}
+.dont-card strong {
   font-size: 14px;
   color: #7f1d1d;
   margin-bottom: 6px;
