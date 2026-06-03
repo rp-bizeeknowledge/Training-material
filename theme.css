@@ -1159,6 +1159,42 @@ li:last-child {
   color: var(--red);
   text-align: center;
 }
+.sb-new {
+  background: #dda53a;
+  color: #1e1a17;
+  text-align: center;
+  border: 2px solid #1e1a17;
+}
+.sb-open {
+  background: #c84b31;
+  color: #f4efe6;
+  text-align: center;
+  border: 2px solid #1e1a17;
+}
+.sb-pending {
+  background: #5e97c9;
+  color: #f4efe6;
+  text-align: center;
+  border: 2px solid #1e1a17;
+}
+.sb-onhold {
+  background: #1e1a17;
+  color: #f4efe6;
+  text-align: center;
+  border: 2px solid #1e1a17;
+}
+.sb-solved {
+  background: #8c8379;
+  color: #f4efe6;
+  text-align: center;
+  border: 2px solid #1e1a17;
+}
+.sb-closed {
+  background: #d4ccbe;
+  color: var(--mid);
+  text-align: center;
+  border: 2px solid #1e1a17;
+}
 
 /* ── 16. STATUS FLOW ─────────────────────────────────────── */
 .status-flow {
@@ -1170,7 +1206,7 @@ li:last-child {
 
 .status-row {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   gap: 12px;
   background: var(--white);
   border: 1px solid var(--border);
@@ -1184,6 +1220,10 @@ li:last-child {
   margin: 0;
   line-height: 1.6;
   text-align: left;
+}
+.status-row ul {
+  margin: 0;
+  padding-left: 22px;
 }
 .status-row strong {
   color: var(--dark);
@@ -2492,6 +2532,7 @@ div.scenario-item {
   border-radius: var(--radius);
   overflow: hidden;
   box-shadow: var(--shadow-sm);
+  text-align: justify;
 }
 .gloss-item {
   display: grid;
@@ -2577,7 +2618,19 @@ div.scenario-item {
   margin-bottom: 6px;
   line-height: 1.55;
 }
+.do-card strong {
+  font-size: 14px;
+  color: #155539;
+  margin-bottom: 6px;
+  line-height: 1.55;
+}
 .dont-card li {
+  font-size: 14px;
+  color: #7f1d1d;
+  margin-bottom: 6px;
+  line-height: 1.55;
+}
+.dont-card strong {
   font-size: 14px;
   color: #7f1d1d;
   margin-bottom: 6px;
