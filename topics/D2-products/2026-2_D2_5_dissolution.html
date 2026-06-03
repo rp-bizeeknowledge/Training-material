@@ -27,39 +27,39 @@
   </div>
 
 <div class="section">
+    <div class="section-title">Example</div>
+    <div class="doc-frame">
+      <iframe src="https://docs.google.com/viewer?url=https://github.com/rp-bizeeknowledge/Assets/raw/main/Dissolution%20example.pdf&embedded=true" style="width:100%;height:500px;border:none;display:block;"></iframe>
+      <div class="doc-frame-caption">CA Dissolution Document</div>
+    </div>
+  </div>
+
+<div class="section">
     <div class="section-title">Pricing</div>
     <div class="pricing-formula"><div class="pf-item"><div class="pf-amount">$199</div><div class="pf-label">Bizee Processing Fee</div></div><div class="pf-operator">+</div><div class="pf-item pf-item--muted"><div class="pf-amount">State Fee</div><div class="pf-label">Varies by state</div></div></div>
   </div>
 
   <div class="section">
-    <div class="section-title">Foreign Qualification Dissolutions</div>
-  <div class="policy-note">
-    <div class="policy-note-label">Internal Policy</div>
-    <p>Dissolutions for Foreign Qualifications are called <strong>Withdrawals</strong>. We do <strong>not</strong> offer this service.</p>
-  </div>
-  </div>
-
-  <div class="section">
     <div class="section-title">Updating Company Status in the DB</div>
     <p>If you find a company listed as <strong>Dissolved, Delinquent, or Revoked</strong> on the Secretary of State's website, you must update the company's status in the database (DB) as follows:</p>
-    <div class="status-map">
-      <div class="status-card input">
-        <h4>State Shows</h4>
-        <p>Delinquent / Revoked / Administratively Dissolved</p>
-      </div>
-      <div class="status-card output">
-        <h4>Update DB To</h4>
-        <p><strong>"Delinquent/Revoked"</strong></p>
-      </div>
-      <div class="status-card input">
-        <h4>State Shows</h4>
-        <p>Voluntarily Dissolved</p>
-      </div>
-      <div class="status-card output">
-        <h4>Update DB To</h4>
-        <p><strong>"Dissolved"</strong></p>
-      </div>
-    </div>
+    <table class="tax-table">
+      <thead>
+        <tr>
+          <th style="background:var(--dark);">State Shows</th>
+          <th style="background:var(--dark);">Update DB To</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Delinquent / Revoked / Administratively Dissolved</td>
+          <td><strong>"Delinquent/Revoked"</strong></td>
+        </tr>
+        <tr>
+          <td>Voluntarily Dissolved</td>
+          <td><strong>"Dissolved"</strong></td>
+        </tr>
+      </tbody>
+    </table>
     <div class="callout callout-red-warning">
       <p>Companies that were <strong>administratively dissolved</strong> by the state <strong>must NOT be marked as "Dissolved."</strong> This status is reserved only for companies that have <strong>voluntarily dissolved</strong>. Always differentiate between voluntary and administrative dissolution.</p>
     </div>
@@ -78,6 +78,11 @@
         <div class="process-body"><p><strong>Upload the screenshot to Internal Storage</strong> as documentation and backup for the update you're making in DB.</p></div>
       </div>
     </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Foreign Qualification Dissolutions</div>
+    <p>Dissolutions for Foreign Qualifications are called <strong>Withdrawals</strong>. We do <strong>not</strong> offer this service.</p>
   </div>
 
   <div class="completion-card">
