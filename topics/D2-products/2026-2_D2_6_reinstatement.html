@@ -36,19 +36,259 @@
     <p>If additional funds are required, an order issue will be generated, and payment must be submitted before the filing can move forward.</p>
   </div>
 
-  <div class="section">
-    <div class="section-title">Important Notes</div>
-    <div class="note-list">
-      <div class="note-item">
-        <p><strong>Reinstatements for Voluntarily-Dissolved Companies:</strong> Not all states allow a company that was formally dissolved by its owners to be reinstated, and some states require a complex process to do so. Because of this, we offer this in a limited number of states. Always check the available Knowledge Article to confirm whether the service is available in the customer's state.</p>
+<div class="section">
+  <div class="section-title">Available States</div>
+ 
+  <style>
+    .state-map-wrap {
+      background: var(--card-bg, #fff);
+      border-radius: 12px;
+      padding: 24px;
+      border: 1px solid var(--border, #e2e2e2);
+    }
+    .state-map-label {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--muted, #999);
+      margin-bottom: 4px;
+    }
+    .state-map-title {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--text, #333);
+      margin-bottom: 20px;
+      max-width: 320px;
+      line-height: 1.4;
+    }
+    .state-legend {
+      display: flex;
+      gap: 16px;
+      margin-bottom: 20px;
+      font-size: 12px;
+      justify-content: flex-end;
+    }
+    .state-legend-item {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .legend-dot {
+      width: 16px;
+      height: 16px;
+      border-radius: 4px;
+    }
+    .legend-dot.available { background: #2d6a4f; }
+    .legend-dot.other { background: #e8e0d4; }
+
+    .state-grid {
+      display: inline-grid;
+      grid-template-columns: repeat(12, 44px);
+      grid-template-rows: repeat(8, 44px);
+      gap: 4px;
+    }
+
+    .state-box {
+      width: 44px;
+      height: 44px;
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 11px;
+      font-weight: 700;
+      cursor: default;
+      transition: all 0.2s ease;
+      position: relative;
+      z-index: 1;
+      white-space: nowrap;
+      overflow: hidden;
+    }
+    .state-box.other {
+      background: #e8e0d4;
+      color: #888;
+    }
+    .state-box.available {
+      background: #2d6a4f;
+      color: #fff;
+      cursor: pointer;
+      box-shadow: 0 2px 6px rgba(45,106,79,0.3);
+    }
+    .state-box.available:hover {
+      width: auto;
+      min-width: 44px;
+      padding: 0 12px;
+      z-index: 10;
+      background: #1b4332;
+      box-shadow: 0 4px 12px rgba(45,106,79,0.4);
+      border-radius: 8px;
+    }
+    .state-box.empty {
+      background: transparent;
+      pointer-events: none;
+    }
+  </style>
+
+  <div class="state-map-wrap">
+    <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 12px;">
+      <div>
+        <div class="state-map-label">Reinstatement Eligibility</div>
+        <div class="state-map-title">Available states for Reinstatements<br>for Voluntarily-Dissolved Companies</div>
       </div>
-      <div class="note-item">
-        <p><strong>Reinstatements for Involuntarily-Dissolved Companies:</strong> When a customer wants to formally dissolve their company, and this has been dissolved by the state, they first have to reinstate the entity. After the company is current with all overdue payments and back in good standing, they can file for Articles of Dissolution.</p>
-      </div>
-      <div class="note-item">
-        <p><strong>Foreign Qualifications:</strong> We do not handle reinstatement filings for foreign qualifications (i.e., businesses registered in states other than their formation state).</p>
+      <div class="state-legend">
+        <div class="state-legend-item"><div class="legend-dot available"></div> Available</div>
+        <div class="state-legend-item"><div class="legend-dot other"></div> Other</div>
       </div>
     </div>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        document.querySelectorAll('.state-box.available').forEach(function(box) {
+          var abbr = box.textContent.trim();
+          var full = box.getAttribute('title');
+          box.addEventListener('mouseenter', function() {
+            box.textContent = full;
+          });
+          box.addEventListener('mouseleave', function() {
+            box.textContent = abbr;
+          });
+        });
+      });
+    </script>
+
+    <!--
+      Grid layout mirrors the standard US state tile map (12 cols x 8 rows)
+      Green = available for reinstatement: NV, WY, UT, CO, VA, MS, TX, NC, DE, CT, NH, ME
+    -->
+    <div class="state-grid">
+      <!-- Row 1 -->
+      <div class="state-box empty"></div>
+      <div class="state-box empty"></div>
+      <div class="state-box empty"></div>
+      <div class="state-box empty"></div>
+      <div class="state-box empty"></div>
+      <div class="state-box empty"></div>
+      <div class="state-box empty"></div>
+      <div class="state-box empty"></div>
+      <div class="state-box empty"></div>
+      <div class="state-box empty"></div>
+      <div class="state-box empty"></div>
+      <div class="state-box available" title="Maine">ME</div>
+
+      <!-- Row 2 -->
+      <div class="state-box empty"></div>
+      <div class="state-box empty"></div>
+      <div class="state-box empty"></div>
+      <div class="state-box empty"></div>
+      <div class="state-box empty"></div>
+      <div class="state-box empty"></div>
+      <div class="state-box empty"></div>
+      <div class="state-box empty"></div>
+      <div class="state-box empty"></div>
+      <div class="state-box other">VT</div>
+      <div class="state-box empty"></div>
+      <div class="state-box available" title="New Hampshire">NH</div>
+
+      <!-- Row 3 -->
+      <div class="state-box other">WA</div>
+      <div class="state-box other">ID</div>
+      <div class="state-box other">MT</div>
+      <div class="state-box other">ND</div>
+      <div class="state-box other">MN</div>
+      <div class="state-box other">WI</div>
+      <div class="state-box empty"></div>
+      <div class="state-box other">MI</div>
+      <div class="state-box empty"></div>
+      <div class="state-box other">NY</div>
+      <div class="state-box other">MA</div>
+      <div class="state-box empty"></div>
+
+      <!-- Row 4 -->
+      <div class="state-box other">OR</div>
+      <div class="state-box available" title="Nevada">NV</div>
+      <div class="state-box available" title="Wyoming">WY</div>
+      <div class="state-box other">SD</div>
+      <div class="state-box other">IA</div>
+      <div class="state-box other">IL</div>
+      <div class="state-box other">IN</div>
+      <div class="state-box other">OH</div>
+      <div class="state-box other">PA</div>
+      <div class="state-box other">NJ</div>
+      <div class="state-box available" title="Connecticut">CT</div>
+      <div class="state-box other">RI</div>
+
+      <!-- Row 5 -->
+      <div class="state-box other">CA</div>
+      <div class="state-box available" title="Utah">UT</div>
+      <div class="state-box available" title="Colorado">CO</div>
+      <div class="state-box other">NE</div>
+      <div class="state-box other">MO</div>
+      <div class="state-box other">KY</div>
+      <div class="state-box other">WV</div>
+      <div class="state-box available" title="Virginia">VA</div>
+      <div class="state-box other">MD</div>
+      <div class="state-box available" title="Delaware">DE</div>
+      <div class="state-box empty"></div>
+      <div class="state-box empty"></div>
+
+      <!-- Row 6 -->
+      <div class="state-box other">AZ</div>
+      <div class="state-box other">NM</div>
+      <div class="state-box other">KS</div>
+      <div class="state-box other">AR</div>
+      <div class="state-box other">TN</div>
+      <div class="state-box available" title="North Carolina">NC</div>
+      <div class="state-box empty"></div>
+      <div class="state-box empty"></div>
+      <div class="state-box empty"></div>
+      <div class="state-box empty"></div>
+      <div class="state-box empty"></div>
+      <div class="state-box empty"></div>
+
+      <!-- Row 7 -->
+      <div class="state-box empty"></div>
+      <div class="state-box empty"></div>
+      <div class="state-box other">OK</div>
+      <div class="state-box other">LA</div>
+      <div class="state-box available" title="Mississippi">MS</div>
+      <div class="state-box other">AL</div>
+      <div class="state-box other">SC</div>
+      <div class="state-box empty"></div>
+      <div class="state-box empty"></div>
+      <div class="state-box empty"></div>
+      <div class="state-box empty"></div>
+      <div class="state-box empty"></div>
+
+      <!-- Row 8 -->
+      <div class="state-box other">HI</div>
+      <div class="state-box empty"></div>
+      <div class="state-box available" title="Texas">TX</div>
+      <div class="state-box empty"></div>
+      <div class="state-box empty"></div>
+      <div class="state-box other">GA</div>
+      <div class="state-box empty"></div>
+      <div class="state-box other">FL</div>
+      <div class="state-box empty"></div>
+      <div class="state-box empty"></div>
+      <div class="state-box empty"></div>
+      <div class="state-box empty"></div>
+    </div>
+
+    <!-- AK below -->
+    <div style="margin-top: 4px;">
+      <div class="state-box other" style="display:inline-flex;">AK</div>
+    </div>
+
+  </div>
+</div>
+
+
+  <div class="section">
+    <div class="section-title">Important Notes</div>
+        <p><strong>Reinstatements for Voluntarily-Dissolved Companies:</strong> Not all states allow a company that was formally dissolved by its owners to be reinstated, and some states require a complex process to do so. Because of this, we offer this in a limited number of states. Always check the available Knowledge Article to confirm whether the service is available in the customer's state.</p>
+        <p><strong>Reinstatements for Involuntarily-Dissolved Companies:</strong> When a customer wants to formally dissolve their company, and this has been dissolved by the state, they first have to reinstate the entity. After the company is current with all overdue payments and back in good standing, they can file for Articles of Dissolution.</p>     
+        <p><strong>Foreign Qualifications:</strong> We do not handle reinstatement filings for foreign qualifications (i.e., businesses registered in states other than their formation state).</p>
   </div>
 
   <div class="completion-card">
