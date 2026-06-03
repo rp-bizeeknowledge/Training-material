@@ -46,12 +46,26 @@
       <strong>name or address</strong>, customers should <strong>contact the IRS directly</strong> 
       using either:</p>
       
-    <p>The slip at the bottom of their CP575 Confirmation Letter (if available)</p>
+    <p><strong>The slip at the bottom of their CP575 Confirmation Letter (if available)</strong></p>
+    <div class="doc-frame">
+      <img src="https://github.com/rp-bizeeknowledge/Assets/blob/main/Bottom%20Slip%20CP575.png?raw=true" alt="Bottom Slip CP575">
+      <div class="doc-frame-caption">Bottom Slip · CP575 Confirmation Letter</div>
+    </div>
     
-    <p>Sending a signed letter that that contains the following details:</p>
-    
+    <p><strong>Sending a signed letter that that contains the following details:</strong></p>
+    <div class="note-item" style="border-radius:16px;">
+      <ul style="margin:0; padding-left:18px; display:flex; flex-direction:column; gap:6px;">
+        <li>Legal business name</li>
+        <li>Employer Identification Number (EIN)</li>
+        <li>Current business address on file with the IRS</li>
+        <li>Full name and title or role of the responsible party</li>
+        <li>Daytime phone number and best time to reach you</li>
+        <li>A clear description of each requested change (i.e., business name, address, or authorized individual)</li>
+      </ul>
+    </div>
+
     <div class="callout callout-red-warning">
-      <p><strong>Bizee cannot update this information</strong> on a taxpayer's behalf through an amendment. Changes to an existing EIN need to be done by the <strong>responsible party</strong> exclusively and might also require the submission of <strong>Form 8821-B</strong>.</p>
+      <p><strong>Bizee cannot update this information</strong> on a taxpayer's behalf through an amendment. Changes to an existing EIN need to be done by the <strong>responsible party</strong> exclusively and might also require the submission of <strong><a href="#" onclick="openModal('modal-f8821b', event); return false;" style="color:inherit; text-decoration:underline; cursor:pointer;">Form 8821-B</a></strong>.</p>
     </div>
   </div>
 
@@ -59,16 +73,33 @@
     <div class="section-title">Pre-Formation Changes vs. Amendment Filing</div>
     <div class="subsection-title">Determining whether an amendment is needed</div>
     <p>It's important to check the <strong>status of the order</strong> and whether the company has <strong>already been formed</strong>:</p>
-    <div class="rules-list">
-      <div class="callout callout-blue-warning"><p><strong>If the company has not yet been formed</strong> and the order is still processing, an amendment is usually <strong>not needed</strong>. We can apply the requested changes before the documents are submitted to the state. If the change cannot be made, the order needs to be placed again.</p></div>
-      <div class="callout callout-yellow-warning"><p><strong>If the company has already been formed</strong> and the documents have been filed, an amendment <strong>will be required</strong> to make any changes to state-registered information.</p></div>
+    <div class="compare-row">
+      <div class="compare-card">
+        <h4 style="color:var(--orange); text-align:center; font-weight:700;">If not yet formed</h4>
+        <p style="text-align:justify; color:var(--dark);">If the order is still processing, an amendment is usually <strong>not needed</strong>. We can apply the requested changes before the documents are submitted to the state. If the change cannot be made, the order needs to be placed again.</p>
+      </div>
+      <div class="compare-card">
+        <h4 style="color:var(--orange); text-align:center; font-weight:700;">If already formed</h4>
+        <p style="text-align:justify; color:var(--dark);">If the documents have been filed, an amendment <strong>will be required</strong> to make any changes to state-registered information.</p>
+      </div>
     </div>
 
     <div class="subsection-title">If the Amendment order hasn't been placed</div>
     <div class="process-steps">
       <div class="process-step">
-        <div class="process-left"><div class="process-num">1</div><div class="process-line"></div></div>
-        <div class="process-body"><p>Advise the customer to <strong>submit the order</strong> and enter the information that needs to be amended in the <strong>designated section during order checkout</strong>.</p></div>
+        <div class="process-left"><div class="process-num">1</div><div class="process-line" style="display:block;"></div></div>
+        <div class="process-body">
+          <p>Advise the customer to <strong>submit the order</strong> and enter the information that needs to be amended in the <strong>designated section during order checkout</strong>.</p>
+        </div>
+      </div>
+    </div>
+    <div class="process-continuation">
+      <div class="process-continuation-spine"></div>
+      <div class="process-continuation-body">
+        <div class="doc-frame" style="margin:0;">
+          <img src="https://github.com/rp-bizeeknowledge/Assets/blob/main/Amendment%20not%20placed.png?raw=true" alt="Amendment not placed">
+          <div class="doc-frame-caption">Amendment ordering from the Dashboard</div>
+        </div>
       </div>
     </div>
 
@@ -76,14 +107,25 @@
     <div class="process-steps">
       <div class="process-step">
         <div class="process-left"><div class="process-num">1</div><div class="process-line"></div></div>
-        <div class="process-body"><p>Check <strong>internal storage</strong> for the amendment receipt as well as the <strong>Order History tab</strong> and any associated comments, to determine if <strong>work has started</strong>.</p></div>
+        <div class="process-body">
+          <p>Check <strong>internal storage</strong> for the amendment receipt as well as the <strong>Order History tab</strong> and any associated comments, to determine if <strong>work has started</strong>.</p>
+        </div>
+      </div>
+      <div class="process-continuation">
+        <div class="process-continuation-spine"></div>
+        <div class="process-continuation-body">
+          <div class="doc-frame" style="margin:0;">
+            <img src="https://raw.githubusercontent.com/rp-bizeeknowledge/Assets/16c7b43233a23ac21a47e30ce2b206e16777cbf3/Check%20Internal%20Storage.gif" alt="Check Internal Storage">
+            <div class="doc-frame-caption">Checking internal storage in DB</div>
+          </div>
+        </div>
       </div>
       <div class="process-step">
-        <div class="process-left"><div class="process-num">2a</div><div class="process-line"></div></div>
+        <div class="process-left"><div class="process-num">2</div><div class="process-line"></div></div>
         <div class="process-body"><h4>If work has begun</h4><p>Advise the customer to submit a <strong>new amendment order</strong>.</p></div>
       </div>
       <div class="process-step">
-        <div class="process-left"><div class="process-num">2b</div></div>
+        <div class="process-left"><div class="process-num">3</div><div class="process-line" style="display:block;"></div></div>
         <div class="process-body">
           <h4>If work hasn't started</h4>
           <ul>
@@ -104,18 +146,24 @@
 
   <div class="section">
     <div class="section-title">Special Scenarios</div>
-    <div class="scenario-list">
-      <div class="scenario-item">
-        <h4>Delaware</h4>
-        <p><strong>Delaware</strong> allows customers to decide whether or not to list company members. If a customer initially chose <strong>not to list members</strong> or the <strong>company address</strong>, they can file an amendment later to add this information.</p>
+    <div class="state-examples" style="grid-template-columns: repeat(3, 1fr);">
+      <div class="state-example-item">
+        <div class="pdf-trigger" onclick="openModal('modal-amend-de', event)">
+          <img src="https://github.com/rp-bizeeknowledge/Assets/blob/main/bizee-icon-state-delaware-1024x1024.png?raw=true" alt="Delaware">
+        </div>
+        <strong>Delaware</strong>
       </div>
-      <div class="scenario-item">
-        <h4>Pennsylvania</h4>
-        <p><strong>Pennsylvania</strong> doesn't show members on the Articles until the <strong>first Annual Report</strong> has been filed. If customers want to change this information, they will have to <strong>wait until the report's deadline is near</strong> so the change can be made through an Amendment.</p>
+      <div class="state-example-item">
+        <div class="pdf-trigger" onclick="openModal('modal-amend-pa', event)">
+          <img src="https://github.com/rp-bizeeknowledge/Assets/blob/main/bizee-icon-state-pennsylvania-1024x1024.png?raw=true" alt="Pennsylvania">
+        </div>
+        <strong>Pennsylvania</strong>
       </div>
-      <div class="scenario-item">
-        <h4>Updating DBA Address After Company Address Amendment</h4>
-        <p>When a customer files an amendment to change the company address with the Secretary of State, the DBA (Doing Business As) address does not automatically update. The <strong>customer</strong> will need to update the DBA address <strong>directly with the county</strong> where the DBA was initially filed.</p>
+      <div class="state-example-item">
+        <div class="pdf-trigger" onclick="openModal('modal-amend-dba', event)">
+          <img src="https://github.com/rp-bizeeknowledge/Assets/blob/main/bizee-icon-address-update-1024x1024.png?raw=true" alt="Updating DBA Address">
+        </div>
+        <strong>Updating DBA Address</strong>
       </div>
     </div>
   </div>
@@ -146,5 +194,56 @@
     <span class="footer-meta">Internal use only · Training & Development · PRODUCTS · Topic 02 of 14</span>
   </div>
 </div>
+
+<!-- PDF Modals -->
+<div class="pdf-modal-overlay" id="modal-amend-de">
+  <div class="pdf-modal" style="height:auto;">
+    <div class="pdf-modal-header">
+      <span class="pdf-modal-title">Delaware</span>
+      <button class="pdf-modal-close" onclick="closeModal('modal-amend-de')">✕</button>
+    </div>
+    <div class="pdf-modal-body" style="padding:24px 28px;">
+      <p><strong>Delaware</strong> allows customers to decide whether or not to list company members. If a customer initially chose <strong>not to list members</strong> or the <strong>company address</strong>, they can file an amendment later to add this information.</p>
+    </div>
+  </div>
+</div>
+
+<div class="pdf-modal-overlay" id="modal-amend-pa">
+  <div class="pdf-modal" style="height:auto;">
+    <div class="pdf-modal-header">
+      <span class="pdf-modal-title">Pennsylvania</span>
+      <button class="pdf-modal-close" onclick="closeModal('modal-amend-pa')">✕</button>
+    </div>
+    <div class="pdf-modal-body" style="padding:24px 28px;">
+      <p><strong>Pennsylvania</strong> doesn't show members on the Articles until the <strong>first Annual Report</strong> has been filed. If customers want to change this information, they will have to <strong>wait until the report's deadline is near</strong> so the change can be made through an Amendment.</p>
+    </div>
+  </div>
+</div>
+
+<div class="pdf-modal-overlay" id="modal-amend-dba">
+  <div class="pdf-modal" style="height:auto;">
+    <div class="pdf-modal-header">
+      <span class="pdf-modal-title">Updating DBA Address After Company Address Amendment</span>
+      <button class="pdf-modal-close" onclick="closeModal('modal-amend-dba')">✕</button>
+    </div>
+    <div class="pdf-modal-body" style="padding:24px 28px;">
+      <p>When a customer files an amendment to change the company address with the Secretary of State, the DBA (Doing Business As) address does not automatically update. The <strong>customer</strong> will need to update the DBA address <strong>directly with the county</strong> where the DBA was initially filed.</p>
+    </div>
+  </div>
+</div>
+
+<div class="pdf-modal-overlay" id="modal-f8821b">
+  <div class="pdf-modal">
+    <div class="pdf-modal-header">
+      <span class="pdf-modal-title">Form 8821-B</span>
+      <button class="pdf-modal-close" onclick="closeModal('modal-f8821b')">✕</button>
+    </div>
+    <div class="pdf-modal-body">
+      <iframe src="https://docs.google.com/viewer?url=https://github.com/rp-bizeeknowledge/Assets/raw/main/f8821.pdf&embedded=true" style="width:100%;height:100%;border:none;display:block;"></iframe>
+    </div>
+  </div>
+</div>
+
+<script src="../../theme.js"></script>
 </body>
 </html>
