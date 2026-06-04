@@ -2939,7 +2939,7 @@ div.scenario-item {
   width: 26px;
   height: 26px;
   border-radius: 50%;
-  background: var(--dark);
+  background: var(--orange);
   color: #fff;
   font-size: 10px;
   font-weight: 700;
@@ -3748,7 +3748,7 @@ div.scenario-item {
   background: var(--dark);
   border-radius: var(--radius);
   padding: 28px 32px;
-  margin: 16px 0;
+  margin: 16px auto;
   text-align: center;
   box-shadow: var(--shadow-md);
 }
@@ -3757,7 +3757,7 @@ div.scenario-item {
   font-weight: 400;
   color: rgba(255, 255, 255, 0.85);
   margin: 0;
-  font-style: italic;
+  font-style: normal;
   text-align: center;
   line-height: 1.7;
 }
