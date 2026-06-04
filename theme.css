@@ -6478,6 +6478,7 @@ div.scenario-item {
     0 12px 28px rgba(17, 17, 17, 0.1);
   overflow: hidden;
   margin: 24px auto;
+  width: 80%;
 }
 .doc-frame img {
   display: block;
