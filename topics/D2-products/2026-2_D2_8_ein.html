@@ -241,7 +241,7 @@ function openModal(key) {
   const viewer = document.getElementById('modal-viewer');
 
   if (data.type === 'pdf') {
-    viewer.innerHTML = `<iframe src="${data.src}" width="100%" height="500px" style="border:1px solid #ddd; border-radius:8px;"></iframe>`;
+    viewer.innerHTML = `<iframe src="${data.src}" width="100%" height="700px" style="border:1px solid #ddd; border-radius:8px;"></iframe>`;
   } else if (data.type === 'image') {
     viewer.innerHTML = `<img src="${data.src}" alt="${data.title}" style="width:100%; border-radius:8px; border:1px solid #ddd;">`;
   } else if (data.type === 'images') {
