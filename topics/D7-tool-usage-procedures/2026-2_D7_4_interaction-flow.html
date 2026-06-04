@@ -171,52 +171,60 @@
       </div>
 
        <!-- ACCOUNT RECOVERY -->
-      <div class="section">
-        <p><h4>Account Recovery</h4></p>
-        <div class="recovery-panel">
-          <p>If the caller cannot provide any authentication information, request them to <strong>reach out from the email or phone number on file</strong> so you can grant access and update the account if required.</p>
-        </div>
+      <p><h4>Account Recovery</h4></p>
+      <div class="recovery-panel">
+        <p>If the caller cannot provide any authentication information, ask to speak directly with the verified contact or offer to transfer the call to them. You can also request them to <strong>reach out from the email or phone number on file
+        </strong> so you can grant access and update the account if required.</p>
       </div>
     </div>
-    <div class="callout callout-yellow-warning">
-      <p><strong>Important:</strong> Apple Pay uses a temporary card number. The last 4 digits in the database will not match the customer's real card, so do not use them for authentication.</p>
-    </div>
 
-    <p><strong>Step 3: If the Caller Is Not a Verified Contact</strong></p>
-    <div class="rules-list">
-      <div class="callout callout-yellow-warning"><p>Ask to speak directly with the verified contact or offer to transfer the call to them.</p></div>
-      <div class="callout callout-red-stop"><p>If they cannot authenticate, <strong>do not</strong> provide account-specific help.</p></div>
-    </div>
+    <div class="callout callout-red-warning">
+      <p>If they cannot authenticate, <strong>do not</strong> provide account-specific help if authentication fails.</p></div>
 
     <div class="subsection-title">Roles and Permissions</div>
-    <div class="role-list">
-      <div class="role-item">
-        <div class="role-name">Contact</div>
-        <div class="role-desc">Can receive information and request changes.</div>
+    <div class="doc-frame" style="max-width: 560px;">
+      <img src="https://github.com/rp-bizeeknowledge/Assets/blob/main/db-contactinfo.png?raw=true" alt="Completed Documents Preview">
+      <div class="doc-frame-caption">Contact information shown in the Contact tab in Bizee Tech</div>
+    </div>
+
+    <div class="doc-frame" style="max-width: 560px;">
+      <img src="https://github.com/rp-bizeeknowledge/Assets/blob/main/db-clientinfo.png?raw=true" alt="Completed Documents Preview">
+      <div class="doc-frame-caption">Client information shown in the Client tab in Bizee Tech</div>
+    </div>
+    <div class="numbered-feature-list">
+      <div class="nf-item">
+        <div class="nf-num">1</div>
+        <div class="nf-body"><div class="role-name">Contact</div><p>Can receive information and request changes.</p></div>
       </div>
-      <div class="role-item">
-        <div class="role-name">Client</div>
-        <div class="role-desc">Can receive information but can only make changes through their dashboard.</div>
+      <div class="nf-item">
+        <div class="nf-num">2</div>
+        <div class="nf-body"><div class="role-name">Owner</div>
+        <p>Can receive information but can only make changes through their dashboard.</p></div>
       </div>
-      <div class="role-item">
-        <div class="role-name">Owner <em>(green check in DB)</em></div>
-        <div class="role-desc">Can receive information but can only make changes through their dashboard.</div>
+      <div class="nf-item">
+        <div class="nf-num">3</div>
+        <div class="nf-body"><div class="role-name">Client</div>
+        <p>Can receive information but can only make changes through their dashboard.</p></div>
+      </div>
       </div>
     </div>
 
     <div class="subsection-title">Special Scenarios</div>
-    <div class="note-list">
-      <div class="note-item">If a verified contact is present with the caller, authenticate the contact directly.</div>
-      <div class="note-item">If the sole member of a company managed by a commercial client wants ownership: send an email requesting their ID, collect information to add them as a user in the database, and escalate using Zendesk (by selecting your Supervisor in the dropdown) and mark the ticket as pending.</div>
+    <ul>
+      <li>If a verified contact is present with the caller, do not ask them to reach out from the email or phone number on file. Instead, follow the full authentication process.</li>
+      <li>If the sole member of a company managed by a commercial client wants ownership: 
+        <ul>
+          <li>Send an email requesting their ID</li>
+          <li>Collect information to add them as a user in the database</li>
+          <li>Escalate using Zendesk (by selecting your Supervisor in the dropdown) and mark the ticket as pending</li>
+        </ul>
+      </li>
+    </ul>
     </div>
-    <div class="callout callout-red-stop">
-      <p><strong>Key rule:</strong> Do not tell customers to "reach out from the email or phone on file." Always follow the full authentication process.</p>
-    </div>
-  </div>
 
   <div class="section">
     <div class="section-title">Support</div>
-    <p>After the customer expresses their concern, and has been authenticated, address the issue clearly and helpfully. Before ending the call, offer any additional support or information they may need.</p>
+    <p>After the customer expresses their concern, and has been authenticated, address the issue clearly and helpfully. Before ending the call, offer any additional support or information they may need. For example:</p>
     <div class="script-box">
       <p>I'm glad I was able to assist. Is there anything else I can help with?</p>
     </div>
@@ -224,10 +232,11 @@
 
   <div class="section">
     <div class="section-title">Closing</div>
-    <p>End with a friendly goodbye and then document the call, document any actions taken and call details in an internal note in Zendesk and comment in DB when appropriate.</p>
+    <p>End with a friendly goodbye. For example:</p>
     <div class="script-box">
       <p>Thank you for calling Bizee. Have a great day!</p>
     </div>
+      <p>Then document the call, writing down any actions taken and call details in an internal note in Zendesk and comment in DB/Bizee Tech when appropriate.</p>
   </div>
 
   <div class="completion-card">
@@ -244,5 +253,6 @@
     <span class="footer-meta">Internal use only · Training & Development · Tool Usage & Procedures · Topic 04 of 05</span>
   </div>
 </div>
+<script src="../../theme.js"></script>
 </body>
 </html>
