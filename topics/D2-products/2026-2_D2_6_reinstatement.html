@@ -24,27 +24,77 @@
     <p>This is typically needed when a business has <strong>missed compulsory filings</strong>, such as the <strong>Annual Report</strong>, or <strong>failed to maintain a Registered Agent</strong>, causing the state to suspend or administratively dissolve the entity.</p>
   </div>
 
+  <div class="section">
+    <div class="section-title">Example</div>
+    <div class="section">
+        <div class="section">
+  <div class="doc-frame" style="max-width: 750px;">
+    <iframe
+      src="https://docs.google.com/viewer?url=https://raw.githubusercontent.com/rp-bizeeknowledge/Assets/main/Reinstatment.pdf&embedded=true"
+      style="width:100%; height:500px; border:none; display:block;">
+    </iframe>
+    <div class="doc-frame-caption">9. Reinstatement
+ · Example</div>
+  </div>
+
 <div class="section">
     <div class="section-title">Pricing</div>
     <div class="pricing-formula"><div class="pf-item"><div class="pf-amount">$199</div><div class="pf-label">Bizee Processing Fee</div></div><div class="pf-operator">+</div><div class="pf-item pf-item--muted"><div class="pf-amount">State Fee</div><div class="pf-label">Varies by state</div></div></div>
     <p>After submission, the Filing Department confirms whether additional amounts are owed (e.g., overdue Annual Report fees or state-assessed penalties). If so, an order issue is generated and payment must be submitted before the filing proceeds.</p>
   </div>
 
-  <div class="section">
-    <div class="section-title">Additional Funds Requests</div>
+html<div class="section">
+  <div class="section-title">Additional Funds Requests</div>
+  <div class="doc-frame" style="max-width: 750px;">
+    <img
+      src="https://raw.githubusercontent.com/rp-bizeeknowledge/Assets/main/additional%20funds.gif"
+      alt="Additional Funds Request"
+      style="width:100%; height:auto; display:block; cursor:zoom-in;"
+      onclick="document.getElementById('gif-lightbox').style.display='flex'">
+
+    <!-- Lightbox -->
+    <div id="gif-lightbox" style="display:none; position:fixed; inset:0; background:rgba(0,0,0,0.85);
+      z-index:9999; align-items:center; justify-content:center; cursor:zoom-out;"
+      onclick="this.style.display='none'">
+      <img
+        src="https://raw.githubusercontent.com/rp-bizeeknowledge/Assets/main/additional%20funds.gif"
+        style="max-width:90vw; max-height:90vh; border-radius:8px; box-shadow:0 8px 40px rgba(0,0,0,0.5);">
+    </div>
+
+    <div class="doc-frame-caption">Additional Funds Request · Example</div>
+  </div>
+</div>
+
+<script>
+  document.querySelectorAll('.doc-frame img').forEach(function(img) {
+    img.addEventListener('click', function() {
+      var lightbox = img.nextElementSibling;
+      lightbox.style.display = 'flex';
+    });
+  });
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') {
+      document.querySelectorAll('[style*="position:fixed"]').forEach(function(el) {
+        el.style.display = 'none';
+      });
+    }
+  });
+</script>
+
+  </div>
+
     <p>Placing a Reinstatement order requires payment of both the <strong>applicable state fee</strong> and <strong>Bizee's processing fee</strong>. After the order is submitted, the Filing Department will contact the state to confirm whether any additional amounts are owed, such as <strong>overdue Annual Report fees</strong> or <strong>state-assessed penalties</strong> needed to return the company to good standing.</p>
     <p>If additional funds are required, an order issue will be generated, and payment must be submitted before the filing can move forward.</p>
   </div>
 
-<div class="section">
-  <div class="section-title">Available States</div>
- 
+
+ <div class="section">
+  <div class="section-title">Availability</div>
+
   <style>
     .state-map-wrap {
-      background: var(--card-bg, #fff);
-      border-radius: 12px;
-      padding: 24px;
-      border: 1px solid var(--border, #e2e2e2);
+      
+      
     }
     .state-map-label {
       font-size: 11px;
@@ -89,6 +139,12 @@
       gap: 4px;
     }
 
+    .state-cell {
+      position: relative;
+      width: 44px;
+      height: 44px;
+    }
+
     .state-box {
       width: 44px;
       height: 44px;
@@ -100,8 +156,9 @@
       font-weight: 700;
       cursor: default;
       transition: all 0.2s ease;
-      position: relative;
-      z-index: 1;
+      position: absolute;
+      top: 0;
+      left: 0;
       white-space: nowrap;
       overflow: hidden;
     }
@@ -116,10 +173,11 @@
       box-shadow: 0 2px 6px rgba(45,106,79,0.3);
     }
     .state-box.available:hover {
-      width: auto;
+      width: max-content;
       min-width: 44px;
-      padding: 0 12px;
+      padding: 0 14px;
       z-index: 10;
+      position: absolute;
       background: #1b4332;
       box-shadow: 0 4px 12px rgba(45,106,79,0.4);
       border-radius: 8px;
@@ -133,8 +191,7 @@
   <div class="state-map-wrap">
     <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 12px;">
       <div>
-        <div class="state-map-label">Reinstatement Eligibility</div>
-        <div class="state-map-title">Available states for Reinstatements<br>for Voluntarily-Dissolved Companies</div>
+        <div class="state-map-title">States where we can help reinstating a<br>Voluntarily-Dissolved company</div>
       </div>
       <div class="state-legend">
         <div class="state-legend-item"><div class="legend-dot available"></div> Available</div>
@@ -163,121 +220,315 @@
     -->
     <div class="state-grid">
       <!-- Row 1 -->
+      <div class="state-cell">
       <div class="state-box empty"></div>
+      </div>
+      <div class="state-cell">
       <div class="state-box empty"></div>
+      </div>
+      <div class="state-cell">
       <div class="state-box empty"></div>
+      </div>
+      <div class="state-cell">
       <div class="state-box empty"></div>
+      </div>
+      <div class="state-cell">
       <div class="state-box empty"></div>
+      </div>
+      <div class="state-cell">
       <div class="state-box empty"></div>
+      </div>
+      <div class="state-cell">
       <div class="state-box empty"></div>
+      </div>
+      <div class="state-cell">
       <div class="state-box empty"></div>
+      </div>
+      <div class="state-cell">
       <div class="state-box empty"></div>
+      </div>
+      <div class="state-cell">
       <div class="state-box empty"></div>
+      </div>
+      <div class="state-cell">
       <div class="state-box empty"></div>
+      </div>
+      <div class="state-cell">
       <div class="state-box available" title="Maine">ME</div>
+      </div>
 
       <!-- Row 2 -->
+      <div class="state-cell">
       <div class="state-box empty"></div>
+      </div>
+      <div class="state-cell">
       <div class="state-box empty"></div>
+      </div>
+      <div class="state-cell">
       <div class="state-box empty"></div>
+      </div>
+      <div class="state-cell">
       <div class="state-box empty"></div>
+      </div>
+      <div class="state-cell">
       <div class="state-box empty"></div>
+      </div>
+      <div class="state-cell">
       <div class="state-box empty"></div>
+      </div>
+      <div class="state-cell">
       <div class="state-box empty"></div>
+      </div>
+      <div class="state-cell">
       <div class="state-box empty"></div>
+      </div>
+      <div class="state-cell">
       <div class="state-box empty"></div>
+      </div>
+      <div class="state-cell">
       <div class="state-box other">VT</div>
+      </div>
+      <div class="state-cell">
       <div class="state-box empty"></div>
+      </div>
+      <div class="state-cell">
       <div class="state-box available" title="New Hampshire">NH</div>
+      </div>
 
       <!-- Row 3 -->
+      <div class="state-cell">
       <div class="state-box other">WA</div>
+      </div>
+      <div class="state-cell">
       <div class="state-box other">ID</div>
+      </div>
+      <div class="state-cell">
       <div class="state-box other">MT</div>
+      </div>
+      <div class="state-cell">
       <div class="state-box other">ND</div>
+      </div>
+      <div class="state-cell">
       <div class="state-box other">MN</div>
+      </div>
+      <div class="state-cell">
       <div class="state-box other">WI</div>
+      </div>
+      <div class="state-cell">
       <div class="state-box empty"></div>
+      </div>
+      <div class="state-cell">
       <div class="state-box other">MI</div>
+      </div>
+      <div class="state-cell">
       <div class="state-box empty"></div>
+      </div>
+      <div class="state-cell">
       <div class="state-box other">NY</div>
+      </div>
+      <div class="state-cell">
       <div class="state-box other">MA</div>
+      </div>
+      <div class="state-cell">
       <div class="state-box empty"></div>
+      </div>
 
       <!-- Row 4 -->
+      <div class="state-cell">
       <div class="state-box other">OR</div>
+      </div>
+      <div class="state-cell">
       <div class="state-box available" title="Nevada">NV</div>
+      </div>
+      <div class="state-cell">
       <div class="state-box available" title="Wyoming">WY</div>
+      </div>
+      <div class="state-cell">
       <div class="state-box other">SD</div>
+      </div>
+      <div class="state-cell">
       <div class="state-box other">IA</div>
+      </div>
+      <div class="state-cell">
       <div class="state-box other">IL</div>
+      </div>
+      <div class="state-cell">
       <div class="state-box other">IN</div>
+      </div>
+      <div class="state-cell">
       <div class="state-box other">OH</div>
+      </div>
+      <div class="state-cell">
       <div class="state-box other">PA</div>
+      </div>
+      <div class="state-cell">
       <div class="state-box other">NJ</div>
+      </div>
+      <div class="state-cell">
       <div class="state-box available" title="Connecticut">CT</div>
+      </div>
+      <div class="state-cell">
       <div class="state-box other">RI</div>
+      </div>
 
       <!-- Row 5 -->
+      <div class="state-cell">
       <div class="state-box other">CA</div>
+      </div>
+      <div class="state-cell">
       <div class="state-box available" title="Utah">UT</div>
+      </div>
+      <div class="state-cell">
       <div class="state-box available" title="Colorado">CO</div>
+      </div>
+      <div class="state-cell">
       <div class="state-box other">NE</div>
+      </div>
+      <div class="state-cell">
       <div class="state-box other">MO</div>
+      </div>
+      <div class="state-cell">
       <div class="state-box other">KY</div>
+      </div>
+      <div class="state-cell">
       <div class="state-box other">WV</div>
+      </div>
+      <div class="state-cell">
       <div class="state-box available" title="Virginia">VA</div>
+      </div>
+      <div class="state-cell">
       <div class="state-box other">MD</div>
+      </div>
+      <div class="state-cell">
       <div class="state-box available" title="Delaware">DE</div>
+      </div>
+      <div class="state-cell">
       <div class="state-box empty"></div>
+      </div>
+      <div class="state-cell">
       <div class="state-box empty"></div>
+      </div>
 
       <!-- Row 6 -->
+      <div class="state-cell">
       <div class="state-box other">AZ</div>
+      </div>
+      <div class="state-cell">
       <div class="state-box other">NM</div>
+      </div>
+      <div class="state-cell">
       <div class="state-box other">KS</div>
+      </div>
+      <div class="state-cell">
       <div class="state-box other">AR</div>
+      </div>
+      <div class="state-cell">
       <div class="state-box other">TN</div>
+      </div>
+      <div class="state-cell">
       <div class="state-box available" title="North Carolina">NC</div>
+      </div>
+      <div class="state-cell">
       <div class="state-box empty"></div>
+      </div>
+      <div class="state-cell">
       <div class="state-box empty"></div>
+      </div>
+      <div class="state-cell">
       <div class="state-box empty"></div>
+      </div>
+      <div class="state-cell">
       <div class="state-box empty"></div>
+      </div>
+      <div class="state-cell">
       <div class="state-box empty"></div>
+      </div>
+      <div class="state-cell">
       <div class="state-box empty"></div>
+      </div>
 
       <!-- Row 7 -->
+      <div class="state-cell">
       <div class="state-box empty"></div>
+      </div>
+      <div class="state-cell">
       <div class="state-box empty"></div>
+      </div>
+      <div class="state-cell">
       <div class="state-box other">OK</div>
+      </div>
+      <div class="state-cell">
       <div class="state-box other">LA</div>
+      </div>
+      <div class="state-cell">
       <div class="state-box available" title="Mississippi">MS</div>
+      </div>
+      <div class="state-cell">
       <div class="state-box other">AL</div>
+      </div>
+      <div class="state-cell">
       <div class="state-box other">SC</div>
+      </div>
+      <div class="state-cell">
       <div class="state-box empty"></div>
+      </div>
+      <div class="state-cell">
       <div class="state-box empty"></div>
+      </div>
+      <div class="state-cell">
       <div class="state-box empty"></div>
+      </div>
+      <div class="state-cell">
       <div class="state-box empty"></div>
+      </div>
+      <div class="state-cell">
       <div class="state-box empty"></div>
+      </div>
 
       <!-- Row 8 -->
+      <div class="state-cell">
       <div class="state-box other">HI</div>
+      </div>
+      <div class="state-cell">
       <div class="state-box empty"></div>
+      </div>
+      <div class="state-cell">
       <div class="state-box available" title="Texas">TX</div>
+      </div>
+      <div class="state-cell">
       <div class="state-box empty"></div>
+      </div>
+      <div class="state-cell">
       <div class="state-box empty"></div>
+      </div>
+      <div class="state-cell">
       <div class="state-box other">GA</div>
+      </div>
+      <div class="state-cell">
       <div class="state-box empty"></div>
+      </div>
+      <div class="state-cell">
       <div class="state-box other">FL</div>
+      </div>
+      <div class="state-cell">
       <div class="state-box empty"></div>
+      </div>
+      <div class="state-cell">
       <div class="state-box empty"></div>
+      </div>
+      <div class="state-cell">
       <div class="state-box empty"></div>
+      </div>
+      <div class="state-cell">
       <div class="state-box empty"></div>
+      </div>
     </div>
 
     <!-- AK below -->
     <div style="margin-top: 4px;">
+      <div class="state-cell">
       <div class="state-box other" style="display:inline-flex;">AK</div>
+      </div>
     </div>
 
   </div>
