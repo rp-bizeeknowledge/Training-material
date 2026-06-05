@@ -124,7 +124,7 @@
         </ul>
       </div>
     </div>
-    <div class="subsection-title">How To Merge: Tickets</div>
+    <div class="subsection-title">How To Merge Tickets</div>
     <p><h4>Option A: Merging One Ticket into Yours</h4></p>
     <div class="process-steps">
       <div class="process-step">
@@ -202,29 +202,71 @@
         <div class="doc-frame-caption">Merging Various Tickets from the Same User · Example</div>
       </div>
     </div>
+    </div>
 
-    <div class="subsection-title">Users</div>
+    <div class="section">
+    <div class="section-title">Keeping Records Updated</div>
+    <p>If a caller or email sender is not using the contact details on file but has been successfully authenticated, offer to update their account information before ending the interaction.</p>
+    <div class="callout script-box">
+      <p>Would you like me to update your contact information on file so we can locate your account faster next time?</p>
+    </div>
+    </div>
     <div class="do-dont">
       <div class="do-card">
-        <h4>✅ DO</h4>
+        <h4>✅ If "Yes"</h4>
         <ul>
-          <li><strong>Merge users when a customer already has an account</strong>, but the email address or phone number they are using is not linked to their existing orders.</li>
-          <li><strong>Authenticate the customer before merging any user records.</strong> Identity verification must always be completed first.</li>
-          <li><strong>Offer to merge the information proactively</strong> to keep the customer's account consolidated and avoid future confusion.</li>
-          <li><strong>Obtain clear and explicit customer consent</strong> before proceeding with the merge, regardless of whether the interaction is by phone or email.</li>
-          <li><strong>Use clear consent language</strong>, such as: "Would you like me to link this phone number (or email) to your account so we can keep everything in one place moving forward?"</li>
+          <li>Send an email requesting them to confirm the contact information on file. Once received, update contact details on DB and in Zendesk's user profile.</li>
         </ul>
       </div>
       <div class="dont-card">
-        <h4>❌ DON'T</h4>
+        <h4>❌ If not</h4>
         <ul>
-          <li><strong>Merge users without customer consent</strong>, even if the information appears to belong to the same person.</li>
-          <li><strong>Merge users before authentication</strong> has been completed.</li>
-          <li><strong>Assume consent</strong> based on context or prior interactions.</li>
-          <li><strong>Merge user records unnecessarily</strong> if the contact information is already correctly linked.</li>
+          <li>Change the ticket requester in Zendesk using the contact's email address.</li>
         </ul>
       </div>
     </div>
+    <!-- GOOD HOUSEKEEPING -->
+  <div class="section">
+    <div class="section-title">Good Housekeeping</div>
+    <p style="font-size:15px;color:var(--muted);margin-bottom:18px; font-weight: 600;">Be on the lookout for these common action items before wrapping up an authenticated interaction.</p>
+
+    <div class="lookout-grid">
+      <div class="lookout-card">
+        <div class="doc-frame" style="max-width: 90%; margin: 12px auto;">
+          <img src="https://github.com/rp-bizeeknowledge/Assets/blob/main/Duplicate%20phone%20%23%20Cx.png?raw=true" title="Duplicate contact info example">
+        </div>
+
+        <div class="lookout-body">
+          <div class="lookout-kicker">Duplicate contact info</div>
+          <h4>Watch for repeated email or phone entries</h4>
+          <p>If duplicate details appear across profiles, confirm the correct account and <strong>keep Zendesk aligned with DB/Bizee Tech.</strong></p>
+        </div>
+      </div>
+
+      <div class="lookout-card">
+        <div class="doc-frame" style="max-width: 90%; margin: 12px auto;">
+          <img src="https://github.com/rp-bizeeknowledge/Assets/blob/main/Duplicate%20phone%20%23%20Cx.png?raw=true" title="Duplicate contact info example">
+        </div>
+        <div class="lookout-body">
+          <div class="lookout-kicker">Missing names</div>
+          <h4>Fill in incomplete contact names</h4>
+          <p>When the customer confirms their identity, update missing first or last names so future agents can <strong>locate the record faster.</strong></p>
+        </div>
+      </div>
+
+      <div class="lookout-card">
+        <div class="doc-frame" style="max-width: 90%; margin: 12px auto;">
+          <img src="https://github.com/rp-bizeeknowledge/Assets/blob/main/Duplicate%20phone%20%23%20Cx.png?raw=true" title="Duplicate contact info example">
+        </div>
+        <div class="lookout-body">
+          <div class="lookout-kicker">Outdated contact info</div>
+          <h4>Offer to update stale phone or email details</h4>
+          <p>If they reached out from a new contact method, ask whether they want it saved and <strong>update DB and Zendesk when confirmed.</strong></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Merge users -->
     <div class="subsection-title">How To Merge: Users</div>
     <div class="process-steps">
       <div class="process-step">
