@@ -692,6 +692,7 @@ li:last-child {
 /* script box */
 .script-box {
   background: var(--blue-light);
+  border-color: var(--blue-border);
   border-left: 6px solid var(--blue-border);
   border-radius: var(--radius);
   margin: 20px 32px;
