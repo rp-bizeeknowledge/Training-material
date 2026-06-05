@@ -7789,5 +7789,56 @@ html {
   to   { opacity: 1; transform: translateY(0); }
 }
 
+/* LOOKOUT CARDS */
+.lookout-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
+@media (max-width: 760px) { .lookout-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 560px) { .lookout-grid { grid-template-columns: 1fr; } }
+
+.lookout-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.lookout-visual {
+  min-height: 118px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+.lookout-body { padding: 14px 16px 16px; }
+
+.lookout-kicker {
+  font-size: 10px;
+  font-weight: 600;
+  font-family: 'DM Mono', monospace;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--orange);
+  margin-bottom: 5px;
+}
+
+.lookout-body h4 {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--dark);
+  margin-bottom: 5px;
+  line-height: 1.35;
+}
+
+.lookout-body p {
+  font-size: 13px;
+  color: var(--mid);
+  line-height: 1.55;
+}
+
+.lookout-body strong {
+  color: var(--dark);
+  font-weight: 600;
+}
+
 /* ── AMENDMENT PAGE SCOPED OVERRIDES ──────────────────────── */
 .amendment-page .subsection-title { margin: 32px 0 14px; }
