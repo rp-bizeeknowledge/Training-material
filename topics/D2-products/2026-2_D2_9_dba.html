@@ -132,7 +132,7 @@
     var data = dbaFiles[key];
     document.getElementById('dba-modal-title').textContent = data.title;
     document.getElementById('dba-modal-viewer').innerHTML =
-      '<iframe src=#zoom=page-width"' + data.src + '" width="100%" height="700px" style="border:1px solid #ddd; border-radius:8px;"></iframe>';
+      '<iframe src="' + data.src + '#zoom=page-width" width="100%" height="700px" style="border:1px solid #ddd; border-radius:8px;"></iframe>';
     document.getElementById('dba-modal').style.display = 'flex';
     document.body.style.overflow = 'hidden';
   }
