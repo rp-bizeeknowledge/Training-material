@@ -692,6 +692,7 @@ li:last-child {
 /* script box */
 .script-box {
   background: var(--blue-light);
+  border-color: var(--blue-border);
   border-left: 6px solid var(--blue-border);
   border-radius: var(--radius);
   margin: 20px 32px;
@@ -6467,6 +6468,20 @@ div.scenario-item {
 }
 
 .doc-frame {
+  display: block;
+  width: 100%;
+  background: var(--white);
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  border-top: 3px solid var(--orange);
+  box-shadow:
+    0 2px 4px rgba(17, 17, 17, 0.05),
+    0 4px 10px rgba(17, 17, 17, 0.08),
+    0 12px 28px rgba(17, 17, 17, 0.1);
+  overflow: hidden;
+  margin: 24px auto;
+}
+.pdf-frame {
   display: block;
   background: var(--white);
   border-radius: var(--radius);
