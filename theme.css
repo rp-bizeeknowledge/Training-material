@@ -108,6 +108,24 @@ a {
 a:hover {
   color: var(--orange-deep);
 }
+/* ── PILL LINK TAG ────────────────────────────────────────── */
+
+.tag {
+  display: inline-block;
+  font-weight: 600;
+  font-size: 12px;
+  text-decoration: none;
+  background-color: #F65E2E;
+  color: #ffffff;
+  padding: 2px 8px;
+  border-radius: 20px;
+  margin: 0 2px;
+}
+
+.tag:hover {
+  background-color: #c94820;
+  color: #ffffff;
+}
 
 /* ── 3. PAGE ──────────────────────────────────────────────── */
 .page {
@@ -1925,6 +1943,7 @@ li:last-child {
 /*LLC VS LICENSE TOGGLE STYLING*/
 
 /* ── Section wrapper ── */
+
 .cmp-section {
   margin-bottom: 2rem;
 }
