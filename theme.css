@@ -3979,6 +3979,7 @@ div.scenario-item {
 .state-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto;
   gap: 8px;
   margin: 12px 0;
 }
@@ -5644,6 +5645,7 @@ div.scenario-item {
 .state-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
   gap: 20px;
   margin: 24px 0;
 }
@@ -7856,10 +7858,10 @@ html {
 .legend-dot { width:16px; height:16px; border-radius:4px; }
 .legend-dot.available { background:#2d6a4f; }
 .legend-dot.other { background:#e8e0d4; }
-.state-grid { display:inline-grid; grid-template-columns:repeat(12, 44px); grid-template-rows:repeat(9, 44px); gap:4px; }
-.state-cell { position:relative; width:44px; height:44px; }
-.state-box { width:44px; height:44px; border-radius:6px; display:flex; align-items:center; justify-content:center; font-size:11px; font-weight:700; cursor:default; transition:all 0.2s ease; position:absolute; top:0; left:0; white-space:nowrap; overflow:hidden; }
-.state-box.other { background:#e8e0d4; color:#888; }
-.state-box.available { background:#2d6a4f; color:#fff; cursor:pointer; box-shadow:0 2px 6px rgba(45,106,79,0.3); }
-.state-box.available:hover { width:max-content; min-width:44px; padding:0 14px; z-index:10; background:#1b4332; box-shadow:0 4px 12px rgba(45,106,79,0.4); border-radius:8px; }
-.state-box.empty { background:transparent; pointer-events:none; }
+.state-map-wrap .state-grid { display:inline-grid; grid-template-columns:repeat(12, 44px); grid-template-rows:repeat(9, 44px); gap:4px; }
+.state-map-wrap .state-cell { position:relative; width:44px; height:44px; }
+.state-map-wrap .state-box { width:44px; height:44px; border-radius:6px; display:flex; align-items:center; justify-content:center; font-size:11px; font-weight:700; cursor:default; transition:all 0.2s ease; position:absolute; top:0; left:0; white-space:nowrap; overflow:hidden; }
+.state-map-wrap .state-box.other { background:#e8e0d4; color:#888; }
+.state-map-wrap .state-box.available { background:#2d6a4f; color:#fff; cursor:pointer; box-shadow:0 2px 6px rgba(45,106,79,0.3); }
+.state-map-wrap .state-box.available:hover { width:max-content; min-width:44px; padding:0 14px; z-index:10; background:#1b4332; box-shadow:0 4px 12px rgba(45,106,79,0.4); border-radius:8px; }
+.state-map-wrap .state-box.empty { background:transparent; pointer-events:none; }
