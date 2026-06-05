@@ -48,37 +48,10 @@
     <img
       src="https://raw.githubusercontent.com/rp-bizeeknowledge/Assets/main/Additional%20fundss.gif"
       alt="Additional Funds Request"
-      style="width:100%; height:auto; display:block; cursor:zoom-in;"
-      onclick="document.getElementById('gif-lightbox').style.display='flex'">
-
-    <!-- Lightbox -->
-    <div id="gif-lightbox" style="display:none; position:fixed; inset:0; background:rgba(0,0,0,0.85);
-      z-index:9999; align-items:center; justify-content:center; cursor:zoom-out;"
-      onclick="this.style.display='none'">
-      <img
-        src="https://raw.githubusercontent.com/rp-bizeeknowledge/Assets/main/Additional%20fundss.gif"
-        style="max-width:90vw; max-height:90vh; border-radius:8px; box-shadow:0 8px 40px rgba(0,0,0,0.5);">
-    </div>
-
+      style="width:100%; height:auto; display:block;">
     <div class="doc-frame-caption">Additional Funds Request · Example</div>
   </div>
 </div>
-
-<script>
-  document.querySelectorAll('.doc-frame img').forEach(function(img) {
-    img.addEventListener('click', function() {
-      var lightbox = img.nextElementSibling;
-      lightbox.style.display = 'flex';
-    });
-  });
-  document.addEventListener('keydown', function(e) {
-    if (e.key === 'Escape') {
-      document.querySelectorAll('[style*="position:fixed"]').forEach(function(el) {
-        el.style.display = 'none';
-      });
-    }
-  });
-</script>
 
   </div>
 

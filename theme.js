@@ -37,8 +37,8 @@
     });
   });
 
-  overlay.addEventListener("click", function (e) {
-    if (e.target === overlay) close();
+  overlay.addEventListener("click", function () {
+    close();
   });
 
   document.addEventListener("keydown", function (e) {

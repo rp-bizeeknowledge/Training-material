@@ -6521,7 +6521,7 @@ div.scenario-item {
   object-fit: contain;
   border-radius: var(--radius);
   box-shadow: 0 32px 80px rgba(0, 0, 0, 0.5);
-  cursor: default;
+  pointer-events: none;
 }
 .doc-frame-caption {
   padding: 9px 16px;
