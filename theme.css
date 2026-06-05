@@ -1325,22 +1325,26 @@ li:last-child {
   margin: 12px 0;
 }
 .benefit-item {
-  display: flex;
-  align-items: flex-start;
-  gap: 10px;
-  padding: 10px 14px;
+  display: block;
+  position: relative;
+  padding: 10px 14px 10px 34px;
   background: var(--green-light);
   border: 1px solid var(--green-border);
   border-radius: var(--radius-sm);
   font-size: 14px;
-  color: #155539;
+  color: #3a7d5a;
   line-height: 1.55;
+}
+.benefit-item strong {
+  color: #155539;
 }
 .benefit-item::before {
   content: "✓";
+  position: absolute;
+  left: 14px;
+  top: 10px;
   color: var(--green);
   font-weight: 700;
-  flex-shrink: 0;
 }
 
 /* ── 19. KEY LISTS ───────────────────────────────────────── */
