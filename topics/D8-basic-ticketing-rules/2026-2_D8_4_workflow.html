@@ -25,10 +25,27 @@
       <div class="phase-card">
         <div class="phase-header">
           <span class="phase-num">PHASE 1</span>
-          <h4>Locating the Order on DB</h4>
+          <h4>Locating the Order on Bizee Tech</h4>
         </div>
         <div class="phase-body">
-          <p>Follow these steps until you locate the customer's account. Be aware that authentication may be required:</p>
+          <p>Follow these steps until you locate the customer's account in DB/Bizee Tech. Be aware that authentication may be required:</p>
+          <div class="do-dont">
+            <div class="do-card">
+              <h4>Authentication not required:</h4>
+              <ol>
+            <li>Copy and paste their email</li>
+            <li>Use their phone number</li>
+          </ol>
+            </div>
+            <div class="dont-card">
+              <h4>Authentication required:</h4>
+              <ol start="3">
+                <li>Use their name</li>
+                <li>Use the "Link to DB" (if available)</li>
+                <li>Ask for the order number or company name</li>
+              </ol>
+            </div>
+          </div>
           <span style="background-color: var(--green);color: #ffffff; font-weight: 600;">Authentication not required:</span>
           <ol>
             <li>Copy and paste their email</li>
@@ -67,8 +84,9 @@
           <h4>Internal Notes and DB Comments</h4>
         </div>
         <div class="phase-body">
-          <p>All agents are required to leave <strong>internal notes</strong> when closing or escalating a request on Zendesk. Escalations require different information annotated in internal comments; follow the escalation guidelines according to the corresponding department.</p>
+          <p>All agents are required to leave <strong>internal notes</strong> when closing or escalating a request on Zendesk. Escalations require different information annotated in internal comments. Follow the <strong>Escalation Guidelines</strong> in the <a href="https://incfile.zendesk.com/hc/en-us/articles/41377392563995--Escalation-Guidelines">Knowledge Base</a> according to the corresponding department.</p>
           <p>DB comments must be written as well, as they will contain requirements to facilitate the resolution of future requests from the same customer.</p>
+          <p>Review the Annotation Guidelines in the <a href="https://incfile.zendesk.com/hc/en-us/articles/4407312289947--Annotation-Guidelines">Knowledge Base</a> article.</p>
         </div>
       </div>
 
@@ -82,16 +100,48 @@
           <p><strong>When to Merge a Ticket:</strong></p>
           <ul>
             <li>You should never merge your tickets into solved tickets unless it's a callback that was made prior to the issue being addressed at a later time.</li>
-            <li>If there are multiple tickets regarding the same matter, you must merge all tickets into the one you will be replying to, making sure that all queries are addressed (make sure that you are not merging your ticket into another untouched ticket).</li>
+            <li>If there are multiple tickets regarding the same matter, merge them into the ticket you will be replying to, ensuring all queries are addressed (do not merge your ticket into an untouched one).</li>
             <li>You must merge tickets into yours when the query of their ticket is the same as your existing open or pending ticket. This prevents double escalations.</li>
           </ul>
-          <p><strong>Merging 2 Tickets:</strong> Click on the 3 dots in the top right corner of the window. Once you see the drop-down menu, click on the option "Merge into another ticket". You'll be able to see a window requesting a ticket number. Keep in mind that the ticket number being requested is the one that you'll merge your current ticket into, so make sure that you input the correct number before clicking the "Merge" button. Make sure to deselect the checkboxes that say "User can see this comment". <strong>Once a ticket is merged, no one can unmerge it.</strong></p>
-          <p><strong>Merging Various Tickets from your Views:</strong> When merging various tickets from your views, select the tickets that will be merged into another ticket and click on "merge" at the bottom of the screen. Type in the ticket number you'll be merging into or select it from the list underneath the box, and click merge.</p>
-          <p><strong>Merging Various Tickets from the Same User:</strong> Click on the tab showing the name of the user in the upper left-hand corner and select the tickets you will be merging. Do not select the ticket that the others will be merged into. Click on the down arrow on the black box in the upper right-hand corner and select "Merge tickets into another ticket...". Select the ticket to be merged into located underneath the box or type in the ticket number on the box, and click merge.</p>
+          <p><strong>Merging 2 Tickets:</strong></p>
+          <ol>
+            <li>You can merge a ticket by clicking on the 3 dots in the top right corner of the window. Once you see the drop-down menu, click on the option "Merge into another ticket".</li>
+            <li>You'll be able to see a window requesting a ticket number. Keep in mind that the ticket number being requested is the one that you'll merge your current ticket into, so make sure that you input the correct number before clicking the "Merge" button.</li>
+            <li>Make sure to deselect the checkboxes that say "User can see this comment".</li>
+            <div class="callout callout-red-warning">
+              Once a ticket is merged, no one can unmerge it.
+            </div>
+          </ol>
+          <p><strong>Merging Various Tickets from your Views:</strong> 
+            <ol>
+              <li>When merging various tickets from your views, select the tickets that will be merged into another ticket and click on "merge" at the bottom of the screen.</li>
+              <li>Type in the ticket number you'll be merging into or select it from the list underneath the box, and click merge.</li>
+            </ol>
+          <p><strong>Merging Various Tickets from the Same User:</strong></p>
+            <ol>
+              <li>Click on the tab showing the name of the user in the upper left-hand corner and select the tickets you will be merging.</li>
+              <li>Do not select the ticket that the others will be merged into.</li>
+              <li>Click on the down arrow on the black box in the upper right-hand corner and select "Merge tickets into another ticket...".</li>
+              <li>Select the ticket to be merged into located underneath the box or type in the ticket number on the box, and click merge.</li>
+          </ol>
 
           <div class="subsection-title">Keeping Our Records Updated</div>
-          <p>Zendesk is not automatically updated once a customer changes their contact information, which can cause user data to be out of date and inaccurate, or unavailable, leading to complications while trying to locate an account, contacting the customer by phone, or sending an email request.</p>
+          <p>Zendesk is not automatically updated when a customer changes their contact information, which can cause user data to be out of date, inaccurate, or unavailable, leading to complications when locating an account, contacting the customer by phone, or sending an email request.</p>
           <p>Make sure to offer to update the user profile in Zendesk every time you notice a discrepancy against what's shown on DB/Bizee Tech, or if the customer has already informed you that their previous email or phone number is no longer being used, only if the caller/email sender has already been authenticated.</p>
+          <div class="do-dont">
+            <div class="do-card">
+              <h4>If the customer agrees</h4>
+              <ul>
+                <li>Send an email requesting written confirmation of the change before applying it to the account on DB/Bizee Tech. Once received, update contact details on DB and in Zendesk's user profile.</li>
+              </ul>
+            </div>
+            <div class="dont-card">
+              <h4>If the customer declines</h4>
+              <ul>
+                <li>Change the ticket requester in Zendesk using the contact's email address.</li>
+              </ul>
+            </div>
+          </div>
           <p><strong>If the customer agrees:</strong> Make sure you send an email requesting written confirmation of the change before applying it to the account on DB/Bizee Tech.</p>
           <p><strong>If the customer declines:</strong> Change the ticket requester by entering the email address shown for the caller/email sender in DB/Bizee Tech.</p>
 
