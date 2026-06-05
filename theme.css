@@ -3047,7 +3047,7 @@ div.scenario-item {
   gap: 10px;
 }
 .phase-header h4 {
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 600;
   color: #fff;
 }
@@ -3075,10 +3075,13 @@ div.scenario-item {
 .phase-body strong {
   color: var(--dark);
 }
-.phase-body ul,
-.phase-body ol {
+.phase-body ul {
   padding-left: 18px;
   margin: 6px 0;
+}
+.phase-body ol {
+  padding-left: 18px;
+  margin: 6px 20px;
 }
 .phase-body li {
   font-size: 14px;
