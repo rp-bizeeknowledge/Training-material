@@ -13,8 +13,8 @@
   <a class="back-link" href="2026-2_D8_0_basic-ticketing-rules.html#top">← Back to Basic Ticketing Rules</a>
 
   <div class="hero hero-soft">
-    <div class="hero-label">BASIC TICKETING · Topic 02</div>
-    <h1>Call Handling</h1>
+    <div class="hero-label">BASIC TICKETING RULES · Topic 02</div>
+    <h1>Call Handling <span>Guidelines</span></h1>
     <div class="hero-sub">Call opening · Follow-up rules · Voicemail · Dropped calls · User management · Hold · Away status · Missed calls</div>
   </div>
 
@@ -47,12 +47,23 @@
       </div>
       <div class="process-step">
         <div class="process-left"><div class="process-num">4</div></div>
-        <div class="process-body"><p>If you can't leave a voicemail, send an email, leave an internal note saying <strong>"Unable to LVM"</strong> and mark the ticket as Solved.</p></div>
+        <div class="process-body"><p>If you can't leave a voicemail, send an email, leave an internal note saying <strong>"Unable to LVM"</strong> and mark the ticket as Solved.</p>
+        <div style="background: var(--white); border-top: 3px solid var(--orange); border-radius: var(--radius-sm); padding: 22px 24px 24px; box-shadow: 0 4px 20px rgba(17,17,17,0.07); margin: 14px 0 14px 20px; overflow: hidden;">
+            <p style="font-size: 14px; font-weight: 500; color: var(--orange); margin-bottom: 12px;">Available macro:</p>
+            <p style="font-size: 12px;">Hello Rafa,</p>
+            <p style="font-size: 12px;">I hope you are doing well.</p>
+            <p style="font-size: 12px;">This is Daniel with Bizee. I attempted returning your missed call but was unable to reach you or leave a voicemail.</p>
+            <p style="font-size: 12px;">Please feel free to reply to this email or contact us at 888-462-3453 if you still need assistance. Our business hours are Monday through Friday, from 9:00 a.m. to 6:00 p.m. CST.</p>
+            <p style="font-size: 12px;">I look forward to hearing from you.</p>
+            <p style="font-size: 12px;">Regards,</p>
+            <p style="font-size: 12px;">Daniel<br><strong>Bizee Support</strong></p>
+          </div>
+        </div>
       </div>
     </div>
-    <div class="callout callout-blue-warning">
-
-      <p>If you are calling an international number, it's important to select the outgoing number in Zendesk as <strong>"international calls"</strong>.</p>
+    <p>If you are calling an international number, it's important to select the outgoing number in Zendesk as <strong>"international calls"</strong>.</p>
+    <div class="doc-frame" style="max-width: 280px;">
+      <img src="https://github.com/rp-bizeeknowledge/Assets/blob/main/intl-call.png?raw=true" alt="International call appearance in Zendesk">
     </div>
   </div>
 
@@ -73,8 +84,20 @@
         <div class="process-body"><p>If they don't answer, leave a voicemail with your name, inviting the customer to call us back if they need further assistance.</p></div>
       </div>
       <div class="process-step">
-        <div class="process-left"><div class="process-num">4</div></div>
-        <div class="process-body"><p>If you can't leave a voicemail, send an email, leave an internal note saying <strong>"Unable to LVM"</strong> and mark the ticket as closed.</p></div>
+        <div class="process-left"><div class="process-num">4</div>
+      </div>
+        <div class="process-body"><p>If you can't leave a voicemail, send an email, leave an internal note saying <strong>"Unable to LVM"</strong> and mark the ticket as closed.</p>
+        <div style="background: var(--white); border-top: 3px solid var(--orange); border-radius: var(--radius-sm); padding: 22px 24px 24px; box-shadow: 0 4px 20px rgba(17,17,17,0.07); margin: 14px 0 14px 20px; overflow: hidden;">
+            <p style="font-size: 14px; font-weight: 500; color: var(--orange); margin-bottom: 12px;">Available macro:</p>
+            <p style="font-size: 12px;">Hello Rafa,</p>
+            <p style="font-size: 12px;">I hope you are doing well.</p>
+            <p style="font-size: 12px;">This is Daniel with Bizee. I attempted returning your missed call but was unable to reach you or leave a voicemail.</p>
+            <p style="font-size: 12px;">Please feel free to reply to this email or contact us at 888-462-3453 if you still need assistance. Our business hours are Monday through Friday, from 9:00 a.m. to 6:00 p.m. CST.</p>
+            <p style="font-size: 12px;">I look forward to hearing from you.</p>
+            <p style="font-size: 12px;">Regards,</p>
+            <p style="font-size: 12px;">Daniel<br><strong>Bizee Support</strong></p>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -82,29 +105,22 @@
   <div class="section">
     <div class="section-title">Managing Users in Zendesk</div>
     <p>Some interactions may require updating the user's information in Zendesk or applying one-time changes.</p>
-    <div class="user-rules">
-      <div class="user-rule">
-        <h4>Updating the Requester</h4>
-        <p>Always update the requester to the email associated with the customer in our database. Do not use any other email as the requester.</p>
-      </div>
-      <div class="user-rule">
-        <h4>Adding a Phone Number</h4>
-        <p>If the phone number in the database doesn't match the number the customer is calling from, ask for their consent before updating it. If the number matches the database, no consent is needed to confirm it.</p>
-      </div>
-      <div class="user-rule">
-        <h4>CCs Box Guidelines</h4>
-        <p><strong>Don't use the CCs box if:</strong> the request only contains a blank phone number, or there is no user profile associated with the contact.<br>
-        <strong>Use the CCs box if:</strong> the customer has both an email and phone number on file, but wants the communication sent to a different email. If this is the case, inform them: <em>"You will receive a copy of this communication at your primary email on file as well."</em></p>
-      </div>
-      <div class="user-rule">
-        <h4>Email Consistency and Updates</h4>
-        <p>Always try to keep the customer's primary email on file aligned with the primary contact email in the database. If you notice a mismatch, proactively offer to update their primary email to match their preference.</p>
-      </div>
-      <div class="user-rule">
-        <h4>Primary vs. Secondary Emails in Zendesk</h4>
-        <p>Zendesk doesn't send communications to secondary emails listed on file. If a customer wants to receive an email at both their primary and secondary address, you must manually add the secondary email to the CCs field located before the Assignee field in Zendesk.</p>
-      </div>
-    </div>
+
+    <div class="subsection-title">Updating the Requester</div>
+    <p>Always update the requester to the email associated with the customer in our database. Do not use any other email as the requester.</p>
+
+    <div class="subsection-title">Adding a Phone Number</div>
+    <p>If the phone number in the database doesn't match the number the customer is calling from, ask for their consent before updating it. If the number matches the database, no consent is needed to confirm it.</p>
+
+    <div class="subsection-title">CCs Box Guidelines</div>
+    <p><strong>Don't use the CCs box if:</strong> the request only contains a blank phone number, or there is no user profile associated with the contact.</p>
+    <p><strong>Use the CCs box if:</strong> the customer has both an email and phone number on file, but wants the communication sent to a different email. If this is the case, inform them: <em>"You will receive a copy of this communication at your primary email on file as well."</em></p>
+
+    <div class="subsection-title">Email Consistency and Updates</div>
+      <p>Always try to keep the customer's primary email on file aligned with the primary contact email in the database. If you notice a mismatch, proactively offer to update their primary email to match their preference.</p>
+
+      <div class="subsection-title">Primary vs. Secondary Emails in Zendesk</div>
+      <p>Zendesk doesn't send communications to secondary emails listed on file. If a customer wants to receive an email at both their primary and secondary address, you must manually add the secondary email to the CCs field located before the Assignee field in Zendesk.</p>
   </div>
 
   <div class="section">
@@ -178,7 +194,7 @@
 
   <div class="footer">
     <span class="footer-logo">Bizee</span>
-    <span class="footer-meta">Internal use only · Training & Development · BASIC TICKETING · Topic 02 of 04</span>
+    <span class="footer-meta">Internal use only · Training & Development · Basic Ticketing Rules · Topic 02 of 04</span>
   </div>
 </div>
 <script src="../../theme.js"></script>
