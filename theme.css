@@ -6378,6 +6378,9 @@ div.scenario-item {
   font-weight: 600;
   flex-shrink: 0;
 }
+.use-case p {
+  font-size: 14px;
+}
 
 .forms-list {
   display: flex;
