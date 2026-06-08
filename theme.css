@@ -573,7 +573,7 @@ li:last-child {
 }
 .policy-note-label {
   display: inline-block;
-  font-size: 10px;
+  font-size: 12px;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.1em;
@@ -1109,11 +1109,11 @@ li:last-child {
   border: 1px solid var(--green-border);
   border-radius: var(--radius-sm);
   font-size: 14px;
-  color: #3a7d5a;
+  color: var (--green);
   line-height: 1.55;
 }
 .benefit-item strong {
-  color: #155539;
+  color: var(--green);
 }
 .benefit-item::before {
   content: "✓";
@@ -1121,6 +1121,35 @@ li:last-child {
   left: 14px;
   top: 10px;
   color: var(--green);
+  font-weight: 700;
+}
+
+.restrictions-list {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin: 12px 0;
+}
+.restriction-item {
+  display: block;
+  position: relative;
+  padding: 10px 14px 10px 34px;
+  background: var(--red-light);
+  border: 1px solid var(--red-border);
+  border-radius: var(--radius-sm);
+  font-size: 14px;
+  color: var(--red);
+  line-height: 1.55;
+}
+.restriction-item strong {
+  color: var(--red);
+}
+.restriction-item::before {
+  content: "✗";
+  position: absolute;
+  left: 14px;
+  top: 10px;
+  color: var(--red);
   font-weight: 700;
 }
 
