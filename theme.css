@@ -3865,6 +3865,9 @@ font-size: 13px;
   gap: 16px 24px;
   margin: 20px 0;
 }
+.req-grid--3col {
+  grid-template-columns: repeat(3, 1fr);
+}
 .req-card-wrap {
   position: relative;
   display: flex;
