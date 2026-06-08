@@ -140,26 +140,13 @@ a.tag-db {
   margin: 0 2px;
 }
 
-a.tag-db {
-  display: inline-block;
-  font-weight: 600;
-  font-size: 12px;
-  text-decoration: none;
+a.tag-db:hover,
+.callout a.tag-db {
   background-color: #049be0;
   color: #ffffff !important;
-  padding: 2px 8px;
-  border-radius: 20px;
-  margin: 0 2px;
 }
 
-a.tag-db:hover,
-.callout a.tag-db:hover,
-.mgmt-compare-cell a.tag-db:hover {
-  background-color: #227094;
-  color: #ffffff !important;
-}
-
-.callout a.tag-db {
+.callout a.tag-db:hover {
   background-color: #049be0;
   color: #ffffff !important;
 }
@@ -586,7 +573,7 @@ li:last-child {
 }
 .policy-note-label {
   display: inline-block;
-  font-size: 10px;
+  font-size: 12px;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.1em;
