@@ -14,7 +14,7 @@
 
   <div class="hero hero-soft">
     <div class="hero-label">PRODUCTS · Topic 08</div>
-    <h1>Employer Identification</h1>
+    <h1>Employer Identification Number <span>(EIN)</span></h1>
         <div class="hero-sub">An EIN is a required document to open a bank account, file taxes and submit payroll taxes</div>
   </div>
 
@@ -60,7 +60,8 @@
       </div>
     </div>
 
-    <p style="margin-top:16px;">While these are the entities we can obtain it for, an EIN is also required for <strong>partnerships</strong> (general or limited), <strong>multiple-member LLCs</strong>, <strong>LLCs taxed as corporations</strong>, and <strong>single-member LLCs</strong> that hire employees. For <strong>sole proprietorships</strong>, an EIN is only required if they have employees or establish certain retirement plans, it's otherwise common that the owners use their own SSN. Many still choose to get one to separate finances, build credit, or establish business legitimacy.</p>
+    <p style="margin-top:16px;">While these are the entities we can obtain it for, an EIN is also required for <strong>partnerships</strong> (general or limited), <strong>multiple-member LLCs</strong>, <strong>LLCs taxed as corporations</strong>, and <strong>single-member LLCs</strong> that hire employees.</p>
+    <p>For <strong>sole proprietorships</strong>, an EIN is only required if they have employees or establish certain retirement plans, it's otherwise common that the owners use their own SSN. Many still choose to get one to separate finances, build credit, or establish business legitimacy.</p>
 
     <div class="subsection-title" style="margin-top:20px;">Required For These Activities</div>
     <div class="req-grid">
@@ -94,15 +95,15 @@
       </div>
     </div>
 
-    <div class="callout callout-blue-warning">
-      <p><strong>An EIN's details are not available to the public.</strong> This information is not published in state or federal databases and is used by the IRS and authorized parties (such as banks and government agencies) to identify the business for tax and financial purposes.</p>
+    <div class="callout callout-yellow-warning">
+      <p><strong>An EIN is not public information</strong>. It is not published in public databases and is used by the IRS and authorized parties (banks, government agencies) to identify the business for tax and financial purposes.</p>
     </div>
   </div>
 
   <div class="section">
     <div class="section-title">Obtainment of an EIN</div>
-    <p>According to IRS guidelines, the EIN should be obtained <strong>after the business entity has been officially formed</strong>. This prevents name mismatches, which would potentially generate delays.</p>
-    <p>To apply for an EIN, <strong>IRS Form SS-4</strong> has to be submitted, either online or by fax. There is <strong>no fee</strong> when applying directly through the IRS. However, third-party services may charge for filing on the customer's behalf.</p>
+    <p>According to IRS guidelines, the EIN should be obtained <strong>after the business entity has been officially formed</strong>. This prevents name mismatches, which could cause delays.</p>
+    <p>To apply for an EIN, <strong>IRS Form SS-4</strong> has to be submitted either online or by fax. There is <strong>no fee</strong> when applying directly through the IRS. However, third-party services may charge for filing on the customer's behalf.</p>
     <p>As part of the application, a <strong>responsible party</strong> must be assigned. This is the person who ultimately owns or controls the business and its assets. In most cases, this is the <strong>owner, majority shareholder, or managing member</strong>, as they are directly involved in the company's financial and tax matters and have a vested interest in its compliance.</p>
     <p>Although the IRS does technically allow <strong>any individual</strong> to be named the responsible party, even someone not affiliated with the company, this is <strong>uncommon and not recommended</strong>. The responsible party is expected to be available to respond to IRS inquiries and represent the business if needed. Listing someone without real authority can result in complications or delays.</p>
   </div>
@@ -114,7 +115,7 @@
       <div class="option-tab">
         <div class="option-tab-header">
           <img src="https://github.com/rp-bizeeknowledge/Assets/blob/main/bizee-icon-chose-bizee-1024x1024.png?raw=true" alt="Chose Bizee">
-          <h4><strong>Option A:</strong> Application faxed by Bizee <br>(without VA subscription)</h4>
+          <h4>Option A:<br>Application faxed by Bizee<br>(without using our VA)</h4>
         </div>
         <ol>
           <li>Confirm that the order is <strong>Shipped</strong> and it has a <strong>signed SS-4</strong> in the Internal Documents tab on DB (Main Orders only).</li>
@@ -126,7 +127,7 @@
       <div class="option-tab">
         <div class="option-tab-header">
           <img src="https://github.com/rp-bizeeknowledge/Assets/blob/main/bizee-icon-declined-bizee-1024x1024.png?raw=true" alt="Declined Bizee">
-          <h4><strong>Option B:</strong> Self Obtained <br> (did not use our services to apply)</h4>
+          <h4>Option B:<br>Obtained without using our service<br><br></h4>
         </div>
         <ol>
           <li>Confirm that the order is <strong>Shipped</strong> and there are <strong>no linked EIN services</strong>.</li>
@@ -195,30 +196,30 @@
 const formData = {
   'form-ss4': {
     title: 'Form SS-4: Application for EIN',
-    desc: 'Form SS-4 is the application used to request an Employer Identification Number from the IRS. We use this form whenever applying for an EIN on behalf of <strong>foreign customers</strong>, <strong>customers who refused to provide an SSN</strong>, or as an alternative for <strong>domestic (electronic) applications that were rejected by the IRS</strong>. This form does not create a business on its own. It is simply the document the IRS uses to assign the company\'s federal tax ID number.',
+    desc: 'Form SS-4 is the application used to request an EIN from the IRS. We use this form whenever applying for an EIN on behalf of <strong>foreign customers</strong>, <strong>customers who refused to provide an SSN</strong>, or as an alternative for <strong>domestic (electronic) applications that were rejected by the IRS</strong>. This form does not create a business on its own. It is simply the document the IRS uses to assign the company\'s federal tax ID number.',
     type: 'pdf',
     src: '../../pdf-viewer/web/viewer.html?file=https://raw.githubusercontent.com/rp-bizeeknowledge/Assets/main/EMPLOYER%20IDENTIFICATION%20NUMBER%20SS4.pdf'
   },
   'form-8821': {
     title: 'Form 8821: Tax Authorization',
-    desc: 'IRS Form 8821, "Tax Information Authorization", lets an individual or entity access taxpayer information. This enables us to contact the IRS on the client\'s behalf and access their EIN details for updates or retrieval. At Bizee, we submit this form along with the SS-4 application to access and review the clients\' EIN information as a third party before it is issued. <strong>We only access EIN-related information</strong>, so clients do not need to worry about other data being shared. Clients must sign this form on their dashboard after signing the SS-4. They cannot sign Form 8821 before the SS-4. <strong>*Note:</strong> This authorization expires once the IRS issues the EIN. Any corrections or issues with the 8821 should be escalated to the EIN/SS-4 department.',
+    desc: 'IRS Form 8821, "Tax Information Authorization", lets an individual or entity access taxpayer information. This enables us to contact the IRS on the client\'s behalf and access their EIN details for updates or retrieval. <br>At Bizee, we submit this form along with the SS-4 application to access and review the clients\' EIN information as a third party before it is issued. <strong>We only access EIN-related information</strong>, so clients do not need to worry about other data being shared. <br>Clients must sign this form on their dashboard after signing the SS-4. They cannot sign Form 8821 before the SS-4. <br><strong>Note:</strong> This authorization expires once the IRS issues the EIN. Any corrections or issues with the 8821 should be escalated to the EIN/SS-4 department.',
     type: 'pdf',
     src: '../../pdf-viewer/web/viewer.html?file=https://raw.githubusercontent.com/rp-bizeeknowledge/Assets/main/EMPLOYER%20IDENTIFICATION%20NUMBER%208821.pdf'
   },
   'cp575': {
     title: 'CP 575: EIN Confirmation Letter',
-    desc: 'The CP575 designation encompasses several distinct versions of the form',
+    desc: 'The CP 575 letter is sent by the IRS, either by fax or mail, to confirm that an EIN has been assigned. It is the original EIN confirmation notice, issued right after the SS-4 (faxed or electronic) is processed and approved. CP 575 Letters can have several different versions, some of which contain a dotted slip customers can mail to the IRS to request changes, while other taxpayers are required to send a signed letter.',
     type: 'images',
     images: [
       {
         src: 'https://raw.githubusercontent.com/rp-bizeeknowledge/Assets/main/CP575.png',
-        label: 'CP 575 - Standard',
-        desc: 'The CP 575 letter is mailed by the IRS, to serve as proof that an EIN has been assigned to a business entity. It is the EIN confirmation notice, issued after a faxed application was approved and its sent directly by the IRS to the address appointed by the customer.'
+        label: 'CP 575',
+        desc: ' '
       },
       {
         src: 'https://raw.githubusercontent.com/rp-bizeeknowledge/Assets/main/CP575A.png',
         label: 'CP 575 - A',
-        desc: 'The CP 575 A letter is mailed by the IRS, to serve as proof that an EIN has been assigned to a business entity when an application has a foreign address present, the entity is a sole proprietor or a single member limited liability company.'
+        desc: 'The CP575A letter is mailed by the IRS, to serve as proof that an EIN has been assigned to a business entity when an application has a foreign address present, the entity is a sole proprietor or a single member limited liability company.'
       },
       {
         src: 'https://raw.githubusercontent.com/rp-bizeeknowledge/Assets/main/CP575G.png',
@@ -229,7 +230,7 @@ const formData = {
   },
   'letter-147c': {
     title: 'EIN Verification Letter (147C)',
-    desc: 'An IRS Letter 147C is an official document issued by the IRS to <strong>verify an existing Employer Identification Number</strong>. It serves as a replacement for the original CP 575 EIN confirmation notice, which is issued only once and cannot be reissued if lost. Businesses typically request a 147C letter when they need official, documented proof of their EIN for banks, vendors, or other institutions. In some cases, customers can request a 147C letter from the IRS directly and use our fax number if we filed for their EIN, as it is already on the IRS\'s records.',
+    desc: 'An IRS Letter 147C is an official document issued by the IRS to <strong>verify an existing Employer Identification Number</strong>. It serves as a replacement for the original CP 575 EIN confirmation notice, which is issued only once and cannot be reissued if lost. <br>Businesses typically request a 147C letter when they need official, documented proof of their EIN for banks, vendors, or other institutions. In some cases, customers can request a 147C letter from the IRS directly and use our fax number if we filed for their EIN, as it is already on the IRS\'s records.',
     type: 'image',
     src: 'https://raw.githubusercontent.com/rp-bizeeknowledge/Assets/main/147%20C.png'
   }
@@ -282,12 +283,8 @@ document.getElementById('form-modal').addEventListener('click', function(e) {
   <a class="next-topic-btn" href="2026-2_D2_9_dba.html#top">Assumed Business Name / DBA →</a>
 </div>
 
-<div class="footer">
-  <span class="footer-logo">Bizee</span>
-<<<<<<< Updated upstream
-  <span class="footer-meta">Internal use only · Training & Development · Products · Topic 08 of 14</span>
+  <div class="footer">
+    <span class="footer-logo">Bizee</span>
+    <span class="footer-meta">Internal use only · Training & Development · Products · Topic 08 of 14</span>
+  </div>
 </div>
-=======
-  <span class="footer-meta">Internal use only · Training & Development · PRODUCTS · Topic 08 of 14</span>
-</div>
->>>>>>> Stashed changes
