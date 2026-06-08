@@ -999,6 +999,7 @@ li:last-child {
 .info-card {
   background: var(--white);
   border: 1px solid var(--border);
+  border-top: 2px solid var(--orange);
   border-radius: var(--radius);
   padding: 16px 18px;
   box-shadow: var(--shadow-xs);
@@ -1948,6 +1949,7 @@ li:last-child {
 .compare-card {
   background: var(--white);
   border: 1px solid var(--border);
+  border-top: 2px solid var(--orange);
   border-radius: var(--radius);
   padding: 16px 18px;
   box-shadow: var(--shadow-xs);
@@ -3027,6 +3029,7 @@ div.scenario-item {
 .annot-card {
   background: var(--white);
   border: 1px solid var(--border);
+  border-top: 2px solid var(--orange);
   border-radius: var(--radius);
   padding: 16px 18px;
   box-shadow: var(--shadow-xs);
@@ -4848,6 +4851,7 @@ div.scenario-item {
 .doc-card {
   background: var(--white);
   border: 1px solid var(--border);
+  border-top: 2px solid var(--orange);
   border-radius: var(--radius);
   padding: 16px 18px;
   box-shadow: var(--shadow-xs);
