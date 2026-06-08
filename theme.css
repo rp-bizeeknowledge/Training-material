@@ -141,12 +141,13 @@ a.tag-db {
 }
 
 a.tag-db:hover,
-.callout a.tag-db {
-  background-color: #049be0;
+.callout a.tag-db:hover,
+.mgmt-compare-cell a.tag-db:hover {
+  background-color: #227094;
   color: #ffffff !important;
 }
 
-.callout a.tag-db:hover {
+.callout a.tag-db {
   background-color: #049be0;
   color: #ffffff !important;
 }
@@ -886,7 +887,7 @@ li:last-child {
   color: var(--muted);
   margin: 0;
   line-height: 1.6;
-  text-align: left;
+  text-align: justify;
 }
 .info-card ul {
   padding-left: 16px;
