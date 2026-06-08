@@ -3755,7 +3755,7 @@ div.scenario-item {
   box-shadow: var(--shadow-sm);
 }
 .grant-card h4 {
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 600;
   color: var(--dark);
   margin-bottom: 6px;
@@ -3769,8 +3769,8 @@ div.scenario-item {
   display: block;
 }
 .grant-card p {
-  font-size: 12px;
-  color: var(--muted);
+  font-size: 13px;
+  color: var(--mid);
   margin: 0;
   text-align: justify;
 }
