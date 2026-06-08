@@ -108,6 +108,49 @@ a {
 a:hover {
   color: var(--orange-deep);
 }
+/* ── PILL LINK TAG ────────────────────────────────────────── */
+
+a.tag,
+.callout a.tag {
+  display: inline-block;
+  font-weight: 600;
+  font-size: 12px;
+  text-decoration: none;
+  background-color: #F65E2E;
+  color: #ffffff !important;
+  padding: 2px 8px;
+  border-radius: 20px;
+  margin: 0 2px;
+}
+
+a.tag:hover,
+.callout a.tag:hover {
+  background-color: #c94820;
+  color: #ffffff !important;
+}
+a.tag-db {
+  display: inline-block;
+  font-weight: 600;
+  font-size: 12px;
+  text-decoration: none;
+  background-color: #049be0;
+  color: #ffffff !important;
+  padding: 2px 8px;
+  border-radius: 20px;
+  margin: 0 2px;
+}
+
+a.tag-db:hover,
+.callout a.tag-db {
+  background-color: #049be0;
+  color: #ffffff !important;
+}
+
+.callout a.tag-db:hover {
+  background-color: #049be0;
+  color: #ffffff !important;
+}
+
 
 /* ── 3. PAGE ──────────────────────────────────────────────── */
 .page {
@@ -1925,6 +1968,7 @@ li:last-child {
 /*LLC VS LICENSE TOGGLE STYLING*/
 
 /* ── Section wrapper ── */
+
 .cmp-section {
   margin-bottom: 2rem;
 }
