@@ -23,44 +23,44 @@
 
       <div class="section">
         <div class="section-title">What It Is</div>
-        <div style="position:relative; display:inline-block; width:100%; max-width:900px;">
+<div style="position:relative; display:inline-block; width:100%; max-width:900px;">
   <img src="https://raw.githubusercontent.com/rp-bizeeknowledge/Assets/main/Business%20Formation%20KIT%20items.png" alt="Business Formation Kit" style="width:100%; display:block; border-radius:8px;">
 
   <!-- Hotspot 1 -->
   <div class="hotspot" style="left:20%; top:35%;" onmouseenter="togglePopup('pop1')" onmouseleave="closePopup('pop1')">1
-    <div class="popup popup-down" id="pop1">
+    <div class="popup popup-down" id="pop1" style="width:240px; font-weight:400;">
       <strong>Binder &amp; Slip Case</strong>
-      <p>Our standard LLC incorporation or corporate kits are handcrafted in the traditional bookbinding method and constructed with heavier materials for extra durability and long life. The three-ring mechanisms with double opening and closing boosters allow pages to lie flat and turn easily.</p>
+      <p>Our standard LLC incorporation or corporate kits are handcrafted in the traditional bookbinding method and constructed with heavier materials for extra durability and long life.</p>
     </div>
   </div>
 
   <!-- Hotspot 2 -->
   <div class="hotspot" style="left:50%; top:43%;" onmouseenter="togglePopup('pop2')" onmouseleave="closePopup('pop2')">2
-    <div class="popup popup-down" id="pop2">
+    <div class="popup popup-down" id="pop2" style="width:240px; font-weight:400;">
       <strong>20 Member Stock Certificates</strong>
-      <p>These elegantly designed numbered security certificates contain your company name and state of incorporation and are printed on the finest security paper available.</p>
+      <p>Elegantly designed numbered security certificates with your company name and state of incorporation, printed on the finest security paper available.</p>
     </div>
   </div>
 
   <!-- Hotspot 3 -->
   <div class="hotspot" style="left:80%; top:42%;" onmouseenter="togglePopup('pop3')" onmouseleave="closePopup('pop3')">3
-    <div class="popup popup-down popup-right" id="pop3">
+    <div class="popup popup-down popup-right" id="pop3" style="width:240px; font-weight:400;">
       <strong>Corporate Forms / Documents</strong>
-      <p>Your personalized binder will include printed minutes and bylaws or an operating agreement if they are included in the package you chose.</p>
+      <p>Your personalized binder will include printed minutes and bylaws or an operating agreement if included in your package.</p>
     </div>
   </div>
 
   <!-- Hotspot 4 -->
   <div class="hotspot" style="left:90%; top:50%;" onmouseenter="togglePopup('pop4')" onmouseleave="closePopup('pop4')">4
-    <div class="popup popup-down popup-right" id="pop4">
+    <div class="popup popup-down popup-right" id="pop4" style="width:240px; font-weight:400;">
       <strong>Corporate Embossing Seal</strong>
-      <p>Custom 1 5/8 metal die cast pocket seal embosser personalized with your company name, State of formation and date of formation.</p>
+      <p>Custom 1 5/8 metal die cast pocket seal embosser personalized with your company name, state and date of formation.</p>
     </div>
   </div>
 
   <!-- Hotspot 5 -->
   <div class="hotspot" style="left:24%; top:70%;" onmouseenter="togglePopup('pop5')" onmouseleave="closePopup('pop5')">5
-    <div class="popup popup-up" id="pop5">
+    <div class="popup popup-up" id="pop5" style="width:240px; font-weight:400;">
       <strong>Personalized Business Name on Kit</strong>
       <p>Each quality binder is personalized in gold with your organization name and comes with a matching slipcase.</p>
     </div>
@@ -68,7 +68,7 @@
 
   <!-- Hotspot 6 -->
   <div class="hotspot" style="left:74%; top:75%;" onmouseenter="togglePopup('pop6')" onmouseleave="closePopup('pop6')">6
-    <div class="popup popup-up" id="pop6">
+    <div class="popup popup-up popup-right" id="pop6" style="width:240px; font-weight:400;">
       <strong>Transfer Ledger</strong>
       <p>8-page alphabetized transfer ledger included with your kit.</p>
     </div>
@@ -76,23 +76,39 @@
 
   <!-- Hotspot 7 -->
   <div class="hotspot" style="left:93%; top:75%;" onmouseenter="togglePopup('pop7')" onmouseleave="closePopup('pop7')">7
-    <div class="popup popup-up popup-right" id="pop7">
+    <div class="popup popup-up popup-right" id="pop7" style="width:240px; font-weight:400;">
       <strong>Index Tabs</strong>
       <p>Mylar-coated, easy to use tabs for your Corporate or LLC Kit.</p>
     </div>
   </div>
 </div>
+
 <script>
 function togglePopup(id) {
   const all = document.querySelectorAll('.popup');
-  all.forEach(p => {
-    if (p.id !== id) p.classList.remove('visible');
-  });
-  document.getElementById(id).classList.toggle('visible');
+  all.forEach(p => { if (p.id !== id) p.classList.remove('visible'); });
+  const popup = document.getElementById(id);
+  popup.classList.toggle('visible');
+  if (popup.classList.contains('visible')) clampPopup(popup);
 }
 
 function closePopup(id) {
   document.getElementById(id).classList.remove('visible');
+}
+
+function clampPopup(popup) {
+  popup.style.left = '';
+  popup.style.right = '';
+  const rect = popup.getBoundingClientRect();
+  const pageRight = document.querySelector('.page').getBoundingClientRect().right;
+  if (rect.right > pageRight) {
+    popup.style.left = 'auto';
+    popup.style.right = '0';
+  }
+  if (rect.left < 0) {
+    popup.style.left = '0';
+    popup.style.right = 'auto';
+  }
 }
 
 document.addEventListener('click', function(e) {
@@ -100,6 +116,7 @@ document.addEventListener('click', function(e) {
     document.querySelectorAll('.popup').forEach(p => p.classList.remove('visible'));
   }
 });
+</script>
 </script>
          <p>
           A document set designed to organize and store essential business
