@@ -962,7 +962,7 @@ li:last-child {
 }
 .process-body p {
   font-size: 14px;
-  color: var(--mid);
+  color: inherit;
   line-height: 1.65;
   margin-bottom: 6px;
 }
@@ -980,7 +980,7 @@ li:last-child {
   line-height: 1.55;
 }
 .process-body strong {
-  color: var(--dark);
+  color: inherit;
 }
 
 /* ── 13. TWO-COLUMN GRID ─────────────────────────────────── */
