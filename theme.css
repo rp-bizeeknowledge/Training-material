@@ -886,7 +886,7 @@ li:last-child {
   color: var(--muted);
   margin: 0;
   line-height: 1.6;
-  text-align: left;
+  text-align: justify;
 }
 .info-card ul {
   padding-left: 16px;
