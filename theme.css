@@ -3868,6 +3868,10 @@ font-size: 13px;
 .req-grid--3col {
   grid-template-columns: repeat(3, 1fr);
 }
+.req-grid--3col .req-card-text,
+.req-grid--3col .req-card p {
+  text-align: left;
+}
 .req-card-wrap {
   position: relative;
   display: flex;
