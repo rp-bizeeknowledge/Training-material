@@ -110,21 +110,23 @@ a:hover {
 }
 /* ── PILL LINK TAG ────────────────────────────────────────── */
 
-.tag {
+a.tag,
+.callout a.tag {
   display: inline-block;
   font-weight: 600;
   font-size: 12px;
   text-decoration: none;
   background-color: #F65E2E;
-  color: #ffffff;
+  color: #ffffff !important;
   padding: 2px 8px;
   border-radius: 20px;
   margin: 0 2px;
 }
 
-.tag:hover {
+a.tag:hover,
+.callout a.tag:hover {
   background-color: #c94820;
-  color: #ffffff;
+  color: #ffffff !important;
 }
 
 /* ── 3. PAGE ──────────────────────────────────────────────── */
