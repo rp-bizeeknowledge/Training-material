@@ -5500,6 +5500,7 @@ html {
   font-size: 14px;
   line-height: 1.6;
   color: var(--dark);
+  text-align: justify;
 }
 
 /* ── FLOATING GUY (D2.10) ─────────────────────────────────── */
