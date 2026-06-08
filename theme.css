@@ -3935,6 +3935,11 @@ div.scenario-item {
   padding: 14px 18px;
   line-height: 1.65;
   color: var(--dark);
+  text-align: left;
+}
+.mgmt-compare-cell p {
+text-align: justify;
+font-size: 13px;
 }
 @media (max-width: 600px) {
   .mgmt-compare-head,
