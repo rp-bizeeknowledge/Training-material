@@ -1099,6 +1099,7 @@ li:last-child {
   font-family: "DM Mono", monospace;
   -webkit-font-smoothing: antialiased;
 }
+.pf-label strong { color: inherit; font-weight: 700; }
 .pf-item--muted .pf-label {
   color: rgba(255, 255, 255, 0.65);
 }
