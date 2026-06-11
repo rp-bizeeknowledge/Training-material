@@ -29,14 +29,13 @@
       and what actions are appropriate based on department responsibilities. 
       Understanding this process helps ensure accurate handling of customer inquiries and internal workflows.</p>
 
-   
     <div class="section-title">Main Order Lifecycle</div>
- <div class="doc-frame" style="cursor: pointer; margin: 16px 0 0;" onclick="openModal('modal-lifecycle-img', event)">
+    <div class="doc-frame" style="cursor: pointer; margin: 16px 0 0;" onclick="openModal('modal-lifecycle-img', event)">
       <img src="https://github.com/rp-bizeeknowledge/Assets/blob/main/Order%20lifecycle%20.png?raw=true" alt="Order Lifecycle Diagram" style="pointer-events: none;">
       <div class="doc-frame-caption">Click here to explore the status flow</div>
     </div>
     <br>
-        <div class="section-title">Status details </div>
+    <div class="section-title">Status details</div>
 
     <div class="lifecycle">
 
@@ -70,6 +69,7 @@
                 <span>Customer Dashboard is Created</span>
               </button>
             </div>
+            <p class="click-hint" style="text-align: center; margin-top: 8px; font-size: 8px; white-space: nowrap;">Click an icon to see more details.</p>
           </div>
           <div class="lc-col-description">
             <div class="lc-label">About this status</div>
@@ -128,6 +128,7 @@
                 <span>Order In Hands of Filing Dept.</span>
               </button>
             </div>
+            <p class="click-hint" style="text-align: center; margin-top: 8px; font-size: 8px; white-space: nowrap;">Click an icon to see more details.</p>
           </div>
           <div class="lc-col-description">
             <div class="lc-label">About this status</div>
@@ -161,6 +162,7 @@
                 <span>No Changes Allowed</span>
               </button>
             </div>
+            <p class="click-hint" style="text-align: center; margin-top: 8px; font-size: 8px; white-space: nowrap;">Click an icon to see more details.</p>
           </div>
           <div class="lc-col-description">
             <div class="lc-label">About this status</div>
@@ -181,7 +183,7 @@
           <span class="lc-header-title">Shipped</span>
         </div>
         <div class="lc-body">
-          <div class="lc-col-highlights">
+          <div class="lc-col-highlights" style="min-height: 340px;">
             <div class="lc-label">Highlights</div>
             <div class="lc-highlight-list">
               <button class="lc-highlight-btn" onclick="openModal('modal-lc-ship-1', event)">
@@ -197,6 +199,7 @@
                 <span>Order Completion Email Is Sent</span>
               </button>
             </div>
+            <p class="click-hint" style="text-align: center; margin-top: 8px; font-size: 8px; white-space: nowrap;">Click an icon to see more details.</p>
           </div>
           <div class="lc-col-description">
             <div class="lc-label">About this status</div>
@@ -208,9 +211,10 @@
 
     </div>
   </div>
- <div class="callout callout-blue-warning">
-      <p>The only changes that can be made to an order regardless of the status are NAICS code updates (<strong>in states that don't list this information</strong>) or the ownership percentages (for <strong>LLCs</strong>).</p>
-    </div>
+
+  <div class="callout callout-blue-warning">
+    <p>The only changes that can be made to an order regardless of the status are NAICS code updates (<strong>in states that don't list this information</strong>) or the ownership percentages (for <strong>LLCs</strong>).</p>
+  </div>
 
   <div class="section">
     <div class="section-title">Hold</div>
@@ -295,29 +299,26 @@
     </div>
   </div>
 
- 
-       <div class="completion-card">
-  <img class="completion-icon-img" src="https://github.com/rp-bizeeknowledge/Assets/blob/main/bizee-icon-topic-complete-cutout-1024x1024.png?raw=true" alt="Topic Complete">
-  <div class="completion-title">You've completed this Module!</div>
-  <a class="next-topic-btn" onclick="showConfetti()" href="#">Celebrate</a>
-</div>
+  <div class="completion-card">
+    <img class="completion-icon-img" src="https://github.com/rp-bizeeknowledge/Assets/blob/main/bizee-icon-topic-complete-cutout-1024x1024.png?raw=true" alt="Topic Complete">
+    <div class="completion-title">You've completed this Module!</div>
+    <a class="next-topic-btn" onclick="showConfetti()" href="#">Celebrate</a>
+  </div>
 
-<!-- GIF Overlay -->
-<div id="confettiOverlay" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; z-index:9999; pointer-events:none;">
-<img src="https://raw.githubusercontent.com/rp-bizeeknowledge/Assets/main/Happy%20Birthday%20Rainbow%20Sticker.gif" style="width:100%; height:100%; object-fit:cover;">
-</div>
+  <!-- GIF Overlay -->
+  <div id="confettiOverlay" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; z-index:9999; pointer-events:none;">
+    <img src="https://raw.githubusercontent.com/rp-bizeeknowledge/Assets/main/Happy%20Birthday%20Rainbow%20Sticker.gif" style="width:100%; height:100%; object-fit:cover;">
+  </div>
 
-<script>
-  function showConfetti() {
-    const overlay = document.getElementById('confettiOverlay');
-    overlay.style.display = 'block';
-
-    // Hide it after 3 seconds
-    setTimeout(() => {
-      overlay.style.display = 'none';
-    }, 3000);
-  }
-</script>
+  <script>
+    function showConfetti() {
+      const overlay = document.getElementById('confettiOverlay');
+      overlay.style.display = 'block';
+      setTimeout(() => {
+        overlay.style.display = 'none';
+      }, 3000);
+    }
+  </script>
 
   <div class="footer">
     <span class="footer-logo">Bizee</span>
@@ -346,7 +347,7 @@
       <button class="pdf-modal-close" onclick="closeModal('modal-pdf-example')">✕</button>
     </div>
     <div class="pdf-modal-body">
-      <iframe src="../../pdf-viewer/web/viewer.html?file=https://raw.githubusercontent.com/rp-bizeeknowledge/Assets/main/order-review-223102174577.pdf#zoom=page-width" style="width:100%;height:100%;border:none;display:block;"></iframe></iframe>
+      <iframe src="../../pdf-viewer/web/viewer.html?file=https://raw.githubusercontent.com/rp-bizeeknowledge/Assets/main/order-review-223102174577.pdf#zoom=page-width" style="width:100%;height:100%;border:none;display:block;"></iframe>
     </div>
   </div>
 </div>
