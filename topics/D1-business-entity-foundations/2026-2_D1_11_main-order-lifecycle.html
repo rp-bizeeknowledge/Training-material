@@ -548,6 +548,35 @@
   </div>
 </div>
 
+<script>
+(function () {
+  var body = document.querySelector('#modal-lifecycle-img .pdf-modal-body--img');
+  if (!body) return;
+  body.style.overflow = 'auto';
+  body.style.cursor = 'grab';
+  var active = false, startX, startY, scrollLeft, scrollTop;
+  body.addEventListener('mousedown', function (e) {
+    active = true;
+    startX = e.clientX;
+    startY = e.clientY;
+    scrollLeft = body.scrollLeft;
+    scrollTop = body.scrollTop;
+    body.style.cursor = 'grabbing';
+    e.preventDefault();
+  });
+  document.addEventListener('mouseup', function () {
+    if (!active) return;
+    active = false;
+    body.style.cursor = 'grab';
+  });
+  document.addEventListener('mousemove', function (e) {
+    if (!active) return;
+    body.scrollLeft = scrollLeft - (e.clientX - startX);
+    body.scrollTop  = scrollTop  - (e.clientY - startY);
+  });
+})();
+</script>
+
 <script src="../../theme.js"></script>
 </body>
 </html>
