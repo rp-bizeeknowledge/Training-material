@@ -16,7 +16,7 @@
   <div class="hero hero-soft">
     <div class="hero-label">FOUNDATIONS · Topic 11</div>
     <h1>The Lifecycle of a <span>Main Order</span></h1>
-    <div class="hero-sub">Review · Hold · Processing · Forwarded · Shipped · Cancellations &amp; Refunds</div>
+    <div class="hero-sub">Review · Hold · Processing · Forwarded · Shipped · Cancelations &amp; Refunds</div>
   </div>
 
   <div class="section">
@@ -29,14 +29,13 @@
       and what actions are appropriate based on department responsibilities. 
       Understanding this process helps ensure accurate handling of customer inquiries and internal workflows.</p>
 
-   
     <div class="section-title">Main Order Lifecycle</div>
- <div class="doc-frame" style="cursor: pointer; margin: 16px 0 0;" onclick="openModal('modal-lifecycle-img', event)">
+    <div class="doc-frame" style="cursor: pointer; margin: 16px 0 0;" onclick="openModal('modal-lifecycle-img', event)">
       <img src="https://github.com/rp-bizeeknowledge/Assets/blob/main/Order%20lifecycle%20.png?raw=true" alt="Order Lifecycle Diagram" style="pointer-events: none;">
       <div class="doc-frame-caption">Click here to explore the status flow</div>
     </div>
     <br>
-        <div class="section-title">Status details </div>
+    <div class="section-title">Status details</div>
 
     <div class="lifecycle">
 
@@ -70,11 +69,12 @@
                 <span>Customer Dashboard is Created</span>
               </button>
             </div>
+            <p class="click-hint" style="text-align: center; margin-top: 8px; font-size: 8px; white-space: nowrap;">Click an icon to see more details.</p>
           </div>
           <div class="lc-col-description">
             <div class="lc-label">About this status</div>
-            <p>Initial stage for every Main Order. Customers may can make limited edits directly through the dashboard, until midnight of the order day (12:00 AM CST). 
-              While customers cannot add or remove entire sections, they may correct specific fields in case of mistakes or second thoughts.</p>
+            <p>This is the initial stage for every Main Order. Customers can make limited edits directly through the dashboard, until midnight of the order day (12:00 AM CST). 
+              While removing entire sections is not allowed, they may correct specific fields in case of mistakes or second thoughts.</p>
             <p>If changes are needed that cannot be made through the dashboard, the order must be <strong>canceled and refunded</strong>, and a new order must be placed.</p>
             <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:16px;">
               <div style="border:1.5px solid var(--green);border-radius:var(--radius-sm);overflow:hidden;display:flex;flex-direction:column;">
@@ -128,6 +128,7 @@
                 <span>Order In Hands of Filing Dept.</span>
               </button>
             </div>
+            <p class="click-hint" style="text-align: center; margin-top: 8px; font-size: 8px; white-space: nowrap;">Click an icon to see more details.</p>
           </div>
           <div class="lc-col-description">
             <div class="lc-label">About this status</div>
@@ -161,6 +162,7 @@
                 <span>No Changes Allowed</span>
               </button>
             </div>
+            <p class="click-hint" style="text-align: center; margin-top: 8px; font-size: 8px; white-space: nowrap;">Click an icon to see more details.</p>
           </div>
           <div class="lc-col-description">
             <div class="lc-label">About this status</div>
@@ -181,7 +183,7 @@
           <span class="lc-header-title">Shipped</span>
         </div>
         <div class="lc-body">
-          <div class="lc-col-highlights">
+          <div class="lc-col-highlights" style="min-height: 340px;">
             <div class="lc-label">Highlights</div>
             <div class="lc-highlight-list">
               <button class="lc-highlight-btn" onclick="openModal('modal-lc-ship-1', event)">
@@ -197,6 +199,7 @@
                 <span>Order Completion Email Is Sent</span>
               </button>
             </div>
+            <p class="click-hint" style="text-align: center; margin-top: 8px; font-size: 8px; white-space: nowrap;">Click an icon to see more details.</p>
           </div>
           <div class="lc-col-description">
             <div class="lc-label">About this status</div>
@@ -208,9 +211,10 @@
 
     </div>
   </div>
- <div class="callout callout-blue-warning">
-      <p>The only changes that can be made to an order regardless of the status are NAICS code updates (<strong>in states that don't list this information</strong>) or the ownership percentages (for <strong>LLCs</strong>).</p>
-    </div>
+
+  <div class="callout callout-blue-warning">
+    <p>The only changes that can be made to an order regardless of the status are NAICS code updates (<strong>in states that don't list this information</strong>) or the ownership percentages (for <strong>LLCs</strong>).</p>
+  </div>
 
   <div class="section">
     <div class="section-title">Hold</div>
@@ -218,7 +222,7 @@
     <div class="hold-list">
       <div class="hold-card">
         <h4><img src="https://github.com/rp-bizeeknowledge/Assets/blob/main/Customer%20Initiated.png?raw=true" alt=""> Customer-Initiated Hold</h4>
-        <p>Customers may request a hold through their dashboard while the order is on Review Status, or contact Support to request it while under Processing Status as well (i.e., if they need more time to decide).</p>
+        <p>Customers may request a hold through their dashboard while the order is on Review Status, or contact Support to request it while under Processing Status as well (for example, if they need more time to decide).</p>
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:14px 0;">
           <div style="border:1.5px solid var(--green);border-radius:var(--radius-sm);overflow:hidden;display:flex;flex-direction:column;">
             <div style="background:var(--green);color:#fff;padding:10px 14px;font-size:11px;font-weight:700;letter-spacing:0.07em;text-transform:uppercase;">Allowed Changes</div>
@@ -276,7 +280,7 @@
       </div>
       <div class="hold-card">
         <h4><img src="https://github.com/rp-bizeeknowledge/Assets/blob/main/Customer%20Service.png?raw=true" alt=""> Customer Service Hold</h4>
-        <p>Customer Service Agents may place an order on hold upon request (i.e., if the customer needs time to review their options).</p>
+        <p>Customer Service Agents may place an order on hold upon request (for example, if the customer needs time to review their options).</p>
         <p>When the customer requests that the order be resumed, Agents should only move the order to <strong>"Processing", not Review</strong>. The "Review" status does not trigger any internal action and will cause delays.</p>
         <div class="callout callout-yellow-warning"><p>These holds last for up to 3 months. If no action is taken within that timeframe, the order will be automatically canceled without a refund.</p></div>
       </div>
@@ -287,7 +291,7 @@
       </div>
     </div>
 
-    <div style="margin-top:28px;margin-bottom:10px;font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:var(--muted);">Cancellations, Refunds &amp; Reactivations</div>
+    <div style="margin-top:28px;margin-bottom:10px;font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:var(--muted);">Cancelations, Refunds &amp; Reactivations</div>
     <div class="refund-list">
       <div class="refund-item">Orders that were <strong>canceled but not refunded</strong> may be <strong>reinstated</strong> at any moment upon customer request.</div>
       <div class="refund-item">Refunds are available as long as the order has <strong>not been submitted to the state</strong> and <strong>no state fees have been paid</strong>.</div>
@@ -295,29 +299,26 @@
     </div>
   </div>
 
- 
-       <div class="completion-card">
-  <img class="completion-icon-img" src="https://github.com/rp-bizeeknowledge/Assets/blob/main/bizee-icon-topic-complete-cutout-1024x1024.png?raw=true" alt="Topic Complete">
-  <div class="completion-title">You've completed this Module!</div>
-  <a class="next-topic-btn" onclick="showConfetti()" href="#">Celebrate</a>
-</div>
+  <div class="completion-card">
+    <img class="completion-icon-img" src="https://github.com/rp-bizeeknowledge/Assets/blob/main/bizee-icon-topic-complete-cutout-1024x1024.png?raw=true" alt="Topic Complete">
+    <div class="completion-title">You've completed this Module!</div>
+    <a class="next-topic-btn" onclick="showConfetti()" href="#">Celebrate</a>
+  </div>
 
-<!-- GIF Overlay -->
-<div id="confettiOverlay" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; z-index:9999; pointer-events:none;">
-<img src="https://raw.githubusercontent.com/rp-bizeeknowledge/Assets/main/Happy%20Birthday%20Rainbow%20Sticker.gif" style="width:100%; height:100%; object-fit:cover;">
-</div>
+  <!-- GIF Overlay -->
+  <div id="confettiOverlay" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; z-index:9999; pointer-events:none;">
+    <img src="https://raw.githubusercontent.com/rp-bizeeknowledge/Assets/main/Happy%20Birthday%20Rainbow%20Sticker.gif" style="width:100%; height:100%; object-fit:cover;">
+  </div>
 
-<script>
-  function showConfetti() {
-    const overlay = document.getElementById('confettiOverlay');
-    overlay.style.display = 'block';
-
-    // Hide it after 3 seconds
-    setTimeout(() => {
-      overlay.style.display = 'none';
-    }, 3000);
-  }
-</script>
+  <script>
+    function showConfetti() {
+      const overlay = document.getElementById('confettiOverlay');
+      overlay.style.display = 'block';
+      setTimeout(() => {
+        overlay.style.display = 'none';
+      }, 3000);
+    }
+  </script>
 
   <div class="footer">
     <span class="footer-logo">Bizee</span>
@@ -346,7 +347,7 @@
       <button class="pdf-modal-close" onclick="closeModal('modal-pdf-example')">✕</button>
     </div>
     <div class="pdf-modal-body">
-      <iframe src="../../pdf-viewer/web/viewer.html?file=https://raw.githubusercontent.com/rp-bizeeknowledge/Assets/main/order-review-223102174577.pdf#zoom=page-width" style="width:100%;height:100%;border:none;display:block;"></iframe></iframe>
+      <iframe src="../../pdf-viewer/web/viewer.html?file=https://raw.githubusercontent.com/rp-bizeeknowledge/Assets/main/order-review-223102174577.pdf#zoom=page-width" style="width:100%;height:100%;border:none;display:block;"></iframe>
     </div>
   </div>
 </div>
@@ -366,7 +367,7 @@
         <div class="confirm-item">Preferred management structure</div>
         <div class="confirm-item">Company address</div>
         <div class="confirm-item">Member's address</div>
-        <div class="confirm-item">Contact Information: Only the designated contact person is authorized to request cancellations or changes to the order</div>
+        <div class="confirm-item">Contact Information: Only the designated contact person is authorized to request cancelations or changes to the order</div>
         <div class="confirm-item">EIN details</div>
       </div>
     </div>
@@ -546,6 +547,35 @@
     </div>
   </div>
 </div>
+
+<script>
+(function () {
+  var body = document.querySelector('#modal-lifecycle-img .pdf-modal-body--img');
+  if (!body) return;
+  body.style.overflow = 'auto';
+  body.style.cursor = 'grab';
+  var active = false, startX, startY, scrollLeft, scrollTop;
+  body.addEventListener('mousedown', function (e) {
+    active = true;
+    startX = e.clientX;
+    startY = e.clientY;
+    scrollLeft = body.scrollLeft;
+    scrollTop = body.scrollTop;
+    body.style.cursor = 'grabbing';
+    e.preventDefault();
+  });
+  document.addEventListener('mouseup', function () {
+    if (!active) return;
+    active = false;
+    body.style.cursor = 'grab';
+  });
+  document.addEventListener('mousemove', function (e) {
+    if (!active) return;
+    body.scrollLeft = scrollLeft - (e.clientX - startX);
+    body.scrollTop  = scrollTop  - (e.clientY - startY);
+  });
+})();
+</script>
 
 <script src="../../theme.js"></script>
 </body>
