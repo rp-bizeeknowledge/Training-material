@@ -581,9 +581,11 @@ li:last-child {
   color: var(--amber);
   margin-bottom: 6px;
 }
-.policy-note p {
-  font-size: 14px;
-  color: var(--muted);
+.policy-note p,
+.policy-note ul,
+.policy-note li {
+  font-size: 15px;
+  color: var(--dark);
   margin: 0;
   line-height: 1.7;
 }
