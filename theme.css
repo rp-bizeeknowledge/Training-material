@@ -1782,6 +1782,11 @@ li:last-child {
   color: var(--blue);
   border: 1px solid var(--blue-border);
 }
+.state-freq-state-county {
+  background: var(--amber-light);
+  color: var(--amber);
+  border: 1px solid var(--amber-border);
+}
 @media (max-width: 520px) {
   .state-examples {
     grid-template-columns: 1fr;
