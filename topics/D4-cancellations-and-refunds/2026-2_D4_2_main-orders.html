@@ -29,7 +29,7 @@
             <div class="req-card">
               <div class="req-card-big-num">1</div>
               <div class="req-card-title">Identity Confirmation</div>
-              <div class="req-card-text">To resolve an <strong>Identity Confirmation</strong> Issue, escalate to your supervisor using the <strong>"Identity Confirmation Issue - Order cancelation request"</strong> macro. Do not mark the issue as resolved on your own.</div>
+              <div class="req-card-text">To resolve an <strong>Identity Confirmation</strong> Issue, escalate to your supervisor using the <strong><a href="#" onclick="openIframeModal('https://incfile.zendesk.com/agent/tickets/2589326'); return false;">"Identity Confirmation Issue - Order cancelation request"</a></strong> macro. Do not mark the issue as resolved on your own.</div>
             </div>
           </div>
           <div class="req-card-wrap">
@@ -133,6 +133,31 @@
     <span class="footer-meta">Internal use only · Training & Development · Cancelations &amp; Refunds · Topic 02 of 04</span>
   </div>
 </div>
+<div id="iframeModal" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.6);z-index:9999;align-items:center;justify-content:center;">
+  <div style="background:#fff;border-radius:10px;overflow:hidden;width:90%;max-width:1100px;height:85vh;display:flex;flex-direction:column;box-shadow:0 8px 40px rgba(0,0,0,0.3);">
+    <div style="display:flex;align-items:center;justify-content:space-between;padding:12px 18px;background:#1a1a1a;color:#fff;font-family:'DM Mono',monospace;font-size:13px;">
+      <span id="iframeModalTitle">Loading...</span>
+      <button onclick="closeIframeModal()" style="background:none;border:none;color:#fff;font-size:20px;cursor:pointer;line-height:1;">&times;</button>
+    </div>
+    <iframe id="iframeModalFrame" src="" style="flex:1;border:none;width:100%;"></iframe>
+  </div>
+</div>
+
+<script>
+  function openIframeModal(url) {
+    const modal = document.getElementById('iframeModal');
+    document.getElementById('iframeModalFrame').src = url;
+    document.getElementById('iframeModalTitle').textContent = url;
+    modal.style.display = 'flex';
+  }
+  function closeIframeModal() {
+    document.getElementById('iframeModal').style.display = 'none';
+    document.getElementById('iframeModalFrame').src = '';
+  }
+  document.getElementById('iframeModal').addEventListener('click', function(e) {
+    if (e.target === this) closeIframeModal();
+  });
+</script>
 <script src="../../theme.js"></script>
 </body>
 </html>
