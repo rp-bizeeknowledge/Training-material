@@ -20,7 +20,7 @@
 
   <div class="section">
     <div class="section-title">What It Is</div>
-    <p>The <strong>Single-view layout</strong> will show after clicking "<strong>View Company</strong>" from the Multi-view list, or by default for accounts linked to <strong>only one company</strong>, or <strong>only one PVA</strong>. When accessing, users will see essential company details, pending actions, and navigation options.</p>
+    <p>The <strong>Single-view layout</strong> will show after clicking "<strong>View Company</strong>" from the Multi-view list, or by default for accounts linked to <strong>only one company</strong>, or <strong>only one Personal Virtual Address</strong>. When accessing, users will see essential company details, pending actions, and navigation options.</p>
   </div>
 
   <div class="section">
@@ -78,7 +78,7 @@
           <p>Below these two tabs, there are four sections that contain additional tabs:</p>
           <ul>
             <li><p><strong>Actions</strong>: Displays tasks that require user attention</p></li>
-            <li><p><strong>Company Documents</strong>: Provides access to relevant documents associated with the company</p></li>
+            <li><p><strong>Company Documents</strong>: Provides access to procured, received or drafted files</p></li>
             <li><p><strong>Company Details</strong>: Displays key company information, such as registration details</p></li>
             <li><p><strong>Services</strong>: Lists available services or packages related to company management</p></li>
           </ul>
@@ -115,81 +115,99 @@
     <div class="section-title">Section Breakdown</div>
 
     <div class="subsection-title">Company Documents Section</div>
-      <p>Clients can access official company documents and manage additional document-related services.</p>
-      <h4>Company Documents Tab</h4>
-      <p>It shows all finalized documents, such as:</p>
-        <ul>
-          <li>Filed Articles</li>
-          <li>EIN confirmation</li>
-          <li>Statement of the Organizer/Incorporator</li>
-          <li>IRS Form 2553</li>
-          <li>Meeting Minutes</li>
-          <li>Corporate Bylaws</li>
-          <li>Operating Agreement</li>
-          <li>Banking Resolution</li>
-        </ul>
-      <div class="doc-frame" style="width: 560px; height: 315px;">
-        <img src="https://github.com/rp-bizeeknowledge/Assets/blob/main/tab-completed-documents.png?raw=true" alt="Dashboard completed documents tab">
-      </div>
-      <h4>Virtual Mailbox Tab</h4>
-        <p>Available mail from the Registered Agent and Virtual Address will be found here. Clients can:</p>
-        <ul>
-          <li>View scanned mail</li>
-          <li>Subscribe to the Virtual Address (if not already subscribed)</li>
-          <li>Purchase an additional Virtual Address</li>
-        </ul>
-        <div class="doc-frame" style="width: 560px; height: 315px;">
-          <img src="https://github.com/rp-bizeeknowledge/Assets/blob/main/tab-virtual-mailbox.png?raw=true" alt="Dashboard Virtual Mailbox tab">
-        </div>
-        <h4>Business Contract Templates Tab</h4>
-          <p>Clients can:</p>
-          <ul>
-            <li>Download and modify the business contract templates if they have purchased the bundle</li>
-            <li>Purchase the business contract templates bundle if they haven't already</li>
-            <li>Request a custom-drafted contract with an attorney (for an additional fee): the attorney contacts the client to discuss the details before drafting the document. Only available to customers who have already purchased the business contract templates.</li>
-          </ul>
-          <div class="doc-frame" style="width: 560px; height: 315px;">
-            <img src="https://github.com/rp-bizeeknowledge/Assets/blob/main/tab-contract-templates.png?raw=true" alt="Dashboard contract templates tab">
-          </div>
+    <p>Clients can access official company documents and manage additional document-related services.</p>
+
+    <h4 class="tab-group-title">Completed Documents Tab</h4>
+    <div class="tab-group">
+      <p>It shows all obtained documents, such as:</p>
+      <ul>
+        <li>Filed Articles</li>
+        <li>EIN confirmation</li>
+        <li>Statement of the Organizer/Incorporator</li>
+        <li>IRS Form 2553</li>
+        <li>Meeting Minutes</li>
+        <li>Corporate Bylaws</li>
+        <li>Operating Agreement</li>
+        <li>Banking Resolution</li>
+      </ul>
+    </div>
+    <div class="doc-frame" style="width: 560px; height: 315px;">
+      <img src="https://github.com/rp-bizeeknowledge/Assets/blob/main/tab-completed-documents.png?raw=true" alt="Dashboard completed documents tab">
+    </div>
+
+    <h4 class="tab-group-title">Virtual Mailbox Tab</h4>
+    <div class="tab-group">
+      <p>Available mail from the Registered Agent and Virtual Address will be found here. Clients can:</p>
+      <ul>
+        <li>View scanned mail (RA/VA)</li>
+        <li>Fax receipts</li>
+        <li>Subscribe to the Virtual Address (if not already subscribed)</li>
+        <li>Purchase an additional Virtual Address Subscription</li>
+      </ul>
+    </div>
+    <div class="doc-frame" style="width: 560px; height: 315px;">
+      <img src="https://github.com/rp-bizeeknowledge/Assets/blob/main/tab-virtual-mailbox.png?raw=true" alt="Dashboard Virtual Mailbox tab">
+    </div>
+
+    <h4 class="tab-group-title">Business Contract Templates Tab</h4>
+    <div class="tab-group">
+      <p>Clients can:</p>
+      <ul>
+        <li>Download and modify the business contract templates if they have purchased the library</li>
+        <li>Purchase the business contract template library if not included with their package</li>
+      </ul>
+    </div>
+    <div class="doc-frame" style="width: 560px; height: 315px;">
+      <img src="https://github.com/rp-bizeeknowledge/Assets/blob/main/tab-contract-templates.png?raw=true" alt="Dashboard contract templates tab">
+    </div>
 
     <div class="subsection-title">Company Details Section</div>
-      <p>Displays essential company information and allows some updates.</p>
-      <h4>Company Info Tab</h4>
-        <p>It displays:</p>
-        <ul>
-          <li>Company name</li>
-          <li>Owners</li>
-          <li>Addresses</li>
-          <li>EIN</li>
-          <li>Contact details</li>
-        </ul>
-        <div class="callout callout-yellow-warning">
-          <strong>Only the contact information is editable from this tab</strong>
-        </div>
-        <div class="doc-frame" style="width: 560px; height: 315px;">
-            <img src="https://github.com/rp-bizeeknowledge/Assets/blob/main/tab-company-info.png?raw=true" alt="Dashboard company info tab">
-          </div>
-          <h4>Registered Agent Tab</h4>
-          <p>Shows current Registered Agent details (either Bizee, entity, or individual). Clients can:</p>
-          <ul>
-            <li>Subscribe to the Registered Agent service</li>
-            <li>Change (appoint) a different Registered Agent</li>
-          </ul>
-          <div class="doc-frame" style="width: 560px; height: 315px;">
-            <img src="https://github.com/rp-bizeeknowledge/Assets/blob/main/tab-registered-agent.png?raw=true" alt="Dashboard registered agent tab">
-          </div>
-        </div>
-        <h4>Order History / Receipts Tab</h4>
-          <p>Displays all purchases and subscriptions related to the specific company.</p>
-          <div class="doc-frame" style="width: 560px; height: 315px;">
-            <img src="https://github.com/rp-bizeeknowledge/Assets/blob/main/tab-order-history.png?raw=true" alt="Dashboard order history tab">
-          </div>
-          <h4>Compliance Tab</h4>
-          <p>Duplicate of the Compliance tab found in Actions (if active). Shows deadlines for filings and notifications to maintain legal compliance.</p>
-          <div class="doc-frame" style="width: 560px; height: 315px;">
-            <img src="https://github.com/rp-bizeeknowledge/Assets/blob/main/tab-compliance.png?raw=true" alt="Dashboard compliance tab">
-          </div>
-      </div>
+    <p>Displays essential company information and allows some updates.</p>
+
+    <h4 class="tab-group-title">Company Info Tab</h4>
+    <div class="tab-group">
+      <p>It displays:</p>
+      <ul>
+        <li>Company name</li>
+        <li>Owners</li>
+        <li>Addresses</li>
+        <li>EIN</li>
+        <li>Contact details</li>
+      </ul>
+    </div>
+    <div class="doc-frame" style="width: 560px; height: 315px;">
+      <img src="https://github.com/rp-bizeeknowledge/Assets/blob/main/tab-company-info.png?raw=true" alt="Dashboard company info tab">
+    </div>
+
+    <h4 class="tab-group-title">Registered Agent Tab</h4>
+    <div class="tab-group">
+      <p>Shows current Registered Agent details (either Bizee, entity, or individual). Clients can:</p>
+      <ul>
+        <li>Subscribe to the Registered Agent service</li>
+        <li>Change (appoint) a different Registered Agent</li>
+      </ul>
+    </div>
+    <div class="doc-frame" style="width: 560px; height: 315px;">
+      <img src="https://github.com/rp-bizeeknowledge/Assets/blob/main/tab-registered-agent.png?raw=true" alt="Dashboard registered agent tab">
+    </div>
+
+    <h4 class="tab-group-title">Order History / Receipts Tab</h4>
+    <div class="tab-group">
+      <p>Displays all purchases and subscriptions related to the specific company.</p>
+    </div>
+    <div class="doc-frame" style="width: 560px; height: 315px;">
+      <img src="https://github.com/rp-bizeeknowledge/Assets/blob/main/tab-order-history.png?raw=true" alt="Dashboard order history tab">
+    </div>
+
+    <h4 class="tab-group-title">Compliance Tab</h4>
+    <div class="tab-group">
+      <p>Duplicate of the Compliance tab found in Actions (if active). Shows deadlines for filings and notifications to maintain legal compliance.</p>
+    </div>
+    <div class="doc-frame" style="width: 560px; height: 315px;">
+      <img src="https://github.com/rp-bizeeknowledge/Assets/blob/main/tab-compliance.png?raw=true" alt="Dashboard compliance tab">
+    </div>
+
+  </div>
 
 <div class="completion-card">
     <img class="completion-icon-img" src="https://github.com/rp-bizeeknowledge/Assets/blob/main/bizee-icon-topic-complete-cutout-1024x1024.png?raw=true" alt="Topic Complete">
