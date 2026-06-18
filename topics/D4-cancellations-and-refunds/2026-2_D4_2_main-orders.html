@@ -36,7 +36,7 @@
             <div class="req-card">
               <div class="req-card-big-num">2</div>
               <div class="req-card-title">Order Issues</div>
-              <div class="req-card-text">If the order has an ongoing <strong>Order Issue (name not available or an additional information request)</strong>, click on <strong>"Resolve Issue"</strong> before you cancel and refund the order, or the system will not allow you to proceed.</div>
+              <div class="req-card-text">If the order has an ongoing <strong>Order Issue (name not available or an additional information request)</strong>, click on <strong><a href="#" onclick="document.getElementById('resolveIssueImg').click(); return false;">"Resolve Issue"</a></strong> before you cancel and refund the order, or the system will not allow you to proceed.</div>
             </div>
 
           </div>
@@ -44,7 +44,7 @@
             <div class="req-card">
               <div class="req-card-big-num">3</div>
               <div class="req-card-title">Communicate Refund Timeframe</div>
-              <div class="req-card-text">A 3 to 5-business-day refund timeframe begins after the refund is applied through the <strong>Transaction History Tab</strong>. Communicate this to the customer so they know when to expect the funds.</div>
+              <div class="req-card-text">A 3 to 5-business-day refund timeframe begins after the refund is applied through the <strong><a href="#" onclick="document.getElementById('transactionHistoryImg').click(); return false;">Transaction History Tab</a></strong>. Communicate this to the customer so they know when to expect the funds.</div>
             </div>
           </div>
           <div class="req-card-wrap"> 
@@ -134,6 +134,10 @@
   </div>
 </div>
 
+<div class="doc-frame" style="display:none;">
+  <img id="resolveIssueImg" src="https://github.com/rp-bizeeknowledge/Assets/blob/main/Ressolving%20an%20issue.png?raw=true" alt="Resolve Issue" />
+  <img id="transactionHistoryImg" src="https://github.com/rp-bizeeknowledge/Assets/blob/main/Transaction%20Histroy%20Tab.gif?raw=true" alt="Transaction History Tab" />
+</div>
 <script src="../../theme.js"></script>
 </body>
 </html>
