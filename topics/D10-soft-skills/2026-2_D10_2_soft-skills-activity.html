@@ -52,9 +52,9 @@
         }
 
         .word{
-            padding:8px 14px;
-            background:#F65E2E;
-            color:#f8f6f3;
+            padding:4px 10px;
+            background: var(--orange);
+            color: var(--bg);
             border-radius:4px;
             cursor:grab;
             user-select:none;
@@ -84,6 +84,29 @@
       </div>
       <div class="section">
         <div class="section-title">Activity</div>
+
+        <div class="subsection-title">Word Bank</div>
+
+  <div id="wordBank">
+
+    <div class="word" draggable="true">prepared</div>
+    <div class="word" draggable="true">organized</div>
+    <div class="word" draggable="true">emotional</div>
+    <div class="word" draggable="true">friendly</div>
+    <div class="word" draggable="true">pressure</div>
+    <div class="word" draggable="true">reputation</div>
+    <div class="word" draggable="true">communicate</div>
+    <div class="word" draggable="true">friendliness</div>
+    <div class="word" draggable="true">follow up</div>
+    <div class="word" draggable="true">intelligence</div>
+    <div class="word" draggable="true">caring</div>
+    <div class="word" draggable="true">independent</div>
+    <div class="word" draggable="true">listening</div>
+    <div class="word" draggable="true">work</div>
+    <div class="word" draggable="true">enthusiastic</div>
+    <div class="word" draggable="true">empathetic</div>
+
+  </div>
         <div class="worksheet">
     <div class="sentence">
     1.
@@ -99,8 +122,9 @@
     3.
     <span class="blank" data-answer="emotional"></span>
     <span class="blank" data-answer="intelligence"></span>
-    means understanding and managing your emotions, and the emotions
-of others. Managing the customer’s happiness is exactly what <span class="blank" data-answer="emotional"></span> <span class="blank" data-answer="intelligence"></span> is about.
+    means understanding and managing your emotions, and the emotions of others. It is crucial for agents to understand how the customer might be feeling.
+
+
   </div>
 
   <div class="sentence">
@@ -130,104 +154,143 @@ customer with confidence.
   </div>
 
   <div class="sentence">
-    10. Even if agents may not be naturally <span class="blank" data-answer="listening"></span>, they need to employ an outgoing front when speaking to a customer.
+    10. Even if agents may not be naturally <span class="blank" data-answer="enthusiastic"></span>, they need to employ an outgoing front when speaking to a customer.
 
   </div>
 
 
 
-
-  <!-- Continue the remaining questions -->
-
-  <div class="subsection-title">Word Bank</div>
-
-  <div id="wordBank">
-
-    <div class="word" draggable="true">prepared</div>
-    <div class="word" draggable="true">intelligence</div>
-    <div class="word" draggable="true">organized</div>
-    <div class="word" draggable="true">emotional</div>
-    <div class="word" draggable="true">friendly</div>
-    <div class="word" draggable="true">pressure</div>
-    <div class="word" draggable="true">communicate</div>
-    <div class="word" draggable="true">friendliness</div>
-    <div class="word" draggable="true">follow up</div>
-    <div class="word" draggable="true">intelligence</div>
-    <div class="word" draggable="true">caring</div>
-    <div class="word" draggable="true">independent</div>
-    <div class="word" draggable="true">listening</div>
-    <div class="word" draggable="true">emotional</div>
-    <div class="word" draggable="true">enthusiastic</div>
-    <div class="word" draggable="true">empathetic</div>
-
-  </div>
-
-  <div class="buttons">
-      <button id="checkBtn">Check Answers</button>
-      <button id="resetBtn">Reset</button>
+  <div class="buttons" style="margin-top: 10px; display: flex; gap: 10px;">
+      <button class="next-topic-btn" style="border: 1px solid #ccc; padding: 10px;" id="checkBtn">Check Answers</button>
   </div>
 
 </div>
 <script>
   let draggedWord = null;
 
-document.querySelectorAll(".word").forEach(word=>{
+// ==========================
+// WORD BANK
+// ==========================
+document.querySelectorAll(".word").forEach(word => {
 
-    word.addEventListener("dragstart",function(){
-        draggedWord=this;
+    word.addEventListener("dragstart", function () {
+        draggedWord = this;
     });
 
 });
 
-document.querySelectorAll(".blank").forEach(blank=>{
+// ==========================
+// BLANKS
+// ==========================
+document.querySelectorAll(".blank").forEach(blank => {
 
-    blank.addEventListener("dragover",e=>{
+    // Allow dropping
+    blank.addEventListener("dragover", function (e) {
         e.preventDefault();
     });
 
-    blank.addEventListener("drop",function(e){
+    // Drop a word
+    blank.addEventListener("drop", function (e) {
 
         e.preventDefault();
 
-        if(this.textContent!="")
-            return;
+        if (!draggedWord) return;
 
-        this.textContent=draggedWord.textContent;
+        // Remove grading colors
+        this.classList.remove("correct", "incorrect");
+
+        // ----------------------------------
+        // If this blank already has a word,
+        // return it to the word bank.
+        // ----------------------------------
+        const existingWord = this.textContent.trim();
+
+        if (existingWord !== "") {
+
+            document.querySelectorAll(".word").forEach(word => {
+
+                if (word.textContent.trim() === existingWord) {
+                    word.classList.remove("used");
+                }
+
+            });
+
+        }
+
+        // ----------------------------------
+        // Remove dragged word from any other blank
+        // ----------------------------------
+        document.querySelectorAll(".blank").forEach(otherBlank => {
+
+            if (
+                otherBlank !== this &&
+                otherBlank.textContent.trim() === draggedWord.textContent.trim()
+            ) {
+
+                otherBlank.textContent = "";
+                otherBlank.classList.remove("correct", "incorrect");
+
+            }
+
+        });
+
+        // ----------------------------------
+        // Place dragged word
+        // ----------------------------------
+        this.textContent = draggedWord.textContent;
+
+        // Mark it as used
         draggedWord.classList.add("used");
 
     });
 
+    // ==========================
+    // CLICK TO REMOVE A WORD
+    // ==========================
+    blank.addEventListener("click", function () {
+
+        const wordText = this.textContent.trim();
+
+        if (wordText === "") return;
+
+        // Return word to the bank
+        document.querySelectorAll(".word").forEach(word => {
+
+            if (word.textContent.trim() === wordText) {
+                word.classList.remove("used");
+            }
+
+        });
+
+        // Empty the blank
+        this.textContent = "";
+        this.classList.remove("correct", "incorrect");
+
+    });
+
 });
 
-document.getElementById("checkBtn").onclick=function(){
+// ==========================
+// CHECK ANSWERS
+// ==========================
+document.getElementById("checkBtn").addEventListener("click", function () {
 
-    document.querySelectorAll(".blank").forEach(blank=>{
+    document.querySelectorAll(".blank").forEach(blank => {
 
-        blank.classList.remove("correct","incorrect");
+        blank.classList.remove("correct", "incorrect");
 
-        if(blank.textContent.trim().toLowerCase()==blank.dataset.answer.toLowerCase())
+        const userAnswer = blank.textContent.trim().toLowerCase();
+        const correctAnswer = blank.dataset.answer.trim().toLowerCase();
+
+        if (userAnswer === correctAnswer) {
             blank.classList.add("correct");
-        else
+        } else {
+            // Wrong answer OR left blank
             blank.classList.add("incorrect");
 
-    });
-
-};
-
-document.getElementById("resetBtn").onclick=function(){
-
-    document.querySelectorAll(".blank").forEach(blank=>{
-
-        blank.textContent="";
-        blank.classList.remove("correct","incorrect");
+        }
 
     });
 
-    document.querySelectorAll(".word").forEach(word=>{
-
-        word.classList.remove("used");
-
-    });
-
-};
+});
 </script>
