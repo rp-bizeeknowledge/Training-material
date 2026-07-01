@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>D10: Soft Skills</title>
+    <link
+      rel="stylesheet"
+      href="https://rp-bizeeknowledge.github.io/Training-material/theme.css"
+    />
+    <link rel="stylesheet" href="../../theme.css" />
+    <style>
+        .sentence{
+            margin:18px 0;
+            font-family: inherit;
+            font-size: inherit;
+        }
+
+        .blank{
+            display:inline-flex;
+            justify-content:center;
+            align-items:center;
+
+            min-width:110px;
+            height:18px;
+
+            border-bottom:2px solid #333;
+            margin:0 3px;
+            vertical-align:middle;
+
+            cursor:pointer;
+            font-weight:bold;
+        }
+
+        .blank.correct{
+            background:#DCFCE7;
+            border-color:#16A34A;
+        }
+
+        .blank.incorrect{
+            background:#FEE2E2;
+            border-color:#DC2626;
+        }
+
+        #wordBank{
+            display:flex;
+            flex-wrap:wrap;
+            gap:10px;
+            margin-top:15px;
+            padding:20px;
+            border:1px solid #bbb;
+        }
+
+        .word{
+            padding:8px 14px;
+            background:#F65E2E;
+            color:#f8f6f3;
+            border-radius:4px;
+            cursor:grab;
+            user-select:none;
+        }
+
+        .word.used{
+            opacity:.35;
+            pointer-events:none;
+        }
+        </style>
+    
+  </head>
+  <body>
+    <a id="top" style="position: absolute; top: 0"></a>
+    <div class="page">
+      <div class="hero hero-soft">
+        <div class="hero-label">SOFT SKILLS · Topic 01</div>
+        <h1>Soft Skills <span>Activity</span></h1>
+        <div class="hero-sub">
+        </div>
+      </div>
+      <div class="section">
+        <div class="section-title">Instructions</div>
+        <p>
+            Fill in the blanks with the correct words to complete the sentences. Drag and drop the words in the Word Bank. When you finish, click on the "Check Answers" button to review your result.
+        </p>
+      </div>
+      <div class="section">
+        <div class="section-title">Activity</div>
+        <div class="worksheet">
+    <div class="sentence">
+    1.
+    Customer service agents deal with many customer issues. Those experiences could easily blur together for someone who is not well-<span class="blank" data-answer="organized"></span>
+  </div>
+
+  <div class="sentence">
+    2.
+    It's only natural for customers to want to feel understood and heard. Nearly 80% of consumers want customer service to be more <span class="blank" data-answer="empathetic"></span>.
+  </div>
+
+  <div class="sentence">
+    3.
+    <span class="blank" data-answer="emotional"></span>
+    <span class="blank" data-answer="intelligence"></span>
+    means understanding and managing your emotions, and the emotions
+of others. Managing the customer’s happiness is exactly what <span class="blank" data-answer="emotional"></span> <span class="blank" data-answer="intelligence"></span> is about.
+  </div>
+
+  <div class="sentence">
+    4. Agents should be <span class="blank" data-answer="independent"></span>
+    enough to find answers on their own and deliver them to the
+customer with confidence.
+  </div>
+
+  <div class="sentence">
+    5. <span class="blank" data-answer="friendliness"></span> is about creating a human touch to every facet of customer service operations.
+  </div>
+
+  <div class="sentence">
+    6. As much as you train in listening, you’ll get nowhere if you cannot <span class="blank" data-answer="communicate"></span> effectively, both internally and externally
+  </div>
+
+  <div class="sentence">
+    7. Everyone has to deal with <span class="blank" data-answer="pressure"></span>. When an agent is dealing with an urgent situation with a customer, they can’t afford to panic because the company’s <span class="blank" data-answer="reputation"></span> is on the line.
+  </div>
+
+  <div class="sentence">
+    8. If something goes unresolved, an agent needs to <span class="blank" data-answer="follow up"></span> on it. Feeling unappreciated is the number 1 reason customers switch away from products and services.
+  </div>
+
+  <div class="sentence">
+    9. <span class="blank" data-answer="listening"></span> consists of understanding not only the customer’s problem, but also the way they feel in order to reply the right way.
+  </div>
+
+  <div class="sentence">
+    10. Even if agents may not be naturally <span class="blank" data-answer="listening"></span>, they need to employ an outgoing front when speaking to a customer.
+
+  </div>
+
+
+
+
+  <!-- Continue the remaining questions -->
+
+  <div class="subsection-title">Word Bank</div>
+
+  <div id="wordBank">
+
+    <div class="word" draggable="true">prepared</div>
+    <div class="word" draggable="true">intelligence</div>
+    <div class="word" draggable="true">organized</div>
+    <div class="word" draggable="true">emotional</div>
+    <div class="word" draggable="true">friendly</div>
+    <div class="word" draggable="true">pressure</div>
+    <div class="word" draggable="true">communicate</div>
+    <div class="word" draggable="true">friendliness</div>
+    <div class="word" draggable="true">follow up</div>
+    <div class="word" draggable="true">intelligence</div>
+    <div class="word" draggable="true">caring</div>
+    <div class="word" draggable="true">independent</div>
+    <div class="word" draggable="true">listening</div>
+    <div class="word" draggable="true">emotional</div>
+    <div class="word" draggable="true">enthusiastic</div>
+    <div class="word" draggable="true">empathetic</div>
+
+  </div>
+
+  <div class="buttons">
+      <button id="checkBtn">Check Answers</button>
+      <button id="resetBtn">Reset</button>
+  </div>
+
+</div>
+<script>
+  let draggedWord = null;
+
+document.querySelectorAll(".word").forEach(word=>{
+
+    word.addEventListener("dragstart",function(){
+        draggedWord=this;
+    });
+
+});
+
+document.querySelectorAll(".blank").forEach(blank=>{
+
+    blank.addEventListener("dragover",e=>{
+        e.preventDefault();
+    });
+
+    blank.addEventListener("drop",function(e){
+
+        e.preventDefault();
+
+        if(this.textContent!="")
+            return;
+
+        this.textContent=draggedWord.textContent;
+        draggedWord.classList.add("used");
+
+    });
+
+});
+
+document.getElementById("checkBtn").onclick=function(){
+
+    document.querySelectorAll(".blank").forEach(blank=>{
+
+        blank.classList.remove("correct","incorrect");
+
+        if(blank.textContent.trim().toLowerCase()==blank.dataset.answer.toLowerCase())
+            blank.classList.add("correct");
+        else
+            blank.classList.add("incorrect");
+
+    });
+
+};
+
+document.getElementById("resetBtn").onclick=function(){
+
+    document.querySelectorAll(".blank").forEach(blank=>{
+
+        blank.textContent="";
+        blank.classList.remove("correct","incorrect");
+
+    });
+
+    document.querySelectorAll(".word").forEach(word=>{
+
+        word.classList.remove("used");
+
+    });
+
+};
+</script>
