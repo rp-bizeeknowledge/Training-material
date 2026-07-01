@@ -64,8 +64,40 @@
             opacity:.35;
             pointer-events:none;
         }
+
+        /* Locked state after activity is completed */
+        body.activity-locked .word{
+            pointer-events:none;
+            cursor:default;
+            opacity:.35;
+        }
+
+        body.activity-locked .blank{
+            pointer-events:none;
+            cursor:default;
+        }
+
+        body.activity-locked #checkBtn{
+            opacity:.5;
+            pointer-events:none;
+            cursor:default;
+        }
+
+        #lockedNotice{
+            display:none;
+            margin-top:15px;
+            padding:12px 16px;
+            background:#FEF3C7;
+            border:1px solid #D97706;
+            border-radius:6px;
+            font-weight:bold;
+        }
+
+        body.activity-locked #lockedNotice{
+            display:block;
+        }
         </style>
-    
+
   </head>
   <body>
     <a id="top" style="position: absolute; top: 0"></a>
@@ -164,9 +196,13 @@ customer with confidence.
       <button class="next-topic-btn" style="border: 1px solid #ccc; padding: 10px;" id="checkBtn">Check Answers</button>
   </div>
 
+  <div id="lockedNotice">You have already completed this activity. Your submitted answers are shown above.</div>
+
 </div>
 <script>
-  let draggedWord = null;
+  var STORAGE_KEY = "bz-d10-softskills-activity";
+
+  var draggedWord = null;
 
 // ==========================
 // WORD BANK
@@ -271,9 +307,9 @@ document.querySelectorAll(".blank").forEach(blank => {
 });
 
 // ==========================
-// CHECK ANSWERS
+// GRADE ALL BLANKS
 // ==========================
-document.getElementById("checkBtn").addEventListener("click", function () {
+function gradeBlanks() {
 
     document.querySelectorAll(".blank").forEach(blank => {
 
@@ -287,10 +323,93 @@ document.getElementById("checkBtn").addEventListener("click", function () {
         } else {
             // Wrong answer OR left blank
             blank.classList.add("incorrect");
-
         }
 
     });
 
+}
+
+// ==========================
+// LOCK THE ACTIVITY
+// ==========================
+function lockActivity() {
+    document.body.classList.add("activity-locked");
+}
+
+// ==========================
+// SAVE COMPLETION
+// ==========================
+function saveCompletion() {
+
+    var answers = [];
+
+    document.querySelectorAll(".blank").forEach(blank => {
+        answers.push(blank.textContent.trim());
+    });
+
+    try {
+        localStorage.setItem(STORAGE_KEY, JSON.stringify({
+            completed: true,
+            answers: answers,
+            timestamp: new Date().toISOString()
+        }));
+    } catch (err) {
+        // Storage unavailable (private mode, etc.) — fail silently
+    }
+
+}
+
+// ==========================
+// RESTORE ON PAGE LOAD
+// ==========================
+function restoreCompletion() {
+
+    var saved = null;
+
+    try {
+        saved = JSON.parse(localStorage.getItem(STORAGE_KEY));
+    } catch (err) {
+        return;
+    }
+
+    if (!saved || !saved.completed || !Array.isArray(saved.answers)) return;
+
+    var blanks = document.querySelectorAll(".blank");
+
+    blanks.forEach(function (blank, i) {
+
+        var answer = saved.answers[i] || "";
+        blank.textContent = answer;
+
+        // Mark the matching word bank word as used
+        if (answer !== "") {
+            document.querySelectorAll(".word").forEach(word => {
+                if (word.textContent.trim() === answer) {
+                    word.classList.add("used");
+                }
+            });
+        }
+
+    });
+
+    gradeBlanks();
+    lockActivity();
+
+}
+
+// ==========================
+// CHECK ANSWERS
+// ==========================
+document.getElementById("checkBtn").addEventListener("click", function () {
+
+    gradeBlanks();
+    saveCompletion();
+    lockActivity();
+
 });
+
+// Run restore on load
+restoreCompletion();
 </script>
+  </body>
+</html>
